@@ -1,0 +1,6 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Vocabulaire}{1}
+\contentsline {section}{\numberline {II.}D\'efinition de cosinus, sinus et tangente}{1}
+\contentsline {section}{\numberline {III.}Applications}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Calcul d'une longueur}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Calcul d'un angle}{2}

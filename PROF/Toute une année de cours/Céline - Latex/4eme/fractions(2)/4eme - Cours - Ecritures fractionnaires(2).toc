@@ -1,0 +1,6 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Produit de nombres en \'ecriture fractionnaire}{1}
+\contentsline {section}{\numberline {II.}Quotient de nombres en \'ecriture fractionnaire}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Inverse d'un nombre non nul}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Quotient de deux nombres en \'ecriture fractionnaire}{2}
+\contentsline {section}{\numberline {III.}R\`egles de priorit\'es et calcul d'une expression}{3}

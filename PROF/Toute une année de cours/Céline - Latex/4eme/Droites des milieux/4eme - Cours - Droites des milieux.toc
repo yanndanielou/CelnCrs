@@ -1,0 +1,5 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Comment r\'ediger une d\'emonstration ?}{1}
+\contentsline {section}{\numberline {II.}Th\'eor\`eme n\IeC {\textdegree }1 : Th\'eor\`eme de la droite des milieux}{2}
+\contentsline {section}{\numberline {III.}Th\'eor\`eme 2 : longueur d'un segment}{3}
+\contentsline {section}{\numberline {IV.}Th\'eor\`eme 3 : avec un milieu et une parall\`ele}{4}

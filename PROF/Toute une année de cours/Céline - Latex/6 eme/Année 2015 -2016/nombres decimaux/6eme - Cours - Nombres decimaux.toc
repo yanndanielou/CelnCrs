@@ -1,0 +1,9 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Les nombres d\'ecimaux}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}\'Ecrire un nombre d\'ecimal}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Nombre d\'ecimal et nombre entier}{1}
+\contentsline {section}{\numberline {II.}Lire et \'ecrire un nombre d\'ecimal}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Tableau de num\'eration}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Fractions d\'ecimales}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Diff\'erentes \'ecritures possibles pour un nombre d\'ecimal}{2}

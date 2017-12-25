@@ -1,0 +1,9 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Proportionnalit\'e}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Rappels}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Quatri\`eme proportionnelle}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Repr\'esentation graphique}{1}
+\contentsline {section}{\numberline {II.}Vitesse moyenne}{2}
+\contentsline {section}{\numberline {III.}Pourcentages}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'eterminer un pourcentage}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Appliquer un pourcentage}{3}

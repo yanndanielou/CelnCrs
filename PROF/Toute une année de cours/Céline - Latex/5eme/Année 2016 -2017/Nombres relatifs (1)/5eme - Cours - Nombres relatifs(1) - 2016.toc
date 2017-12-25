@@ -1,0 +1,5 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Vocabulaire}{1}
+\contentsline {section}{\numberline {II.}Droite gradu\'ee - Abscisse}{1}
+\contentsline {section}{\numberline {III.}Rep\'erage dans le plan}{2}
+\contentsline {section}{\numberline {IV.}Comparaison des nombres relatifs}{4}

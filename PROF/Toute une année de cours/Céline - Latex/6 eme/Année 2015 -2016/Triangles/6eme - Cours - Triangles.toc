@@ -1,0 +1,7 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Comment construire un triangle}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Construction d'un triangle dont on conna\IeC {\^\i }t les 3 c\^ot\'es}{1}
+\contentsline {section}{\numberline {II.}Les triangles particuliers}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Le triangle rectangle}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Le triangle isoc\`ele}{2}

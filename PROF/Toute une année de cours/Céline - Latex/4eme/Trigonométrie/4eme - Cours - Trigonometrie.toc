@@ -1,0 +1,8 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Cosinus d'un angle}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Vocabulaire}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Cosinus d'un angle}{1}
+\contentsline {section}{\numberline {II.}Applications du cosinus d'un angle}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Calcul la longueur du c\^ot\'e adjacent}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Calcul de l'hypot\'enuse}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Calcul de la mesure d'un angle}{2}

@@ -1,0 +1,6 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Calcul d'une expression sans parenth\`eses}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Encha\IeC {\^\i }nement d'additions et de soustraction}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Encha\IeC {\^\i }nements de multiplications et de divisions}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Encha\IeC {\^\i }nements d'op\'erations diverses}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}4.}Calcul de quotient}{3}

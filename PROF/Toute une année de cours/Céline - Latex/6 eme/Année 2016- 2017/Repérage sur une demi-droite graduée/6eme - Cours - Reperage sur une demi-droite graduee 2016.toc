@@ -1,0 +1,4 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Demi-droite gradu\'ee}{1}
+\contentsline {section}{\numberline {II.}Abscisse d'un point}{1}
+\contentsline {section}{\numberline {III.}Et avec des fractions d\'ecimales}{3}

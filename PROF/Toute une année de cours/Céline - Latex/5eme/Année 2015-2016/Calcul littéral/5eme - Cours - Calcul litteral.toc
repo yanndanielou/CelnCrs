@@ -1,0 +1,9 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Expression litt\'erale}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Des exemples en g\'eom\'etrie}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Utiliser des lettres dans les calculs}{1}
+\contentsline {section}{\numberline {II.}Simplifier l'\'ecriture des expressions litt\'erales}{2}
+\contentsline {section}{\numberline {III.}Transformer les expressions litt\'erales}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'evelopper}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Factoriser}{3}
+\contentsline {section}{\numberline {IV.}Notion d'\'egalit\'e}{3}

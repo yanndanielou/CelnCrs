@@ -1,0 +1,20 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Rappel : Vocabulaire}{1}
+\contentsline {section}{\numberline {II.}Calcul d'une expression sans parenth\`ese}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Encha\IeC {\^\i }nement d'additions et de soustraction}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Propri\'et\'es}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Sens de variation}{2}
+\contentsline {section}{\numberline {III.}La fonction exponentielle}{5}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Activit\'e de d\'ecouverte}{5}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}D\'efinition}{6}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}D\'eriv\'ee de la fonction exponentielle}{6}
+\contentsline {subsection}{\numberline {\hspace {.5cm}4.}Variation}{7}
+\contentsline {subsection}{\numberline {\hspace {.5cm}5.}Courbe repr\'esentative}{8}
+\contentsline {subsubsection}{\numberline {\hspace {.75cm}(1)}convexit\'e}{8}
+\contentsline {subsubsection}{\numberline {\hspace {.75cm}(2)}propri\'et\'es}{8}
+\contentsline {section}{\numberline {IV.}Exponentielle d'une fonction : $\qopname \relax o{exp}(u)$}{11}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'eriv\'ee}{11}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Variation}{11}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Exemples types}{12}
+\contentsline {subsubsection}{\numberline {\hspace {.75cm}(1)}Les fonctions $f_k:x\DOTSB \mapstochar \rightarrow \ensuremath {\mathrm {e}}^{-kx}$, avec $k>0$.}{12}
+\contentsline {subsubsection}{\numberline {\hspace {.75cm}(2)}Les fonctions $g_k:x\DOTSB \mapstochar \rightarrow \ensuremath {\mathrm {e}}^{-kx}$, avec $k>0$.}{12}

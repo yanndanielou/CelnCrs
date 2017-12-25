@@ -1,0 +1,5 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Th\'eor\`eme de Thal\`es}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Le th\'eor\`eme}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Application du Th\'eor\`eme de Thal\`es}{2}
+\contentsline {section}{\numberline {II.}R\'eciproque du th\'eor\`eme de Thal\`es}{2}

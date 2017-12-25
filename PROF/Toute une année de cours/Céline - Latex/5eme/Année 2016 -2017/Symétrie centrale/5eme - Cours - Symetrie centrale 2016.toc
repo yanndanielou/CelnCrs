@@ -1,0 +1,8 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}D\'efinitions}{1}
+\contentsline {section}{\numberline {II.}Sym\'etrique d'un point}{2}
+\contentsline {section}{\numberline {III.}Propri\'et\'es de la sym\'etrie centrale}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Sym\'etrique d'un segment}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Sym\'etrique d'une droite ou d'une demi-droite}{4}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Sym\'etrique d'un cercle}{4}
+\contentsline {subsection}{\numberline {\hspace {.5cm}4.}Construction du sym\'etrique d'une figure}{4}

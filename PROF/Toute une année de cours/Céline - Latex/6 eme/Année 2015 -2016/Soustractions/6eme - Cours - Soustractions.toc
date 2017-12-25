@@ -1,0 +1,5 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Soustractions}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Vocabulaire de la soustraction}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Soustractions en colonne}{1}
+\contentsline {section}{\numberline {II.}Ordre de grandeur d'une diff\'erence}{1}

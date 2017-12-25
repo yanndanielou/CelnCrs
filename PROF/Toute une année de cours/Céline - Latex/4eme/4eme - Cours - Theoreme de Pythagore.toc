@@ -1,0 +1,9 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Le th\'eor\`eme de Pythagore}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Reconna\IeC {\^\i }tre l'hypot\'enuse dans un triangle rectangle}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}\'Enonc\'e du th\'eor\`eme de Pythagore}{1}
+\contentsline {section}{\numberline {II.}Applications du th\'eor\`eme de Pythagore}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Premi\`ere application}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Deuxi\`eme application}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Montrer qu'un triangle n'est pas rectangle}{3}
+\contentsline {section}{\numberline {III.}La r\'eciproque du th\'eor\`eme de Pythagore}{3}

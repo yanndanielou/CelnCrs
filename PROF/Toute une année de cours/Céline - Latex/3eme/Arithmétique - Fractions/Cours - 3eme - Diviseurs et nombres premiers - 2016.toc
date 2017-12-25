@@ -1,0 +1,9 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Multiples, diviseurs et nombres premiers}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Multiples et diviseurs}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Crit\`eres de divisibilit\'e}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Nombres premiers}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}4.}Diviseurs communs}{3}
+\contentsline {section}{\numberline {II.}Applications}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'ecomposition et fractions irr\'eductibles}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Notion de PGCD}{4}

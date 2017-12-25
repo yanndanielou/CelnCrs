@@ -1,0 +1,9 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}D\'evelopper avec les identit\'es remarquables}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Premi\`ere et deuxi\`eme identit\'es remarquables : carr\'e d'une somme et carr\'e d'une diff\'erence}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Troisi\`eme identit\'e remarquable}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}D\'eveloppements plus difficiles}{2}
+\contentsline {section}{\numberline {II.}Factoriser avec les identit\'es remarquables}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Premi\`ere et deuxi\`eme identit\'es remarquables : carr\'e d'une somme et carr\'e d'une diff\'erence}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Troisi\`eme identit\'e remarquable}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Factorisations plus difficiles}{3}

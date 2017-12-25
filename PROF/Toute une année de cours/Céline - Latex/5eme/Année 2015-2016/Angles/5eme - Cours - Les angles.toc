@@ -1,0 +1,10 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}D\'efinitions}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Angles adjacents}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Angles compl\'ementaires, angles suppl\'ementaires}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Angles oppos\'es par le sommet}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}4.}Angles alternes-internes}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}5.}Angles correspondants}{3}
+\contentsline {section}{\numberline {II.}Propri\'et\'es}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Si les droites sont parall\`eles}{3}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Si les angles ont m\^eme mesure}{4}

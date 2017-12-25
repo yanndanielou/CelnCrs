@@ -1,0 +1,7 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Vocabulaire}{1}
+\contentsline {section}{\numberline {II.}Additions et soustractions en colonne}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Additions en colonne}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Soustractions en colonne}{2}
+\contentsline {section}{\numberline {III.}Calculs en ligne}{2}
+\contentsline {section}{\numberline {IV.}Ordre de grandeur d'une somme et d'une diff\'erence}{3}

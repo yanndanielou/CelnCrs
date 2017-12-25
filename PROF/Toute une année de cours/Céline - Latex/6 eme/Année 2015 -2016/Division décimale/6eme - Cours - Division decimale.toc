@@ -1,0 +1,8 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}La division d\'ecimale}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Dividende et diviseur entier}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Dividende d\'ecimal et diviseur entier }{1}
+\contentsline {section}{\numberline {II.}Technique de calculs}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Diviser par 10, 100, 1 000, ...}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Et quand cela ne fonctionne pas ?}{2}

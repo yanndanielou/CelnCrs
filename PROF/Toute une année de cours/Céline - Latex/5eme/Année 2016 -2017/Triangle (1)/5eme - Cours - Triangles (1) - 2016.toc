@@ -1,0 +1,9 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}In\'egalit\'e triangulaire}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Cas g\'en\'eral}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Cas d'\'egalit\'e}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Application aux triangles}{1}
+\contentsline {section}{\numberline {II.}Comment construire un triangle ?}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Construire un triangle connaissant les longueurs de ses trois c\^ot\'es}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Construire un triangle connaissant les longueurs de deux c\^ot\'es et la mesure de l'angle compris entre ces c\^ot\'es}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Construire un triangle connaissant la longueur d'un c\^ot\'e et les mesures des deux angles qui lui sont adjacents}{3}

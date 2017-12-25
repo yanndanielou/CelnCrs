@@ -1,0 +1,10 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Le rectangle}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Reconna\IeC {\^\i }tre un rectangle}{1}
+\contentsline {section}{\numberline {II.}Le losange}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Reconna\IeC {\^\i }tre un losange}{2}
+\contentsline {section}{\numberline {III.}Le carr\'e}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Reconna\IeC {\^\i }tre un carr\'e}{2}

@@ -1,0 +1,7 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Introduction}{1}
+\contentsline {section}{\numberline {II.}Sym\'etrique d'un point, d'une figure}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Propri\'et\'e de la sym\'etrie axiale}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Sym\'etrique d'un point par rapport \`a une droite}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Sym\'etrique de figures usuelles}{4}
+\contentsline {section}{\numberline {III.}Axes de sym\'etrie}{5}

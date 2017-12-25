@@ -1,0 +1,14 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Les points}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Notation}{1}
+\contentsline {section}{\numberline {II.}Les segments}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Notation}{1}
+\contentsline {section}{\numberline {III.}Les droites}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Notation}{2}
+\contentsline {section}{\numberline {IV.}Les demi-droites}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Notation}{2}
+\contentsline {section}{\numberline {V.}Points align\'es}{2}

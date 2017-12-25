@@ -1,0 +1,9 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Rappels}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Somme de deux nombres relatifs}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Diff\'erence de deux nombres relatifs}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Calcul comportant des sommes et des diff\'erences}{1}
+\contentsline {section}{\numberline {II.}Produit de nombres relatifs}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Vocabulaire}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Produit de deux nombres relatifs}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Produit de plusieurs nombres relatifs}{3}

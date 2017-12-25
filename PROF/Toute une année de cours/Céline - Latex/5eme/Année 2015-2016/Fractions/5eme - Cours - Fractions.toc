@@ -1,0 +1,8 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Multiples et diviseurs}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Crit\`eres de divisibilit\'e}{1}
+\contentsline {section}{\numberline {II.}Fractions, \'egalit\'e de quotient}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}\'Ecriture fractionnaire}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}\'Egalit\'e de quotient}{2}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Applications}{2}

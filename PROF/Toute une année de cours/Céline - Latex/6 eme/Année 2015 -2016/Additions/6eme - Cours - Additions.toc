@@ -1,0 +1,6 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Additions}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Vocabulaire de l'addition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Additions en colonne}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Additions en ligne}{2}
+\contentsline {section}{\numberline {II.}Ordre de grandeur d'une somme}{3}

@@ -1,0 +1,6 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}La notion de fonction}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Repr\'esentation graphique}{1}
+\contentsline {section}{\numberline {II.}Image d'un nombre par une fonction}{3}
+\contentsline {section}{\numberline {III.}Ant\'ec\'edent d'un nombre par une fonction}{3}

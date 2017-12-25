@@ -1,0 +1,7 @@
+\select@language {french}
+\contentsline {section}{\numberline {I.}Somme et diff\'erence de fractions}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Les d\'enominateurs sont \'egaux}{1}
+\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Les d\'enominateurs sont diff\'erents}{1}
+\contentsline {section}{\numberline {II.}Produit de nombres en \'ecriture fractionnaire}{1}
+\contentsline {section}{\numberline {III.}Quotient de nombres en \'ecriture fractionnaire}{2}
+\contentsline {section}{\numberline {IV.}R\`egles de priorit\'es et calcul d'une expression}{2}
