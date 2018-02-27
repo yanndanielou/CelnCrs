@@ -1,7 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}M\'ediatrice d'un triangle }{1}
-\contentsline {section}{\numberline {II.}Hauteur d'un triangle}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Propri\'et\'es des hauteurs dans un triangle}{2}
-\contentsline {section}{\numberline {III.}Les m\'edianes}{3}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{3}

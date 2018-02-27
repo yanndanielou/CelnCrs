@@ -1,3 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Diff\'erence de deux nombres relatifs}{1}
-\contentsline {section}{\numberline {II.}Distance de deux points sur une droite gradu\'ee}{1}

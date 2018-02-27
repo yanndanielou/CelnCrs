@@ -1,2 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Centre de sym\'etrie}{1}
