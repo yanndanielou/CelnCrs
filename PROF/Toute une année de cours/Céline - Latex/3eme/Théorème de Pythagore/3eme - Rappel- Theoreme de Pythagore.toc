@@ -1,3 +1,0 @@
-\select@language {french}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Th\'eor\`eme de Pythagore}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}R\'eciproque du th\'eor\`eme de Pythagore}{1}

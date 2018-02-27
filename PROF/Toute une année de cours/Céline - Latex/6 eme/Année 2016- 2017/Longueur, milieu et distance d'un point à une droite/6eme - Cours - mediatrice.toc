@@ -1,2 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}M\'ediatrice d'un segment}{1}

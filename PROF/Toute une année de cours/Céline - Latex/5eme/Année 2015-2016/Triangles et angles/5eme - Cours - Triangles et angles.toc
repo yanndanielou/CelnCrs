@@ -1,6 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Somme des angles d'un triangle}{1}
-\contentsline {section}{\numberline {II.}Triangles particuliers}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Triangles rectangles}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Triangles isoc\`eles}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Triangles \'equilat\'eraux}{2}

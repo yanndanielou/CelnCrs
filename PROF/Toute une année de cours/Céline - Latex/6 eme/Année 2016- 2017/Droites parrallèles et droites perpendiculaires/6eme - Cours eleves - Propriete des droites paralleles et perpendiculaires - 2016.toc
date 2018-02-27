@@ -1,4 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Construction de droites perpendiculaires et parall\`eles}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Droites perpendiculaires}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Droites parall\`eles}{2}

@@ -1,7 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Les hauteurs}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Propri\'et\'es des hauteurs dans un triangle}{2}
-\contentsline {section}{\numberline {II.}Les m\'edianes}{3}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinition}{3}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Propri\'et\'es des m\'edianes dans un triangle}{4}

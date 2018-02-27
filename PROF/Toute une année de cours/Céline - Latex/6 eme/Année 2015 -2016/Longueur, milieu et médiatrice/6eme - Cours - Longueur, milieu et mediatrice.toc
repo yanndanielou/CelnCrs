@@ -1,4 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Longueur d'un segment}{1}
-\contentsline {section}{\numberline {II.}Milieu d'un segment}{1}
-\contentsline {section}{\numberline {III.}M\'ediatrice d'un segment}{4}

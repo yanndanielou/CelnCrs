@@ -1,8 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Distributivit\'e de la multiplication}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Distributivit\'e de la multiplication par rapport \`a l'addition}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Distributivit\'e de la multiplication par rapport \`a la soustraction}{1}
-\contentsline {section}{\numberline {II.}D\'eveloppement et factorisation}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'evelopper une expression}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Factoriser une expression}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Utiliser la distributivit\'e pour aller plus vite}{2}

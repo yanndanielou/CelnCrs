@@ -1,4 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}D\'efinition du cercle}{1}
-\contentsline {section}{\numberline {II.}Vocabulaire du cercle}{1}
-\contentsline {section}{\numberline {III.}Arcs de cercle}{1}

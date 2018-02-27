@@ -1,5 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Vocabulaire et d\'efinition}{1}
-\contentsline {section}{\numberline {II.}Mesurer et construire d'un angle}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Mesurer un angle avec un rapporteur}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Construire un angle}{2}

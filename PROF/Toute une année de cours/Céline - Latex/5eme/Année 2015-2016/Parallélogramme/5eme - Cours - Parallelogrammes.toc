@@ -1,5 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Parall\'elogramme}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}D\'efinitions}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Propri\'et\'es}{1}
-\contentsline {section}{\numberline {II.}Utiliser les propri\'et\'es du parall\'elogramme}{2}

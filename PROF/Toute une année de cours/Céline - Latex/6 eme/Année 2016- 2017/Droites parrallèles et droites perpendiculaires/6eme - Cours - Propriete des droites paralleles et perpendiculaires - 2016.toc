@@ -1,9 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Construction de droites perpendiculaires et parall\`eles}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Droites perpendiculaires}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Droites parall\`eles}{2}
-\contentsline {section}{\numberline {II.}R\'ediger une d\'emonstration, un raisonnement}{3}
-\contentsline {section}{\numberline {III.}Propri\'et\'es des droites parall\`eles et perpendiculaires}{3}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Premi\`ere propri\'et\'e}{3}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Deuxi\`eme propri\'et\'e}{4}
-\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Troisi\`eme propri\'et\'e}{4}

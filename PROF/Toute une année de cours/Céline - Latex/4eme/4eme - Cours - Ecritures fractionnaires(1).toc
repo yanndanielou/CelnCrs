@@ -1,7 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Quotient \'egaux - \'Egalit\'e des produits en croix}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Quotient \'egaux - Simplification}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}\'Egalit\'e des produits en croix}{1}
-\contentsline {section}{\numberline {II.}Somme et diff\'erence de fractions}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Les d\'enominateurs sont \'egaux}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Les d\'enominateurs sont diff\'erents}{2}

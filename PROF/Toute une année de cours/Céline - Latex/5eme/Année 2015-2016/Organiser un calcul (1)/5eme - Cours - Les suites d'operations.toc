@@ -1,9 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Rappel : Vocabulaire}{1}
-\contentsline {section}{\numberline {II.}Calcul d'une expression sans parenth\`eses}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Encha\IeC {\^\i }nement d'additions et de soustraction}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Encha\IeC {\^\i }nements de multiplications et de divisions}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Encha\IeC {\^\i }nements d'op\'erations diverses}{3}
-\contentsline {subsection}{\numberline {\hspace {.5cm}4.}Calcul de quotient}{4}
-\contentsline {section}{\numberline {III.}Calcul d'une expression avec parenth\`eses ou crochets }{4}
-\contentsline {section}{\numberline {IV.}\'Ecrire une expression num\'erique}{5}

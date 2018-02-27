@@ -1,8 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}Vocabulaire}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Droites s\'ecantes}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Droites parall\`eles}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}3.}Droites perpendiculaires}{2}
-\contentsline {section}{\numberline {II.}Constructions}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Droites perpendiculaires}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}Droites parall\`eles}{3}

@@ -1,3 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}D\'efinitions}{1}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}Sym\'etrie centrale}{1}

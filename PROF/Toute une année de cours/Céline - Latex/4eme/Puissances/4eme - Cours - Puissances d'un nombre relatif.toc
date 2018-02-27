@@ -1,6 +1,0 @@
-\select@language {french}
-\contentsline {section}{\numberline {I.}D\'efinitions et propri\'et\'es}{1}
-\contentsline {section}{\numberline {II.}R\`egles de calculs}{2}
-\contentsline {section}{\numberline {III.}Puissance de dix}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}1.}\'Ecriture d\'ecimale des puissances de 10}{2}
-\contentsline {subsection}{\numberline {\hspace {.5cm}2.}\'Ecriture scientifique}{3}
