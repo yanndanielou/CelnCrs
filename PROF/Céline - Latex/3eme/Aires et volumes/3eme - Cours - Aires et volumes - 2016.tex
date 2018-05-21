@@ -530,8 +530,24 @@
 \newpage
  \setcounter{page}{1}
  
+ 
+
+ \vspace*{0.2cm}
+
+\textbf{\underline{{\large Mes objectifs:}}}
+
+\begin{itemize}[label=$\hookrightarrow$]
+\item Je dois savoir calculer le volume d'un parallélépipède rectangle, d'un prisme droit, d'un cylindre de révolution, d'une pyramide et d'un cône de révolution à l'aide d'une formule.
+
+\item Je dois savoir calculer l'aire d'une sphère de rayon donné.
+
+\item Je dois savoir calculer le volume d'une boule de rayon donné.
 
 
+
+\end{itemize}
+
+ \vspace*{0.5cm}
 
 
  
@@ -554,14 +570,7 @@
 \reponse[4]\\
 
 
-\end{Exoapp}
-
-\newpage
-
-
-\begin{Exoapp}
-
-\initq \q Calculer l'aire grisée.\\
+\q Calculer l'aire violette.\\
 
 \begin{center}
 \includegraphics[scale=0.6]{aires3.eps} 
@@ -571,6 +580,8 @@
 
 \end{Exoapp}
 
+\newpage
+
 \section{Volumes de solide}
 
 \subsection{Le pavé droit et le cube}
@@ -579,33 +590,51 @@
 
 \bmul{2}
 
-\textbf{{\large Le pavé droit :}\\}
+\textbf{{\underline{ Le pavé droit :}}\\}
 
 \includegraphics[scale=1]{lepavedroit.eps} 
 
 
 \columnbreak
 
-\textbf{{\large Un pavé droit particulier, le cube :}\\}
+\textbf{{\underline{ Un pavé droit particulier, le cube :}}\\}
 
 \includegraphics[scale=1]{aires4.eps} 
 
 \emul
 
+\vspace*{1cm}
 
-\newpage
+\begin{Exoapp}
+
+\initq \q Quel est le volume d'un pavé de droit de longueur 1 dm, de largeur 5 cm et de hauteur 30 mm ?\\
+\reponse[4]\\
+
+
+\q Quel est le volume d'un cube de côté 3 m ?\\
+\reponse[4]\\
+
+\end{Exoapp}
+
 
 \subsection{Le prisme droit}
 
-\ex 
 
+\df{
+\textbf{Un prisme droit }est un solide dont :\\
+- Deux faces sont des polygones superposables et parallèles ; on les appelle \textbf{les bases} ;\\
+- Les autres faces sont des rectangles ; on les appelle \textbf{les faces latérales}.
+
+}\\
+
+\underline{\textbf{Exemple:}}
 Un prisme droit à base triangulaire.\\
 
 \begin{center}
 \includegraphics[scale=1]{prismedroit.eps} 
 \end{center}
 
- \df{
+ \prop{
 Le volume d'un prisme droit est le produit de l'aire de sa base par sa hauteur : $\mathscr{V} = \mathscr{B}  \times h$
 }\\
 
@@ -616,6 +645,7 @@ Le volume d'un prisme droit est le produit de l'aire de sa base par sa hauteur :
 \includegraphics[scale=0.7]{vol6.eps}  
 \columnbreak
 
+Calculer le volume du prisme ci-contre.\\
 \reponse[3]
 
 \emul
@@ -624,13 +654,20 @@ Le volume d'un prisme droit est le produit de l'aire de sa base par sa hauteur :
 
 \subsection{Le cylindre}
 
+\df{
+\textbf{Un cylindre de révolution} est un solide qui possède: \\
+- \textbf{deux bases} sont deux disques superposables et parallèles,
+
+-\textbf{ une face latérale} qui s'enroule autour des bases et qui est perpendiculaire aux bases. 
+}\\
+
 
 \begin{center}
 \includegraphics[scale=1]{vol2.eps}
 \end{center}
 
 
- \df{
+ \prop{
 Le volume du cylindre est le produit de l'aire de sa base par
 sa hauteur :$\mathscr{V} = \mathscr{B}  \times h = \pi r^{2} \times h$
 }
@@ -642,9 +679,12 @@ sa hauteur :$\mathscr{V} = \mathscr{B}  \times h = \pi r^{2} \times h$
 \includegraphics[scale=0.4]{vol7.eps}  
 \columnbreak
 
+\qa Calculer le volume du cylindre ci-contre.\\
 \reponse[4]
 
 \emul
+
+\qa Calculer le volume du cylindre ci-dessus.\\
 \reponse[3]
 
 \end{Exoapp}
@@ -653,11 +693,19 @@ sa hauteur :$\mathscr{V} = \mathscr{B}  \times h = \pi r^{2} \times h$
 
 \subsection{Le cône de révolution}
 
+\df{
+Un cône de révolution est un solide formé :\\
+-	d'un disque appelé \textbf{base} ;\\
+-	d'une surface courbe appelé \textbf{face latérale} ;\\
+-	d'un point appelé \textbf{sommet du cône}.
+
+}\\
+
 \begin{center}
 \includegraphics[scale=1]{vol3.eps} 
 \end{center}
 
-\df{
+\prop{
 Le volume d'un cône de révolution est le tiers du produit de l'aire de sa base par sa hauteur :\\
 \begin{center}
 $\mathscr{V} = \dfrac{\mathscr{B}  \times h}{3} = \dfrac{\pi r^{2} \times h}{3}$
@@ -674,8 +722,10 @@ $\mathscr{V} = \dfrac{\mathscr{B}  \times h}{3} = \dfrac{\pi r^{2} \times h}{3}$
 \includegraphics[scale=0.8]{vol9.eps}   
 \columnbreak
 
+\initqa \qa Calculer le volume du cône de révolution ci-contre.\\
 \reponse[4]\\
 
+\qa Calculer le volume du cône de révolution ci-contre.\\
 \reponse[4]\\
 
 \emul
@@ -686,12 +736,18 @@ $\mathscr{V} = \dfrac{\mathscr{B}  \times h}{3} = \dfrac{\pi r^{2} \times h}{3}$
 
 \subsection{La pyramide}
 
+\df{
+\textbf{Une pyramide }est un solide dont :\\
+- toutes les faces latérales sont des triangles ayant un sommet commun appelé \textbf{sommet de la pyramide} , \\
+- l'autre face est un polygone quelconque appelé \textbf{base de la pyramide}.
+}\\
+
 
 \begin{center}
 \includegraphics[scale=0.7]{vol4.eps} 
 \end{center}
 
-\df{
+\prop{
 Le volume d'une pyramide est le tiers du produit de l'aire de sa base par sa hauteur : $\mathscr{V} = \dfrac{\mathscr{B}  \times h}{3}$
 }
 
@@ -704,9 +760,10 @@ Le volume d'une pyramide est le tiers du produit de l'aire de sa base par sa hau
 \includegraphics[scale=1]{vol11.eps}\\
 
 \columnbreak
-
+\initqa \qa Calculer le volume de la pyramide ci-contre.\\
 \reponse[4]\\
 
+\qa Calculer le volume de la pyramide ci-contre.\\
 \reponse[4]\\
 
 \emul
@@ -716,11 +773,15 @@ Le volume d'une pyramide est le tiers du produit de l'aire de sa base par sa hau
 
 \subsection{Une boule}
 
+\df{
+\textbf{La boule de centre O et de rayon R} est l'ensemble des points de l'espace dont la distance à O est inférieure ou égale à R.
+}\\
+
 \begin{center}
 \includegraphics[scale=1]{vol5.eps} 
 \end{center}
 
-\df{
+\prop{
 Le volume d'une boule de rayon R est : $\mathscr{V} = \dfrac{4}{3} \pi r^{3}$
 }
 
@@ -734,8 +795,10 @@ Le volume d'une boule de rayon R est : $\mathscr{V} = \dfrac{4}{3} \pi r^{3}$
 
 \columnbreak
 
+\initqa \qa Calculer le volume de la boule ci-contre.\\
 \reponse[4]\\
 
+\qa Calculer le volume de la figure ci-contre.\\
 \reponse[4]\\
 
 \emul
@@ -751,11 +814,13 @@ Attention à bien différencier l'aire totale d'un solide et l'aire latérale d'un 
 Une aire latérale (d'un cylindre, d'une pyramide etc) est la surface délimitant ce solide privée de sa (ou ses) base(s).
 }\\
 
+
+
 \begin{Exoapp}
 
 \bmul{2}
 
-\initq \q \qa Calculer l'aire latérale du prisme droit ci-contre :
+\initq \q \initqa \qa Calculer l'aire latérale du prisme droit ci-contre :
 \reponse[4]\\
 
 \qa Calculer l'aire totale de ce solide :\\
@@ -772,21 +837,36 @@ Une aire latérale (d'un cylindre, d'une pyramide etc) est la surface délimitant 
 
 \end{Exoapp}
 
+\vspace*{1cm}
 
-\prop{
-L'aire d'une sphère de rayon R est égale à $ 4\pi r^{2}$.
+\df{
+La sphère de centre O et de rayon R est l'ensemble des points de l'espace dont la distance à O est égale à R.
 }\\
 
-\ex
+\vspace*{0.5cm}
 
+\prop{
+L'aire d'une sphère de rayon r est égale à $ 4\pi r^{2}$.
+}\\
+
+\vspace*{0.5cm}
+
+\underline{Exemples :}\\
 
 \initq \q Calculer l'aire d'une sphère de diamètre 200 cm.\\
+\reponse[6]\\
 
+\newpage
 
+\bmul{2}
 \q  Calculer l'aire de la sphère ci-contre :\\
 \includegraphics[scale=1]{vol16.eps} 
 
+\columnbreak
 
+\noindent\reponse[6]\\
+
+\emul
 \section{Volume et équations}
 
 \textbf{{\large Problème 1 :}} 

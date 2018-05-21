@@ -1,0 +1,210 @@
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} \usepackage[french]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{color}
+\usepackage{ulem}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Devoir maison}{Nom :}{Prénom :}{3 ème}{Date :}
+
+\vspace*{1cm}
+
+
+\exo
+
+Le graphique suivant donne la température  relevée au village  olympique de Pyeongchang le 31  janvier 2018. 
+
+\q Quelle température faisait-il à 8h ? \textbf{-4 \degre C} \\
+
+\q A quelle(s) heure(s) la température était-elle de -2\degre C ? \textbf{11h et 18h} \\
+
+\q Quelle est la température minimale de la journée et à quelle heure a-t-elle été relevée ? \textbf{-12 \degre C vers 3h} \\
+
+\q Pendant combien de temps la température est-elle restée positive au cours de cette journée ? \textbf{4h30} \\
+
+\q On associe la courbe ci-dessus à une fonction $f$ .  \\
+
+   
+  \qa Quelle est l'image de 9 par cette fonction ? \textbf{$h(9)=-4$} \\
+  
+  \qa Quelle valeur a pour antécédent 14 ? \textbf{$h(3) = 14$}\\
+  
+  \qa Quelle(s) valeur(s) a/ont pour image -8 ? \textbf{$h(5)=-8$}\\
+  
+   \qa Quel(s) est (sont) le (les) antécédent(s) de 2 par cette fonction ? \textbf{$h(13)=2 $ et $h(15)=2$ }\\
+   
+   \vspace*{1cm}
+
+
+\exo
+
+On donne l'expression $D=(2x+3)(2x-1)-(3x-4)(2x+3)$.\\
+
+\noindent \initq \q $D=(2x+3)(2x-1)-(3x-4)(2x+3)$ \\
+$D= 4x^{2}-2x+6x-3 - (6x^{2} + 9x -8x-12)$\\
+$D= 4x^{2}-2x+6x-3 - 6x^{2} - 9x +8x+12$\\
+\fbox{$D= -2x^{2} +3x +9$}\\
+
+
+\q $D=(2x+3)(2x-1)-(3x-4)(2x+3)$\\
+$D=(2x+3)[(2x-1)-(3x-4)]$ \\
+$D=(2x+3)(2x-1-3x+4)$\\
+\fbox{$D=(2x+3)(-x+3)$}\\
+
+
+
+\q Pour x = 1, je choisi l'expression factorisée de D de la question 2.\\
+$D=(2 \times 1 +3)(-1+3)$\\
+$D=5\times 2$\\
+\fbox{$D=10$}\\
+
+\q Pour $x=-\dfrac{3}{2}$, je choisi l'expression développée de D de la question 1.\\
+$D= -2 \times \left(-\dfrac{3}{2}\right)^{2} +3\times\left(-\dfrac{3}{2}\right) +9$\\
+$D= -2 \times \left(\dfrac{9}{4}\right) +3\times\left(-\dfrac{3}{2}\right) +9$\\
+$D= -\dfrac{9}{2} -\dfrac{9}{2} +9$\\
+$D= -\dfrac{18}{2} +9$\\
+\fbox{$D= 0$}\\
+
+\vspace*{1cm}
+
+\newpage
+
+\exo
+
+La figure suivante est donnée à titre indicatif pour préciser la position des points A, B, C, D et E. Les longueurs représentées ne le sont pas en vraie grandeur.\\
+On donne CE = 5 cm, CD = 12 cm, CA = 18 cm, CB = 7,5 cm, AB = 19,5 cm.
+
+\begin{center}
+\includegraphics[scale=1]{dmexo3.eps} 
+\end{center}
+
+\noindent \initq \q Les points E, C et B sont alignés dans le même ordre que les points D, C et A.
+
+\bmul{2}
+D'une part, $\dfrac{EC}{CB}=\dfrac{5}{7.5}\approx 0,67$
+
+
+\columnbreak
+D'autre part, $\dfrac{DC}{CA}=\dfrac{12}{18} \approx 0,67$
+
+\emul
+
+Ainsi $\dfrac{EC}{CB} = \dfrac{DC}{CA}$, donc d'après la réciproque du théorème de Thalès les droites (ED) et AB) sont parallèles.\\
+
+
+\q Dans les triangles EDC et ABC :\\
+
+- Les points E, C et B sont alignés dans le même ordre que les points D, C et A.\\
+- Les droites (ED) et AB) sont parallèles\\
+
+D'après le théorème de Thalès, on a :  $\dfrac{EC}{CB}=\dfrac{DC}{CA} = \dfrac{ED}{AB}$\\
+\begin{center}
+$\dfrac{5}{7.5}= \dfrac{12}{18} = \dfrac{ED}{19.5}$\\
+\end{center}
+
+$ \dfrac{12}{18} = \dfrac{ED}{19.5}$ donc $ED = \dfrac{12 \times 19.5}{18}=13 cm$\\
+
+
+
+
+
+\q  Dans le triangle DCE,\\
+
+\bmul{2}
+D'une part, $ED^{2}=13^{2} = 169$
+
+
+\columnbreak
+D'autre part, $EC^{2} + CD^{2} = 5^{2} + 12^{2} = 25 + 144 $\\
+\hspace*{1cm} $EC^{2} + CD^{2} =169$
+
+\emul
+
+Ainsi, $EC^{2} + CD^{2} =ED^{2}$ donc d'après la réciproque du théorème de Pythagore le triangle CDE est rectangle en C.\\
+
+
+
+
+\q Dans le triangle DCE rectangle en C, je cherche l'angle $\widehat{DEC}$, je connais l'hypoténuse et le côté adjacent.\\
+
+\hspace*{2cm} \noindent $cos \widehat{DEC} =\dfrac{EC}{ED} $\\
+\hspace*{2.5cm} $cos \widehat{DEC} =\dfrac{5}{13} $\\
+
+A l'aide de la calculatrice, on trouve $\widehat{DEC} \approx 67  $ \degre\\
+
+\end{document}
