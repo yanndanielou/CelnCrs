@@ -298,6 +298,9 @@
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ei}{\end{itemize}}
 
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
 %	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
 	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
 	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
@@ -491,7 +494,7 @@
   \newtheorem{exot}{\sffamily Exercice-type }
 \newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
  
-\newcommand{\chapitre}{Organiser un calcul (2)}
+\newcommand{\chapitre}{Périmètres et aires}
 
 \newcommand{\numchapitre}{}
 
@@ -525,19 +528,201 @@
 \newpage
  \setcounter{page}{1}
  
+\begin{center}
+\textbf{{\large Activité d'introduction}}
+\end{center}
+
+\begin{flushleft}
+\includegraphics[scale=0.55]{actintro1.eps} 
+\end{flushleft}
+
+ \vspace*{0.8cm}
+ 
+ \textbf{\underline{{\large Mes objectifs:}}}
+
+\begin{itemize}[label=$\hookrightarrow$]
+
+
+\item Je dois savoir définir les notions de périmètre et d'aire,
+
+\item Je dois savoir calculer le périmètre d'une figure et l'exprimer dans la bonne unité, 
+
+\item Je dois savoir calculer l'aire d'une surface simple, ou par décomposition en surfaces dont les aires sont facilement calculables et l'exprimer dans la bonne unité.
+
+
+
+\end{itemize}
+
+\vspace*{0.8cm}
 
 \section{ Périmètre d'une figure}
 
+\vspace*{0.3cm}
+
+\df{
+Le mot périmètre provient du grec ancien \textit{perimetros}  qui signifie "mesure du tour",  c'est donc la longueur que l'on parcourt lorsqu'on fait un tour d'une figure.
+}\\
+
+\vspace*{0.3cm}
+
 \subsection{Périmètre d'un polygone}
+
+\vspace*{0.3cm}
+
+\df{
+Le périmètre d'un polygone est la somme des longueurs de ses côtés.
+}\\
+
+\underline{\textbf{Exemple :}}
+
+\bmul{2}
+
+Calculer le périmètre du polygone ABCDE suivant :\\
+
+\reponse[4]
+
+\columnbreak
+
+\includegraphics[scale=0.9]{perimetre1.eps} 
+
+\emul
+
 
 \subsection{Périmètre d'un cercle}
 
-\section{Aires d'une figure}
+\vspace*{0.2cm}
 
-Voici un rappel des formules donnant l'aire de quelques figures planes connues :\\
+\df{
+
+La lettre grecque $\pi$ désigne un nombre particulier. Il est définit par le rapport constant de la circonférence d'un cercle à son diamètre dans un plan .\\
+ Une approximation de $\pi$ : $\pi \approx 3,1415926$
+
+}\\
+
+\vspace*{0.2cm}
+
+\df{
+Soit (C) un cercle de rayon r et de diamètre d.\\
+La longueur d'un cercle (ou la circonférence d'un cercle) s'obtient en multipliant son diamètre d par le nombre $\pi$.
+D'où les formules suivantes:\\
+
+\hspace*{3cm} $P = \pi \times d$ \hspace*{1cm} ou \hspace*{1cm}  $ P = 2 \times \pi \times r$
+}\\
+
+\underline{\textbf{Exemples :}}\\
+
+\initq \q  Quel est le périmètre d'un cercle de rayon 30 dm ?\\
+
+\vspace*{2cm}
+
+\q Quelle est la circonférence d'un cercle de diamètre 10 cm ?\\
+
+\vspace*{2cm}
+
+\includegraphics[scale=0.55]{aireintro.eps} 
+
+\section{Aire d'une figure}
+
+\df{
+L'aire d'une "figure fermée" est la mesure de sa surface, c'est à dire de la partie recouvrant l'intérieur de cette figure.\\
+L'unité de base pour mesurer les surfaces est le mètre carré ($m^2$). 
+}\\
+
+\vspace*{0.5cm}
+
+\underline{\textbf{Exemple :}}
+
+\bmul{2}
+
+Sachant qu'un carré fait 1 cm de côté, quelle est l'aire du polygone ci-contre :\\
+
+\reponse[4]
+
+\columnbreak
 
 
-\includegraphics[scale=1]{formules.eps} 
+\rotatebox{90}{
+\includegraphics[scale=1]{aires1.eps} 
+}
+\emul
+
+\vspace*{0.2cm}
+
+\begin{itemize}[label=\textbullet]
+\item \textbf{Voici un rappel des formules donnant l'aire de quelques figures planes connues :}\\
+
+\end{itemize}
+
+\bmul{2}
+
+\begin{center}
+\underline{\textbf{Le rectangle} }
+
+
+\includegraphics[scale=1]{rect.eps} \\
+
+\fbox{\textbf{Aire du rectangle :}\hspace*{0.5cm} $\mathcal{A} =l \times L$ \hspace*{0.5cm}}
+\end{center}
+\columnbreak
+
+\begin{center}
+\underline{\textbf{Le carré} }
+
+
+\includegraphics[scale=0.9]{carre.eps} \\
+
+\fbox{\textbf{Aire du carré :}\hspace*{0.5cm}$\mathcal{A} =c^{2}$ \hspace*{0.5cm}}
+\end{center}
+
+\emul
+
+\bmul{2}
+
+\begin{center}
+\underline{\textbf{Le cercle} }
+
+
+\includegraphics[scale=1]{cercle.eps} \\
+
+\fbox{\textbf{Aire du cercle :}\hspace*{0.5cm} $\mathcal{A} =\pi \times r^{2}$\hspace*{0.5cm}}
+\end{center}
+\columnbreak
+
+\begin{center}
+\underline{\textbf{Le triangle} }
+
+
+\includegraphics[scale=1]{triangle.eps} \\
+
+\fbox{\textbf{Aire du triangle :}\hspace*{0.5cm} $\mathcal{A} = \dfrac{b \times h}{2}$\hspace*{0.5cm}}
+\end{center}
+
+\emul
+
+\newpage
+
+\underline{\textbf{Exemples :}}\\
+
+\initq \q Quelle est l'aire d'un carré de côté 2,5 cm ?\\
+\reponse[4]\\
+
+\q Quelle est l'aire d'un rectangle de longueur 0,5 cm et de largeur 1 cm ?\\
+\reponse[4]\\
+
+\q Quelle est l'aire d'un cercle de 10 m de diamètre ?\\
+\reponse[4]\\
+
+\begin{Exoapp}
+
+\initq \q Calculer l'aire grisée.\\
+
+\begin{center}
+\includegraphics[scale=0.6]{aires3.eps} 
+\end{center}
+
+\reponse[4]
+
+\end{Exoapp}
 
 
 

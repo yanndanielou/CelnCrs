@@ -1,0 +1,983 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paramétrages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,10pt,twoside,french]{article}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% déclaration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caractères
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la géométrie
+	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et séparations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{1cm}{1cm}{1cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'entête
+	%	6 fixe la distance entre l'entête et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
+	\newtheorem{propriete}{\underline{Propriété :}}
+	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{Méthodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom spéciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Repérage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Opérateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombrée
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des thèorème et autres définitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On règle les marges définitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contrôle fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On règle les marges définitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contrôle fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des fonctions mathématiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des numérotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{.75cm}(\arabic{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \thesection}% apparence du numéro
+   {1em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \thesubsection}% apparence du numéro
+   {1em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \thesubsubsection}% apparence du numéro
+   {0.5em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{Transformations et homothéties}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+\newpage
+ \setcounter{page}{1}
+ 
+ \vspace*{0.2cm}
+
+\textbf{\underline{{\large Mes objectifs:}}}
+
+\begin{itemize}[label=$\hookrightarrow$]
+\item Je dois comprendre l'effet d'une translation, d'une symétrie (axiale et centrale), d'une rotation, d'une homothétie sur une figure,
+
+\item Je dois savoir mettre en \oe{uvre} ou écrire un protocole de construction d'une figure géométrique,
+
+\item Je dois savoir utiliser un logiciel de géométrie dynamique, notamment pour transformer une figure par translation, symétrie, rotation, homothétie.
+
+
+
+\end{itemize}
+
+ \vspace*{0.5cm}
+
+
+\begin{center}
+\textbf{{\large Activité d'introduction} }
+\end{center}
+
+$\rightarrow$ Quels types de transformation connaissez-vous ? Quelles sont les transformations présentes ci-dessous ?\\
+
+
+
+\bmul{2}
+
+\underline{Figure 1  }: . . . . . . . . . . . . . . . . . . . . . . .
+
+\begin{center}
+\includegraphics[scale=0.7]{trans1.eps} 
+\end{center}
+
+On dit que le dessin en position 2 est \textbf{l'image} du dessin en position 1 par \textbf{la translation qui transforme A en B} ou, autrement dit, par la translation de vecteur $\vec{AB} $.\\
+
+\columnbreak
+
+\underline{Figure 2  }: . . . . . . . . . . . . . . . . . . . . . . .
+
+\begin{center}
+\includegraphics[scale=0.6]{symax1.eps} 
+\end{center}
+
+On dit que la tortue n\degre2 est \textbf{l'image} de la tortue n\degre1 par \textbf{la symétrie d'axe (d)}.\\
+
+
+
+
+\emul
+
+\vspace*{0.5cm}
+
+\bmul{2}
+
+\underline{Figure 3  }: . . . . . . . . . . . . . . . . . . . . . . .
+
+\begin{center}
+\includegraphics[scale=0.6]{rotation1.eps} 
+\end{center}
+
+On dit que la tortue n\degre2 est \textbf{l'image} de la tortue n\degre1 par \textbf{la rotation de centre O et d'angle 60 \degre}.\\
+\columnbreak
+
+\underline{Figure 4  }: . . . . . . . . . . . . . . . . . . . . . . .
+
+\begin{center}
+\includegraphics[scale=0.7]{symcentrale1.eps} 
+\end{center}
+
+On dit que le robot n\degre2 est \textbf{l'image} du robot n\degre1 par \textbf{la symétrie de centre O}, ou encore par \textbf{la rotation de centre O et d'angle 180\degre}.\\
+
+\emul
+
+
+\newpage
+
+\section{Symétries, Translations et rotations}
+
+
+\subsection{La symétrie axiale}
+
+\bmul{2}
+\green 
+\underline{Définition} :
+
+\black
+Deux  points  E  et  E'  sont  \textbf{symétriques  par  rapport  à une droite (d)} si (d) est \textbf{la médiatrice de [EE']} : c'est à dire si (d) est perpendiculaire à [EE']  en son milieu.
+
+
+Par symétrie axiale, une figure et son symétrique se superposent par pliage le long de l'axe de symétrie.\\
+
+\columnbreak
+
+\begin{center}
+\includegraphics[scale=0.4]{symax2.eps} 
+\end{center}
+
+\emul
+
+
+\subsection{La symétrie centrale}
+\bmul{2}
+\textcolor{green}{\underline{Définition} :}\\
+
+\black
+Une symétrie centrale est une transformation du plan par rapport à un point. L'image d'un point E \textbf{dans une symétrie de centre O} est le point E' tel que \textbf{O est le milieu du segment [EE']}.\\
+On dit que E' est le symétrique de E par rapport à O.\\
+
+
+Deux figures symétriques par symétrie centrale se superposent par un demi-tour autour du centre de symétrie.
+
+\columnbreak
+
+\begin{center}
+\includegraphics[scale=0.5]{symcentrale2.eps} 
+\end{center}
+
+\emul
+
+\subsection{La translation}
+
+\bmul{2}
+\textcolor{green}{\underline{Définition} :}\\
+
+\black
+
+L'image  d'un  point  E  par  \textbf{la  translation  qui transforme A en B}, autrement dit \textbf{la translation de vecteur $\vec{AB} $}, est le point E' tel que \textbf{ABE'E est un parallélogramme}.\\
+On dit que E' est le translaté de E.\\
+
+Par  translation,  une  figure  et  sa  translatée  se  superposent  en glissant le long de la direction.
+
+\columnbreak
+
+\begin{center}
+\includegraphics[scale=0.5]{translation2.eps} 
+\end{center}
+
+
+\emul 
+
+\subsection{La rotation}
+
+\bmul{2}
+\textcolor{green}{\underline{Définition} :}
+
+\black
+
+L'image  d'un  point  E  par  \textbf{la  rotation de centre O et d'angle $\alpha$ }est le point E' tel que : \\
+\hspace*{2cm}- $OE' = OE$\\
+\hspace*{2cm}- $\widehat{EOE'}= \alpha$
+
+Ci-contre, la figure $F_{1}$ et la figure $F_{2}$, que l'on obtient après une rotation de centre O et d'angle 120\degre dans le sens direct, \textbf{sont superposables}.\\
+
+
+
+\columnbreak
+
+
+\begin{center}
+\includegraphics[scale=0.5]{rotation2.eps} 
+\end{center}
+
+\emul
+
+Par convention, le «\textbf{ sens direct }» en mathématique signifie « \textbf{sens inverse des aiguilles d'une montre} ».
+
+\noindent \underline{\textbf{Remarque} :} Une \textbf{symétrie  centrale} est  une  \textbf{rotation}  particulière  pour laquelle l'angle est \textbf{180\degre}.\\
+
+
+
+\newpage
+
+\begin{center}
+ \underline{\textbf{{\large Activités sur les transformations}}}
+\end{center}
+
+ \vspace*{0.5cm}
+ 
+\exo Vrai ou faux.
+
+\bmul{2}
+
+\begin{flushleft}
+\includegraphics[scale=0.9]{exo1.eps} 
+\end{flushleft}
+
+\columnbreak
+
+\qa Le symétrique de N par rapport à Q est V.\\
+
+\qa Le symétrique de L par rapport à (MR) est Q.\\
+
+\qa L'image de H par la rotation de centre I et d'angle 45\degre dans le sens anti-horaire est C.\\
+
+\qa L'image de M par la translation qui transforme Q en P est L.\\
+
+\qa L'image de H par la rotation de centre B et d'angle 90\degre dans le sens horaire est J.\\
+
+\qa La translation qui transforme M en D transforme L en C.\\
+
+\emul
+ 
+ 
+\bmul{2}
+ 
+ \exo 
+ 
+ \includegraphics[scale=0.6]{exo2.eps} \\
+ 
+\initq \q Construire en vert l'image du rectangle ABCD par la symétrie d'axe (AC).\\
+\q Construire en noir l'image du rectangle ABCD par la symétrie de centre B.\\
+\columnbreak
+
+\exo \\
+
+\initq \q Tracer un triangle ABC.\\
+
+\q Par la translation qui transforme A en B, placer le point D, image de B.\\
+\q Par la translation qui transforme A en B, placer le point E qui a pour image A.\\
+
+\q Placer le points F tel que C soit le milieu du segment [BF].\\
+
+\q Placer le point G, image de A par la symétrie de centre C.\\
+
+\q Quelle est l'image de F par la translation qui transforme A en B ? Justifier.\\
+ Que peut-on en déduire pour les droites (AB) et (GF) ?\\
+
+\q Démontrer que les droites (BF) et (DG) sont parallèles.\\
+
+\emul
+
+\exo 
+\bmul{2}
+
+\includegraphics[scale=0.6]{exo4.eps} 
+
+\columnbreak
+
+\initq \q Tracer en rouge l'image de cette figure par la translation qui transforme A en B.\\
+
+
+\q Tracer en bleu l'image de la figure par la rotation de centre O et d'angle 45\degre dans le sens inverse des aiguilles d'une montre.\\
+
+
+\emul
+
+\newpage
+
+\prop{
+Dans  toutes  ces  transformations l'image d'une figure est superposable à la figure initiale. On sait donc que :\\
+\hspace*{2cm}- Les longueurs sont conservées\\
+\hspace*{2cm}- Les angles sont conservés\\
+\hspace*{2cm}- Les aires sont conservées.
+}\\
+
+
+
+\section{Homothétie}
+
+\df{
+Soit un point O. \\
+Transformer une figure par \textbf{une homothétie de centre O}, c'est l'agrandir ou la réduire en faisant glisser ses points le long de droites passant par O.\\
+Une homothétie est définie par  : \\
+\hspace*{4cm} -  un centre,\\
+\hspace*{4cm} -  un rapport k avec k un nombre relatif non nul.
+}\\
+
+\df{
+Une figure et son image par une homothétie ont la même forme.\\
+L'homothétie conserve, l'alignement des points, la notion de milieu et la mesure des angles.
+}\\
+
+\subsection{Avec un rapport k positif}
+
+\begin{itemize}[label=\textbullet]
+
+\item \textbf{Image d'un point par une homothétie de rapport positif}\\
+
+\df{
+L'image d'un point M par une homothétie de centre O et de \textbf{rapport k positif} est le point M' tel que :\\
+
+\hspace*{4cm}  -  M' appartient à la demi-droite [OM);\\
+\hspace*{4cm}  -   $OM'=k\times OM$.\\
+
+}\\
+
+\underline{Exemple :} Construire M' l'image du point M par l'homothétie de centre O et de rapport k = 2,5 puis M'' l'image de M par l'homothétie de centre O et de rapport k = 0,2.
+
+\begin{center}
+\includegraphics[scale=0.8]{homoex1.eps} 
+\end{center}
+
+\newpage
+
+\item \textbf{Image d'un segment par une homothétie de rapport positif}\\
+
+\prop{
+On considère A,B et O trois points du plan et k un nombre positif. Si les points A' et B' sont les images respectives des points A et B  par l'homothétie de centre O et de rapport k alors
+
+\hspace*{4cm}    $(A'B') \sslash (AB)$ ,\\
+\hspace*{4cm}  et  $A'B' = k \times AB$  .\\
+
+}\\
+
+\underline{\textbf{Démonstration}:}\\
+
+\begin{center}
+\includegraphics[scale=0.8]{demohomo.eps} 
+\end{center}
+
+\bi
+\item Comme A' est l'image de A par l'homothétie de centre O et de rapport k positif, d'après la définition, on a : $OA' = k \times OA$ ou encore $\dfrac{OA'}{OA}=k$.\\
+De même B' est l'image de B par l'homothétie de centre O et de rapport k, donc $OB' = k \times OB$ ou encore $\dfrac{OB'}{OB}=k$.\\
+
+On a $\dfrac{OA'}{OA}=k$ et $\dfrac{OB'}{OB}=k$ donc \textbf{$k=\dfrac{OA'}{OA}=\dfrac{OB'}{OB}$}\\
+
+Comme $\dfrac{OA'}{OA}=\dfrac{OB'}{OB}$, d'après la réciproque du théorème de Thalès on peut affirmer que \fbox{\textbf{$(A'B') \sslash (AB)$}}.
+
+\item On sait que $(A'B') \sslash (AB)$ et que les points O, A, A' sont alignés dans le même ordre que les points O, B, B'.\\
+
+D'après le théorème de Thalès, on a :\\
+
+$ \dfrac{OA'}{OA}=\dfrac{OB'}{OB} = \dfrac{A'B'}{AB} =k $ et ainsi $\dfrac{A'B'}{AB}=k$ ou encore \fbox{$A'B' = k \times AB$}\\
+
+
+
+
+\ei
+
+
+
+\item \textbf{Image d'une figure par une homothétie de rapport positif}\\
+
+
+\underline{\textbf{Exemple 1}} : $k >1$
+
+On veut transformer la figure $F_{1}$ par l'homothétie de rapport $k=2$.\\
+
+\begin{center}
+\includegraphics[scale=1]{homok2.eps} 
+\end{center}
+
+
+
+\underline{\textbf{Exemple 2}} : $0<k<1$
+
+On veut transformer la figure $J_{1}$ par l'homothétie de rapport $k=0.5$.\\
+
+\begin{center}
+\includegraphics[scale=0.85]{homok0.5.eps} 
+\end{center}
+
+\end{itemize}
+
+\prop{ On considère la figure $F_{2}$ qui est l'image de la figure $F_{1}$ par une homothétie de centre O et de rapport k.\\
+
+    Si $k>1$, alors $F_{2}$ est un agrandissement de $F_{1}$ par cette homothétie;\\
+    Si $0<k<1$, alors $F_{2}$ est une réduction de $F_{1}$ par cette homothétie.
+}\\
+
+\begin{Exoapp}
+
+\initq \q Tracer un triangle équilatéral ABC de côté 11 cm. Tracer l'image du triangle ABC par l'homothétie de centre O et de rapport k = 0.5.\\
+
+
+
+\q  Tracer un carré ABCD de côté 3 cm.\\
+Tracer l'image du carré ABCD par l'homothétie de centre O et de rapport k = 2.\\ Calculer l'aire de ABCD et l'aire de A'B'C'D' et comparer-les.\\
+
+
+
+\end{Exoapp}
+
+\prop{
+Dans une homothétie de rapport k positif :\\
+
+-  les longueurs sont multipliées par k;\\
+-  les aires sont multipliées par $k^{2}$.
+
+}\\
+
+\begin{Exoapp}
+
+LEON est un carré de côté 5 cm. MARC est l'image de LEON par une homothétie de rapport $k=4$.\\
+
+\initq \q Quelle est la nature de MARC ?\\
+\reponse[2]\\
+
+\q Quel est le périmètre de MARC ?\\
+\reponse[2]\\
+
+\q Quelle est l'aire de MARC?\\
+\reponse[2]\\
+
+\end{Exoapp}
+ 
+
+\subsection{Avec un rapport k négatif}
+
+On peut aussi effectuer une homothétie avec un rapport k négatif (c'est-à-dire $k<0$). L'image de la figure sera alors de l'autre côté du centre.\\
+
+\underline{Remarque :} Une homothétie de rapport $k=-1$ correspond à une symétrie centrale.
+
+\newpage
+
+\bmul{2}
+
+\underline{\textbf{Exemple 1}} : $k = -1$
+
+On veut transformer la figure $F_{1}$ par l'homothétie de rapport $k=-1$.\\
+
+
+\begin{flushleft}
+\includegraphics[scale=0.7]{homok-1.eps} 
+\end{flushleft}
+
+
+\columnbreak
+
+\underline{\textbf{Exemple 2}} : $k<0$
+
+On veut transformer la figure $J_{1}$ par l'homothétie de rapport $k=-2$.\\
+
+
+\begin{flushleft}
+\includegraphics[scale=0.7]{homok-2.eps} 
+\end{flushleft}
+
+
+\emul
+
+\begin{Exoapp}
+
+\initq \q Tracer l'image du polygone ci-dessous par l'homothétie de centre O et de rapport $k=-1$.\\
+
+\includegraphics[scale=1.1]{exoapp2a.eps} \\
+
+\q Tracer l'image d'un rectangle ABCD de longueur 5 cm et de largeur 3 cm par une homothétie de centre E et de rapport $k=-2$. \\
+
+\includegraphics[scale=1.15]{exoapp2b.eps} \\
+
+\end{Exoapp}
+
+
+
+
+
+\section{Pavages du plan}
+
+
+
+
+\end{document}
