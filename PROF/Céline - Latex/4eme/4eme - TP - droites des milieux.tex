@@ -1,0 +1,191 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{TP : Droite des milieux}{Nom :}{Prénom :}{Classe}{Date}
+
+
+\vspace*{1cm}
+
+
+\exo{5}\textbf{Droite passant par le milieu de deux côtés d'un triangle}\\
+
+\q Construire un triangle ABC quelconque.\\
+
+\q Placer D le milieu du segment [AB] et E le milieu de segment [AC].\\
+
+\q Tracer la droite (DE). Puis déplacer les points A, B et C.\\
+
+\q  Conjectures :\\
+
+\qa Comment semblent être les droites (DE) et (BC) ? (Sur le logiciel, utiliser l'outil "Relation entre deux objets".)\\
+\reponse[1]\\
+
+\qa Mesurer la longueur des segments [DE] et [BC]. Que peut-on dire des segments [DE] et [BC] ?\\
+\reponse[1]
+
+\begin{center}
+\textbf{Évaluation  durant le TP :}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+Triangle ABC  & \hspace*{1cm}/1 \\ 
+\hline 
+Points D et E & \hspace*{1cm}/1 \\ 
+\hline 
+Droite & \hspace*{1cm}/1 \\ 
+\hline 
+
+\end{tabular} 
+\end{center}
+
+\vspace*{0.6cm}
+
+\exo{15} \textbf{Droite passant par le milieu d'un côté et parallèle à un autre côté}\\
+
+\vspace*{0.5cm}
+
+\textbf{ PARTIE 1 : Conjecturer}\\
+
+\initq \q Construire un triangle ABC.\\
+
+\q \initqa
+\qa Placer le point D, le milieu du segment [AB].\\
+
+\qa Tracer la droite parallèle à (BC) passant par D.\\
+
+\q Placer E, le point d'intersection de cette droite avec le segment [AC].\\
+
+\q Mesurer la longueur des segments [EA] et [EC].\\
+\reponse[1]
+
+\q Déplacer les points de la figure Que peut-on conjecturer sur le point E ?\\
+\reponse[2]\\
+
+
+\begin{center}
+\textbf{Évaluation  durant le TP :}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+Triangle ABC  & \hspace*{1cm}/1 \\ 
+\hline 
+Points D et E & \hspace*{1cm}/1 \\ 
+\hline 
+Droite & \hspace*{1cm}/1 \\ 
+\hline 
+
+\end{tabular} 
+\end{center}
+
+\newpage
+
+\textbf{ PARTIE 2 : Démontrer}\\
+
+\initq \q Placer F, le milieu de [BC].\\
+
+Répondre aux questions suivantes à l'aide de vos connaissances en rédigeant des démonstrations. \\
+
+\q 
+\initqa 
+\qa Démontrer que les droite (DF) et (EC) sont parallèles.\\
+\reponse[5]\\
+
+\qa Démontrer que le quadrilatère DFCE est un parallélogramme\\
+\reponse[5]\\
+
+\q 
+\initqa \qa Démontrer que DF = EC\\
+\reponse[4]\\
+
+\qa $DF= \dfrac{AC}{2}$\\
+\reponse[4]\\
+
+\qa En déduire que le point E est le milieu du segment [AC].\\
+\reponse[4]\\
+
+
+\vspace*{2cm}
+\begin{flushright}
+\textbf{Note : ......./ 20 }
+\end{flushright}
+
+ 
+
+
+\end{document}

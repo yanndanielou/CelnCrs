@@ -1,0 +1,158 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Organiser un calcul(1)}{Nom :}{Prénom :}{Classe}{Date}
+
+
+
+\vspace*{1cm}
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Compétences & Acquis & En cours  & Non acquis \\ 
+\hline 
+-Utiliser un vocabulaire adapté &  &  &  \\ 
+\hline
+-Écrire une expression correspondant à une
+succession d'opérations &  &  &  \\ 
+\hline
+-Effectuer une succession d'opération donnée &  &  &  \\ 
+\hline 
+-Respecter les priorités de calculs  &  &  &  \\ 
+\hline 
+
+
+\end{tabular} 
+
+\vspace*{0.5cm}
+
+\exo{4} Questions de cours\\
+
+\q \textbf{Traduire} les phrases suivantes par une expression numérique puis \textbf{calculer} :\\
+
+\qa	La différence de 13 et de 6.\\
+\reponse[1]\\
+
+\qa	La somme de 54 et du quotient de 8 par 4.\\
+\reponse[1]\\
+
+\q Traduire les expressions numériques suivantes par \textbf{des phrases} :\\
+
+\initqa
+\qa $129  - (36 \times 2)$  \hspace*{0,3cm}
+\reponse[1]\\
+
+\qa $(38 - 5 )\times 7$ \hspace*{0,3cm}
+\reponse[1]\\
+
+\medskip
+
+\exo{3} Camille a acheté pour 77 euros, cinq livres de poche de même prix et un CD à 17 euros. \\
+
+\initq
+\q	Écrire \textbf{une} expression numérique qui permet de calculer le prix d'un livre de poche.\\
+\reponse[1]\\
+
+\q	Calculer le prix d'un livre de poche \textbf{en indiquant les étapes de calcul }.\\
+\reponse[2]\\
+
+
+
+\exo{3} Calculer les expressions suivantes \textbf{en détaillant les étapes de calcul}.\\
+
+\begin{multicols}{2}
+$V = 9 - [2 \times (12-8)] $\\
+\reponse[3]\\
+
+$M =(34-(25-6))\times 8 $\\
+\reponse[3]\\
+
+
+\columnbreak
+
+$Q = (15-4) \times (7+2) $\\
+\reponse[3]\\
+
+
+
+\end{multicols}
+
+
+
+
+
+
+
+\end{document}

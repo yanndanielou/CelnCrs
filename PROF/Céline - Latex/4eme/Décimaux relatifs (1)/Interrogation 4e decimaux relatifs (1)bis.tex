@@ -1,0 +1,172 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Décimaux relatifs(1)}{Nom :}{Prénom :}{Classe}{Date}
+
+
+
+\vspace*{1cm}
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Compétences & Acquis & En cours  & Non acquis \\ 
+\hline 
+- Savoir additionner et soustraire des entiers relatifs &  &  &  \\ 
+\hline 
+- Savoir multiplier deux nombres positifs  &  &  &  \\ 
+\hline 
+- Respecter les priorités de calculs  &  &  &  \\ 
+\hline 
+- Calculer le produit de plusieurs nombres relatifs simples &  &  &  \\ 
+\hline 
+- Organiser et effectuer à la main les séquences de calcul correspondantes &  &  &  \\ 
+\hline 
+\end{tabular} 
+
+\vspace*{0.5cm}
+
+\exo{2} Questions de cours\\
+
+\q Compléter la propriété suivante.\\
+
+Pour additionner deux nombres relatifs de \textbf{même signe} :	
+\begin{itemize}
+\item \reponse[1] ;
+\item \reponse[1].
+\end{itemize}
+
+\q Quel est le signe d'un produit de 67 facteurs non nuls dont 31 sont positifs ? (\textbf{Justifier})\\
+\reponse[2]\\
+
+\medskip
+
+\exo{6,5} Effectuer les calculs suivants \textbf{en indiquant toutes les étapes de calculs}.\\
+
+\begin{multicols}{3}
+
+$H=-5 + 13 $\\
+\reponse[1]\\
+
+$D = -8 \times 6 $\\
+\reponse[1]\\
+
+$K = 15 + 4,2 - 6 + 3,7 - 8,1$\\
+\reponse[2]\\
+
+\columnbreak
+
+$M = 15 - ( -8)$\\
+\reponse[1]\\
+
+$P = -100 \times (-70,8) $\\
+\reponse[1]\\
+
+$U = ( 6 - 17 ) \times ( 4 - 3 )$\\
+\reponse[2]\\
+
+\columnbreak
+
+
+$S = 13 \times (-3)$\\
+\reponse[1]\\
+
+$Z = 8 + 3 \times ( - 7 ) $\\
+\reponse[1]\\
+
+$R = 11-(8 - 12)$\\
+\reponse[2]\\
+
+
+
+\end{multicols}
+
+
+
+\exo{1,5} \\
+
+\initq
+\q Déterminer le signe du produit suivant : $W= -1 \times (-2) \times 2,5 \times (-4) \times 7 \times (-0,5) $\\
+\reponse[1]\\
+
+\q Calculer l'expression suivante \textbf{en indiquant toutes les étapes de calculs}.\\
+
+$W= -1 \times (-2) \times 2,5 \times (-4) \times 7 \times (-0,5) $\\
+\reponse[4]
+
+
+
+
+
+\end{document}

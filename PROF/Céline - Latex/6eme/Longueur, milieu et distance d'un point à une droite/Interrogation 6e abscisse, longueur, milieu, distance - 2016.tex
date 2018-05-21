@@ -1,0 +1,162 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Repérage sur une demi-droite graduée, longueur et milieu}{Nom :}{Prénom :}{Classe}{Date}
+
+
+\exo{2} Cours \\
+
+\q Donner la définition du milieu d'un segment.\\
+\reponse[2]\\
+
+\q Donner la définition d'une abscisse.\\
+\reponse[2]\\
+
+
+\exo{1} Écrire les codages manquants :\\
+
+
+\bmul{2}
+
+\q On sait que :
+O milieu de [AC], OB = OA et (AB) $\perp$ (BC) 
+
+\columnbreak
+
+\includegraphics[scale=1]{codage.eps} 
+
+\emul
+
+\exo{2} Compléter chaque graduation avec les nombres qui manquent :\\
+
+\bmul{2}
+
+\begin{flushleft}
+\includegraphics[scale=1]{dtegraduee.eps} 
+\end{flushleft}
+
+\columnbreak
+
+\begin{flushleft}
+ \includegraphics[scale=1]{dtegraduees2.eps}
+ \end{flushleft} 
+\emul
+
+
+\exo{2} \\
+
+\initq \q Écrire l'abscisse des points placés sur les  demi-droites graduées ci-dessous.\\
+
+\includegraphics[scale=1]{abscisse1.eps} \\
+
+
+\q Sur la demi-droite, placer les points : R(3,3) ; O(1,5) ; S(7,4) et N(0,4). \\
+
+\includegraphics[scale=1]{abscisse2.eps} \\
+
+
+\medskip
+
+
+\exo{3}
+
+Soit [FG] un segment tel que : FG = 15 cm.\\
+Soit C le point du segment [FG] tel que : FC = 6,4 cm.\\
+Soit K le point du segment [FG] tel que : C est le milieu de [FK].\\
+
+\initq
+\q Faire une figure\\
+
+\vspace*{5cm}
+
+\q Calculer CG.(\textbf{Justifier votre réponse.})\\
+\reponse[2]\\
+
+\q Tout en sachant que C est le milieu de [FK]. Calculer CK.(\textbf{Justifier votre réponse.})\\
+\reponse[2]\\
+
+
+
+
+
+
+
+
+
+
+\end{document}

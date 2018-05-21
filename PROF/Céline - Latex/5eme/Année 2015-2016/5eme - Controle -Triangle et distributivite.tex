@@ -1,0 +1,183 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} \usepackage[french]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Contrôle : Triangles et distributivité}{Nom :}{Prénom :}{Classe}{Date}
+
+
+
+
+
+\vspace*{0.5cm}
+
+\exo{2,5}  Cours\\
+
+\noindent \q Donner la définition d'une hauteur dans un triangle.\\
+\q Comment appelle-t-on le point de concours des médianes d'un triangle ? \\
+\q Compléter \textbf{sur le sujet} les propriétés suivantes :\\
+
+Pour tous les nombres que l'on note k, a et b : \hspace*{1cm}     $k \times (a +b)= ...................... + ............................$\\
+
+Pour tous les nombres que l'on note k, a et b : \hspace*{1cm}     $............................= k \times a - k \times b$\\
+
+\vspace*{0,5cm}
+
+\exo{4,5} Soit le triangle ABC tel que AB = 6 cm, AC = 3,7 cm et BC = 4,4 cm.\\
+
+\initq 
+\q Ce triangle est-il constructible? Si oui, construire le triangle ABC.\\
+
+\q Tracer les 3 hauteurs de ce triangle.\\
+
+\q Que remarque-t-on?\\
+
+\vspace*{0,5cm}
+
+\exo{3} \\
+
+\initq 
+\q Construire un triangle SUR tel que UR = 5 cm , $\widehat{RUS}= 100$ et  $\widehat{SRU} = 30 $ puis placer le point A tel que U soit le milieu du segment [AR].\\
+
+\q Que représente, de façon précise, la droite (SU) pour le triangle SAR ? \\
+
+\vspace*{0,5cm}
+
+\exo{4} Entourer \textbf{sur le sujet} en rouge les expressions factorisées et en bleu les expressions développées.\\
+
+\bmul{3}
+
+\qa $4 \times (2 + 3)$\\
+
+\qa $1,7 \times 4 + 1,7 \times 6$
+
+\columnbreak
+
+\qa $k \times (a + b)$\\
+
+\qa $(9-3) \times 7$
+
+\columnbreak
+
+\qa $7 \times 3 - 7 \times 2 + 7 \times 7$\\
+
+\qa $k \times a - k \times b$
+
+\emul
+
+\vspace*{0,5cm}
+
+\exo{2}
+Une maman achète 5 pains au chocolat et 5 croissants. 	\\		Un pain au chocolat coûte 0,90 euros et un croissant, 0,70 euros  .\\
+
+Calculer de \textbf{deux façons} différentes le montant de la dépense.	\\
+
+\vspace*{0,5cm}
+
+\exo{4}
+Utiliser la distributivité pour calculer astucieusement les expressions suivantes. \textbf{(Détailler vos calculs)}\\
+
+\bmul{4}
+
+$A = 99 \times 42,5	$
+
+\columnbreak
+
+$C = 58 \times 7,4 - 58 \times  7,3$
+
+\columnbreak
+
+$B = 1,7 \times 1 001$		
+
+\columnbreak
+
+$D = 63 \times  4,1 + 37 \times  4,1	$
+
+\emul
+
+
+\exo{} Bonus \\
+
+Sachant que  $45 \times 23 = 1 035$  et  $45 \times  52 = 2 340$, utiliser la distributivité pour calculer :\\
+
+E = $45 \times 75$	\hspace*{1cm} $F = 29 \times 45 	$ 				(Détailler vos calculs)
+
+
+
+
+
+\end{document}
