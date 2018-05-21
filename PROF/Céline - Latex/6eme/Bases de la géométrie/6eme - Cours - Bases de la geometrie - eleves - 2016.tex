@@ -355,6 +355,11 @@
 }		
 		
 		
+		
+		\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+		
 		% Danger dans box
 		\newsavebox{\dangerbox}
  
@@ -523,13 +528,33 @@
 \newpage
  \setcounter{page}{1}
  
+ \vspace*{0.5cm}
+ 
+ \textbf{\underline{{\large Mes objectifs:}}}
+
+\begin{itemize}[label=$\hookrightarrow$]
+
+\item Je dois savoir utiliser un vocabulaire approprié,
+
+\item 	Je dois savoir définir et tracer un point, un segment, une droite et une demi-droite,
+
+\item  Je dois savoir lire et utiliser les symboles d'appartenance et de non-appartenance.\\
+
+
+\end{itemize}
+
+\underline{\textbf{Introduction}}\\
+
+
+La géométrie étudiée ici se situe dans le plan : on parle de \textbf{géométrie plane}.\\
+Le plan est une surface infinie. Pour nous, le plan est symbolisé par la feuille de papier qui elle est bien sûr limitée à ses bords.
+ 
 \section{Les points}
 
-La géométrie étudiée ici se situe dans le plan : on parle de géométrie plane . Le plan est symbolisé par la feuille de papier . Le plan est une surface infinie. La feuille que l'on utilise est bien sûr limitée à ses bords.
 
 \subsection{Définition}
 
-\df {Un point du plan est un lieu , un endroit qui n'a ni longueur ni épaisseur .Il existe partout
+\df {Un point du plan est un lieu, un endroit qui n'a ni longueur ni épaisseur. Il existe partout
 des points, qui ne sont pas nécessairement marqués ou encore moins nommés.
 }
 
@@ -540,14 +565,14 @@ des points, qui ne sont pas nécessairement marqués ou encore moins nommés.
 On note un point avec une \textbf{lettre majuscule d'imprimerie}.
 Sur une feuille, on note l'endroit où il se trouve par \textbf{une croix}.\\
 
-Sur une même figure, deux points ne peuvent pas avoir le même nom.\\
+\begin{Danger} Sur une même figure, deux points ne peuvent pas avoir le même nom.\\
 
-\ex{
+\end{Danger}
 
-\vspace*{2cm}
-}
+\textbf{\underline{Exemple :}} Représenter deux points M et N.\\
  
 
+\vspace*{2cm}
 
 
 
@@ -557,15 +582,37 @@ Sur une même figure, deux points ne peuvent pas avoir le même nom.\\
 
 \df{
 Un segment est une ligne droite limitée des deux côtés par ses extrémités
-}
+}\\
+
+\begin{center}
+\includegraphics[scale=0.6]{segment1.eps} \\
+\end{center}
 
 
-\vspace*{3cm}
+\begin{Exoapp}
+\bmul{2}
+
+\includegraphics[scale=0.65]{segment2.eps} 
+
+
+\columnbreak
+
+
+ Tracer en bleu le segment [AC] en noir le segment [BD]. Noter E le point où les deux segments se croisent.\\
+
+\emul
+
+\end{Exoapp}
 
 \subsection{Notation}
 
-On note [AB] ou [BA], le segment d'extrémités A et B.
+On note [AB] ou [BA], le segment d'extrémités A et B.\\
 
+
+\begin{information}
+
+En mathématiques, on utilise un crochet pour noter une ligne qui s'arrête.
+\end{information}
 
 
 \section{Les droites}
@@ -575,17 +622,40 @@ On note [AB] ou [BA], le segment d'extrémités A et B.
 Une droite est une ligne droite illimitée des deux côtés.
 }
 
-\vspace*{3cm}
+\begin{center}
+\includegraphics[scale=0.7]{dte1.eps} \\
+\end{center}
+
+\begin{Exoapp}
+\bmul{2}
+
+\includegraphics[scale=0.65]{segment2.eps} 
+
+
+\columnbreak
+
+
+ Tracer en rouge la droite (AB), en vert la droite (DC). Noter F le point où les deux droites se coupent.\\
+
+\emul
+
+\end{Exoapp}
 
 \subsection{Notation}
 
 On note (AB) ou (BA), la droite qui passe par les points A et B.\\
 
-\rem{ 
+\begin{information}
 En mathématiques, on utilise une parenthèse pour noter une ligne qui ne s'arrête pas.
-On peut aussi nommer une droite sans donner le nom des points par lesquels elle passe.}\\
+On peut aussi nommer une droite sans donner le nom des points par lesquels elle passe.\\
 
-\vspace*{3cm}
+\begin{center}
+\includegraphics[scale=0.5]{dte2.eps} 
+\end{center}
+
+\end{information}
+
+\vspace*{1cm}
 
 \section{Les demi-droites}
 \subsection{Définition}
@@ -594,33 +664,66 @@ On peut aussi nommer une droite sans donner le nom des points par lesquels elle 
 Une demi-droite est une\textbf{ ligne droite limitée} d'un côté par un \textbf{point} qu'on appelle "\textbf{origine}" et\textbf{ illimitée} de l'autre côté.
 }
 
-
+\begin{center}
+\includegraphics[scale=0.8]{demi-dte1.eps} 
+\end{center}
 
 \subsection{Notation}
 
-Une demi-droite se note avec un crochet du côté de l'origine et une parenthèse de l'autre côté.
+Une demi-droite se note avec un crochet du côté de l'origine et une parenthèse de l'autre côté.\\
 
-\vspace*{3cm}
+On note [CD), la demi-droite d'origine C.\\
+
+\vspace*{0.2cm}
+
+\begin{Exoapp}
+
+\bmul{2}
+
+\includegraphics[scale=0.6]{demidte1.eps} 
+
+\columnbreak
+
+Gaëlle est absente au cours de maths aujourd'hui, décrivez-lui la figure ci-contre.\\
+
+\reponse[4]
+
+
+\emul
+
+
+\end{Exoapp}
+
 
 \section{Points alignés}
 
 \df{
-Des points sont alignés lorsqu'ils sont placés sur une même droite\\
+Des points sont alignés lorsqu'ils sont placés sur une même droite
 }\\
 
-\vspace*{3cm}
-
-\df{
-Quand des points sont alignés, pour indiquer que :
-\bi
-\item C appartient à la droite (AB), on note C $\in$ (AB).
-\item E n'appartient pas à la droite (AB), on note E $\notin$ (AB).
-\ei
-}
+\begin{center}
+\includegraphics[scale=0.8]{alignes.eps} 
+\end{center}
 
 \vspace*{0.5cm}
 
-\ex 
+\df{
+Pour indiquer que :
+\bi
+\item C \textbf{appartient à} la droite (AB), on note C \textbf{$\in$} (AB).
+\item E \textbf{n'appartient pas} à la droite (AB), on note E \textbf{$\notin$} (AB).
+\ei
+}\\
+
+
+
+\ex
+ 
+\vspace*{0.5cm}
+
+\begin{center}
+\includegraphics[scale=0.55]{alignes2.eps} 
+\end{center}
 
 
 \end{document}

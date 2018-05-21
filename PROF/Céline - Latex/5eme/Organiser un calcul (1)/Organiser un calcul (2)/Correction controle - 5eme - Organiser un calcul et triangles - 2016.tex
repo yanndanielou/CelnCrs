@@ -1,0 +1,290 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{color}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Correction du contrôle sur les 3 premiers chapitres}{5 ème}{}{}{}
+
+
+
+\exo{5} \\
+
+\q Relier chaque phrase à l'expression qui lui correspond (\textbf{sur le sujet})
+
+\begin{multicols}{2}
+
+\bi
+\item La somme de 9 et du quotient de 7 par 2.\\
+
+\item Le produit de 7 par la somme 9 et de 2.\\
+
+\item Le quotient de 9 par la somme 7 et de 2.\\
+
+\item La somme de 9 et du produit de 7 par 2.\\
+
+\item Le quotient d'une somme par 2.
+\ei
+
+\hfill
+\columnbreak
+\hfill
+
+\bi
+\item $A= 9 + 7 \times 2$\\
+
+\item $ B= 7 \times (9 +2)$\\
+
+\item $ C=9 + \dfrac{7}{2}$\\
+
+\item $D= (9+7) \div 2$\\
+
+\item $E= 9 \div (7+2)$
+\ei 
+
+\end{multicols}
+
+\q Calculer les expressions A, B, C, D et E.\\
+
+\red
+\bmul{3}
+
+$A= 9 + 7 \times 2$\\
+
+$A= 9 + 14$\\
+
+\fbox{$A= 23$}\\
+
+$D= (9+7) \div 2$\\
+
+$D= 16 \div 2$\\
+
+\fbox{$D= 8$}\\
+
+\columnbreak
+
+$ B= 7 \times (9 +2)$\\
+
+$ B= 7 \times 11$\\
+
+\fbox{$ B= 77$}\\
+
+$E= 9 \div (7+2)$\\
+
+$E= 9 \div 9$\\
+
+\fbox{$E= 1$}\\
+
+\columnbreak
+
+$ C= 9 + \dfrac{7}{2}$\\
+
+$ C= 9 + 3,5 $\\
+
+\fbox{$ C= 12,5 $}\\
+
+\emul
+
+
+\vspace*{0.6cm}
+
+\black \exo{2}(\textbf{Sur le sujet})
+
+Chacune des expressions suivantes est fausse. Placer, dans chaque cas, des parenthèses aux bons endroits pour rendre l'égalité vraie.\\
+
+
+\qa 2 $\times$ \textcolor{red}{(}5 + 2\textcolor{red}{)} = 14\\
+
+\qa	1 + \textcolor{red}{(} 3 + 2 \textcolor{red}{)} $\times$ 6 = 31\\
+
+\qa	\textcolor{red}{(} 1 + 2 \textcolor{red}{)} $\times$ 5 + 3 $\times$ \textcolor{red}{(} 10 - 4 \textcolor{red}{)} = 33
+
+\vspace*{0.6cm}
+
+\exo{4}\\
+
+Calculer les expressions suivantes en respectant les priorités (on détaillera toutes les étapes de calculs) :\\
+
+\initq
+
+\bmul{3}
+\q $D= 24-15+8$\\
+
+\red $D= 9+8$\\
+
+\fbox{$D= 17$}\\
+
+
+
+\columnbreak
+
+\black \q $M= 18 - 5 \times 2$\\
+
+\red $M= 18 - 10$\\
+
+\fbox{$M= 8$}\\
+
+
+\columnbreak
+
+\black \q $G= 81 \div 9 \times 3$\\
+
+\red $G= 9 \times 3$\\
+
+\fbox{$G= 27$}\\
+
+
+
+\emul
+
+\bmul{3}
+\black \q $V= (24-2-1) \div (4 \times 25)$\\
+
+\red $V= (21) \div (4 \times 25)$\\
+
+$V= 21 \div 100$\\
+
+\fbox{$V= 0,21$}\\
+
+\columnbreak
+
+
+\black \q $L = 57 + 30 \div 6$\\
+
+\red $L = 57 + 5$\\
+
+\fbox{$L = 62$}\\
+
+
+
+\columnbreak
+
+
+
+
+\black \q $S= 3 \times [18 -(4-1)\times2]$\\
+
+\red $S= 3 \times [18 - 3 \times2]$\\
+
+$S= 3 \times [18 - 6]$\\
+
+$S= 3 \times 12$\\
+
+\fbox{$S= 36$}\\
+
+
+
+\emul
+
+\vspace*{0.6cm}
+
+\black \exo{2}\\
+
+Pour le tournoi de handball du collège, les professeurs d'EPS ont réparti les 96 élèves de $5^{eme}$ en équipes de 12. Pour l'échauffement, 24 ballons sont distribués équitablement entre les équipes.\\
+
+\initq
+\q Écrire \textbf{une} expression qui permet de calculer le nombre de ballons distribués par équipe.\\
+
+\red L'expression qui nous permettra de calculer le nombre de ballons distribués par équipe est la suivante : $ M = 24 \div ( 96 \div 12) $\\
+
+\black \q Effectuer les calculs.\\
+
+\red $ M = 24 \div ( 96 \div 12) $\\
+
+$ M = 24 \div 8 $\\
+
+\fbox{$M = 3$} Il y aura donc 3 ballons par équipes.\\
+
+\vspace*{0.6cm}
+
+
+\black \exo{3}\\
+
+\initq
+\q Peut-on construire un triangle dont les côtés mesurent 9 cm, 5,5 cm et 6,1 cm?(\textbf{Justifier votre réponse}) Si oui, construire ce triangle.\\
+
+\red La plus grande longueur est 9 cm . La somme des deux autres vaut : 5,5 + 6,1 = 11,6cm. Ainsi, 9 < 5,5 + 6,1 donc on peut en déduire que le triangle sera constructible.\\
+
+\black \q Des segments de longueurs 8,3 cm, 12,4 cm et 3,4 cm peuvent-ils être les côtés d'un triangle ? (\textbf{Justifier votre réponse}) Si oui, construire ce triangle.
+
+\red La plus grande longueur est 12,4 cm . La somme des deux autres vaut : 8,3 + 3,4 = 11,7 cm. Ainsi, 12,4 > 8,3 + 3,4 donc on peut en déduire que le triangle ne sera pas constructible.\\
+
+
+\vspace*{0.6cm}
+
+\black Pour les exercices de géométrie, reprendre le cours sur comment tracer un triangle.
+
+\end{document}

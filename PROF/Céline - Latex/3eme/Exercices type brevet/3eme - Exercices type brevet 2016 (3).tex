@@ -1,0 +1,136 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} \usepackage[french]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+\newcommand{\initexo}{\setcounter{numexo}{0}}
+
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Exercices type brevet }{Nom :}{Prénom :}{Classe :}{Date :}
+
+
+
+\exo{6}\\
+\q On donne l'expression suivante :  $ E = (2x+1)^{2} +(x-3)^{2}$ \\
+
+\noindent \qa Calculer la valeur de E lorsque $x = 3$.\\
+\qa Développer et réduire l'expression E.\\
+\qa Utilise la réponse de la question précédente pour calculer la valeur de l'expression E pour $x = 3$.\\
+
+
+\q On donne l'expression suivante :  $ K = (x-2)(x+2)- (2x+3)(x-2)$ \\
+
+\noindent \initqa \qa Calculer la valeur de l'expression K pour $ x = -1$.\\
+\qa Factoriser l'expression K.\\
+\qa Utiliser la réponse à la question précédente pour calculer la valeur de l'expression K pour $x = -1$.\\
+
+
+\exo{2}\\
+\initq \q Calculer le PGCD de 4 567 et 2 431. Que peut-on dire de ces deux nombres ?\\
+
+\noindent \q Simplifier la fraction suivante $\dfrac{33 291}{59535}$, en utilisant soit la notion de PGCD ou de décomposition en produit de facteurs premiers.\\
+
+
+\vspace*{2cm}
+
+\titre{Exercices type brevet }{Nom :}{Prénom :}{Classe :}{Date :}
+
+
+
+\initexo \exo{6}\\
+\initq \q On donne l'expression suivante :  $ E = (8 - 5x)^{2} +(x+9)^{2}$ \\
+
+\noindent \initqa \qa Calculer la valeur de E lorsque $x = 3$.\\
+\qa Développer et réduire l'expression E.\\
+\qa Utilise la réponse de la question précédente pour calculer la valeur de l'expression E pour $x = 3$.\\
+
+
+\q On donne l'expression suivante :  $ K = (x-2)(x+2)- (7x-3)(x-2)$ \\
+
+\noindent \initqa \qa Calculer la valeur de l'expression K pour $ x = -1$.\\
+\qa Factoriser l'expression K.\\
+\qa Utiliser la réponse à la question précédente pour calculer la valeur de l'expression K pour $x = -1$.\\
+
+
+\exo{2}\\
+\initq \q Calculer le PGCD de 2 276 et 3 217. Que peut-on dire de ces deux nombres ?\\
+
+\noindent \q Simplifier la fraction suivante $\dfrac{33 291}{59535}$, en utilisant soit la notion de PGCD ou de décomposition en produit de facteurs premiers.\\
+
+
+
+\end{document}
+ 
