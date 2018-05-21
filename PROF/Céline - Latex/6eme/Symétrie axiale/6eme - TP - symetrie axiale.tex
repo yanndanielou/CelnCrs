@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{TP avec Geogebra : Symétrie axiale}{}{}{6ème}{}
+\vspace*{0.15cm}
+
+Ouvrir le logiciel Geogebra.\\
+Préparer la feuille en enlevant les axes. \textit{(clic droit de la souris puis axes)}\\
+
+\textbf{PARTIE 1 :} \textit{Symétrique d'un point par rapport à une droite}\\
+\q Construire une droite (AB) et placer un point M qui n'appartient pas à la droite (AB). \\
+Colorier la droite (AB) en rouge. \textit{(outil déplacer \includegraphics[scale=1]{curseur.eps}  , clic droit de la souris, propriétés, couleur)}\\
+\q Construire le symétrique M' du point M par rapport à la droite (AB).\textit{ (outil symétrie axiale \includegraphics[scale=0.8]{outilsymax.eps}  )}\\
+\q Tracer le segment [MM'], il coupe la droite (AB) en I, placer le point I.\\
+ \textit{(outil intersection entre deux objets \includegraphics[scale=1]{intersection.eps}  )}\\
+\q Mesurer les segments [MI] et [IM'] avec un outil de mesure de Geogebra. \\
+\textbf{Le point I est . . . . . . . . . . . . . . . . . . . . . du segment [MM'].}\\
+\q Faire afficher la mesure de l'angle $\widehat{MIA}$. \textit{(outil angle \includegraphics[scale=1]{outilangle.eps} )}\\
+Que peut-on dire de la droite (AB) pour le segment [MM’] ?\\
+   \textbf{La droite (AB) est . . . . . . . . . . . . . . . . . . . au segment [MM’].}\\
+
+$\rightarrow$ \textbf{Enregistrez votre fichier} dans le dossier devoir sous le nom "TP-prenom "\\
+
+\vspace*{0.15cm}
+
+\textbf{PARTIE 2 :} \textit{Symétrique d'un segment par rapport à une droite}\\
+ \initq \q Sur le même fichier, se déplacer si besoin avec l'outil \includegraphics[scale=0.85]{outilsdeplacement.eps}  et construire un segment [CD].\\
+\q Construire le symétrique [C’D’] du segment [CD] par rapport à la droite (AB).\\
+\q Faire afficher et comparer les longueurs des segments [CD] et [C’D’].\\
+
+\noindent\fbox{\parbox{\linewidth-2\fboxrule-2\fboxsep}{\textbf{\underline{Conclusion }:} \textit{Le symétrique d'un segment par rapport à une droite est} . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}}\\
+
+\vspace*{0.15cm}
+
+\textbf{PARTIE 3 :} \textit{Symétrique d'une droite par rapport à une droite}\\
+ \initq \q Toujours sur le même fichier, se déplacer si besoin avec l'outil \includegraphics[scale=0.85]{outilsdeplacement.eps}  et construire une droite (EF).\\
+\q Puis construire son symétrique par rapport à la droite (AB).\\
+
+
+\noindent\fbox{\parbox{\linewidth-2\fboxrule-2\fboxsep}{\textbf{\underline{Conclusion }:} \textit{Le symétrique d'une droite par rapport à une droite est} . . . . . . . . . . . . . . . . . . . . . . . . . . . . . }}\\
+
+$\rightarrow$ \textbf{Penser à enregistrer} régulièrement votre travail en cliquant sur "Sauvegarder".\\
+
+\vspace*{0.15cm}
+
+\textbf{PARTIE 4 :} \textit{Symétrique d'un cercle par rapport à une droite}\\
+ \initq \q Toujours sur le même fichier, se déplacer si besoin avec l'outil \includegraphics[scale=0.85]{outilsdeplacement.eps}  et construire un cercle de centre O et passant par un point G.\\
+\q Construire ensuite les symétriques O’ et G’ de O et G par rapport à la droite (AB) puis le symétrique du cercle.\\
+\q Tracer les segments [OG] et [O’G’] et afficher leurs longueurs.\\
+
+
+\noindent\fbox{\parbox{\linewidth-2\fboxrule-2\fboxsep}{\textbf{\underline{Conclusion }:} \textit{Le symétrique d'un cercle  par rapport à une droite est} . . . . . . . . . . . . . de même . . . . . . . . . }}\\
+\vspace*{0.15cm}
+
+\textbf{PARTIE 5 :} \textit{Symétrique d'un polygone par rapport à une droite}\\
+\initq \q Toujours sur le même fichier, construire un polygone RSTUV puis son symétrique R’S’T’U’V’ par rapport à la droite (AB).\\
+\q Afficher et comparer les longueurs des segments [RS], [ST], [TU], [UV], [VR] et leurs symétriques.\\
+\q Afficher et comparer les mesures de l'angle $\widehat{RST}$ et de son symétrique.\\
+\q Afficher et comparer l'aire du polygone RSTUV et de son symétrique.\\
+
+
+\noindent\fbox{\parbox{\linewidth-2\fboxrule-2\fboxsep}{\textbf{\underline{Conclusion }:} La symétrie axiale conserve : - . . . . . . . . . . . . . . . . . .\\
+\hspace*{7.5cm}- . . . . . . . . . . . . . . . . . .\\
+\hspace*{7.5cm}- . . . . . . . . . . . . . . . . . .\\
+} 
+}\\
+\end{document}
