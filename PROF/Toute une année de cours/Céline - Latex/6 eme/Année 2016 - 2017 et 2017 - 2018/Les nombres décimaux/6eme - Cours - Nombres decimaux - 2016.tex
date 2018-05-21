@@ -352,7 +352,10 @@
   \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
   \vspace*{\marge}
   \bigskip
-}		
+}	
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}	
 		
 		
 		% Danger dans box
@@ -529,36 +532,38 @@
 
 \df{
 L'écriture décimale d'un nombre décimal se compose d'une \textbf{partie entière} et d'une \textbf{partie décimale}.
-}
+}\\
 
+\vspace*{0.1cm}
 
-\includegraphics[scale=1]{ex.eps} 
+\underline{\textbf{Exemple :}}
+
+\hspace*{3cm} \includegraphics[scale=0.7]{ex.eps} 
+
 
 \subsection{Écrire un nombre décimal}
 
 
 \prop{
-Ajouter des 0 avant la partie entière, ou après la partie décimale, ne change pas un nombre  décimal.}
+Ajouter des 0 avant la partie entière, ou après la partie décimale, ne change pas un nombre  décimal.}\\
 
 \medskip
 
-\ex
+\underline{\textbf{Exemple :}}
 
-83,5 = 0083,5\\
-725,35 = 725,350\\
-0,52 = 0,520\\
+ 0083,5 = 83,5  \hspace*{2cm}  07 025,350 = 7 025,35    \hspace*{2cm} 0,5200 = 0,52\\
 
 
 \subsection{Nombre décimal et nombre entier}
 
 \df{
-Un nombre décimal dont la partie décimale est zéro est un nombre entier.}
+Un nombre décimal dont la partie décimale est zéro est un nombre entier.}\\
 
-\medskip
 
-\ex
 
-372,0 est un nombre entier : 372,0 = 372
+\underline{\textbf{Exemple :}}
+
+372,0 = 372  donc 372 est un nombre entier
 
 \medskip
 
@@ -576,10 +581,28 @@ Un nombre décimal dont la partie décimale est zéro est un nombre entier.}
 
 Lire le nombre écrit dans le tableau de numération de différentes manières.\\
 
+\noindent \reponse[2]\\
 
-\includegraphics[scale=1]{appli.eps} 
+\begin{Exoapp}
+Compléter par les nombres qui conviennent :\\
 
-\vspace*{0.6cm}
+\bmul{2}
+
+1 unité = . . . . . . centièmes\\
+
+1 dixième = . . . . . . millièmes\\
+
+\columnbreak
+
+1 dixième = . . . . . . centièmes\\
+
+1 centaine = . . . . . . centièmes\\
+
+
+\emul
+
+
+\end{Exoapp}
 
 
 \subsection{Fractions décimales}
@@ -594,19 +617,63 @@ Lire le nombre écrit dans le tableau de numération de différentes manières.\\
 
 \ex
 
-$\dfrac{5}{10}=0,5$ (cinq dixièmes) ; $\dfrac{123}{100}=1,23$(cent vingt trois centièmes) ...
+$\dfrac{5}{10}=0,5$ (cinq dixièmes) ; $\dfrac{123}{100}=1,23$ (cent vingt trois centièmes) ...\\
 
 \vspace*{0.6cm}
 
+\begin{Exoapp}
 
+Compléter :\\
+
+\bmul{4}
+
+$ 4,7 = \dfrac{. . . }{10}$
+
+\columnbreak
+
+$ 1,50 = \dfrac{. . .}{. . .}$
+
+
+\columnbreak
+
+$ 3,91 = \dfrac{. . .}{. . .}$
+
+\columnbreak
+
+$ 9,105 = \dfrac{. . .}{. . .}$
+
+
+\emul
+
+
+\end{Exoapp}
 
 
 \subsection{Différentes écritures possibles pour un nombre décimal}
 
+\vspace*{0.6cm}
 
 
+Un nombre décimal peut s'écrire sous différentes formes :\\
 
-\includegraphics[scale=1]{diff.eps} 
+
+\setlength{\shadowsize}{1pt}
+
+\begin{center}
+
+\bi
+
+\item $53,145 = (5 \times 10) + 3 + \dfrac{1}{10} + \dfrac{4}{100}  + \dfrac{5}{1000}$\\
+
+\item $53,145 = 53 + \dfrac{145}{1000} $ \hspace*{0.2cm} $\leftarrow $\shadowbox{On lit : 53 unités et 145 millièmes}\\
+
+\item $53,145 = \dfrac{53 145}{1000} $ \hspace*{0.2cm} $\leftarrow $\shadowbox{On lit : 53 145 millièmes} \\
+
+\ei
+
+\end{center}
+
+
 
 
  
