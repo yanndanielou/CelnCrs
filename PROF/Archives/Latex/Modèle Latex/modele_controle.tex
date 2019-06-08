@@ -1,0 +1,604 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+
+
+
+
+
+
+\titre{Nombres relatifs et repérage}
+\niveau{6\ieme}
+
+
+
+    Compléter :
+    \begin{multicols}{4}
+      \begin{enumerate}
+      \item $\dfrac{5}{8}=\dfrac{\ldots}{56}$
+      \item $\dfrac{36}{\ldots}=\dfrac{6}{5}$
+      \item $\dfrac{\ldots}{8}=\dfrac{70}{80}$
+      \item $\dfrac{9}{\ldots}=\dfrac{18}{14}$
+      \item $\dfrac{\ldots}{25}=\dfrac{1}{5}$
+      \item $\dfrac{72}{\ldots}=\dfrac{9}{4}$
+      \item $\dfrac{5}{\ldots}=\dfrac{45}{63}$
+      \item $\dfrac{40}{\ldots}=\dfrac{10}{9}$
+      \end{enumerate}
+    \end{multicols}
+
+
+    \exercice
+    Compléter :
+    \begin{multicols}{4}
+      \begin{enumerate}
+      \item $\dfrac{1}{6}=\dfrac{2}{\ldots}$
+      \item $\dfrac{\ldots}{8}=\dfrac{24}{48}$
+      \item $\dfrac{\ldots}{7}=\dfrac{64}{56}$
+      \item $\dfrac{2}{7}=\dfrac{\ldots}{35}$
+      \item $\dfrac{18}{\ldots}=\dfrac{9}{2}$
+      \item $\dfrac{45}{36}=\dfrac{\ldots}{4}$
+      \item $\dfrac{\ldots}{18}=\dfrac{1}{9}$
+      \item $\dfrac{28}{42}=\dfrac{\ldots}{6}$
+      \end{enumerate}
+    \end{multicols}
+
+
+    \exercice
+    Compléter :
+    \begin{multicols}{4}
+      \begin{enumerate}
+      \item $\dfrac{\ldots}{70}=\dfrac{2}{7}$
+      \item $\dfrac{45}{\ldots}=\dfrac{5}{2}$
+      \item $\dfrac{\ldots}{24}=\dfrac{8}{3}$
+      \item $\dfrac{12}{24}=\dfrac{\ldots}{4}$
+      \item $\dfrac{42}{49}=\dfrac{\ldots}{7}$
+      \item $\dfrac{7}{\ldots}=\dfrac{63}{72}$
+      \item $\dfrac{\ldots}{90}=\dfrac{10}{9}$
+      \item $\dfrac{\ldots}{48}=\dfrac{10}{6}$
+      \end{enumerate}
+    \end{multicols}
+
+
+    \exercice
+    \parbox{0.4\linewidth}{
+      \begin{enumerate}
+      \item Donner les coordonnées des points B, C, D, F, G et N.
+      \item Placer dans le repère les points P, S, T, U, V et X de coordonnées
+        respectives \hbox{$(-3{,}5~;~0)$}, \hbox{$(-4~;~-2{,}5)$},
+        \hbox{$(4{,}5~;~-4{,}5)$}, \hbox{$(0~;~-3)$}, \hbox{$(-0{,}5~;~1)$} et
+        \hbox{$(3{,}5~;~4{,}5)$}.
+      \item Placer dans le repère le point Z d'abscisse -3 et d'ordonnée -1,5
+      \end{enumerate}}\hfill
+    \parbox{0.55\linewidth}{
+      \psset{unit=0.8cm}
+      \begin{pspicture}(-4.95,-4.95)(4.95,4.95)
+        \psgrid[subgriddiv=2, subgridcolor=lightgray,
+        gridlabels=8pt](0,0)(-5,-5)(5,5)
+        \psline[linewidth=1.2pt]{->}(-5,0)(5,0)
+        \psline[linewidth=1.2pt]{->}(0,-5)(0,5)
+        \pstGeonode[PointSymbol=x,PosAngle={-135,45,135,45,-45,45,},PointNameSep=0.4](-4.0, -1.5){B}(0, 4.0){C}(-2.5, 3.0){D}(0.5, 0){F}(1.0, -3.5){G}(4.5, 3.0){N}
+      \end{pspicture}}
+
+    \exercice
+    \parbox{0.4\linewidth}{
+      \begin{enumerate}
+      \item Donner les coordonnées des points A, B, D, E, G et I.
+      \item Placer dans le repère les points J, M, N, P, U et W de coordonnées
+        respectives \hbox{$(-2~;~-1{,}5)$}, \hbox{$(4~;~0)$},
+        \hbox{$(0~;~4{,}5)$}, \hbox{$(4{,}5~;~4)$}, \hbox{$(-1{,}5~;~2)$} et
+        \hbox{$(3{,}5~;~-3{,}5)$}.
+      \item Placer dans le repère le point X d'abscisse -2 et d'ordonnée 3
+      \end{enumerate}}\hfill
+    \parbox{0.55\linewidth}{
+      \psset{unit=0.8cm}
+      \begin{pspicture}(-4.95,-4.95)(4.95,4.95)
+        \psgrid[subgriddiv=2, subgridcolor=lightgray,
+        gridlabels=8pt](0,0)(-5,-5)(5,5)
+        \psline[linewidth=1.2pt]{->}(-5,0)(5,0)
+        \psline[linewidth=1.2pt]{->}(0,-5)(0,5)
+        \pstGeonode[PointSymbol=x,PosAngle={45,45,-135,45,-45,135,},PointNameSep=0.4](0.5, 2.5){A}(0, 0.5){B}(-2.5, -2.5){D}(1.5, 0){E}(4.0, -2.0){G}(-4.5, 0.5){I}
+      \end{pspicture}}
+
+    \exercice
+    Construire la symétrique de chacune des figures par rapport au point O en
+    utilisant le quadrillage :\par
+    \psset{unit=.9cm}
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](2.5,1.0){a}(-2.5,2.5){b}(-1.5,-1.0){c}(-1.5,-1.5){d}(1.0,-3.0){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+    \hfill
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](2.0,1.0){a}(-0.5,3.0){b}(-2.5,-1.0){c}(-2.0,-3.0){d}(2.5,-2.5){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+    \hfill
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](1.5,1.5){a}(0.5,3.0){b}(-3.0,-2.0){c}(-3.0,-3.0){d}(3.0,-2.5){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+
+    \exercice
+    Construire la symétrique de chacune des figures par rapport au point O en
+    utilisant le quadrillage :\par
+    \psset{unit=.9cm}
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](3.0,1.0){a}(-0.5,2.0){b}(-2.0,-1.5){c}(1.0,-3.0){d}(2.5,-1.0){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+    \hfill
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](1.0,1.5){a}(-1.5,1.5){b}(-2.0,-0.5){c}(-1.0,-2.0){d}(2.5,-1.5){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+    \hfill
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](2.5,2.5){a}(0.5,3.0){b}(-1.5,-0.5){c}(0.5,-2.5){d}(3.0,-2.0){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.5,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+\section{Nombres relatifs}
+\begin{definition}
+Pour repérer des choses on a parfois besoin des nombres. On fixe une
+origine et chaque chose est repérée par un nombre.\par
+Parfois, il est nécessaire de repérer les objets de part et d'autre de
+l'origine. On précise le côté choisi en notant que le nombre est
+{\em positif} ($+$) ou {\em négatif} ($-$) : ce sont les nombres relatifs.
+Le nombre 0 est particulier : il est à la fois positif et négatif.
+
+\end{definition}
+\begin{ex}
+\parbox[t]{0.7\linewidth}{
+La température : on fixe comme origine la température à laquelle l'eau gèle :
+$0^{\circ}$C.
+Lorsqu'on est plus chaud que cette origine, on parle de températures
+{\em positives} (comme  $+16^{\circ}$C) et lorsqu'on est plus froid  que cette origine,
+on parle de températures {\em négatives} (comme  $-8^{\circ}$C).}%
+\hskip3em
+\parbox{0.1\linewidth}{%
+\setlength{\unitlength}{0.1cm}
+\begin{picture}(6.91,41.21)
+\shade\put(3.46,3.45){\arc{6.73504}{5.1720}{10.5306}}
+\put(3.46,39.45){\arc{2.98}{3.1482}{6.2765}}
+\path(1.95,39.46)(1.95,6.46)
+\path(4.95,39.46)(4.95,6.46)
+\shade\path(1.95,6)(1.95,33)(4.95,33)(4.95,6)(1.95,6)
+\multiput(1.55,7)(0,1){33}{\line(1,0){3.8}}
+{\tiny\multiputlist(7.95,7)(0,2){$-10$,$-8$,$-6$,$-4$,$-2$,$0$,$+2$,$+4$,
+	$+6$,$+8$,$+10$,$+12$,$+14$,$+16$,$+18$,$+20$,$+22$}
+\multiputlist(-1,8)(0,2){$-9$,$-7$,$-5$,$-3$,$-1$,$+1$,$+3$,$+5$,$+7$,
+	$+9$,$+11$,$+13$,$+15$,$+17$,$+19$,$+21$}
+}
+\thicklines\put(1.55,17){\line(1,0){3.8}}
+\end{picture}}
+\end{ex}
+
+
+\begin{ex}
+Les étages d'un immeuble sont  repérés par rapport à un niveau 0 : le
+rez-de-chaussée. Les étages au dessus sont les étages positifs et les
+étages en dessous (cave, garages) sont les étages négatifs. On retrouve
+cette notation sur les commandes d'ascenseur.\par
+
+\setlength{\unitlength}{0.00068in} %d'après Xfig 
+\begin{picture}(6286,4239)
+\put(492,159.119){\arc{70.237}{6.2011}{9.5069}}
+\put(772,159.119){\arc{70.237}{6.2011}{9.5069}}
+\path(492,162)(912,162)(912,237)(772,312)(562,312)(387,237)
+	(387,162)(492,162)
+\put(1242,159.119){\arc{70.237}{6.2011}{9.5069}}
+\put(1522,159.119){\arc{70.237}{6.2011}{9.5069}}
+\path(1242,162)(1662,162)(1662,237)(1522,312)(1312,312)(1137,237)
+	(1137,162)(1242,162)
+\put(1932,164.053){\arc{80.105}{0.0513}{3.0903}}
+\put(2252,164.053){\arc{80.105}{0.0513}{3.0903}}
+\path(1932,162)(2412,162)(2412,237)(2252,312)(2012,312)(1812,237)
+	(1812,162)(1932,162)
+\put(2682,164.053){\arc{80.105}{0.0513}{3.0903}}
+\put(3002,164.053){\arc{80.105}{0.0513}{3.0903}}
+\path(2682,162)(3162,162)(3162,237)(3002,312)(2762,312)(2562,237)
+	(2562,162)(2682,162)
+\path(987,912)(12,912)
+\path(312,462)(4212,462)
+\path(312,912)(312,12)(4212,12)(4212,912)
+\path(312,912)(12,1212)
+\path(312,12)(12,387)(12,1212)
+\path(312,462)(12,762)
+\path(12,1212)(912,1212)
+\path(4212,912)(3912,1212)
+\path(4212,912)(3912,912)
+\path(612,912)(612,462)
+\path(912,912)(912,462)
+\path(912,1062)(162,1062)
+\path(162,1062)(162,612)
+\path(612,912)(312,1212)
+\path(912,912)(612,1212)
+\path(1212,462)(1212,837)
+\path(1512,837)(1512,462)
+\path(1812,837)(1812,462)
+\path(2112,837)(2112,462)
+\path(2412,837)(2412,462)
+\path(2712,837)(2712,462)
+\path(3012,837)(3012,462)
+\path(3312,837)(3312,462)
+\path(3612,837)(3612,462)
+\path(3912,837)(3912,462)
+\blacken\path(4482,642)(4362,612)(4482,582)(4482,642)
+\path(4362,612)(5412,612)
+\blacken\path(4482,192)(4362,162)(4482,132)(4482,192)
+\path(4362,162)(5412,162)
+\blacken\path(4332,1092)(4212,1062)(4332,1032)(4332,1092)
+\path(4212,1062)(5412,1062)
+\blacken\path(4332,1317)(4212,1287)(4332,1257)(4332,1317)
+\path(4212,1287)(5412,1287)
+\blacken\path(4332,1767)(4212,1737)(4332,1707)(4332,1767)
+\path(4212,1737)(5412,1737)
+\blacken\path(4332,1992)(4212,1962)(4332,1932)(4332,1992)
+\path(4212,1962)(5412,1962)
+\blacken\path(4332,2217)(4212,2187)(4332,2157)(4332,2217)
+\path(4212,2187)(5412,2187)
+\blacken\path(4332,2442)(4212,2412)(4332,2382)(4332,2442)
+\path(4212,2412)(5412,2412)
+\blacken\path(4332,2637)(4212,2607)(4332,2577)(4332,2637)
+\path(4212,2607)(5412,2607)
+\blacken\path(4332,2892)(4212,2862)(4332,2832)(4332,2892)
+\path(4212,2862)(5412,2862)
+\blacken\path(4332,1542)(4212,1512)(4332,1482)(4332,1542)
+\path(4212,1512)(5412,1512)
+\put(5487,987){\makebox(0,0)[lb]{Niveau 0}}
+\put(5487,87){\makebox(0,0)[lb]{Niveau $-2$}}
+\put(5487,537){\makebox(0,0)[lb]{Niveau $-1$}}
+\put(5472,1242){\makebox(0,0)[lb]{Niveau $+1$}}
+\put(5442,1467){\makebox(0,0)[lb]{Niveau $+2$}}
+\put(5442,1677){\makebox(0,0)[lb]{Niveau $+3$}}
+\put(5442,1917){\makebox(0,0)[lb]{Niveau $+4$}}
+\put(5457,2142){\makebox(0,0)[lb]{Niveau $+5$}}
+\put(5442,2352){\makebox(0,0)[lb]{Niveau $+6$}}
+\put(5442,2577){\makebox(0,0)[lb]{Niveau $+7$}}
+\put(5427,2817){\makebox(0,0)[lb]{Niveau $+8$}}
+\texture{555555 55000000 555555 55888888 88555555 55000000 555555 55808080 
+	80555555 55000000 555555 55888888 88555555 55000000 555555 55888088 
+	80555555 55000000 555555 55888888 88555555 55000000 555555 55808080 
+	80555555 55000000 555555 55888888 88555555 55000000 555555 55888088 }
+\shade\path(1164,2439)(1164,3875)(1528,4095)
+	(1843,3942)(1843,3672)(1339,3672)
+	(1339,2439)(1164,2439)
+\path(1164,2439)(1164,3875)(1528,4095)
+	(1843,3942)(1843,3672)(1339,3672)
+	(1339,2439)(1164,2439)
+\texture{aa555555 55bbbbbb bb555555 55fefefe fe555555 55bbbbbb bb555555 55eeefee 
+	ef555555 55bbbbbb bb555555 55fefefe fe555555 55bbbbbb bb555555 55efefef 
+	ef555555 55bbbbbb bb555555 55fefefe fe555555 55bbbbbb bb555555 55eeefee 
+	ef555555 55bbbbbb bb555555 55fefefe fe555555 55bbbbbb bb555555 55efefef }
+\shade\path(1164,2439)(1022,2439)(1022,3992)
+	(1370,4212)(1528,4095)(1164,3875)(1164,2439)
+\path(1164,2439)(1022,2439)(1022,3992)
+	(1370,4212)(1528,4095)(1164,3875)(1164,2439)
+\path(1164,3875)(1022,3992)
+\path(1164,3875)(1022,3992)
+\path(1954,887)(1954,1107)(2160,1107)(2160,887)
+\path(2049,1057)(2049,887)(1985,887)(1985,1057)(2049,1057)
+\path(2096,1057)(2096,887)(2049,887)(2049,1057)(2096,1057)
+\path(2870,887)(2870,1107)(3091,1107)(3091,887)
+\path(2981,1057)(2981,887)(2918,887)(2918,1057)(2981,1057)
+\path(3028,1057)(3028,887)(2981,887)(2981,1057)(3028,1057)
+\path(3837,987)(3837,1104)(3220,1104)(3220,987)(3837,987)
+\path(3331,1104)(3331,987)
+\path(3441,1104)(3441,987)
+\path(3520,1104)(3520,987)
+\path(3631,1104)(3631,987)
+\path(3741,1104)(3741,987)
+\path(3837,1215)(3837,1315)(3220,1315)(3220,1215)(3837,1215)
+\path(3331,1315)(3331,1215)
+\path(3441,1315)(3441,1215)
+\path(3520,1315)(3520,1215)
+\path(3631,1315)(3631,1215)
+\path(3741,1315)(3741,1215)
+\path(3837,1437)(3837,1557)(3220,1557)(3220,1437)(3837,1437)
+\path(3331,1557)(3331,1437)
+\path(3441,1557)(3441,1437)
+\path(3520,1557)(3520,1437)
+\path(3631,1557)(3631,1437)
+\path(3741,1557)(3741,1437)
+\path(3837,1662)(3837,1765)(3220,1765)(3220,1662)(3837,1662)
+\path(3331,1765)(3331,1662)
+\path(3441,1765)(3441,1662)
+\path(3520,1765)(3520,1662)
+\path(3631,1765)(3631,1662)
+\path(3741,1765)(3741,1662)
+\path(3837,1887)(3837,1987)(3220,1987)(3220,1887)(3837,1887)
+\path(3331,1987)(3331,1887)
+\path(3441,1987)(3441,1887)
+\path(3520,1987)(3520,1887)
+\path(3631,1987)(3631,1887)
+\path(3741,1987)(3741,1887)
+\path(3837,2115)(3837,2233)(3220,2233)(3220,2115)(3837,2115)
+\path(3331,2233)(3331,2115)
+\path(3441,2233)(3441,2115)
+\path(3520,2233)(3520,2115)
+\path(3631,2233)(3631,2115)
+\path(3741,2233)(3741,2115)
+\path(3837,2337)(3837,2458)(3220,2458)(3220,2337)(3837,2337)
+\path(3331,2458)(3331,2337)
+\path(3441,2458)(3441,2337)
+\path(3520,2458)(3520,2337)
+\path(3631,2458)(3631,2337)
+\path(3741,2458)(3741,2337)
+\path(3837,2562)(3837,2647)(3220,2647)(3220,2562)(3837,2562)
+\path(3331,2647)(3331,2562)
+\path(3441,2647)(3441,2562)
+\path(3520,2647)(3520,2562)
+\path(3631,2647)(3631,2562)
+\path(3741,2647)(3741,2562)
+\path(3837,2787)(3837,2904)(3220,2904)(3220,2787)(3837,2787)
+\path(3331,2904)(3331,2787)
+\path(3441,2904)(3441,2787)
+\path(3520,2904)(3520,2787)
+\path(3631,2904)(3631,2787)
+\path(3741,2904)(3741,2787)
+\shade\path(1022,887)(912,1057)(912,2439)(1022,2290)(1022,887)
+\path(1022,887)(912,1057)(912,2439)
+	(1022,2290)(1022,887)
+\shade\path(3091,2222)(2981,2372)(2981,3267)(3091,3100)(3091,2222)
+\path(3091,2222)(2981,2372)(2981,3267)(3091,3100)(3091,2222)
+\shade\path(2254,2102)(2160,2290)(2160,2880)(2254,2677)(2254,2102)
+\path(2254,2102)(2160,2290)(2160,2880)(2254,2677)(2254,2102)
+\shade\path(1418,2290)(1339,2439)(1339,3672)(1418,3555)(1418,2290)
+\path(1418,2290)(1339,2439)(1339,3672)(1418,3555)(1418,2290)
+\texture{80222222 22555555 55808080 80555555 55222222 22555555 55880888 8555555 
+	55222222 22555555 55808080 80555555 55222222 22555555 55080808 8555555 
+	55222222 22555555 55808080 80555555 55222222 22555555 55880888 8555555 
+	55222222 22555555 55808080 80555555 55222222 22555555 55080808 8555555 }
+\shade\path(1418,2290)(1022,2290)(912,2439)(1339,2439)(1418,2290)
+\path(1418,2290)(1022,2290)(912,2439)(1339,2439)(1418,2290)
+\shade\path(1418,3555)(1339,3672)(1954,3672)(2049,3555)(1418,3555)
+\path(1418,3555)(1339,3672)(1954,3672)(2049,3555)(1418,3555)
+\shade\path(2254,2102)(2049,2102)(2049,2290)(2160,2290)(2254,2102)
+\path(2254,2102)(2049,2102)(2049,2290)(2160,2290)(2254,2102)
+\shade\path(2870,2677)(2254,2677)(2160,2880)(2728,2880)(2870,2677)
+\path(2870,2677)(2254,2677)(2160,2880)(2728,2880)(2870,2677)
+\shade\path(3091,2222)(2870,2222)(2870,2372)(2981,2372)(3091,2222)
+\path(3091,2222)(2870,2222)(2870,2372)(2981,2372)(3091,2222)
+\path(1954,3100)(1954,3167)(1528,3167)(1528,3100)(1954,3100)
+\path(1954,2002)(1954,2052)(1528,2052)(1528,2002)(1954,2002)
+\path(1954,1782)(1954,1832)(1528,1832)(1528,1782)(1954,1782)
+\path(1954,2222)(1954,2290)(1528,2290)(1528,2222)(1954,2222)
+\path(1954,2439)(1954,2492)(1528,2492)(1528,2439)(1954,2439)
+\path(1954,2677)(1954,2709)(1528,2709)(1528,2677)(1954,2677)
+\path(1954,2880)(1954,2947)(1528,2947)(1528,2880)(1954,2880)
+\path(1954,3335)(1954,3370)(1528,3370)(1528,3335)(1954,3335)
+\path(2460,2290)(2460,2610)(2364,2610)(2364,2290)(2460,2290)
+\path(2775,2290)(2775,2610)(2664,2610)(2664,2290)(2775,2290)
+\path(2775,1782)(2775,2102)(2664,2102)(2664,1782)(2775,1782)
+\path(2775,1292)(2775,1615)(2664,1615)(2664,1292)(2775,1292)
+\path(2460,1782)(2460,2102)(2364,2102)(2364,1782)(2460,1782)
+\path(2460,1292)(2460,1615)(2364,1615)(2364,1292)(2460,1292)
+\path(1954,1562)(1954,1615)(1528,1615)(1528,1562)(1954,1562)
+\path(1843,1007)(1843,1345)(1481,1345)(1481,1007)(1843,1007)
+\shade\path(3908,3087)(3087,3087)(2977,3254)(3750,3254)(3908,3087)
+\path(3908,3087)(3087,3087)(2977,3254)(3750,3254)(3908,3087)
+\path(1022,887)(1022,2290)(1418,2290)(1418,3555)(2049,3555)(2049,2102)
+	(2254,2102)(2254,2677)(2870,2677)(2870,2222)(3091,2222)(3091,3100)
+	(3912,3100)(3912,887)(1022,887)
+\end{picture}
+\end{ex}
+
+\begin{ex}
+\`A la banque, lorsqu'on a de l'argent sur un compte, 100\euro\ par exemple,
+la banque note $+100$. Si on
+dépense 150\euro\, on doit de l'argent à la banque (on doit 50\euro). La
+banque note : $-50$.
+\end{ex}
+\begin{ex}
+Pour situer à quelle altitude on se trouve, on prend comme origine
+le niveau de la mer : c'est le niveau 0. Le sommet du Mont Blanc se
+trouve à 4810 mètres au dessus de ce niveau, on note : $+4810$. Si un
+sous-marin se trouve à 1200 mètres en dessous du niveau de la mer, on note :
+$-1200$.\\
+\setlength{\unitlength}{0.0006in} %d'après Xfig
+\begin{picture}(7463,3000)(0,-10)
+\put(1362,787){\ellipse{600}{200}}
+\shade\path(2412,1212)(2187,987)(1962,387)
+	(1662,87)(12,12)(12,1212)
+	(2412,1212)(2412,1212)
+\put(1362,787){\blacken\ellipse{600}{200}}
+\blacken\path(1400,887)(1400,987)(1325,987)
+	(1325,936)(1362,936)(1362,887)(1400,887)
+\path(2412,1212)(2187,987)(1962,387)
+	(1662,87)(12,12)(12,1212)
+	(2412,1212)(2412,1212)
+\path(1662,87)(1962,387)(2187,987)(2412,1212)
+	(3012,1362)(3612,1362)(3912,1587)
+	(4212,2187)(4362,2037)(4512,2412)
+	(4587,2337)(4737,2637)(4962,1962)
+	(5112,2337)(5187,2262)(5262,2412)
+	(5637,1362)(5937,1662)(6312,1212)
+\dashline{60.000}(4737,2637)(6912,2637)
+\dashline{60.000}(2187,837)(6912,837)
+\dashline{60.000}(2412,1200)(6987,1200)
+\put(6987,762){\makebox(0,0)[lb]{$-1200$}}
+\put(7062,1137){\makebox(0,0)[lb]{0}}
+\put(6987,2562){\makebox(0,0)[lb]{$+4810$}}
+\end{picture}
+
+
+\end{ex}
+
+
+\begin{remark}
+Dans certains pays, comme la France, on repère l'année par rapport
+à une année origine : celle qui a vu la naissance de Jésus.
+On peut situer des évènements par rapport à cette origine : révolution
+française en $+1789$, naissance de Jules César en $-101$.
+
+Malheureusement, l'année origine n'est pas l'an 0 mais l'an 1. On ne peut
+donc pas tout à fait dire que les années sont comme les nombres relatifs
+puisque l'an 0 n'existe pas.
+\end{remark}
+
+
+
+\section{Droite graduée}
+
+\begin{definition}
+	Sur une droite, on repère chaque point par un nombre : son {\em abscisse}.
+	Pour cela, on place un point d'abscisse 0. D'un côté, on place régulièrement
+	les  nombres positifs et de l'autre les  nombres négatifs.
+\begin{center}
+	\setlength{\unitlength}{1cm}
+	\begin{picture}(12,2)(-6,-1)
+		\put(-6,0){\vector(1,0){12}}
+		\multiput(-5,-0.1)(1,0){11}{\line(0,1){0.2}}
+		\multiputlist(-5,-0.3)(1,0){$-5$,$-4$,$-3$,$-2$,$-1$,0,$+1$,
+			$+2$,$+3$,$+4$,$+5$}
+		\ptcentre(0,0.3){$\bullet$}\ptcentre(0,-1){$\bullet$}
+		\put(0,0.3){\vector(1,0){5}}
+		\put(0,-1){\vector(-1,0){5}}
+		\ptne(0,0.3){nombres positifs}
+		\ptno(0,-1){nombres négatifs}
+	\end{picture}
+\end{center}
+\end{definition}
+\begin{remark}
+Pour indiquer de quel côté de l'origine se trouvent les nombres positifs, la
+droite graduée est orientée : une flèche indique le côté des positifs.
+\end{remark}
+
+\begin{ex}
+\begin{center}
+\setlength{\unitlength}{5mm}
+	\begin{picture}(12,2)(-6,0)
+		\put(-6,0){\vector(1,0){12}}
+		\multiput(-5,-0.1)(1,0){11}{\line(0,1){0.2}}
+		{\tiny
+		\multiputlist(-5,-0.3)(1,0){$-5$,$-4$,$-3$,$-2$,$-1$,0,$+1$,
+			$+2$,$+3$,$+4$,$+5$}}
+		\ptn(-3,0){A} \ptn(0,0){B} \ptn(4,0){C}
+	\end{picture}
+\end{center}
+La droite est graduée de gauche à droite : les nombres positifs sont à droite
+de l'origine.\par
+L'abscisse de A est $-3$ (~on note : $\mathrm A(-3)$~);
+l'abscisse de B est 0 et l'abscisse de C
+est $+4$.
+\end{ex}
+
+
+
+
+\section{Repère du plan}
+\begin{definition}
+ Deux droites graduées perpendiculaires forment {\em un repère du plan}. Ces deux
+droites permettent de repérer un point dans le plan par ses {\em coordonnées} :
+{\em l'abscisse} (sur la droite horizontale) et {\em l'ordonnée}
+(sur la droite verticale).
+\begin{center}
+\setlength{\unitlength}{7.5mm}
+	\begin{picture}(12,10)(-6,-4)
+		\put(-6,0){\vector(1,0){12}}
+		\put(0,-4){\vector(0,1){10}}
+		\multiput(-5,-0.1)(1,0){11}{\line(0,1){0.2}}
+		\multiput(-0.1,-4)(0,1){10}{\line(1,0){0.2}}
+		\multiputlist(-5,-0.3)(1,0){$-5$,$-4$,$-3$,$-2$,$-1$,,$+1$,
+			$+2$,$+3$,$+4$,$+5$}
+		\multiputlist(0.5,-4)(0,1){$-4$,$-3$,$-2$,$-1$,,$+1$,
+			$+2$,$+3$,$+4$,$+5$}
+		\ptse(0,0){0}
+		\dashline{0.2}(3,0)(3,2)(0,2) \ptne(3,2){A}
+		\dashline{0.2}(0,-3)(1,-3)(1,0) \ptse(1,-3){B}
+		\dashline{0.2}(-4,0)(-4,5)(0,5) \ptno(-4,5){C}
+		\put(-1,-2){\vector(1,2){1}}\pto(-1,-2){Origine du repère}
+		\put(-2,-3.5){\vector(1,0){2}}\pto(-2,-3.5){Droite des ordonnées}
+		\put(3.5,-2){\vector(0,1){2}}\pts(3.5,-2){Droite des abscisses}
+	\end{picture}
+
+\end{center}
+Les coordonnées de A sont $(+3;+2)$. Son abscisse est $+3$, son ordonnée est $+2$.\\
+Les coordonnées de B sont $(+1;-3)$. Son abscisse est $+1$, son ordonnée est $-3$.\\
+Les coordonnées de C sont $(-4;+5)$. Son abscisse est $-4$, son ordonnée est $+5$.\\
+\end{definition}
+
+
+\end{document}

@@ -1,0 +1,1311 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paramétrages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,10pt,twoside,french]{article}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% déclaration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caractères
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la géométrie
+	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et séparations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{1cm}{1cm}{1cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'entête
+	%	6 fixe la distance entre l'entête et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
+	\newtheorem{propriete}{\underline{Propriété :}}
+	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{Méthodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom spéciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Repérage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Opérateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombrée
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des thèorème et autres définitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+
+	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On règle les marges définitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contrôle fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On règle les marges définitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contrôle fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des fonctions mathématiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des numérotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{.75cm}(\arabic{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \thesection}% apparence du numéro
+   {1em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \thesubsection}% apparence du numéro
+   {1em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \thesubsubsection}% apparence du numéro
+   {0.5em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{Fonction exponentielle}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+
+\newpage
+
+ \setcounter{page}{1}
+ 
+\section{Rappel : Vocabulaire}
+
+\begin{itemize}
+\item Une addition est une opération qui permet de calculer une somme.\\
+\ex
+15 + 23 est la somme de 15 et 23.\\
+15 et 23 sont des termes de la somme.\\
+\item Une soustraction est une opération qui permet de calculer une différence.\\
+\ex
+23 ? 15 est la différence de 23 et 15.\\
+	23 et 15 sont des termes de la différence.\\
+\item	Une multiplication est une opération qui permet de calculer un produit.\\
+\ex
+100 x 25 est le produit de 100 et 25.\\
+	100 et 25 sont deux facteurs du produit.\\
+\item	Une division est une opération qui permet de calculer un quotient.\\
+\ex
+24 : 5 est le quotient de 24 par 5.\\
+Le dividende est 24 et le diviseur est 5. Le quotient est égal à 4,8.\\
+\end{itemize}
+
+
+\section{Calcul d'une expression sans parenthèse}
+
+\subsection{Enchaînement d'additions et de soustraction}
+
+\begin{Exoapp}
+test
+\end{Exoapp}
+
+
+
+\begin{information}
+test
+\end{information}
+
+\begin{danger}
+la multiplication et la division sont prioritaires
+\end{danger}
+
+
+
+\begin{defi}
+test
+\end{defi}
+
+\df{test}
+
+\medskip
+
+\rems\\
+
+\ex
+\\
+
+\medskip
+
+
+
+
+\subsection{Propriétés}
+
+\prop{Soit $q$ et $r$ deux réels strictement positifs. Pour tous réels $a$ et $b$, on a :
+\begin{multicols}{2}
+\begin{itemize}
+\item $q^{-a}= \dfrac{1}{q^a}$
+\item $q^a\times r^a=(q\times r )^a$
+\item $(q^a)^b=q^{a\times b}$
+\item $q^{a-b}= \dfrac{q^a}{q^b}$
+\end{itemize}
+\end{multicols}
+}
+
+\medskip
+
+\preuve{En effet, $q^{x-x}= q^x \times q^{-x}$ soit $1= q^x \times q^{-x}$ donc $q^x \ne 0$ et $q^{-x}=\dfrac{1}{q^x}$.
+	
+	De plus, $q^{x-y}=q^{x+(-y)}=q^x \times q^{-y}= \dfrac{q^x}{q^y}$
+			
+}
+
+\medskip
+		
+\prop{Pour tout réel $a$, $q^{a}>0$.}
+
+\medskip
+	
+\preuve{En effet, $q^a=q^{\frac{a}{2}+\frac{a}{2}}= q^{\frac{a}{2}} \times q^{\frac{a}{2}}>0$ soit $q^x = \left( q^{\frac{a}{2}}\right)^2 $ avec $q^a \ne 0$.
+}
+
+
+
+		
+
+
+\subsection{Sens de variation}
+
+En continuité avec les suites numériques, on admet que le sens de variation de la fonction exponentielle de base $q$ avec $q>0$ est le même que celui de la suite géométrique associée :
+
+\medskip
+
+\thm{%
+\begin{itemize}
+	\item Si $0<q<1$, la fonction $x\longmapsto q^x$ est strictement décroissante sur $\R$.
+	\item Si $q=1$, la fonction $x\longmapsto q^x$ est constante sur $\R$.
+	\item Si $q>1$, la fonction $x\longmapsto q^x$ est strictement croissante sur $\R$.
+\end{itemize}
+}
+
+\medskip
+
+\prop{
+\begin{center}
+Si $q>0$ et  $q \ne 1$, alors pour tous nombres réels $a$ et $b$ : $q^a =q^b$ si, et seulement si, $a=b$.
+\end{center}
+}
+
+\medskip
+
+Ce résultat est une conséquence de la stricte monotonie et de l'application du théorème des valeurs intermédiaires appliqué aux fonctions strictement monotones.\\
+
+\prop{Les fonctions exponentielle de base $q$ sont convexe sur \R.}\\
+
+En résumé, on peut synthétiser ces résultats :\\ 
+
+%\subsection{propriétés}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|*{2}{>{\centering \arraybackslash}X|}}\hline
+
+$0<q<1$ \rule[-4mm]{0pt}{1cm} & $q>1$ \\\hline
+La fonction exponentielle de base $q$ est strictement décroissante sur $\R$. & La fonction exponentielle de base $q$ est strictement croissante sur $\R$.\\\hline
+%$\displaystyle\lim_{x \to - \infty} q^x = + \infty$  et $\displaystyle\lim_{x \to + \infty} q^x = 0$ \rule[-4mm]{0pt}{1cm}
+ %&  $\displaystyle\lim_{x \to - \infty} q^x = 0$  et $\displaystyle\lim_{x \to + \infty} q^x = + \infty$
+%\\ \hline
+\psset{unit=.8cm} 
+\begin{pspicture}(-4,-.5)(4,6.25)
+\def\pshlabel#1{\footnotesize #1}
+\def\psvlabel#1{\footnotesize #1}
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\def\f{.64^x}
+\psaxes[labels=none, ticks=none,linewidth=0.75pt]{->}(0,0)(-4,-.5)(4,6)
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{-}(0,0)(-.1,-.1)(1,1)
+\uput[dl](0,0){\footnotesize{$0$}}\uput[dl](4,0){\footnotesize{$x$}} \uput[dl](0,6){\footnotesize{$y$}}
+\psplot[algebraic=true,plotpoints=200,linewidth=1.25pt, linecolor=bleu]{-4}{4}{\f}
+\psset{linewidth=.25pt,linestyle=dashed, linecolor=prune} 
+\psline(1,0)(1,.64)(0,.64)
+\uput[l](0,.64){\footnotesize{\prune{$q$}}}
+\end{pspicture}
+&
+\psset{unit=.8cm} 
+\begin{pspicture}(-4,-.5)(4,6.25)
+\def\pshlabel#1{\footnotesize #1}
+\def\psvlabel#1{\footnotesize #1}
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\def\f{1.55^x}
+\psaxes[labels=none, ticks=none,linewidth=0.75pt]{->}(0,0)(-4,-.5)(4,6)
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{-}(0,0)(-.1,-.1)(1,1)
+\uput[dl](0,0){\footnotesize{$0$}}\uput[dl](4,0){\footnotesize{$x$}} \uput[dl](0,6){\footnotesize{$y$}}
+\psplot[algebraic=true,plotpoints=200,linewidth=1.25pt, linecolor=bleu]{-4}{4}{\f}
+\psset{linewidth=.25pt,linestyle=dashed, linecolor=prune} 
+\psline(1,0)(1,1.55)(0,1.55)
+\uput[l](0,1.55){\footnotesize{\prune{$q$}}}
+\end{pspicture}\\ \hline
+\multicolumn{2}{|c|}{La fonction fonction exponentielle de base $q$ est convexe sur $\R$ \rule[-4mm]{0pt}{1cm}} \\ \hline
+\end{tabularx} 
+
+
+\newpage
+\begin{multicols}{2}
+
+\begin{exo}
+\end{exo}
+
+Sur cette figure sont représentées quatre fonctions :
+$$ x\longmapsto 0,3^x \quad ; \quad x \longmapsto 0,5^x \quad ; \quad x \longmapsto 1,5^x \quad ; \quad x \longmapsto 2,9^x$$
+Identifier chacune des fonctions en justifiant.
+
+\begin{center}
+\begin{pspicture*}(-4,-0.5)(5,5)
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{->}(0,0)(-5,-1)(5,5)
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=bleu]{-5}{4}{0.3^x}
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=bleu]{-5}{4}{0.5^x}
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=bleu]{-5}{4}{1.5^x}
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=bleu]{-5}{4}{2.9^x}
+\rput[t](-2.8,5){$\Cm_f$}
+\rput[t](-1.6,5){$\Cm_g$}
+\rput[t](1.8,5){$\Cm_h$}
+\rput[t](4.2,5){$\Cm_k$}
+\end{pspicture*}
+\end{center}
+
+
+%\end{ExoType}
+
+\begin{exo}
+\end{exo}
+
+Ecrire sous la forme $q^x$ les nombres suivants :
+\begin{multicols}{2}
+\begin{enumerate}
+\item $2^{1,3}\times 2^{3,4}$
+\item $1,3^{2,6}\times 1,3^{-4,1}$
+\item $\dfrac{1,8^{-2,3}}{1,8^{-1,2}}$
+\item $0,85^{6,1} \times 0,85^{-4,2} \times 0,85^{-9,5}$
+\end{enumerate}
+\end{multicols}
+
+%\end{ExoType}
+
+\begin{exo}
+\end{exo}
+
+En utilisant le sens de variation des fonctions exponentielles, comparer les nombres suivants :
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item $1,05^3$ et $1,05^5$
+\item $0,25^2$ et $0,25^4$
+\item $0,4^{1,2}$ et $0,4^{3,5}$
+\item $3^{-2,5}$ et $3^{-1,5}$
+\end{enumerate}
+\end{multicols}
+
+
+\begin{exo}
+\end{exo}
+
+En utilisant une calculatrice, donner une approximation des nombres suivants :
+$$2,25^{1,5} \quad ; \quad 1,05^{-2,3} \quad ;\quad 0,45^{-2,8} \quad ; \quad 0,75^{5,7} \quad ; \quad \pi^{2,5}$$
+
+\begin{exo}
+\end{exo}
+
+Écrire chacune des expressions suivantes sous la forme $a^x$ pour $a$ réel strictement positif.
+$$a^{1,8}\times a^{2,2} \quad ; \quad a^{-3}\times a^{4,5} \quad ; \quad a^{\sqrt{2}} \times a^{2} \quad ; \quad a^{1,05}\times a^{-3,6} $$
+
+\begin{exo}
+\end{exo}
+
+Déterminer la fonction $f$ définie sur \R par $f(x)=kq^x$, sachant que $f(0)=-3$ et $f(-1)=-10$.
+
+\begin{exo}
+\end{exo}
+
+Soit la fonction $f$ définie sur $[-5;5]$ par :
+$$f(x)=1,5^x-3$$
+\begin{enumerate}
+\item Afficher sur l'écran d'une calculatrice le tracé de la courbe représentative de $f$.
+\item \begin{enumerate}
+\item Justifier l'existence et l'unicité d'une unique solution pour l'équation $f(x)=0$ sur $[0;3]$.
+\item Utiliser la calculatrice pour donner une approximation à 0,1 près par défaut de cette solution.
+\end{enumerate}
+\end{enumerate}
+
+\begin{exo}
+\end{exo}
+
+L'étude de la consommation d'une voiture en fonction de sa vitesse conduit à la formule $c=2,8\times 1,008^v$, où $c$ est la consommation en litres pour 100 km parcourus et $v$ la vitesse en kilomètres par heure.
+\begin{enumerate}
+\item Déterminer la consommation pour une vitesse de 100 km/h.
+\item À l'aide d'une calculatrice, construire un tableau de valeurs pour $v$ variant de 70 à 130 avec un pas de 5.
+\item Déterminer la vitesse à partir de laquelle la consommation est supérieure à 7 litres pour 100 km.
+\end{enumerate} 
+
+
+\begin{exo}
+\end{exo}
+
+Une grande métropole avait 1,3 millions d'habitants le 1\ier janvier 2009. Le service de recensement a observé que, pendant 10 ans, sa population a augmenté  régulièrement de 1,2 \% par an. Voici 3 fonctions $f$, $g$ et $h$ définies sur $[0;10]$ par :\\
+
+$f(x)=1,3\times 0,012^x ; g(x)=1,3(1+0,012x)$  \\et $h(x)=1,3\times 1,012^x$
+\begin{enumerate}
+\item Laquelle de ces trois fonctions permet d'obtenir la population (exprimée en million d'habitants) au 1\ier janvier de l'année 2000+$x$.
+\item Combien d'habitants comptait la métropole le 1\ier janvier 2009 ?
+\end{enumerate}
+
+
+\begin{exo}
+\end{exo}
+
+L'évolution du nombre de centenaire en France depuis 1900 peut être modélisée par la fonction $f$ donnée par $f(x)=69 \times 1,05^x$, où $x$ désigne le rang de l'année, en considérant que l'année 1900 est l'année de rang 0.
+\begin{enumerate}
+\item À l'aide de cette fonction, estimer le nombre de centenaires en France en 2014, puis en 2015.
+\item Quels est la pourcentage d'augmentation ds centenaires entre les années 2014 et 2015 ? Entre les années 1900 et 1901.
+\end{enumerate}
+
+\end{multicols}
+%
+\section{La fonction exponentielle}
+
+\subsection{Activité de découverte}
+
+\medskip
+
+Soit $f$ une fonction dérivable en 0 telle que $f'(0)=1$ et vérifiant pour tous réels $x$ et $y$, $f(x+y) = f(x) \times f(y)$.
+
+\begin{enumerate}
+\item Démontrer que s'il existe un réel $a$ tel que $f(a)=0$, alors, pour tout réel $x$, on a $f(x)=0$. 
+
+En déduire que pour tout réel $x$, $f(x) \ne 0$.
+	\item En écrivant que $f(x+0)=f(x)$, montrer que $f(0)=1$.
+		\item \begin{enumerate}
+		\item Montrer que pour tout réel $x$ et tout réel $h$ non nul, $\dfrac{f(x+h)-f(x)}{h}= f(x) \times \dfrac{f(h)-1}{h}$
+		\item En déduire que $f$ est dérivable sur $\R$ et que pour tout réel $x$, $f'(x) =f(x)$.
+		\end{enumerate}
+		\end{enumerate}
+		\emph{Rappel }: 
+		
+		Dire que la fonction $f$ est dérivable en 0 et que le nombre dérivé $f'(0)=1$ signifie que  $\displaystyle\lim_{h \to 0} \dfrac{f(0+h)-f(0)}{h} = 1$. 
+
+\reponse[24]
+
+\newpage
+
+
+\subsection{Définition}
+
+\begin{multicols}{2}
+
+Il est relativement simple de voir que toutes les fonctions exponentielles ont pour image 1 en 0 (car $q^0=1$).\\
+
+L'exercice préparatoire nous a permis de mettre en évidence l'existence d'une fonction exponentielle $f$ telle que $f'(0)=1$.\\
+
+On admettra que parmi toutes les fonctions exponentielles de base $q$ il existe \textbf{une seule} fonction dont le nombre dérivé en 0 soit égal à 1. \\
+
+Autrement dit, il existe une seule valeur du réel $q$ telle que la tangente au point $A(0;1)$ de la courbe représentative de la fonction $x \longmapsto q^x$ a pour coefficient directeur 1.\\
+ 
+Cette valeur particulière du réel $q$ est notée $\e$.
+
+Le nombre $\e$ est un irrationnel une valeur approchée est : $\e \approx 2,71828$. \\
+
+\columnbreak
+
+\begin{pspicture}(-3.5,-1)(4,5)
+\def\pshlabel#1{\footnotesize #1}
+\def\psvlabel#1{\footnotesize #1}
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\def\f{EXP(x)}
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{->}(0,0)(-3.5,-1)(4,5)
+\uput[dl](0,0){\footnotesize{$0$}}\uput[dl](4,0){\footnotesize{$x$}} \uput[dl](0,5){\footnotesize{$y$}}
+\psplot[algebraic=true,plotpoints=200,linewidth=1.25pt, linecolor=bleu]{-3.5}{1.6}{\f}
+\uput[dr](1.7,5){\footnotesize{\bleu{$y=\e^x$}}}
+\psset{linecolor=prune} 
+\psline[linewidth=.5pt]{<->}(-2,-1)(2,3)
+\uput[dr](2,3){\footnotesize{\prune{$y=x+1$}}}
+\psline[linewidth=.25pt,linestyle=dashed](1,0)(1,2.71828)(0,2.71828)
+\uput[l](0,2.71828){\footnotesize{\prune{$\e$}}}
+\psdot[dotstyle=*,dotscale=.8, linecolor=bleu](0,1)
+\uput[dr](0,1){\footnotesize{\bleu{$A$}}}
+\end{pspicture}
+
+\end{multicols}
+
+
+
+\df{%
+La fonction $x \longmapsto \e^x$ s'appelle la fonction exponentielle de base $\e$ ou plus simplement exponentielle. 
+
+On la note exp \[\mathrm{exp} \colon x \longmapsto \e^x\]
+}
+
+On en déduit les propriétés suivantes :\\
+
+\prop{
+
+\begin{itemize}
+	\item La fonction exponentielle est définie pour tout réel $x$ par $\mathrm{exp}(x)=\e^x$
+	\item $\mathrm{exp}(0)=\e^0 =1$,\hfill $\mathrm{exp}(1)=\e^1 = \e$,\hfill $\mathrm{exp}(-1)=\e^{-1} =\dfrac{1}{\e}$ ,\hfill $\mathrm{exp}(0,5)=\e^{0,5} = \sqrt{\e}$
+	\item La fonction exponentielle est strictement positive sur $\R$ : pour tout nombre réel $x$, $\e^x >0$
+	\item La fonction exponentielle est dérivable sur $\R$ et son nombre dérivé en 0 est 1 :  $\mathrm{exp}'(0)=1$
+	\item Pour tous réels $x$ et $y$, et pour tout entier relatif $m$
+	
+	$\e^{x+y} = \e^x \times \e^y$,\hfill  $\e^{-x}= \dfrac{1}{\e^x}$,\hfill $\e^{x-y}= \dfrac{\e^x}{\e^y}$,\hfill $\left({\e^x}\right)^m=\e^{mx}$
+\end{itemize}
+}
+\subsection{Dérivée de la fonction exponentielle}
+
+\thm{%
+La dérivée de la fonction exponentielle est ... la fonction exponentielle. Ainsi, pour tout nombre réel $x$, $$\mathrm{exp}'(x)=\e^x$$
+}
+
+\rem Difficile de faire plus simple ;)\\
+
+ \preuve{
+ 	
+	Pour tout réel $x$ et pour tout réel $h \ne 0$,  \[\frac{\mathrm{exp}(x+h)-\mathrm{exp}(x)}{h}=\frac{\e^{x+h}-\e^x}{h}=\frac{\e^x\times\e^h-\e^x}{h}=\e^x\times\frac{\e^h-1}{h}\]
+	Or $\mathrm{exp}'(0)=1$ signifie que $\displaystyle\lim_{h \to 0} \dfrac{\e^{0+h}-\e^{0}}{h} = 1$ soit $\displaystyle\lim_{h \to 0} \dfrac{\e^h-1}{h} = 1$. 	
+	
+	
+	Donc pour tout réel $x$, $\displaystyle\lim_{h \to 0} \frac{\mathrm{exp}(x+h)-\mathrm{exp}(x)}{h} = \displaystyle\lim_{h \to 0} \e^x\times\frac{\e^h-1}{h} = \e^x$
+}
+	
+	\subsection{Variation}
+		
+	\thm{%		
+La fonction exponentielle est strictement croissante sur $\R$
+	}	
+ 
+\preuve{
+	 	
+La fonction exponentielle est dérivable sur $\R$ et est égale à sa dérivée.
+
+Or pour tout réel $x$, 	$\e^x>0$. On en déduit que la fonction exponentielle est strictement croissante sur $\R$.
+}	
+ 	
+On en déduit les propriétés suivantes :
+
+\prop{
+\begin{itemize}
+\item Pour tout réel $x \leqslant 0$, $0 < \e^{x}\leqslant 1$
+\item Pour tout réel $x \geqslant 0$, $\e^{x}\geqslant 1$
+	\item 	Pour tous réels $x$ et $y$, $\e^{x} = \e^{y} \iff x = y $ et $\e^{x} < \e^{y} \iff x < y$	
+\end{itemize}
+}
+
+\medskip
+
+\begin{Exoapp}
+\emph{\textbf{Résolu}}\\
+\begin{enumerate}
+	\item Résoudre dans $\R$ l'inéquation $\e^{1-3x} < \e^{2x-3}$ \[\e^{1-3x} < \e^{2x+3}\iff 1-3x < 2x+3 \iff -5x < 2 \iff x > -\frac{2}{5}\]
+	D'où l'ensemble solution $S= \left] -\dfrac{2}{5}; +\infty\right[$
+		\item Résoudre dans $\R$ l'inéquation $\e^{x^2-1} \geqslant 1$ \[\e^{x^2-1} \geqslant 1 \iff \e^{x^2-1} \geqslant \e^0  \iff x^2-1 \geqslant 0\]
+	D'où l'ensemble solution $S= \left] -\infty ; -1\right] \cup \left[ 1 ; +\infty \right[$
+\end{enumerate}
+\end{Exoapp}
+ 	 
+
+
+\subsection{Courbe représentative}
+
+\subsubsection{convexité}
+
+\thm{%		
+La fonction exponentielle est convexe sur $\R$
+	}	
+
+\preuve{
+	 	
+La fonction exponentielle est dérivable sur $\R$ et est égale à sa dérivée. 
+
+Par conséquent, la dérivée seconde est $\mathrm{exp}''(x)=\e^x$ donc $\mathrm{exp}''(x)>0$.
+}
+
+%\subsubsection{limites}
+%
+% 
+%$\e >1$ alors $\displaystyle\lim_{n \to + \infty} \e^n = + \infty$. Par prolongement, $\displaystyle\lim_{x \to + \infty} \e^x = + \infty$.
+% 
+% $\e^{-n} =\dfrac{1}{\e^n}= {\left( \dfrac{1}{\e} \right)}^n$ d'où $\displaystyle\lim_{n \to - \infty} \e^n = \displaystyle\lim_{n \to + \infty} {\left( \dfrac{1}{\e} \right)}^n = 0$. Par prolongement, $\displaystyle\lim_{x \to - \infty} \e^x = 0$.
+% 
+%\medskip
+%
+%\cadreR{%		
+%$\displaystyle\lim_{x \to - \infty} \e^x = 0$ et $\displaystyle\lim_{x \to + \infty} \e^x = + \infty$  
+%	}
+
+\subsubsection{propriétés}
+Quelques résultats qu'il faut connaitre :\\
+\prop{
+\begin{enumerate}
+	\item \'Equation de la tangente au point d'abscisse 0 : $y= x + 1$
+		\item \'Equation de la tangente au point d'abscisse 1 : $y= \mathrm{exp}'(1)\times (x-1) + \mathrm{exp}(1)$ Soit $y= \e x$
+
+\end{enumerate}
+}
+
+\prop{La courbe représentative de la fonction exponentielle est située au dessus de la droite $\mathrm{\Delta}$ d'équation $y=x$.\\			
+(\emph{ Voir l'exercice  \no  \ref{compare-exp-et-x}})					
+}
+
+\begin{center}
+\begin{pspicture}(-3.5,-1.5)(5,8)
+\def\pshlabel#1{\footnotesize #1}
+\def\psvlabel#1{\footnotesize #1}
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\newrgbcolor{vert}{0.08 .22 0.1}
+\def\f{EXP(x)}
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{->}(0,0)(-3.5,-1.5)(5,8)
+\uput[dl](0,0){\footnotesize{$0$}}\uput[dl](5,0){\footnotesize{$x$}} \uput[dl](0,8){\footnotesize{$y$}}
+\psplot[algebraic=true,plotpoints=200,linewidth=1.25pt, linecolor=bleu]{-3.5}{2.079}{\f}
+\uput[dr](2.2,8){\footnotesize{\bleu{$\mathcal{C}_{ \mathrm{exp}}$}}}
+\psset{linecolor=prune} 
+\psline[linewidth=.5pt](-1.5,-.5)(1.5,2.5)
+\uput[r](1.5,2.5){\footnotesize{\prune{$y=x+1$}}}
+\psline[linewidth=.25pt,linestyle=dashed](1,0)(1,2.71828)(0,2.71828)
+\uput[l](0,2.71828){\footnotesize{\prune{$\e$}}}
+\psline[linewidth=.5pt](-.25,-.6796)(2.25,6.116)
+\uput[r](2.25,6.116){\footnotesize{\prune{$y=\e x$}}}
+\psline[linewidth=.75pt,linecolor=vert]{-}(-1.5,-1.5)(4.5,4.5)
+\uput[r](4.5,4.5){\footnotesize{\vert{$\mathrm{\Delta}$}}}
+\end{pspicture}
+\end{center}
+																						
+\newpage
+
+\setcounter{exo}{0}
+\begin{center}
+\fbox{\textbf{EXERCICES}}
+\end{center}
+
+\begin{exo}
+\end{exo}
+
+ \medskip 
+ 
+Simplifier les écritures suivantes :
+
+$A={\left( \e^x\right)}^2-\dfrac{1}{\e^{-2x}}$ ; \hfill $B={\left(\e^x+\e^{-x}\right)}^2-{\left(\e^x-\e^{-x}\right)}^2$ ; \hfill $C=\e^{-x}\left(\e^{2x}-\dfrac{1}{\e^x} \right)$ ; \hfill
+$D=\dfrac{\e^{2x+1}}{\e^{1-x}}$ ; \hfill $E=\dfrac{{\left(\e^{x+2}\right)}^2}{\e^{2x-1}}$.  
+
+\begin{exo}
+\end{exo}
+
+Résoudre dans $\R$  les équations et inéquations suivantes :
+
+\medskip
+
+		\begin{tabularx}{\linewidth}{*{3}{@{}>{\raggedright \arraybackslash}X}}
+1. \: $\e^{x^2+x-1}=1$ & 2. \: $\dfrac{\e^{3x+5}}{\e^{3-2x}}=\e^{2x^2-1}$  &	3. \: $2\e^{2x}-\e^x-1=0$\\ 
+4. \:  $\e^{\frac{1}{x}} \geqslant \e$  \rule[-4mm]{0pt}{1cm} & 5. \: $\e^{2x} \leqslant \e^x$  &	6. \: $\e^{2x} \e^{x^2} < 1$\\
+\end{tabularx}
+
+\bigskip
+  
+\begin{exo}\label{compare-exp-et-x}
+\end{exo}
+
+ \medskip 
+
+Soit $f$ la fonction  définie sur $\R$  par $f(x)=\e^x-x$.
+	
+\begin{enumerate}
+	\item Déterminer $f'(x)$.
+	\item \'Etudier les variations de $f$, en déduire que $f$  admet un minimum.
+	\item Justifier que pour tout réel $x$ on a : $\e^x>x$. 
+\end{enumerate}
+
+\begin{exo}
+\end{exo}
+
+ Dans chacun des cas suivants, calculer la dérivée de la fonction $f$
+ 
+ \begin{enumerate}
+ \item $f$ est définie sur $]0; +\infty[$ par $f(x)=\dfrac{\e^x+1}{x}$
+  \item $f$ est définie sur $\R$ par $f(x)=(2x-1)\e^{x}$
+ \item $f$ est définie sur $\R$ par $f(x)=\e^{x}-\dfrac{1}{\e^{x}}$
+ \end{enumerate} 	
+
+\begin{exo}
+\end{exo} 
+
+  Soit $f$ la fonction définie sur $\R$ par $f(x)=\dfrac{4}{1+\e^x}-2$.
+  
+  On a tracé ci-dessous, la courbe $\mathcal{C}_f$ représentant la fonction $f$ et les droites $\mathcal{D}_1$ et $\mathcal{D}_2$ d'équations respectives $y=-2$ et $y=2$
+  
+\begin{center}
+\psset{unit=.5cm}
+\begin{pspicture}(-11,-5)(12,6)
+\def\pshlabel#1{\footnotesize #1}
+\def\psvlabel#1{\footnotesize #1}
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\def\f{4/(EXP(x)+1)-2}
+\def\g{5/(3*x+5)}
+\def\h{(x+3)/(3-x)}
+\psgrid[gridwidth=0.1pt,gridcolor=darkgray,subgriddiv=0,gridlabels=0](-9,-5)(10,6)
+\psset{unit=1cm}
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{->}(0,0)(-4.5,-2.5)(5,3)
+\uput[dl](0,0){\footnotesize{$0$}}\uput[dl](5,0){\footnotesize{$x$}} \uput[dl](0,3){\footnotesize{$y$}}
+\psplot[algebraic=true,plotpoints=200,linewidth=1.25pt, linecolor=bleu]{-4.5}{5}{\f}
+\uput[ul](5,-2){\footnotesize{\bleu{$\mathcal{C}_f$}}}
+\psset{linewidth=1pt, linecolor=prune}
+\psline(-4.5,2)(5,2)
+\uput[ul](5,2){\footnotesize{\prune{$\mathcal{D}_2$}}}
+\psline(-4.5,-2)(5,-2)
+\uput[dr](-4.5,-2){\footnotesize{\prune{$\mathcal{D}_1$}}}
+\end{pspicture}
+\end{center}
+\begin{enumerate}
+	\item \'Etudier les positions relatives de la courbe $\mathcal{C}_f$ avec les droites $\mathcal{D}_1$ et $\mathcal{D}_2$.
+	\item \'Etudier les variations de la fonction $f$.
+	\item \'Etudier la convexité de la fonction $f$.
+	\item La courbe $\mathcal{C}_f$ admet-elle un point d'inflexion ?
+\end{enumerate}
+  
+\begin{exo}
+\end{exo}
+
+ Soit $f$ la fonction définie sur $\R$ par $f (x) = \left(x^2-\dfrac{5}{2}x+1\right) \e^x$. 
+ 
+ Sa courbe représentative notée $\mathcal{C}_f$ est donnée ci-dessous.
+ \begin{center}
+\psset{unit=.5cm}
+\begin{pspicture}(-13,-6)(8,10)
+\def\pshlabel#1{\footnotesize #1}
+\def\psvlabel#1{\footnotesize #1}
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\def\f{(x^2-2.5*x+1)*EXP(x)}
+\psgrid[gridwidth=0.1pt,gridcolor=darkgray,subgriddiv=0,gridlabels=0](-13,-6)(8,10)
+\psset{unit=1cm}
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{->}(0,0)(-6.5,-3)(4,5)
+\uput[dl](0,0){\footnotesize{$0$}}\uput[dl](4,0){\footnotesize{$x$}} \uput[dl](0,5){\footnotesize{$y$}}
+\psplot[algebraic=true,plotpoints=200,linewidth=1.25pt, linecolor=bleu]{-6.5}{2.285}{\f}
+%\psline(-1,2.5)(1,-.5)
+\uput[dr](2.4,5){\footnotesize{\bleu{$\mathcal{C}_f$}}}
+\end{pspicture}
+\end{center}
+ 
+\begin{enumerate}
+	\item On note $f'$ la fonction dérivée de la fonction $f$.
+	
+\begin{enumerate}
+	\item Calculer $f'(x)$.
+	\item \'Etudier le signe de $f'(x)$ selon les valeurs de $x$.
+	\item Dresser le tableau de variations de $f$.
+\end{enumerate}
+ \item Déterminer une équation de la tangente $T$ à la courbe $\mathcal{C}_f$ au point d'abscisse 0.
+ 
+ Tracer la droite $T$ sur le graphique précédent.
+	
+
+	\item Montrer que l'équation $f(x)=40$ admet une solution unique $\alpha$ dans l'intervalle $[2;3]$.
+	
+	\`A l'aide de la calculatrice, déterminer la valeur arrondie à $10^{-2}$ près de $\alpha$.
+\end{enumerate}
+
+\begin{exo}
+\end{exo}
+
+
+ Soit $f$ la fonction définie pour tout réel $x$ par $f(x)=\e^x+\dfrac{1}{\e^{x}}$.
+ 
+\begin{enumerate}
+\item On note $f'$ la dérivée de la fonction $f$.
+	
+\begin{enumerate}
+	\item Calculer $f'(x)$.
+	\item Donner le tableau de variations de $f$.
+\item En déduire que pour tout réel $x$, $\e^x+\e^{-x}\geqslant 2$.
+\end{enumerate}
+	\item On note $f''$ la dérivée seconde de la fonction $f$.
+	
+\begin{enumerate}
+	\item Montrer que pour tout réel $x$, $f''(x)=f(x)$.
+	\item \'Etudier la convexité de la fonction $f$.
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\section{Exponentielle d'une fonction : $\exp (u)$}
+
+On considère une fonction $u$ définie sur un intervalle $I$. 
+
+La composée de la fonction $u$ suivie de la fonction exponentielle est la fonction $f$ notée  $f=\e^u$.\\
+
+\exs 
+
+\begin{itemize}
+\item La fonction $f$ définie pour tout réel $x$ par $f(x)= \e^{0,5x-3}$ est la composée de la fonction affine $u$ définie sur $\R$ par $u(x) =0,5x-3$ suivie de la fonction exponentielle, $f=\e^u$.
+\item La fonction $g$ définie pour tout réel $x$ par $g(x)= 0,5\e^{x}- 3 $ est la composée la fonction exponentielle suivie de la fonction affine $u$ définie sur $\R$ par $u(x) =0,5x-3$ 
+\end{itemize}
+
+
+\subsection{Dérivée}
+
+
+\df{%
+Soit $u$ une fonction définie et dérivable sur un intervalle $I$. La fonction $\e^ u$ est dérivable sur $I$ et$$\left( \e^u \right) ' =u' \times \e^u $$
+}\\
+
+\exs
+ 	 
+\begin{itemize}
+	\item Soit $f$ la fonction définie pour tout réel $x$ par $f(x)= \e^{-x}$.
+	
+	Pour tout réel $x$, on pose $u(x)=-x$. $u$ est dérivable sur $\R$ et $u'(x)=-1$.
+	
+	Donc $f$ est dérivable sur $\R$ et $f'(x) =  -\e^{-x}$.
+		\item Soit $f$ la fonction définie pour tout réel $x$ par $f(x)= \e^{0,5x^2-2x+1}$.
+	
+	Pour tout réel $x$, posons $u(x)=0,5x^2-2x+1$. $u$ est dérivable sur $\R$ et $u'(x)=x-2$.
+	
+	Donc $f$ est dérivable sur $\R$ et $f'(x) =  (x-2) \e^{0,5x^2-2x+1}$.
+\end{itemize}
+
+\subsection{Variation}
+
+\thm{%
+Les fonctions $u$ et $\e^u$ ont les mêmes variations sur tout intervalle $I$ où $u$ est définie.
+}
+
+\preuve{
+ 
+ Soient $a<b$ deux réels de l'intervalle $I$
+
+\begin{itemize}
+	\item Si $u$ est croissante sur $I$ alors $u(a) < u(b)$
+	
+	De la stricte croissance de  la fonction exponentielle on en déduit que si  $u(a) < u(b)$ alors $\e^{u(a)} < \e^{u(b)}$
+	
+	Donc si $u$ est croissante sur $I$ alors la fonction $\e^u$ est croissante sur $I$.
+
+	\item Si $u$ est décroissante sur $I$ alors $u(b) < u(a)$
+	
+	Or la fonction exponentielle est strictement croissante donc si  $u(b) < u(a)$ alors $\e^{u(b)} < \e^{u(a)}$
+	
+	Par conséquent, si $u$ est décroissante sur $I$ alors la fonction $\e^u$ est décroissante sur $I$.
+\end{itemize}
+}\\
+
+
+\rem
+
+Si $u$ est dérivable sur $I$, alors la fonction $f=\e^u$ est dérivable sur $I$ et pour tout réel $x \in I$, $f'(x) =  u'(x) \e^{u(x)}$.
+
+Or pour tout réel $x \in I$, $\e^{u(x)} > 0$ donc $f'(x)$ est du même signe que $u'(x)$.
+
+\newpage
+
+\subsection{Exemples types}
+
+\subsubsection{Les fonctions $f_k:x\mapsto \e^{-kx}$, avec $k>0$.}
+
+
+Ces fonctions sont de la forme $\e^u$ avec $u(x)=-kx$. Comme $k$ est positif, on en déduit que la fonction $u$ est décroissante sur \R, et donc que les fonctions $f_k$ le sont également sur \R.\\
+
+Par ailleurs, $f_k(0)=1$ pour toute valeur de $k$. Donc les courbes représentatives des fonctions $f_k$ passent toutes par le point de coordonnées $(0;1)$.
+
+\begin{center}
+\begin{pspicture*}(-5,-0.5)(5,5)
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{->}(0,0)(-5,-1)(5,5)
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=orange]{-5}{4}{EXP(-0.3*x)}
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=green]{-5}{4}{EXP(-0.9*x)}
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=red]{-5}{4}{EXP(-1.2*x)}
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=bleu]{-5}{4}{EXP(-2*x)}
+\rput[t](-4,2.5){$k=-0,3$}
+\rput[tr](-1.6,4){$k=-0,9$}
+\rput*[tr](-1.4,5){$k=-1,2$}
+\rput*[lt](-0.5,5){$k=-2$}
+\end{pspicture*}
+\end{center}
+
+\subsubsection{Les fonctions $g_k:x\mapsto \e^{-kx}$, avec $k>0$.}
+
+Ces fonctions sont de la forme $\e^u$ avec $u(x)=-kx^2$. On en déduit donc que $g_k'(x)=-2kx\e^{-kx^2}$. Le signe de $g_k'(x)$ dépend donc du signe de $-2kx$. Comme $k>0$, on peut assez facilement déterminer le tableau de variation de la fonction $g_k$:
+
+\begin{center}
+
+\begin{tikzpicture}
+\tkzTabInit{$x$/1,$g_k'(x)$/1,$g_k(x)$/1.5}{$-\infty$,$0$,$+\infty$}
+\tkzTabLine{,+,z,-}
+\tkzTabVar{-/,+/$1$,-/}
+\end{tikzpicture}
+\end{center}
+
+Tout comme pour les fonctions $f_k$ , $g_k(0)=1$ pour toute valeur de $k$. Donc les courbes représentatives des fonctions $g_k$ passent toutes par le point de coordonnées $(0;1)$.
+
+\begin{center}
+\psset{yunit=2cm}
+\begin{pspicture*}(-5,-0.5)(5,2)
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{->}(0,0)(-5,-1)(5,5)
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=orange]{-5}{4}{EXP(-0.3*x^2)}
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=green]{-5}{4}{EXP(-0.9*x^2)}
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=red]{-5}{4}{EXP(-1.2*x^2)}
+\psplot[algebraic=true,plotpoints=200,linewidth=1pt, linecolor=bleu]{-5}{4}{EXP(-2*x^2)}
+\rput[t](-3.3,0.3){$k=-0,3$}
+\rput[tr](-1.6,4){$k=-0,9$}
+\rput*[tr](-1.4,5){$k=-1,2$}
+\rput*[t](0,0.3){$k=-2$}
+\end{pspicture*}
+\end{center}
+
+\newpage
+
+
+
+
+\end{document}

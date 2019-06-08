@@ -1,0 +1,275 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Calcul littéral}{Nom :}{Prénom :}{Classe}{Date}
+
+\exo{4} Questions de cours\\
+
+
+    Compléter :
+    \begin{multicols}{4}
+      \begin{enumerate}
+      \item $\dfrac{5}{8}=\dfrac{\ldots}{56}$
+      \item $\dfrac{36}{\ldots}=\dfrac{6}{5}$
+      \item $\dfrac{\ldots}{8}=\dfrac{70}{80}$
+      \item $\dfrac{9}{\ldots}=\dfrac{18}{14}$
+      \item $\dfrac{\ldots}{25}=\dfrac{1}{5}$
+      \item $\dfrac{72}{\ldots}=\dfrac{9}{4}$
+      \item $\dfrac{5}{\ldots}=\dfrac{45}{63}$
+      \item $\dfrac{40}{\ldots}=\dfrac{10}{9}$
+      \end{enumerate}
+    \end{multicols}
+
+
+  
+    Compléter :
+    \begin{multicols}{4}
+      \begin{enumerate}
+      \item $\dfrac{1}{6}=\dfrac{2}{\ldots}$
+      \item $\dfrac{\ldots}{8}=\dfrac{24}{48}$
+      \item $\dfrac{\ldots}{7}=\dfrac{64}{56}$
+      \item $\dfrac{2}{7}=\dfrac{\ldots}{35}$
+      \item $\dfrac{18}{\ldots}=\dfrac{9}{2}$
+      \item $\dfrac{45}{36}=\dfrac{\ldots}{4}$
+      \item $\dfrac{\ldots}{18}=\dfrac{1}{9}$
+      \item $\dfrac{28}{42}=\dfrac{\ldots}{6}$
+      \end{enumerate}
+    \end{multicols}
+
+
+   
+    Compléter :
+    \begin{multicols}{4}
+      \begin{enumerate}
+      \item $\dfrac{\ldots}{70}=\dfrac{2}{7}$
+      \item $\dfrac{45}{\ldots}=\dfrac{5}{2}$
+      \item $\dfrac{\ldots}{24}=\dfrac{8}{3}$
+      \item $\dfrac{12}{24}=\dfrac{\ldots}{4}$
+      \item $\dfrac{42}{49}=\dfrac{\ldots}{7}$
+      \item $\dfrac{7}{\ldots}=\dfrac{63}{72}$
+      \item $\dfrac{\ldots}{90}=\dfrac{10}{9}$
+      \item $\dfrac{\ldots}{48}=\dfrac{10}{6}$
+      \end{enumerate}
+    \end{multicols}
+
+
+  
+    \parbox{0.4\linewidth}{
+      \begin{enumerate}
+      \item Donner les coordonnées des points B, C, D, F, G et N.
+      \item Placer dans le repère les points P, S, T, U, V et X de coordonnées
+        respectives \hbox{$(-3{,}5~;~0)$}, \hbox{$(-4~;~-2{,}5)$},
+        \hbox{$(4{,}5~;~-4{,}5)$}, \hbox{$(0~;~-3)$}, \hbox{$(-0{,}5~;~1)$} et
+        \hbox{$(3{,}5~;~4{,}5)$}.
+      \item Placer dans le repère le point Z d'abscisse -3 et d'ordonnée -1,5
+      \end{enumerate}}\hfill
+    \parbox{0.55\linewidth}{
+      \psset{unit=0.8cm}
+      \begin{pspicture}(-4.95,-4.95)(4.95,4.95)
+        \psgrid[subgriddiv=2, subgridcolor=lightgray,
+        gridlabels=8pt](0,0)(-5,-5)(5,5)
+        \psline[linewidth=1.2pt]{->}(-5,0)(5,0)
+        \psline[linewidth=1.2pt]{->}(0,-5)(0,5)
+        \pstGeonode[PointSymbol=x,PosAngle={-135,45,135,45,-45,45,},PointNameSep=0.4](-4.0, -1.5){B}(0, 4.0){C}(-2.5, 3.0){D}(0.5, 0){F}(1.0, -3.5){G}(4.5, 3.0){N}
+      \end{pspicture}}
+
+
+    \parbox{0.4\linewidth}{
+      \begin{enumerate}
+      \item Donner les coordonnées des points A, B, D, E, G et I.
+      \item Placer dans le repère les points J, M, N, P, U et W de coordonnées
+        respectives \hbox{$(-2~;~-1{,}5)$}, \hbox{$(4~;~0)$},
+        \hbox{$(0~;~4{,}5)$}, \hbox{$(4{,}5~;~4)$}, \hbox{$(-1{,}5~;~2)$} et
+        \hbox{$(3{,}5~;~-3{,}5)$}.
+      \item Placer dans le repère le point X d'abscisse -2 et d'ordonnée 3
+      \end{enumerate}}\hfill
+    \parbox{0.55\linewidth}{
+      \psset{unit=0.8cm}
+      \begin{pspicture}(-4.95,-4.95)(4.95,4.95)
+        \psgrid[subgriddiv=2, subgridcolor=lightgray,
+        gridlabels=8pt](0,0)(-5,-5)(5,5)
+        \psline[linewidth=1.2pt]{->}(-5,0)(5,0)
+        \psline[linewidth=1.2pt]{->}(0,-5)(0,5)
+        \pstGeonode[PointSymbol=x,PosAngle={45,45,-135,45,-45,135,},PointNameSep=0.4](0.5, 2.5){A}(0, 0.5){B}(-2.5, -2.5){D}(1.5, 0){E}(4.0, -2.0){G}(-4.5, 0.5){I}
+      \end{pspicture}}
+
+    
+    Construire la symétrique de chacune des figures par rapport au point O en
+    utilisant le quadrillage :\par
+    \psset{unit=.9cm}
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](2.5,1.0){a}(-2.5,2.5){b}(-1.5,-1.0){c}(-1.5,-1.5){d}(1.0,-3.0){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+    \hfill
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](2.0,1.0){a}(-0.5,3.0){b}(-2.5,-1.0){c}(-2.0,-3.0){d}(2.5,-2.5){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+    \hfill
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](1.5,1.5){a}(0.5,3.0){b}(-3.0,-2.0){c}(-3.0,-3.0){d}(3.0,-2.5){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+
+    \exercice
+    Construire la symétrique de chacune des figures par rapport au point O en
+    utilisant le quadrillage :\par
+    \psset{unit=.9cm}
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](3.0,1.0){a}(-0.5,2.0){b}(-2.0,-1.5){c}(1.0,-3.0){d}(2.5,-1.0){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+    \hfill
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](1.0,1.5){a}(-1.5,1.5){b}(-2.0,-0.5){c}(-1.0,-2.0){d}(2.5,-1.5){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.0,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+    \hfill
+    \begin{pspicture*}(-3,-3)(3,3)
+      \psgrid[subgriddiv=2,gridlabels=0pt]
+      \pstGeonode[PointSymbol=none,PointName=none](2.5,2.5){a}(0.5,3.0){b}(-1.5,-0.5){c}(0.5,-2.5){d}(3.0,-2.0){e}
+      \pstGeonode[PointSymbol=x, linecolor=Black, dotsize=6pt](0.5,0.0){O}
+      \pspolygon[linewidth=1pt](a)(b)(c)(d)(e)
+    \end{pspicture*}
+    
+\q Qu'est-ce qu'une expression littérale ?\\
+\reponse[2]
+
+\q Que signifie "développer une expression" ?\\
+\reponse[2]
+
+\q Simplifier les écritures suivantes :\\
+\begin{multicols}{2}
+
+$A=3\times x$\\
+\reponse[1]
+
+$B=x\times x$\\
+\reponse[1]
+
+$C=3\times x+3\times4$\\
+\reponse[1]
+
+
+\columnbreak
+
+
+$E=6\times(3+y)$\\
+\reponse[1]
+
+$F=6\times(3+y)$\\
+\reponse[1]
+
+
+$G=6\times(3+y)$\\
+\reponse[1]
+\end{multicols}
+
+\exo{4} Calculer les expressions suivantes en indiquant toutes les étapes de calculs.\\
+
+\begin{multicols}{2}
+\noindent
+$A=6\times(x+4)$ pour $x=3$\\
+\reponse[3]
+\noindent
+$C=t^{2}-8$ pour $t=4$\\
+\reponse[3]
+
+
+
+
+\columnbreak
+\noindent
+$B=(5+x)\times7$ pour $x=10$\\
+\reponse[3]
+\noindent
+$B=(5+x)\times7$ pour $x=10$\\
+\reponse[3]
+
+
+
+\end{multicols}
+\end{document}
