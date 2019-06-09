@@ -528,40 +528,219 @@
 
  \setcounter{page}{1}
  
-\section{Théorème de Thalès}
+ 
+ 
+ \section{Les triangles semblables}
+ 
+ 
+ \subsection{Définition}
+ 
+ \df{
+ Deux triangles sont semblables si tous les angles de l'un sont égaux aux angles de l'autre. 
+ }\\
+ 
+ 
+ \underline{\textbf{Exemples :}}\\
+ 
+\begin{center}
+ \includegraphics[scale=0.8]{exsemblable12.eps}  
+\end{center}
+ 
+ Les triangles $A_{1}B_{1}C_{1}$ et $A_{2}B_{2}C_{2}$ sont dits semblables car $ \widehat{A_{1}B_{1}C_{1}}= \widehat{A_{2}B_{2}C_{2}}$, $ \widehat{A_{1}C_{1}B_{1}}= \widehat{A_{2}C_{2}B_{2}}$ et $ \widehat{C_{1}A_{1}B_{1}}= \widehat{C_{2}A_{2}B_{2}}$.\\
+ 
+ 
+ \underline{\textbf{Remarque :}} Pour que deux triangles soient semblables, il suffit que deux angles de l'un des triangles soient égaux à deux angles de 
+l'autre triangle.\\
+ 
+\begin{Exoapp}
+ 
+Prouver que les deux triangles ci-dessous sont semblables.\\
 
+\bmul{2}
+
+ \includegraphics[scale=0.8]{exsemblable3.eps}  
+
+\columnbreak
+
+\noindent \reponse[5]
+
+\emul
+
+\end{Exoapp}
+ 
+ \subsection{Propriétés des triangles semblables}
+ 
+ 
+ 
+ \prop{
+ Si  deux  triangles  sont  semblables  alors  les  longueurs  des  côtés  de  l'un  sont  proportionnelles  aux longueurs des côtés de l'autre.
+ } \\
+ 
+\underline{\textbf{Exemple :}} Les triangles ABC et EFD sont semblables. 
+ 
+\begin{center}
+ \includegraphics[scale=1]{trianglesemblables.eps} 
+\end{center}
+ 
+ Comme les  triangles  ABC  et  DEF  sont  semblables alors  les 
+longueurs des côtés du triangle ABC sont proportionnelles aux longueurs des côtés du triangle DEF.\\
+
+On a alors le tableau de proportionnalité suivant : \hspace*{0.5cm} \begin{tabular}{|c|c|c|c|}
+\hline 
+\textbf{Longueurs ABC} & AB & AC & CB \\ 
+\hline 
+\textbf{Longueurs DEF} & EF & ED & DF \\ 
+\hline 
+\end{tabular} 
+
+\vspace*{0.5cm}
+
+On peut aussi écrire l'égalité suivante :
 
 \begin{center}
- \includegraphics[scale=1]{thales.eps}
+ \includegraphics[scale=1]{trianglesemblables2.eps} 
+ 
+\end{center}
+
+\textbf{$\rightarrow$ Cette propriété permet dans un exercice de calculer des longueurs.}\\
+ 
+ \begin{Exoapp}
+ 
+  Dans la figure ci-dessous, calculer les longueurs  AC et EF, en justifiant votre réponse.\\
+  
+\includegraphics[scale=1]{exosemblables4.eps} \\
+  
+\noindent \reponse[8]  \\
+  
+
+   
+ 
+ \end{Exoapp}
+ 
+ 
+ \prop{
+ Si  les  longueurs  des  côtés  d'un  triangle  sont  proportionnelles  aux  longueurs  des  côtés  d'un  autre triangle alors ces deux triangles sont semblables. 
+  }\\
+ 
+ 
+ \underline{\textbf{Exemple :}} On cherche à savoir si les triangles ABC et DEF sont semblables.\\	
+ 
+ \bmul{2}
+ 
+ Pour cela on va comparer les longueurs des 2 triangles :\\
+ 
+ $\dfrac{FD}{AB}= $ \hspace*{1cm} $\dfrac{EF}{CB}= $ \hspace*{1cm} $\dfrac{ED}{AC}= $ \hspace*{1cm}\\
+ 
+ On remarque alors que les quotients sont égaux.\\
+ Il y a donc proportionnalité entre les longueurs des 2 triangles.
+ 
+ On peut donc conclure que les triangles DEF et ABC sont semblables.\\
+ 
+ \columnbreak
+ \includegraphics[scale=1]{exosemblables5.eps} \\
+ 
+ \emul
+ 
+ \begin{Exoapp}
+ Justifier que les triangles  ABC  et  MNP  ci-dessous, sont des triangles semblables. 
+ 
+ \bmul{2}
+  \includegraphics[scale=0.6]{exosemblables6.eps} 
+  
+  \columnbreak
+ 
+ \noindent \reponse[8] 
+ 
+ \emul
+ 
+ \end{Exoapp}
+ 
+ \subsection{Agrandissement et réduction}
+ 
+ \exo  Expliquer pour les triangles sont semblables, puis donner le rapport de réduction ou d'agrandissement qui permet de passer du triangle KJL au triangle HGI.
+ 
+  \bmul{2}
+  \includegraphics[scale=1]{exosemblables7.eps} 
+  
+  \columnbreak
+ 
+ \noindent \reponse[5] 
+ 
+ \emul
+ 
+ 
+ \prop{
+ Soit k un nombre.\\
+ 
+ Si $k<1$, il s'agit d'une réduction de rapport $k$.\\
+ 
+ Si $k>1$, il s'agit d'un agrandissement de rapport $k$.\\
+ 
+ }\\
+ 
+ 
+ 
+ 
+ 
+\section{Cas particulier - Théorème de Thalès}
+
+
+\subsection{Le théorème}
+
+\begin{center}
+\includegraphics[scale=0.8]{thalesfig.eps}  
  \end{center} 
+ 
+ \vspace*{0.3cm}
+
 
 \thm{
-Soient ABC un triangle quelconque non aplati, M et N deux points tels que M $\in$ [AB] et N $\in$ [AC].\\
-Si la droite (MN) est parallèle à la droite (BC),
+Soient ABC un triangle quelconque non aplati.\\
+Si les droites (AB) et (AC) sont sécantes en A et si la droite (MN) est parallèle à la droite (BC).\\
 Alors on a l'égalité suivante :\\
 
 \begin{center}
 $\dfrac{AM}{AB}=\dfrac{AN}{AC}=\dfrac{MN}{BC}$
 \end{center}
 }\\
-
-\section{Application du Théorème de Thalès}
-
-\textbf{Objectif} : Le théorème de Thalès permet de calculer des longueurs de segments. \\
+\vspace*{0.3cm}
 
 
-On considère un triangle ABC tel que AB = 12 cm, BC = 4 cm, AM = 9cm et AN = 6 cm. Les droites (MN) et (BC) sont parallèles. \\
+\underline{\textbf{Exemple}}\\
+
+On suppose que les droites  (LB) et (IC) sont parallèles.\\
+
+ \hspace*{6cm} \includegraphics[scale=0.9]{thales5.eps} \\
+
+
+
+
+
+\subsection{Application du Théorème de Thalès}
+\vspace*{0.3cm}
+
+
+\underline{\textbf{Objectif}} \textbf{: Le théorème de Thalès permet de calculer des longueurs de segments.} \\
+
+\vspace*{0.3cm}
+
+
+\underline{Énoncé :}
+On considère un triangle ABC tel que AB = 12 cm, BC = 4 cm, AM = 9cm et AN = 6 cm. \\
+Les droites (MN) et (BC) sont parallèles. \\
 \textbf{Calculer AC et MN.}(Faîtes un schéma à main levée avec les mesures.)\\
 
+\vspace*{0.3cm}
+
+\underline{\textbf{Résolution :}} \\
 
 Dans le triangle ABC :
 \bi
-\item M $\in$ [AB]
-\item N $\in$ [AC]
+\item Les droites (MB) et (NC) sont sécantes en A. Les points A, M, B et A, N, C sont alignés dans le même ordre.
 \item (MN) $\slash\slash$ (BC)
 \ei
 
-D'après le théorème de Thalès, on :
+D'après le théorème de Thalès, on a:
 
 \begin{center}
 $\dfrac{AM}{AB}=\dfrac{AN}{AC}=\dfrac{MN}{BC}$\\
@@ -588,5 +767,24 @@ MN = 3 cm
 
 
 \emul
+
+\vspace*{0.3cm}
+
+
+\begin{Exoapp}
+
+\bmul{2}
+
+
+
+\columnbreak
+
+
+
+\emul
+
+
+\end{Exoapp}
+
 
 \end{document}

@@ -1,0 +1,313 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Programmation au collège}{Nom :}{Prénom :}{3ème}{}
+
+
+
+\begin{center}
+ \begin{large}
+ Scratch, Geotortue, pseudo-code, ...
+ \end{large}
+\end{center}
+
+
+\hspace*{0.5cm} \includegraphics[scale=0.45]{algointro1.eps} \hspace*{2.5cm} \includegraphics[scale=0.7]{aglointro2.eps} \\
+
+
+
+\setlength{\fboxrule}{2pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+
+\vspace*{0.2cm}
+
+\underline{\textbf{{\large Rappels de cours}}}\\
+
+\textbf{Un algorithme} est une prescription détaillée indiquant \textbf{la liste des instructions élémentaires} qu'un opérateur doit exécuter, dans un ordre précis, pour résoudre n'importe quel problème d'un type donné.\\
+
+Le mot « algorithme » vient du nom de  Al Khwarizmi, grand mathématicien arabe (783-850).\\
+
+Un algorithme ne dépend pas d'un langage de programmation. Il décrit la structure du programme, et doit être ensuite traduit dans un langage propre à un logiciel pour être exécuté sur un ordinateur.\\
+
+On distinguera \textbf{trois étapes d'écriture} :
+\bi \item \underline{Le langage naturel} : il décrit librement la marche à suivre.\\
+\item \underline{Le langage codé} : intermédiaire, c'est l'algorithme proprement dit, il est régi par des conventions rigoureuses.\\
+\item \underline{Le langage de programmation} : appelé programme, il est propre à chaque logiciel. On étudiera les langages de la calculatrice.\\
+\ei
+
+\textbf{Remarque} : L'étape 1 (le langage naturel) n'est souvent pas faite à l'écrit mais à l'oral et on passe directement à l'étape 2, l'écriture de l'algorithme.
+\vspace*{0.2cm}
+\end{minipage}}
+\end{flushleft}
+
+\vspace*{0.4cm}
+
+$\rightarrow$ On souhaite calculer l'image de $x$ par la fonction f telle que $f(x)=(x+1)^{2}$\\
+
+
+
+\bmul{3}
+
+\textbf{{\small \underline{Le langage naturel}} }\\
+
+
+\begin{small}
+On choisit une valeur pour la variable $x$.\\
+Puis, on calcul la valeur de $(x+1)^{2}$.\\
+Et enfin, on a $y=(x+1)^{2}$\\
+\end{small}
+
+
+
+\columnbreak
+
+\textbf{{\small \underline{Le langage codé}}}\\
+
+
+\includegraphics[scale=0.8]{algointro3.eps}  
+
+\columnbreak
+
+\textbf{{\small \underline{Le langage de programmation}}}
+
+\begin{flushleft}
+ \includegraphics[scale=1]{algointro4.eps}
+\end{flushleft}
+ 
+\emul   
+
+
+  
+
+\newpage
+
+
+\begin{flushleft}
+{\large \textbf{\underline{PARTIE 1 :} Quelques constructions}}
+\end{flushleft}\begin{center}
+\underline{\textbf{{\large Exercice 1}}}
+\end{center}
+
+
+Les carreaux font 40 unités de large. On supposera que le stylo est en position d'écriture. A l'aide du script ci-dessous à gauche, dessiner à droite le chemin du lutin-chat. La position initiale du lutin-chat est à l'intersection des segments qu'il cache.
+
+\bmul{2}
+
+\includegraphics[scale=0.7]{exoalgo1.eps} \\
+
+\columnbreak
+
+\vspace*{1cm}
+
+\includegraphics[scale=0.9]{grillescratch.eps} \\
+
+\emul
+
+
+
+\begin{center}
+\underline{\textbf{{\large Exercice 2}}}
+\end{center}
+
+
+Les carreaux font 40 unités de large. On supposera que le stylo est en position d'écriture. A l'aide du script ci-dessous à gauche, dessiner à droite le chemin du lutin-chat. La position initiale du lutin-chat est à l'intersection des segments qu'il cache.
+
+\bmul{2}
+
+\includegraphics[scale=0.8]{exoalgo2.eps} \\
+
+\columnbreak
+
+
+
+\includegraphics[scale=0.9]{grillescratch.eps} \\
+
+\emul
+
+
+
+\begin{center}
+\underline{\textbf{{\large Exercice 3}}}
+\end{center}
+
+
+Les carreaux font 40 unités de large. On supposera que le stylo est en position d'écriture. A l'aide du script ci-dessous à gauche, dessiner à droite le chemin du lutin-chat. La position initiale du lutin-chat est à l'intersection des segments qu'il cache.
+
+\bmul{2}
+
+\includegraphics[scale=0.8]{exoalgo3.eps} 
+
+\columnbreak
+
+\vspace*{0.4cm}
+
+\includegraphics[scale=0.9]{grillescratch.eps} 
+
+\emul
+
+
+\newpage
+
+
+\begin{center}
+\underline{\textbf{{\large Exercice 4}}}
+\end{center}
+
+Pour chacun des quatre scripts ci-dessous, donner les coordonnées de la position finale du lutin-chat sachant que sa position de départ est donné par les coordonnées (0 ; 0).
+
+
+\bmul{2}
+
+
+\includegraphics[scale=0.75]{exoalgo4a.eps} \\
+
+\includegraphics[scale=0.75]{exoalgo4c.eps} 
+
+\columnbreak
+
+
+
+\includegraphics[scale=0.75]{exoalgo4b.eps} \\
+
+\includegraphics[scale=0.75]{exoalgo4d.eps} 
+
+
+
+\emul
+
+\vspace*{0.4cm}
+
+
+\begin{center}
+\underline{\textbf{{\large Exercice 5}}}
+\end{center}
+
+
+
+
+
+Voici un programme de calcul :
+\bi \item  choisir un nombre ;
+\item lui ajouter 2 ;
+\item  puis multiplier par 3.\\
+\ei
+
+Parmi les script Scratch suivants, lequel permet d'utiliser le programme de calcul ?\\
+
+
+\includegraphics[scale=0.9]{exoalgo5.eps} 
+
+
+
+
+\newpage
+
+
+\begin{center}
+\underline{\textbf{{\large Exercice 6}}}
+\end{center}
+
+
+\textit{\underline{Signification des instructions :}\\
+•  rep : répète\\
+•  av : avance\\
+•  td : tourne à droite\\}
+
+Trois  dessins  ont  été  réalisés  à  l'aide  de  différents  langages. On supposera que le stylo est en position d'écriture. Associer  chaque  dessin  aux  algorithmes Geotortue et Scratch correspondants.\\
+
+\vspace*{0.4cm}
+
+\includegraphics[scale=1]{exoalgo6a.eps} \\
+
+\includegraphics[scale=1]{exoalgo6b.eps} \\
+
+\includegraphics[scale=1]{exoalgo6c.eps} \\
+
+
+\begin{center}
+\underline{\textbf{{\large Exercice 7}}}
+\end{center}
+
+\vspace*{0.2cm}
+
+\includegraphics[scale=0.8]{exoalgo7.eps}  A vous de jouer ! Écrire l'algorithme permettant de créer la figure ci-contre. \\
+\reponse[8]
+
+
+\end{document}
