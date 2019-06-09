@@ -1,0 +1,185 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation 4 : Repérage sur une demi-droite graduée}{Nom :}{Prénom :}{Classe}{Date}
+
+\vspace*{0.25cm}
+
+\begin{flushleft}
+\begin{tabular}{|m{9.5cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|}
+\hline 
+\textbf{Compétences} & \begin{center}
+\textbf{N.E.}
+\end{center} & \begin{center}
+\textbf{M.I.}
+\end{center} & \begin{center}
+\textbf{M.F.}
+\end{center}  & \begin{center}
+\textbf{M.S.}
+\end{center} & \begin{center}
+\textbf{T.B.M.}
+\end{center} \\ 
+\hline 
+Je dois savoir placer un nombre sur demi-droite graduée &  &  & & &\\
+\hline 
+Je dois savoir lire l'abscisse d'un point sur une demi-droite graduée &  &  & & &\\
+\hline
+
+
+\end{tabular} 
+\end{flushleft}
+
+\textit{N.E = Non évalué ; M.I. = Maîtrise insuffisante ; M.F. = Maîtrise fragile ; M.S. = Maîtrise satisfaisante ; T.B.M. = Très bonne maîtrise}\\
+
+
+\vspace*{0.5cm}
+
+\exo{2} Compléter chaque graduation avec les nombres qui manquent :\\
+
+\begin{center}
+ \includegraphics[scale=1.15]{dtegraduees2.eps}
+\end{center}
+
+\vspace*{0.3cm}
+
+\begin{center}
+\includegraphics[scale=0.7]{abscisse10.eps} 
+\end{center}
+
+\vspace*{0.3cm}
+
+\exo{2} \\
+
+\initq \q Écrire l'abscisse des points placés sur les  demi-droites graduées ci-dessous.\\
+
+\includegraphics[scale=1]{abscisses1a.eps} \\
+
+\noindent \reponse[4]\\
+
+\vspace*{0.25cm}
+
+\q Sur la demi-droite, placer les points : R(4,4) ; O(2,5) ; S(7,4) et N(0,7). 
+
+
+\includegraphics[scale=0.8]{abscisse2a.eps} \\
+
+\newpage
+
+\exo{3} On considère les 5 points suivants définis par leur abscisse :
+
+\bmul{2}
+
+\textbf{A}(4,04)\\
+
+\textbf{C}$\left(4 + \dfrac{1}{100} + \dfrac{3}{10}\right)$\\
+
+\textbf{E} a pour partie entière 4 et sa partie décimale vaut 22 centièmes.\\
+
+\columnbreak
+
+\textbf{B}$\left(4+\dfrac{2}{10} + \dfrac{8}{100}\right)$\\
+
+\textbf{D}$\left( 4 + (1 \times 0,1) + (6 \times 0,01) \right)$\\
+
+\textbf{F}(Quatre cent sept centièmes)\\
+
+
+
+\emul
+
+$\rightarrow$ \textbf{Placer ces 5 points sur la demi-droite graduée ci-dessous :}
+
+\begin{center}
+\includegraphics[scale=0.9]{abscisse3.eps} 
+
+\end{center}
+\vspace*{0.5cm}
+
+\exo{3} Dans   chaque   cas,   tracer   une   demi-droite graduée   en   choisissant   au   mieux   l'unité   pour pouvoir ensuite placer tous les nombres donnés.\\
+
+\qa 0 ; 0,5 ; 0,2 ; 0,34 ; 0,67 et 0,7.\\
+
+\includegraphics[scale=1]{grille.eps} \\
+
+\qa 12,4 ; 11,2 ; 15,3 ; 18,9 et 17,3.
+
+\includegraphics[scale=1]{grille.eps} \\
+
+
+
+\end{document}

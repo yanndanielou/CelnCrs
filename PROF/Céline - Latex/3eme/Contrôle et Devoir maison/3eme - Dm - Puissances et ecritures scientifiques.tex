@@ -1,0 +1,189 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} \usepackage[french]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{color}
+\usepackage{ulem}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Puissances et écritures scientifiques}{Nom}{Prénom}{Date}{Classe}
+\vspace*{0.5cm}
+
+\exo \\
+Calculer les expressions suivantes en détaillant vos étapes de calculs.
+
+\bmul{3}
+
+$P = 20  - 3 \times 2^{3}$\\
+
+$C = (3 \times 5)^{2} + 4 $\\
+
+\columnbreak
+
+$L =(5+3^{2}) \times 10$\\
+
+$S = 3 \times (4 + 5 )^{2}$\\
+
+
+\columnbreak
+
+$B= 3 \times 5^{2} +4$\\
+
+$G = \dfrac{131,2 - 2 \times 4^{3}}{5^{2} - 3^{2}}$\\
+
+\emul
+
+\vspace*{0.4cm}
+
+\exo \\
+Recopier le texte suivant en réécrivant les nombres en gras en écriture décimale.\\
+
+"On estime qu'en 2015 les $0,735 \times 10^{10}$ êtres humains ont envoyé $4 200 \times 10^{9}$ SMS.\\
+Un SMS a donc été envoyé toutes les $751 \times 10^{-8}$ secondes."\\
+
+\vspace*{0.4cm}
+
+\exo \\
+Donner l'écriture scientifique des nombres suivants : 
+
+\bmul{4}
+
+65 100 000
+
+\columnbreak
+
+0,007 23
+
+\columnbreak
+
+$21 \times 10^{2} \times 10^{-7}$
+
+\columnbreak
+
+$(4 \times 10^{7})^{2}$
+
+\emul
+
+\vspace*{0.4cm}
+
+\exo \\
+Voici les diamètres de deux types de bactéries et de deux virus.
+\bi
+\item Bactérie typique : $0,2 \times 10^{-7}$ m ; 
+\item Nano bactérie : $50 \times 10^{-9} $ m ;
+\item Virus de la varicelle : $1 750 \times 10^{-10}$ m ;
+\item Virus de la gastroentérite : $0,017 \times 10^{-6}$ m.\\
+\ei
+
+Donner la notation scientifique de chaque diamètre, puis ranger ces diamètres dans l'ordre croissant.\\
+
+\vspace*{0.4cm}
+
+
+\exo \\
+Donner l'écriture décimale puis la notation scientifique de A et de B.\\
+
+$A = \dfrac{15-9 \times 10^{-3}}{3 \times 10^{2}}$ \hspace*{1.5cm} $B =\dfrac{6 \times 10^{-3} \times 28 \times 10^{-2}}{14 \times 10^{-3}}$\\
+
+\vspace*{0.4cm}
+
+\exo \\
+
+\q L'égalité $10^{5} + 10^{-5} = 1$ est-elle vraie ?\\
+
+\q L'égalité $\dfrac{10^{17} + 3}{10^{17}}=1$ est-elle vraie ?\\
+
+\vspace*{0.4cm}
+
+\exo \\
+
+\initq \q Un carré a pour périmètre $2^{19}$ cm. Exprimer sous la forme d'une puissance de 2 :\\
+\qa la longueur du côté de ce carré ;\\
+\qa l'aire de ce carré.\\
+
+\q Quelle est la longueur du côté d'un carré d'aire $9^{12}$ $cm^{2}$ ?\\
+
+\q Une arête d'un cube mesure $6 \times 10^{-9}$ m.\\
+\initqa \qa Quelle est l'aire d'une face ?\\
+\qa Quelle est le volume de ce cube ?\\
+
+\q Le volume d'un cube est $7^{15}$ $dm^{3}$. Quelle est la longueur d'une arête ?\\
+
+
+
+
+
+\end{document}

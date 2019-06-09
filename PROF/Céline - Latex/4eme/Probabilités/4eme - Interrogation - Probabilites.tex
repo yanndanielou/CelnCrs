@@ -1,0 +1,185 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} \usepackage[french]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation : Les probabilités}{Nom :}{Prénom :}{Classe}{Date}
+
+
+\begin{flushleft}
+\begin{tabular}{|m{9.5cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|}
+\hline 
+\textbf{Compétences} & \begin{center}
+\textbf{N.E.}
+\end{center} & \begin{center}
+\textbf{M.I.}
+\end{center} & \begin{center}
+\textbf{M.F.}
+\end{center}  & \begin{center}
+\textbf{M.S.}
+\end{center} & \begin{center}
+\textbf{T.B.M.}
+\end{center} \\ 
+\hline 
+Je dois comprendre et savoir utiliser des notions élémentaires de probabilité &  &  & & &\\
+\hline 
+Je dois savoir calculer des probabilités dans des contextes familiers &  &  & & &\\
+\hline
+
+
+\end{tabular} 
+\end{flushleft}
+
+\textit{N.E = Non évalué ; M.I. = Maîtrise insuffisante ; M.F. = Maîtrise fragile ; M.S. = Maîtrise satisfaisante ; T.B.M. = Très bonne maîtrise}\\
+
+\vspace*{0.5cm}
+
+
+\exo{1} Cours \\
+
+\q Donner la définition d'une expérience aléatoire.\\
+\reponse[4]\\
+
+\vspace*{0.5cm}
+
+\exo{2,5}
+On lance un dé équilibré à 6 faces et on regarde le numéro sur la face supérieure. \\
+Préciser la nature de chacun des événements suivants (événement élémentaire, impossible ou certain) :\\
+A = « on obtient 2 » ;\\
+B = « on obtient un chiffre pair » ;\\
+C = « on obtient un nombre négatif » ;\\
+D = « on obtient un chiffre strictement supérieur à 5 » ;\\
+E = « on obtient un nombre entier ».\\
+
+\noindent \reponse[5]\\
+
+\vspace*{0.5cm}
+
+\exo{4.5}
+Un sac contient six boules : quatre blanches et deux noires. \\
+Ces boules sont numérotées : les blanches portent les numéros 1, 1, 2 et 3 et le noires portent les numéros 1 et 2. On tire une boule au hasard.\\
+ Dans cet exercice, toutes les fractions seront données sous forme irréductible.\\
+ 
+\initq 
+
+\noindent \q Cette expérience est-elle une expérience aléatoire ?Justifier.\\
+\reponse[2]\\
+\q Quelles sont les issues de cette expérience aléatoire ?\\
+\reponse[2]\\
+\q Quelle est la probabilité de tirer une boule blanche ? Justifier.\\
+\reponse[2]\\
+\q  Quelle est la probabilité de tirer une boule portant le numéro 2 ? Justifier.\\
+\reponse[2]\\
+\q Quelle est la probabilité de tirer une boule portant le numéro 1 ? Justifier.\\
+\reponse[2]\\
+\q Quelle est la probabilité de tirer une boule blanche portant le numéro 1 ? Justifier.\\
+\reponse[2]\\
+
+\exo{2} 
+
+\bmul{2}
+Pour gagner à ce jeu, il faut tomber sur la couleur rouge. On a le choix entre une roulette, un dé et une urne contenant dix boules.\\
+
+Que faut-il choisir pour avoir le plus de chance de gagner : la roulette, le dé ou l'urne ? (\textbf{Justifier votre réponse avec des probabilités.})\\
+\columnbreak
+
+\includegraphics[scale=1]{jeuouge.eps} 
+
+\emul
+
+\noindent \reponse[6]\\
+
+
+
+\vspace*{0.5cm}
+
+\exo{} BONUS
+
+On prend deux dés cubiques non truqués. On les lance et on ajoute les deux nombres obtenus.\\
+
+\initq  \q Combien y a-t-il d'issues possibles ? Citer-les.\\
+
+\q Quelle est la probabilité d'obtenir 9 ?\\
+
+\noindent \reponse[6]\\
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,152 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Opérations sur les fractions }{Nom :}{Prénom :}{Classe}{Date}
+
+
+\exo{1} Cours \\
+
+Compléter les propriétés suivantes :
+
+\bi
+\item Pour multiplier deux nombres en écriture fractionnaire,, il suffit\reponse[2]  ; \\
+
+
+\item Soient a, b, f des nombres relatifs (b non nul),  $\dfrac{a}{b} + \dfrac{f}{b} = $ . . . . . . . . . . \\
+
+\ei
+
+\exo{4,5}
+
+\bmul{3}
+
+$B = \dfrac{-3}{5} - \dfrac{-11}{5}$\\
+\reponse[4]\\
+
+$J = \dfrac{-3}{5} \times \dfrac{12}{-9}$\\
+\reponse[4]\\
+
+\columnbreak
+
+$N = \dfrac{2}{3} - \dfrac{4}{7}$\\
+\reponse[4]\\
+
+$ U = \dfrac{\dfrac{2}{3}}{\dfrac{5}{18}}$\\
+\reponse[4]\\
+
+
+\columnbreak
+
+$P = 2 - \dfrac{19}{6}$\\
+\reponse[4]\\
+
+$H = \dfrac{\dfrac{4}{-7}}{16}$\\
+
+\noindent \reponse[4]\\
+
+\emul
+
+
+\exo{4,5}
+
+\bmul{3}
+
+$E =\dfrac{19}{6} - \dfrac{4}{3} \times \dfrac{5}{2}$ \\
+\reponse[8]\\
+
+
+\columnbreak
+
+$S = (\dfrac{2}{5} \div \dfrac{8}{15}) \div (\dfrac{5}{7} + \dfrac{3}{21})$ \\
+\reponse[8]\\
+
+
+\columnbreak
+
+$F = \dfrac{\dfrac{4}{7} - 2}{2 - \dfrac{11}{14}}$ \\
+\reponse[8]
+
+
+\emul
+
+\exo{} BONUS
+
+\noindent Quelle est le résultat de la somme de 3 et de l'inverse de la somme de 3 et de l'inverse de la somme de 3 et 3 ? (Expliquez votre résultat au dos de la feuille)
+
+
+\end{document}

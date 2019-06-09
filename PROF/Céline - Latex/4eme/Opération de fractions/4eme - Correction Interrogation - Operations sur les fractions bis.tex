@@ -1,0 +1,252 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{color}
+\usepackage{ulem}
+
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Opérations sur les fractions }{Nom :}{Prénom :}{Classe}{Date}
+
+
+\exo{1} Cours \\
+
+Compléter les propriétés suivantes :
+
+\bi
+
+\item Pour multiplier deux nombres en écriture fractionnaire,, il suffit \textcolor{red} {de multiplier les numérateurs entre eux, puis  les dénominateurs entre eux. }   \\
+
+
+\item Soient a, b, f des nombres relatifs (b non nul),  $\dfrac{a}{b} + \dfrac{f}{b} = \textcolor{red} {\dfrac{a + f}{b}}$  \\
+\ei
+
+
+\exo{4,5}
+
+\bmul{3}
+
+$B = \dfrac{-3}{5} - \dfrac{-11}{5}$\\
+
+\textcolor{red} { $B = \dfrac{-3 - (-11)}{5}$\\}
+
+\textcolor{red} {$B = \dfrac{-3 +11}{5}$\\}
+
+\fbox{\textcolor{red} {$B =\dfrac{8}{5}$\\}}
+
+$J = \dfrac{-3}{5} \times \dfrac{12}{-9}$\\
+
+\textcolor{red} { $J = \dfrac{ \xout{-3} \times \xout{3} \times 4}{5 \times \xout{-3} \times \xout{3}}$ \\ }
+
+\fbox{\textcolor{red} {$J = \dfrac{ 4}{5 }$ \\}}
+ 
+
+\columnbreak
+
+$N = \dfrac{2}{3} - \dfrac{4}{7}$\\
+
+\textcolor{red} { $N = \dfrac{2 \times 7}{3 \times 7} - \dfrac{4 \times 3}{7 \times 3}$ \\}
+
+\textcolor{red} {$N = \dfrac{14}{21} - \dfrac{12}{21}$\\}
+
+\textcolor{red} {$N = \dfrac{14 - 12}{21} $\\}
+
+\fbox{\textcolor{red} {$N = \dfrac{2}{21}$\\}}
+
+
+$ U = \dfrac{\dfrac{2}{3}}{\dfrac{5}{18}}$\\
+
+\textcolor{red} {$ U = \dfrac{2}{3} \div \dfrac{5}{18}$ \\}
+
+\textcolor{red} {$ U = \dfrac{2}{3} \times \dfrac{18}{5}$ \\}
+
+\textcolor{red} {$ U = \dfrac{2 \times\xout{ 3} \times 6}{\xout{3} \times 5}  $ \\}
+
+\textcolor{red} {$ U = \dfrac{2 \times 6}{ 5}  $ \\}
+
+\fbox{\textcolor{red} {$ U = \dfrac{12}{ 5}  $ \\}}
+
+\columnbreak
+
+$P = 2 - \dfrac{19}{6}$\\
+
+\textcolor{red} { $P = \dfrac{2}{1} - \dfrac{19}{6}$ \\}
+
+\textcolor{red} { $P = \dfrac{2 \times 6}{1 \times 6} - \dfrac{19}{6}$ \\}
+
+\textcolor{red} { $P = \dfrac{12}{6} - \dfrac{19}{6}$ \\}
+
+\textcolor{red} { $P = \dfrac{12- 19}{6} $ \\}
+
+\fbox{\textcolor{red} { $P = \dfrac{-7}{6} $ \\}}
+
+
+$H = \dfrac{\dfrac{4}{-7}}{16}$\\
+
+\textcolor{red} {$H = \dfrac{\dfrac{4}{-7}}{\dfrac{16}{1}}$\\}
+
+\textcolor{red} {$H = \dfrac{4}{-7} \div \dfrac{16}{1}$\\}
+
+\textcolor{red} {$H = \dfrac{4}{-7} \times \dfrac{1}{16}$\\}
+
+\textcolor{red} {$H = \dfrac{\xout{4} \times 1}{-7 \times \xout{4} \times 4} $\\}
+
+\fbox{\textcolor{red} {$H = -\dfrac{1}{28} $\\}}
+
+
+
+
+
+
+\emul
+
+
+\exo{4,5}
+
+\bmul{2}
+
+$E =\dfrac{19}{6} - \dfrac{4}{3} \times \dfrac{5}{2}$ \\
+
+\textcolor{red} { $E =\dfrac{19}{6} - \dfrac{4 \times 5}{3 \times 2} $ \\}
+
+\textcolor{red} { $E =\dfrac{19}{6} - \dfrac{20}{6} $ \\}
+
+\textcolor{red} { $E =\dfrac{19 - 20 }{6}  $ \\}
+
+\fbox{\textcolor{red} { $E =\dfrac{ - 1 }{6}  $ \\}}
+
+\columnbreak
+
+$S = (\dfrac{2}{5} \div \dfrac{8}{15}) \div (\dfrac{5}{7} + \dfrac{3}{21})$ \\
+\textcolor{red}  { $S = (\dfrac{2}{5} \times \dfrac{15}{8}) \div (\dfrac{5 \times 3}{7 \times 3} + \dfrac{3}{21})$ \\}
+\textcolor{red}  { $S = (\dfrac{\xout{2} \times 3 \times \xout{5}}{\xout{5} \times \xout{2} \times 4} ) \div (\dfrac{15}{21} + \dfrac{3}{21})$ \\}
+\textcolor{red}  { $S = \dfrac{3}{4}  \div \dfrac{18}{21}$ \\}
+\textcolor{red}  { $S = \dfrac{3}{4}  \times \dfrac{21}{18}$ \\}
+\textcolor{red}  { $S = \dfrac{\xout{3}\times \xout{3} \times 7}{4 \times \xout{3} \times \xout{3} \times 2} $  \\}
+\fbox{\textcolor{red}  { $S = \dfrac{7}{8}  $\\}}
+\emul
+
+
+\bmul{2}
+
+$F = \dfrac{\dfrac{4}{7} - 2}{2 - \dfrac{11}{14}}$ \\
+
+\textcolor{red} {$F = \dfrac{\dfrac{4}{7} - \dfrac{2}{1}}{\dfrac{2}{1} - \dfrac{11}{14}}$ }\\
+
+\textcolor{red} {$F = \dfrac{\dfrac{4}{7} - \dfrac{2 \times 7}{1 \times 7}}{\dfrac{2 \times 14}{1 \times 14} - \dfrac{11}{14}}$ }\\
+
+\textcolor{red} {$F = \dfrac{\dfrac{4}{7} - \dfrac{14}{7}}{\dfrac{28}{14} - \dfrac{11}{14}}$ }\\
+
+\columnbreak
+
+\textcolor{red} {$F = \dfrac{\dfrac{4 - 14}{7} }{\dfrac{28 - 11}{14}}$ }\\
+
+\textcolor{red} {$F = \dfrac{\dfrac{- 10}{7} }{\dfrac{17}{14}}$ }\\
+
+\textcolor{red} {$F = \dfrac{- 10}{7} \times \dfrac{14}{17}$ }\\
+
+\textcolor{red} {$F = \dfrac{- 10\times2 \times \xout{7} }{\xout{7} \times 17}  $ }\\
+
+\fbox{\textcolor{red} {$F = \dfrac{-20 }{17}  $ }\\}
+
+\emul
+\exo{} BONUS
+
+\noindent Quelle est le résultat de la somme de 3 et de l'inverse de la somme de 3 et de l'inverse de la somme de 3 et 3 ? 
+
+\bmul{2}
+
+\textcolor{red} { $ Z = 3 + \dfrac{1}{3 + \dfrac{1}{3 +3}}$}\\
+
+\textcolor{red} { $ Z = 3 + \dfrac{1}{3 + \dfrac{1}{6}}$}\\
+
+\textcolor{red} { $ Z = 3 + \dfrac{1}{\dfrac{3 \times 6}{1 \times 6} + \dfrac{1}{6}}$}\\
+
+\textcolor{red} { $ Z = 3 + \dfrac{1}{\dfrac{18}{6} + \dfrac{1}{6}}$}\\
+
+\columnbreak
+\textcolor{red} { $ Z = 3 + \dfrac{1}{\dfrac{19}{6}}$}\\
+
+\textcolor{red} { $ Z = 3 + \dfrac{6}{19}$\\}
+
+\textcolor{red} { $ Z = \dfrac{3 \times 19}{1 \times 19} +\dfrac{6}{19}$}\\
+
+\textcolor{red} { $ Z = \dfrac{57}{ 19} + \dfrac{6}{19}$}\\
+
+\fbox{\textcolor{red} { $ Z = \dfrac{63}{ 19}$}\\}
+
+\emul
+\end{document}

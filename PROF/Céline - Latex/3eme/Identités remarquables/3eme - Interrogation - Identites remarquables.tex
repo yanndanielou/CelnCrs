@@ -1,0 +1,176 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} \usepackage[french]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{color}
+\usepackage{ulem}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation : Identités remarquables}{Nom}{Prénom}{Date}{Classe}
+
+\vspace*{1cm}
+
+\begin{tabular}{|m{11cm}|c|c|c|}
+\hline 
+\textbf{Compétences} & \textbf{Acquis} & \textbf{En cours}  & \textbf{Non acquis} \\ 
+\hline 
+-Connaître les identités remarquables &  &  & \\
+\hline
+-Développer en utilisant une identité remarquable sur des exemples numériques ou littéraux &  &  & \\
+\hline
+-Factoriser en utilisant une identité remarquable sur des exemples numériques ou littéraux &  &  & \\
+\hline
+
+\end{tabular} 
+
+\vspace*{1cm}
+
+
+\exo{1} Compléter les identités remarquables suivantes :\\
+
+\bi
+
+
+
+
+\item $ (a-b)^{2}$ = . . . . . . . . . . . . . . . . . . . . . . . . \\
+
+\item  . . . . . . . . . . . . . . . . . . . . . . . . =  $a^{2} - b^{2}$ \\
+
+\ei
+
+\vspace*{1cm}
+
+\exo{4.5} Développer et réduire les identités remarquables suivantes :
+
+\bmul{3}
+
+$L = (x + 1)^{2}$\\
+\reponse[2]\\
+
+\columnbreak
+
+$E = (8x - 2)^{2}$\\
+\reponse[2]\\
+
+\columnbreak
+
+$A = (44x - 100)(44x+ 100)$\\
+\reponse[2]\\
+
+\emul
+
+
+
+$M = (x -1)^{2} + 3(2x+3)^{2}$\\
+\reponse[7]\\
+
+\vspace*{1cm}
+
+\exo{4.5} Factoriser les identités remarquables suivantes :
+
+\bmul{3}
+$E = 25x^{2} + 40 x + 16$\\
+\reponse[2]\\
+
+
+\columnbreak
+
+
+$R = 81x^{2} - 36 $\\
+\reponse[2]\\
+\columnbreak
+
+$A = 49 + 9x^{2}- 42x  $\\
+\reponse[2]\\
+
+\emul
+
+\newpage
+
+\vspace*{0.5cm}
+$G = (-17x+5)^{2} - (9x+8)^{2}$\\
+\reponse[7]\\
+
+\vspace*{0.5cm}
+
+\exo{} BONUS\\
+Factoriser \textbf{au maximum} les expressions suivantes :\\
+
+ \hspace*{1cm} $ K = 4x^{3}-12x^{2}+x $ \hspace*{0.75cm} $Q= (4x-1)(13-x)+16x^{2}-8x+1$\\
+\reponse[9]
+
+\end{document}
