@@ -1,0 +1,140 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Fractions (2) }{Nom :}{Prénom :}{Classe}{Date}
+
+
+\exo{2} Entourer les fractions qui sont irréductibles, c'est-à-dire non simplifiables.
+
+\begin{flushleft}
+\includegraphics[scale=0.65]{interooexo1.eps} 
+\end{flushleft}
+
+\exo{3} Compléter les égalités suivantes :\\
+
+\bmul{3}
+
+{\Large $\dfrac{10}{6} = \dfrac{....}{3} = \dfrac{25}{....}$}\\
+
+\vspace*{0.75cm}
+
+{\Large $3 = \dfrac{3}{....} = \dfrac{....}{15}$}\\
+
+
+
+\columnbreak
+
+{\Large $\dfrac{45}{60} = \dfrac{3}{....} = \dfrac{....}{28}$}\\
+
+\vspace*{0.75cm}
+
+{\Large $7 = \dfrac{....}{4} = \dfrac{14}{....}$}\\
+
+
+\columnbreak
+
+
+{\Large $\dfrac{26}{65} = \dfrac{....}{5} = \dfrac{18}{....}$}\\
+
+\vspace*{0.5cm}
+
+{\Large $\dfrac{27}{36} = \dfrac{3}{....} = \dfrac{....}{40}$}\\
+
+\emul
+
+\vspace*{0.5cm}
+
+\exo{2} Écrire les écritures fractionnaires suivantes sous forme de fractions. \textit{Justifier vos réponses par des calculs.}\\
+
+
+{\Large $ \dfrac{6,5}{9,073} $ \hspace*{1.75cm}  $ \dfrac{4,7}{0,5} $ \hspace*{1.75cm} $ \dfrac{4,28}{1,2} $  \hspace*{1.75cm} $ \dfrac{0,1}{0,3} $ }\\
+
+\noindent \reponse[6]\\
+
+
+
+
+\exo{3}  Simplifier au maximum les fractions suivantes. \textit{Justifier vos réponses par des calculs.} \\
+
+
+{\Large $ \dfrac{35}{55} $ \hspace*{1.85cm}  $ \dfrac{750}{240} $ \hspace*{1.85cm} $ \dfrac{99}{22} $ \hspace*{1.85cm}  $ \dfrac{216}{120} $  }\\
+
+\noindent \reponse[8]\\
+
+
+\end{document}

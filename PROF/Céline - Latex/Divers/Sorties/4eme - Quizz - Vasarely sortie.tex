@@ -1,0 +1,160 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+\usepackage{pifont}
+\usepackage{lscape}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace*{0.1cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+
+
+
+
+\titre{{\large Quizz : Centre Pompidou, la fontaine Stravinsky et Vasarely}}{}{}{4ème}{}
+
+\vspace*{0.7cm}
+
+\textbf{{\large \underline{Questions :}}}\\
+
+\q Vous avez travaillé ce matin autour de la fontaine Stravinsky, savez-vous quel est l'autre nom qu'on lui donne? \\
+\textit{Fontaines des Automates.}\\
+
+\q Ce monument évoque l' \oe{uvre} de Igor Stravinsky, un compositeur russe du XXème siècle. \\
+De combien de sculptures la fontaine est-elle composée ?\\
+\textit{16 sculptures.}\\
+
+
+\q Pouvez-vous me citer parmi les sculptures une sculpture qui fait référence à la musique ?\\
+\textit{La clef de sol.}\\
+
+\q Si vous avez fait attention, vous avez pu remarquer qu'il y avait des sculptures de couleurs et des sculptures monochromes. \\
+Combien y-a-t-il  de sculptures monochromes ?\\
+\textit{Il y en a 7.}\\
+
+\q On va parler maintenant du grand bâtiment où nous allons aller voir l'exposition cette après-midi, le centre Pompidou.\\
+Savez-vous qui a eu l'idée de le construire et en quelle année ?\\
+\textit{Le président Georges Pompidou, en 1969.}\\
+
+\q Un concours d'idées est alors lancé, et sont invités à participer 681 architectes du mondes entier de 49 pays différents. 3 projets sont alors retenu par le jury.\\
+Quelles sont les nationalités  des architectes des projets retenu ?\\
+\textit{2 italiens et un anglais.}\\
+
+BONUS : Quel était le président du jury ? \textit{Jean Prouvé}\\
+
+\q Quels sont les architectes retenu pour la conduite du projet et donc à l'origine du centre Pompidou ?\\
+\textit{Renzo Piano et Richard Rogers.}\\
+
+
+
+\q Au début de sa construction à quoi avait été comparé le bâtiment ?\\
+\textit{A une raffinerie de pétrole.}\\
+
+\q A quelle date a été inauguré le centre Pompidou ?\\
+\textit{Le 31 janvier 1977.}\\
+
+\q Quel était le président à l'époque ?\\
+\textit{Valery Giscard d'Estaing}.\\
+
+\q La particularité du bâtiment est que les tuyaux sont apparents et ont été peints de plusieurs couleurs.\\
+Combien de couleurs sont présentes sur le bâtiment et quelles sont-elles ?\\
+\textit{Jaune, vert, bleu, rouge.}\\
+
+\newpage
+
+\vspace*{0.4cm}
+
+\q Ces couleurs ont une signification bien particulière, pouvez-vous me dire à quoi font référence 2 de ces couleurs ?\\
+\textit{bleu = circulation de l'air, jaune = circulation de l'électricité, vert = circulation de l'eau et rouge = circulation de personnes.}\\
+
+\q Tout à l'heure, nous irons assisté à une exposition d'un artiste hongrois Victor Vasarely. 
+Quelles sont ses dates de naissance et de mort ?\\
+\textit{1906 / 1997.}\\
+
+
+\q C'est un artiste très connu aujourd'hui  mais à l'époque il se destinait à une toute autre carrière. Pouvez-vous me dire vers dans domaine souhaitait-il travaillé?\\
+\textit{la médecine.}\\
+
+\q  Il est aujourd'hui reconnu comme le père fondateur d'un grand mouvement artistique. Quel est-il? \\
+\textit{L'Op Art.}\\
+
+\q Vasarely va travailler pendant sa carrière aussi pour de nombreuses entreprises. En 1972 c'est la firme Renault fait appel à lui.\\
+Savez-vous pourquoi?\\
+\textit{La firme Renault qui souhaite se développer à l'international, confie à Vasarely le soin de dépoussiérer son vieux logo.}\\
+
+\q Dès 1973, les travaux de construction de la Fondation de Vasarely débutent. Savez-vous dans quel ville ?\\
+\textit{Aix-en-Provence.}\\
+
+
+
+\end{document}

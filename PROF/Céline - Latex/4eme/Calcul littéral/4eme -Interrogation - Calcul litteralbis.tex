@@ -1,0 +1,222 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation : Calcul littéral }{Nom :}{Prénom :}{Classe}{Date}
+
+\vspace*{0.75cm}
+
+\begin{flushleft}
+\begin{tabular}{|m{9.5cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|}
+\hline 
+\textbf{Compétences} & \begin{center}
+\textbf{N.E.}
+\end{center} & \begin{center}
+\textbf{M.I.}
+\end{center} & \begin{center}
+\textbf{M.F.}
+\end{center}  & \begin{center}
+\textbf{M.S.}
+\end{center} & \begin{center}
+\textbf{T.B.M.}
+\end{center} \\ 
+\hline 
+Je dois savoir réduire une expression littérale &  &  & & &\\
+\hline 
+Je dois savoir développer une expression littérale de la forme a (b+c) &  &  & & &\\
+\hline
+Je dois savoir utiliser le double développement  &  &  & & &\\ 
+\hline
+
+
+\end{tabular} 
+\end{flushleft}
+
+\textit{N.E = Non évalué ; M.I. = Maîtrise insuffisante ; M.F. = Maîtrise fragile ; M.S. = Maîtrise satisfaisante ; T.B.M. = Très bonne maîtrise}\\
+
+\vspace*{0.75cm}
+
+\exo{2}\textbf{Simplifier} si possible chacune des écritures suivantes en supprimant les symboles "$\times$" et les parenthèses \textbf{inutiles} :
+\bmul{2}
+\begin{flushleft}
+$9 \times x \times 6 \times y = ....................... $ \\
+\end{flushleft}
+
+\begin{flushleft}
+$ 5 \times (6 \times
+a +7) - (31\times b ) =  . . . . . . . . . . . . . . . . . . . . . . . . . . $
+\end{flushleft}
+
+\columnbreak
+
+\begin{flushleft}
+	$  z \times 2 \times z \times z + 7 \times c \times 4 \times c = .............................. $ \\
+	\end{flushleft}	
+	
+
+
+
+
+\begin{flushleft}
+        $ ( x \times 3 - 1,7) \times (t - 5)       = .............................. $ \\   
+        \end{flushleft}        
+
+\emul
+
+\vspace*{0.5cm}
+
+\exo{2}Supprimer les parenthèses en utilisant les propriétés vues en cours et \textbf{réduire} les expressions suivantes :\\
+
+
+\bmul{2}
+
+
+$S = 3x^{2} - 14 + (-9 + 2x^{2} - 21x)$\\
+\reponse[5]\\
+
+
+
+
+\columnbreak
+
+$L = (4y^{2} - 3y + 5) - (- 5y^{2} + 7y - 8)$\\
+\reponse[5]\\
+
+
+\emul
+
+	
+\vspace*{0.5cm}
+
+
+\exo{6} \textbf{Développer} et \textbf{réduire} chacune des expressions suivantes:\\
+
+
+\bmul{2}
+
+$B= 7(-3x + 8)$\\
+\reponse[6]\\
+
+
+
+\columnbreak
+
+$F= -9y(11-y)$\\
+\reponse[6]\\
+
+
+
+\emul
+
+\newpage
+
+\vspace*{0.5cm}
+
+\bmul{2}
+
+
+$O = (5+x) (3x+6)$\\
+\reponse[8]\\
+
+\columnbreak
+
+
+
+$R = (x-9)(4x-7)$\\
+\reponse[8]\\
+
+\emul
+
+\vspace*{0.5cm}
+
+\exo{} Bonus
+
+Wendy a cinq ans de plus que Marion. Samia a le double de l'âge de Wendy. On note $x$ l'âge de Marion.\\
+
+- Exprimer en fonction de $x$ :\\
+
+\noindent \qa l'âge de Wendy : \\
+\qa l'âge de Samia :\\
+\qa la somme des âges de Marion, Wendy et Samia :\\
+
+
+- Marion a 14 ans.
+Calculer la somme des âges de Marion, Wendy et Samia.\\
+\reponse[6]\\
+
+
+\end{document}
