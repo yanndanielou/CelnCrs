@@ -1,0 +1,177 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Correction de la séance d'AP  : Calculs de volumes}{}{}{3ème}{}
+
+
+
+\vspace*{0.2cm}
+
+
+\exo\\
+
+Volume du pavé droit : $V_{A} = L \times l \times h$\\
+donc $V_{A} = 1 \times 1 \times 2  = 2 m^{3}$\\
+
+Volume du cylindre + Volume de 2 demies boules de même rayon (donc volume d'une boule)\\
+$V_{B} = \pi \times r^{2} \times h + \dfrac{4}{3} \pi r^{3}$\\
+$V_{B} = \pi \times 0.58^{2} \times 1.15 + \dfrac{4}{3} \pi 0.58^{3}$\\
+$V_{B} \approx 2,03 m^{3}$\\
+
+Les 2 conteneurs ont donc pratiquement le même volume.\\
+
+
+
+
+\exo \\
+
+\qa $d=19,5 \div 3$ 	d = 6,5 cm 	Le diamètre d'une balle est 6,5 cm.\\
+
+\qa $V1 =6.5 \times 6.5 \times 19.5$	V1 = 823,875 $cm^{3}$	Le volume V1 de la boîte est 823,875$cm^{3}$ .\\
+
+\qa $V2 = 3 \times \dfrac{4}{3} \pi \times 3.25^{3} = 137,3125 \pi \approx 431,380 cm^{3}$  
+Le volume V2 des 3 balles est environ 431,380 cm3.\\
+
+\qa $\dfrac{421,380}{823,875} \times 100 \approx 52$	Les balles occupent environ 52 $\%$ du volume de la boîte.\\
+
+
+\exo\\
+
+\initqa \qa Volume du culbuto : $V = \dfrac{\pi \times 10^{2} \times 20}{3} + \dfrac{1}{} \times \dfrac{4}{3} \pi \times 10^{3}$\\
+
+$V = \dfrac{2000 \pi}{3} + \dfrac{2000 \pi}{3} = \dfrac{4000 \pi}{3} \approx 4189 cm{3}$\\
+
+\qa Aire de la surface d'une demie sphère :\\
+
+$ A = \dfrac{1}{2} \times 4 \pi r^{2}$\\
+$ A = \dfrac{1}{2} \times 4 \pi \times 10^{2} = 200 \pi \approx 628 cm^{2}$\\
+
+
+\qa $2,5 \times 5,5 \times 10 000 = 137 500 cm^{2}$\\
+On peut couvrir une surface de 137 500 $cm^{2}$ avec 2,5 L de peinture.\\
+
+$137 500 \div 628 \approx 218 $\\
+On peut donc peindre environ 218 culbutos avec 2,5 L de peinture.\\
+
+\exo\\
+\q  On va considérer que la surface au sol de la maison (à distinguer de la surface habitable), n'est constituée que de la surface du sol de la partie principale. On exclut les chambres et le grenier qui sont à l'étage.\\
+Le sol de la partie principale, est un rectangle EF GH de dimensions 12 m sur 9 m dont l' aire est : $9 \times 12 = 108 m^{2}$\\
+
+\q \initqa \qa La partie principale est constituée d’un pavé droit ABCDEFGH, donc son volume V1 est : $V1 = 12 \times 3 \times 9 = 324 m^{3}$.\\
+
+
+\qa Pour calculer le volume des chambres, on va soustraire le volume de la pyramide réduite IRTSM à celui de la grande pyramide IABCD.\\
+
+\textbf{Calcul du volume de la pyramide IABCD.}\\
+La pyramide IABCD est de base, le rectangle ABCD d'aire A d'après la question 1., et de hauteur IK1 = 6, 75 m.\\
+$V_{IABCD} = \dfrac{108 \times 6.25}{3} = 243 m^{3}$\\
+
+
+\textbf{Calcul du volume de la pyramide IRTSM.}\\
+La pyramide IRTSM est une réduction de la pyramide IABCD de rapport : $k= \dfrac{IK_{2}}{IK_{1}} = \dfrac{4.5}{6.75} =\dfrac{2}{3}$\\
+
+
+Les longueurs étant multipliées par ce rapport $=\dfrac{2}{3}$, et d'après la propriété, les aires le sont par $k^{2}$ et les volumes par $k^{3}$\\
+
+Donc $V_{IRTSM} = \left(\dfrac{2}{3}\right)^{3} \times V_{IABCD} = \dfrac{8}{27} \times 243 = 72 m^{3}$\\
+
+\textbf{Calcul du volume des chambres.}\\
+
+$V2 = V_{IABCD} - V_{IRTSM} = 243 - 72 = 171 m^{3}$.\\
+
+
+\qa Puisque les radiateurs seront installés dans toute la maison sauf au grenier, le volume V3 à chauffer à la somme des volumes de la partie principale et des chambres.\\
+
+$V3 = V1 + V2 = 324 + 171 = 495 m^{3}$\\
+
+
+
+\q 
+Le calcul à l'aide d'un produit en croix par exemple nous donne directement la puissance électrique nécessaire pour chauffer les 495 m3 du volume de la maison.\\
+
+$P= \dfrac{925 \times 495}{25}=18315 W$\\
+
+Par division euclidienne de la puissance électrique nécessaire par la puissance d'un radiateur on obtient : $18315 = 1800 \times 10 + 315$\\
+
+Il faudra donc 11 radiateurs pour avoir la puissance nécessaire car 10 ne suffisent pas.\\
+
+Le radiateurs coûtent 349,90 euros pièces donc cela représente pour l’achat des 11 radiateurs une somme de : $S = 11 \times 349.90 =3848.90 $ euros.\\
+
+
+
+\end{document}

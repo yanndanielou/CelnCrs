@@ -1,0 +1,223 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Exercices sur les nombres entiers }{}{}{4ème}{}
+
+\vspace*{0.2cm}
+
+
+\bmul{2}
+
+\exo \\ Recopier et compléter avec les mots : \textit{chiffre}, \textit{nombre}.
+
+\begin{flushleft}
+\initqa \qa Dans une équipe de rugby, le . . . de joueur est 15.\\
+
+\qa 7 est  le . . .des unités du . . . 57.\\
+
+\qa Le . . . 148 est écrit avec trois . . .\\
+\end{flushleft}
+
+\vspace*{0.5cm}
+
+\exo \\ Recopier et compléter avec les mots : \textit{unités}, \textit{dizaines}, \textit{centaines}, \textit{milliers}, \textit{...}\\
+
+\initqa \noindent \qa 504 = 5 . . . 4 . . . \\
+ \qa 2 320 = 2 . . . 3 . . . 2 . . .\\
+\qa 2 005 087 = 2 . . . 5 . . . 8 . . . 7 . . . \\
+\qa 3 009 000 205 = 3 . . . 9 . . . 2 . . . 5 . . .\\
+
+\vspace*{0.5cm}
+
+
+\exo \\ Recopier et compléter.
+\begin{flushleft}
+\initqa \qa (4 $\times$ 10 000) + (5 $\times$ 1 000) + (7 $\times$ 10) + 1 = ...\\
+
+\qa (3 $\times$ 1 000 000) + (7 $\times$ 100 000) + (5 $\times$ 100)  = ...\\
+
+\qa (2 $\times$ 100 000) + (3 $\times$ 1 000) + (1 $\times$ 100) + 7 = ...\\
+
+\qa (9 $\times$ 10 000 000 000) + (7 $\times$ 1 000 000) + (2 $\times$ 10 000) + (6 $\times$ 100) = ...\\
+
+\end{flushleft}
+
+
+
+\columnbreak
+
+
+\exo \\ Écrire chaque nombre de façon à le lire facilement et supprimer les zéros inutiles.
+
+\initqa \qa 2 073 \hspace*{0.5cm} \qa 01234560  \hspace*{0.5cm} \qa 0056502430700\\
+
+\vspace*{0.5cm}
+
+\exo \\  Recopier et compléter par les nombres qui conviennent.\\
+
+\initqa \noindent \qa 1 milliard = . . . millions \\
+ \qa 1 milliard = . . . milliers\\
+\qa 1 million = . . . centaines \\
+ \qa 1 millier = . . . dizaines\\
+ 
+ \vspace*{0.5cm}
+
+\exo \\ Décomposer les nombres suivants comme sur l'exemple.\\
+\textbf{Exemple :} 356 = (3  $\times$ 100) + (5 $\times$ 10) + 6\\
+
+\initqa \qa 9 527 \hspace*{0.25cm} \qa 14 025 \hspace*{0.25cm} \qa 1 250 730
+ 
+ 
+\emul
+
+\vspace*{0.5cm}
+
+\exo \\ Recopier et compléter.\\
+
+\noindent \initqa \qa 1 235 = (1  $\times$ . . .) + (2  $\times$ . . .) + (3 $\times$ . . .) + 5\\
+\qa 24 103 = (2 $\times$ . . . ) + (4  $\times$ . . .) + (1 $\times$ . . .) + (3 $\times$ . . .)\\
+ \qa 3 758 000 = (3 $\times$ . . . ) + (7  $\times$ . . .) + (5 $\times$ . . .) + (8 $\times$ . . .)\\
+ \qa 20 507 050 = (2 $\times$ . . . ) + (5  $\times$ . . .) + (7 $\times$ . . .) + (5 $\times$ . . .)\\
+ 
+ \vspace*{0.5cm}
+ 
+ 
+  
+ 
+  
+  
+  \bmul{2}
+  
+  \exo \\ Recopier et compléter.
+\begin{flushleft}
+ \initqa \qa Dans 275, le chiffre des dizaines est ...\\
+\qa Dans 8 345, le chiffre des ... est 8.\\
+\qa Dans 135 437, le chiffre 3 est celui des ... et des ...\\
+\end{flushleft}
+
+
+  \vspace*{0.5cm}
+  
+   \exo \\ 70 532 spectateurs ont assisté à un concert à Bercy.\\
+  Pour ce nombre, quel est le chiffre : \\
+  \initqa \qa des dizaines ? \hspace*{0.25cm} \qa des milliers ? \\
+   \qa des centaines ? \hspace*{0.25cm} \qa des dizaines de mille ?\\
+  
+\exo \\    Dans le nombre 7 156 940 238 :\\
+\initqa \qa quel est le chiffre des unités de milliards ? \\
+\qa quel est le nombre d'unités de millions ? \\
+\qa quel est le chiffre des dizaines de mille? \\
+\qa quel est le nombre de dizaines de mille? \\
+ 
+ \columnbreak
+ 
+ \exo \\ Dans le nombre 98 651 :\\
+\initqa \qa quel est le nombre d'unités ?\\
+\qa quel est le nombre de dizaines ?\\
+\qa quel est le nombre de centaines ?\\
+\qa quel est le nombre de milliers ?\\
+
+ \exo \\ Dans chaque cas, écrire le nombre en chiffres.
+\begin{flushleft}
+  \initqa \qa 25 dizaines\\
+ \qa 370 dizaines\\
+ \qa 325 centaines\\
+ \qa 21 dizaines de mile et 87 unités\\
+ \qa 69 unités de millions et 146 dizaines\\
+\end{flushleft} 
+
+\vspace*{0.25cm}
+ 
+ 
+  \exo \\ Écrire tous les nombres entiers possibles de trois chiffres en utilisant une seule fois chacun des chiffres 3 ; 4 et 0.\\
+ 
+
+ 
+
+ 
+ \emul
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+
+\end{document}
