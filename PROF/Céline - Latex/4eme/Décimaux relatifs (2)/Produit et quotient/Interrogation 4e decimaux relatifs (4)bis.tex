@@ -1,0 +1,186 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Décimaux relatifs(2)}{Nom :}{Prénom :}{Classe}{Date}
+
+
+\vspace*{0.5cm}
+
+\begin{flushleft}
+\begin{tabular}{|m{9.5cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|}
+\hline 
+\textbf{Compétences} & \begin{center}
+\textbf{N.E.}
+\end{center} & \begin{center}
+\textbf{M.I.}
+\end{center} & \begin{center}
+\textbf{M.F.}
+\end{center}  & \begin{center}
+\textbf{M.S.}
+\end{center} & \begin{center}
+\textbf{T.B.M.}
+\end{center} \\ 
+\hline 
+Je dois savoir additionner et soustraire des entiers relatifs &  &  & & &\\
+\hline 
+Je dois savoir calculer le produit de plusieurs nombres relatifs&  &  & & &\\
+\hline
+Je dois savoir respecter les priorités de calculs   &  &  &  & &\\ 
+\hline 
+
+\end{tabular} 
+\end{flushleft}
+
+\textit{N.E = Non évalué ; M.I. = Maîtrise insuffisante ; M.F. = Maîtrise fragile ; M.S. = Maîtrise satisfaisante ; T.B.M. = Très bonne maîtrise}\\
+
+\vspace*{0.5cm}
+
+\exo{8} Effectuer les calculs suivants \textbf{en indiquant toutes les étapes de calculs}.\\
+
+\begin{multicols}{3}
+
+
+$Z = 26-4 \times (  8 )$\\
+\reponse[5]\\
+
+
+
+\columnbreak
+
+
+
+$U = ( 7-18 ) \times ( 5-6 )$\\
+\reponse[5]\\
+
+
+
+\columnbreak
+
+
+
+$R = \dfrac{-  6\times 7}{(-1) \times (-2)}$\\
+\reponse[5]\\
+
+
+
+\end{multicols}
+
+
+
+\bmul{2}
+
+$C = (-2) \times (-1) \times (-5) - 7^{2} $\\
+\reponse[8]\\
+
+
+
+\columnbreak
+
+$A= 3-7 \times (-4 ) + 5 \times (-9)$  \\
+\reponse[8]\\
+
+\emul
+
+$J= (35-37)\times[5 +(3-(-2)) \times 2]$\\
+\reponse[5]\\
+
+\newpage
+
+\noindent \reponse[3]\\
+
+$U= \dfrac{(-8) \times (-3) - (-9)\times (-6)}{12 \div (-3)-2}$\\
+\reponse[7]\\
+
+
+\vspace*{0.5cm}
+
+\exo{2} Dans chaque cas, \textbf{recopier} et placer les parenthèses pour que l'égalité soit vraie.\\
+
+\qa $14-4 \times 6 - 1 = 50$\\
+
+
+
+\qa $ 15-25 \times 2,4 +7 -3 \times 2 = -16$\\
+
+\noindent \reponse[7]\\
+
+
+
+
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Le petit truc en plus}{}{}{4ème}{}
+
+\vspace*{1cm}
+
+{\Large \textbf{A rendre avant le 13 décembre !!}}
+
+\vspace*{1cm}
+La construction d'un sangaku est à réaliser sur une feuille blanche.\\
+
+\includegraphics[scale=1]{sangaku.eps} \\
+
+Un programme de construction :\\
+ 
+\bi \item Placer un point O.\\
+\item Construire le cercle de centre O et de diamètre 12 cm.\\
+\item Placer un point A sur le cercle et tracer le segment [OA].\\
+\item Construire le point B image du point A par la rotation de centre O et d'angle 60\degre (sens anti-horaire) et tracer le segment [OB].\\
+\item Construire le point C image du point B par la rotation de centre O et d’angle 60\degre (sens anti-horaire)et tracer le segment [OC].\\
+\item Même consigne pour les points D, E, F.\\
+\item Construire le cercle de centre O et de rayon 2 cm, il coupe le segment [OA] en A’, le segment [OB] en B’, … , le segment [OF] en F’.\\
+\item Construire les cercles de diamètres [AA’], [BB’], [CC’], [DD’], [EE’], [FF’].\\
+\ei
+
+\vspace*{1cm}
+
+
+Temps passé à faire réaliser la figure : . . . .\\
+
+\vspace*{1cm}
+
+\begin{flushright}
+\begin{tabular}{|p{9cm}|}
+\hline 
+\textbf{Critères d'évaluation :} \\ 
+\hline 
+Je sais faire une figure complète\\
+Je sais construire une figure avec précision\\
+Je sais construire une figure de façon soignée\\
+Je comprends les consignes et le vocabulaire mathématique \\
+\hline 
+\end{tabular} 
+
+\end{flushright}
+
+\end{document}
