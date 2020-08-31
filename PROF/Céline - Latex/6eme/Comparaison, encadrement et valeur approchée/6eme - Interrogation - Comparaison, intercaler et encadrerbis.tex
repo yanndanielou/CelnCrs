@@ -1,0 +1,196 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Comparer, intercaler et encadrer des nombres }{Nom :}{Prénom :}{Classe}{Date}
+
+\vspace*{0.5cm}
+\begin{flushleft}
+\begin{tabular}{|m{9.5cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|}
+\hline 
+\textbf{Compétences} & \begin{center}
+\textbf{N.E.}
+\end{center} & \begin{center}
+\textbf{M.I.}
+\end{center} & \begin{center}
+\textbf{M.F.}
+\end{center}  & \begin{center}
+\textbf{M.S.}
+\end{center} & \begin{center}
+\textbf{T.B.M.}
+\end{center} \\ 
+\hline 
+Je dois savoir ranger des nombres dans le sens croissant ou dans le sens décroissant &  &  & & &\\
+\hline 
+Je dois savoir encadrer un nombre, intercaler un nombre entre deux autres &  &  & & &\\
+\hline
+Je dois savoir donner une valeur approchée (par excès ou par défaut) à l'unité, au dixième, au centième près &  &  & & &\\ 
+\hline
+
+\end{tabular} 
+\end{flushleft}
+
+\textit{N.E = Non évalué ; M.I. = Maîtrise insuffisante ; M.F. = Maîtrise fragile ; M.S. = Maîtrise satisfaisante ; T.B.M. = Très bonne maîtrise}\\
+
+
+\vspace*{0.5cm}
+
+
+
+\exo{1,5} Compléter les définitions du cours : \\
+
+
+\q Ranger des nombres du plus petit au plus grand, c'est les ranger dans \reponse[2]\\
+
+\q Encadrer un nombre, c'est \reponse[3]\\
+
+
+\exo{3} 
+
+\initq \qa Ranger dans l'ordre décroissant les nombres suivants : \\
+
+$ 5,4$ \hspace*{0.3cm};\hspace*{0.3cm} $ \dfrac{542}{100} + \dfrac{3}{1 000}$ \hspace*{0.3cm} ;\hspace*{0.3cm} $ \dfrac{53}{10} + \dfrac{9}{100}$\hspace*{0.3cm} ; \hspace*{0.3cm}$ 538$ centièmes\hspace*{0.3cm} et\hspace*{0.3cm} $ \dfrac{5470}{1 000}$\\
+
+\reponse[1]\\
+
+
+\qa Compléter avec le nombre \textbf{entier} qui suit ou celui qui précède :\\
+
+\bmul{3}
+
+$12,4 < . . .$
+
+\columnbreak
+
+$ . . . < 6,19 $
+
+\columnbreak
+
+$ . . . < \dfrac{2 345 }{100}$\\
+
+\emul
+
+\exo{2,5} 
+
+\initq \q Intercaler un nombre entre 3,1 et 3,2 : \\
+\reponse[1]\\
+
+\q Encadrer les nombres suivants par deux entiers consécutifs :
+
+\bmul{2}
+
+. . . . . . . < 74,586 < . . . . . . .
+
+\columnbreak
+
+. . . . . . . < $ \dfrac{8523}{100}$ < . . . . . . .
+
+
+\emul
+
+\newpage
+
+\vspace*{0.5cm}
+
+\exo{3} $\pi$ est un nombre qui a fasciné tant de savants depuis l'antiquité. \\
+$\pi$ est un nombre irrationnel (c'est à dire qu'il s'écrit avec un nombre infini de décimales sans suite logique). \\
+Le 2 Août 2010, 5 000 milliards de décimales de $\pi$ ont été découverts par deux japonnais Alexander J. Yee et Shigeru en 90 jours.\\
+ Et 1 an plus tard après 371 jours de travail, ces même chercheurs ont battu leur record et ont découvert jusqu'à 10 000 milliards de décimales de $\pi$. En voici une toute petite approximation :
+
+\begin{center}
+{\large $\pi \approx 3,141 592 653 589 793 238 462 643 383 279 502 884 197 169 399 375 $}
+\end{center}
+
+
+
+\initq \q \initqa \qa Encadrer le nombre $\pi$ \textbf{au millième} près.\\
+\reponse[4]\\
+
+\qa Donner la valeur approchée \textbf{au millième} près de $\pi$ par défaut.\\
+\reponse[4]\\
+
+
+\q Donner la valeur approchée \textbf{au dixième} près de $\pi$ par excès.\\
+\reponse[4]\\
+
+\q BONUS. Donner un arrondi de $\pi$ au centième près. Expliquer votre réponse.\\
+\reponse[4]\\
+
+
+
+
+\end{document}

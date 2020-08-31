@@ -1,0 +1,196 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Correction de la séance d'AP 5 : Pourcentages}{}{}{3ème}{}
+
+\vspace*{0.2cm}
+
+
+\exo \\ Calculer
+
+\bmul{2}
+\initqa 
+\qa 25 $\%$ de 32 km :\textbf{ 8 km }\\
+
+
+\qa 65 $\%$ de 380 m : \textbf{247 m}
+
+
+\columnbreak
+
+\qa 14 $\%$ de 1500 euros : \textbf{210 euros }\\
+
+
+\qa 125 $\%$ de 68 L : \textbf{85 L}
+
+
+
+\emul
+
+\vspace*{0.4cm}
+
+\exo \\ Le volume d'eau sur Terre est d'environ 1 380 millions de $km^{3}$. 97,1 $\%$ de ce volume est composé d'eau salée. \\
+
+Il y a 97,1 $\%$ d'eau salée, 100 - 97,1 = 2,9, donc il y a 2,9 $\%$ d'eau douce.\\
+
+$\dfrac{2,9}{100} \times 1 380 \times 10^{6}= 40 020 000 = 4,002 \times 10^{7}$\\
+
+\textbf{Donc il y a 40 020 000 $km^{3}$ d'eau douce.}\\
+
+\vspace*{0.4cm}
+
+\exo \\ Professions en 2005. On comptait environ 24 921 000 actifs en France.\\
+\initq \q Sachant qu'il y avait 2,7 $\%$ d'agriculteurs en 2005, quel était leur nombre ?\\
+
+$\dfrac{2,7}{100} \times 24 921 000= 672 867$. \textbf{Il y a donc en 2005, 672 867 agriculteurs.\\}
+
+\q Sachant que le nombre d'ouvriers était environ de 5 972 000, calculer leur pourcentage par rapport au nombre d'actifs.\\
+
+$\dfrac{5 972 000}{24 921 000} \times 100 = 23,96$. \textbf{Il y avait donc 23,95 $\%$ d'ouvriers.}
+\vspace*{0.4cm}
+
+
+\exo \\ Une usine est divisée en deux ateliers. 
+L'atelier nord compte 1000 salariés dont 80$\%$ d'ouvriers.\\
+L'atelier sud compte 540 salariés dont 70$\%$ d'ouvriers.
+Calculer le pourcentage d'ouvriers dans cette usine.\\
+
+\bmul{2}
+
+\textbf{Atelier Nord :} \\
+$\dfrac{80}{100} \times 1 000= 800$\\
+Il y a donc 800 ouvriers dans l'atelier Nord.
+
+
+\columnbreak
+
+\textbf{Atelier Sud :} \\
+$\dfrac{70}{100} \times 540= 378$\\
+Il y a donc 378 ouvriers dans l'atelier Nord.
+
+
+\emul
+
+On compte au total, 800 + 378 = 1 178, 1 178 ouvriers dans l'usine qui compte 1 540 salariés.\\
+$\dfrac{1178}{1540} \times 100 = 76,5$. \textbf{Il y a donc 76,5 $\%$ d'ouvriers dans toute l'usine.\\}
+
+\vspace*{0.4cm}
+
+
+\exo \\ Des prix.\\
+\initqa \qa Julie obtient une réduction de 15 $\%$ sur un vélo valant 158 euros . Quel est le montant de la réduction obtenue par Julie ?\\
+
+$\dfrac{15}{100} \times 158= 23,7$. \textbf{Elle obtient une réduction de 23,7 euros sur son vélo.}\\
+
+
+\qa Patrick a obtenu une réduction de 27 euros sur une console de jeu qui valait 225 euros. Quel pourcentage de réduction a-t-il obtenu ?\\
+
+$\dfrac{27}{225} \times 100 = 12$. \textbf{Il obtient une réduction de 12 $\%$}.\\
+
+\newpage
+
+\qa Paul a obtenu une baisse de 45 euros sur un appareil photo, soit une baisse de 30 $\%$ du prix initial. Quel était le prix initial de l'appareil photo ?\\
+
+\begin{tabular}{|c|c|}
+\hline 
+45 &  ? \\ 
+\hline 
+30 & 100 \\ 
+\hline 
+\end{tabular}  $\dfrac{45 \times 100}{30} = 150$\\
+\textbf{Le prix initial était de 150 euros.}\\
+\vspace*{0.4cm}
+
+\exo \\ Une montre coûtait 175 euros en 2006. Son prix est augmenté de 3 $\%$
+en 2007, puis de 4 $\%$ en 2008.\\
+\initq \q Calculer le prix de cette montre en 2007, puis en 2008.\\
+
+En 2007 : $\dfrac{3}{100} \times 175 = 5,25 $ \textbf{Nouveau prix : 175 + 5,25 = 180,25 euros}\\
+
+En 2008 : $\dfrac{4}{100} \times 180,25 = 7,21 $ \textbf{Nouveau prix : 180,25 + 7,21 = 187,46 euros}\\
+
+
+\q Calculer le pourcentage d'augmentation sur les deux années.\\
+
+$\dfrac{187,46}{175} \times 100 = 106,5$.\hspace*{1cm} 100 - 106,5 = 6,5.\\
+
+\textbf{Il y a donc eu sur les 2 ans une augmentation de 6,5 $\%$}.
+
+
+
+\end{document}

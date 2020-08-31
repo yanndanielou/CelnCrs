@@ -668,38 +668,34 @@ Intercaler un nombre entre deux nombres donnés, c'est écrire un nombre compris e
 
 \underline{\textbf{Exemple :}} Intercaler un nombre entre 8 et 9. \\
 
-\vspace*{1.5cm}
+\vspace*{1cm}
 
 \df{
 Encadrer un nombre, c'est écrire qu'il est compris entre deux nombres, l'un plus petit et l'autre plus grand.
 }\\
 
-\underline{\textbf{Exemple :}} On considère $a$ l'abscisse du point A.\\
-
-
-\begin{center}
-\includegraphics[scale=1]{encadrer.eps} \\
-\end{center}
+\underline{\textbf{Exemples d'encadrement :}}
 
 \vspace*{0.3cm}
 
 \bi
 
-\item Un encadrement à l'\textbf{unité} de $a$ est : $3 < a < 4$
+\item Un encadrement à l'\textbf{unité} de 5,32 est : $5 < a < 6$
 
-\item Un encadrement au \textbf{dixième} de $a$ est : $3,1 < a < 3,2$
+\item Un encadrement au \textbf{dixième} de $5,789$ est : $5,7 < a < 5,8$
 
-\item Un encadrement au \textbf{centième} de $a$ est : $3,14 < a < 3,15$
+\item Un encadrement au \textbf{centième} de 11,235 est : $11,23 < a < 11,24$
 
 
 \ei
- 
-\vspace*{0.3cm}
 
+\newpage
 
-\section{Valeurs approchées}
+\section{Valeurs approchées et arrondi}
 
-\vspace*{0.5cm}
+\subsection{Valeurs approchées}
+
+\vspace*{0.25cm}
 
 On considère $a$ l'abscisse du point A.\\
 \renewcommand{\arraystretch}{2.2}
@@ -720,9 +716,65 @@ au millième : & . . . < $a$ < 14,784 & au millième : \\
 \hline 
 \end{tabular} 
 
+\noindent\fbox{\parbox{\linewidth-2\fboxrule-2\fboxsep}{ 
+\textbf{Méthode pour trouver les valeurs approchées par défaut ou par excès au dixième
+}\\
 
- 
+\textbf{Étape 1} : On écrit un encadrement du nombre A au dixième, c'est-à-dire avec un chiffre après la virgule.\\
 
+\textbf{Étape 2} : Le nombre de gauche sera le même que le nombre A sans les chiffres après les dixièmes, c'est \textbf{la valeur approchée de A par défaut au dixième}.\\
+
+\textbf{Étape 3} :Le nombre de droite est \textbf{la valeur approchée de A par excès au dixième}. \\
+
+}}\\
+
+\vspace*{0.25cm}
+
+\begin{Exoapp}
+\initq
+\q Donner une valeur approchée par défaut au dixième près de 14,256.\\
+\reponse[2]\\
+\q Donner une valeur approchée par excès à l'unité près de 7,21.\\
+\reponse[2]\\
+\q Donner une valeur approchée par défaut au millième près de 91,2654.\\
+\reponse[2]
+
+\end{Exoapp}
+
+\newpage
+
+\subsection{Arrondi d'un nombre}
+
+\noindent\fbox{\parbox{\linewidth-2\fboxrule-2\fboxsep}{ 
+\textbf{Méthode pour trouver l'arrondi au dixième d'un nombre A.
+}\\
+
+\textbf{Étape 1, 2 et 3} : On reprend les mêmes étapes que pour trouver les valeurs approchées de A au dixième.\\
+
+\textbf{Étape 4} : On complète les nombres de gauche et de droite avec zéros inutiles.\\
+
+\textbf{Étape 5} : On regarde vers lequel des 2, le nombre A est le plus proche pour obtenir l'arrondi au dixième.\\
+
+}}
+
+
+\vspace*{0.5cm}
+
+\underline{\textbf{Exemples :}} \qa Trouver l'arrondi de  A = 10,273.
+
+
+\includegraphics[scale=0.75]{arrondi1.eps} \\
+
+\qa Compléter sur la feuille directement et donner les valeurs approchées par défaut et excès au dixième ainsi que l'arrondi au dixième de 57,861.
+
+\includegraphics[scale=0.75]{arrondi2.eps} \\
+
+\begin{Exoapp}
+
+\includegraphics[scale=0.65]{arrondi3.eps} 
+
+
+\end{Exoapp}
 
 
 

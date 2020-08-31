@@ -470,16 +470,17 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}
-   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesection}% apparence du numéro
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries
+ }% apparence commune au titre et au numéro
+   {\sffamily \textcolor{red} \thesection}% apparence du numéro
    {1em}% espacement numéro/texte
-   {\sffamily }% apparence du titre
+   {\sffamily   \textcolor{red} }% apparence du titre
    
 \titleformat{\subsection}
    {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsection}% apparence du numéro
+   {\sffamily \textcolor{blue} \thesubsection}% apparence du numéro
    {1em}% espacement numéro/texte
-   {\sffamily }% apparence du titre
+   {\sffamily \textcolor{blue}}% apparence du titre
 
 \titleformat{\subsubsection}
    {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
@@ -491,7 +492,7 @@
   \newtheorem{exot}{\sffamily Exercice-type }
 \newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
  
-\newcommand{\chapitre}{Grandeurs et périmètre}
+\newcommand{\chapitre}{Grandeurs et périmètres}
 
 \newcommand{\numchapitre}{}
 
@@ -525,21 +526,9 @@
 \newpage
  \setcounter{page}{1}
  
-
 \begin{center}
-\textbf{Activité d'introduction 
-}\end{center}
- 
-Recopier et compléter avec l'unité de longueur appropriée :
-\bi
-
-\item  Une allumette mesure 47 . . . de long et pèse 0,13 . . . .
-\item Tom pèse 52,5 . . . pour une taille de 1,60 . . . .
-\item Un cheval a une hauteur au garrot de 155 . . . pour une masse de 7  . . . .
-\item La longueur du tour de la Terre est d'environ 40 000 . . . . \\
-\ei
-
-\vspace*{0.5cm}
+{\Large \textcolor{red}{\underline{CHAPITRE ? :}} \hspace*{0.5cm}\textbf{ Grandeurs et périmètres}}
+\end{center}
  
 \textbf{\underline{{\large Mes objectifs:}}}
 
@@ -554,7 +543,22 @@ Recopier et compléter avec l'unité de longueur appropriée :
 
 \end{itemize}
 
-\vspace*{0.8cm}
+\vspace*{0.3cm}
+
+\begin{center}
+\textbf{\underline{{\large Activité d'introduction}} 
+}\end{center}
+ 
+Recopier et compléter avec l'unité de longueur appropriée :
+\bi
+
+\item  Une allumette mesure 47 . . . de long et pèse 0,13 . . . .
+\item Tom pèse 52,5 . . . pour une taille de 1,60 . . . .
+\item Un cheval a une hauteur au garrot de 155 . . . pour une masse de 7  . . . .
+\item La longueur du tour de la Terre est d'environ 40 000 . . . . \\
+\ei
+
+
 
 
 
@@ -570,71 +574,83 @@ Son unité est le gramme, noté g.}\\
 
 \ex
 
- La masse d'une tablette de chocolat est 100 g.
+ La masse d'un téléphone portable de nos jours est en moyenne 145 g.
 
 \vspace*{0.5cm}
 
-\begin{center}
- \includegraphics[scale=1]{mesuremasses.eps}
- \end{center} 
 
-\underline{\textbf{Remarques :}}\\
-
-- On rappelle que l'on inscrit un seul chiffre par colonne. 
-
-- 1 q = 100 kg et 1 t = 1000 kg  \\
 
 
 \subsection{Conversions}
 
-\underline{Méthode} :\\
-Pour convertir une masse (c'est-à-dire changer d'unité), il faut toujours placer le chiffre des unités dans la colonne de l'unité de masse.\\
+Voici les différentes mesures de masses :
 
-\underline{\textbf{Exemples :}}
 
-\bmul{3}
+\begin{flushleft}
+ \includegraphics[scale=0.65]{conversions0.eps}
 
-1 dag = 100 dg 
+\end{flushleft}
 
-\columnbreak
+\underline{\textbf{Remarques :}}\\
 
- 10 kg = 1000 g 
+\textbf{- On rappelle que l'on inscrit un seul chiffre par colonne. }\\
 
-\columnbreak
+\textbf{- 1 q = 100 kg et 1 t = 1000 kg } \\
 
-1 cg = 0,1 dg 
+\newpage
 
-\emul
+\underline{\textbf{{\large Méthode:}}} \\
+Pour convertir une masse (c'est-à-dire changer d'unité), il faut toujours placer le chiffre des unités dans la colonne de l'unité de masse.\textit{(voir le tableau ci-dessus)}\\
+Vous pouvez vous servir du tableau au-dessus pour faire les exercices qui vont suivre !
+
+\setlength{\fboxrule}{1.5pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+{\large A NE PAS RECOPIER !!!!}\\
+
+\underline{\textbf{Exemple 1:}}\\
+\includegraphics[scale=0.63]{conversions1.eps} \\
+\underline{\textbf{Exemple 2:}}\\
+\includegraphics[scale=0.63]{conversions2.eps} \\
+
+\underline{\textbf{Exemple 3:}}\\
+\includegraphics[scale=0.63]{conversions3.eps} 
+
+\end{minipage}}
+\end{flushleft}
+
+
 
 
 \begin{Exoapp}
 \initq 
-
+Convertir les masses suivantes :
 \bmul{2}
-\q Convertir 13 hg en g.\\
-\reponse[1]\\
+\qa 13 hg = . . . . . . . . . . . . . . . . g.\\
 
-\q Convertir 43,52 cg en dg.\\
-\reponse[1]\\
 
-\q Convertir 4,3 g en mg.\\
-\reponse[1]\\
+\qa 43,52 cg = . . . . . . . . . . . . . . . . dg.\\
+
+
+\qa  4,3 g = . . . . . . . . . . . . . . . . mg.
+
 
 \columnbreak
 
-\q Convertir 458 dg en dag.\\
-\reponse[1]\\
+\qa 458 dg = . . . . . . . . . . . . . . . . dag.\\
 
-\q Convertir 45,2 kg en dag.\\
-\reponse[1]\\
 
-\q Convertir 6 541 kg en tonne .\\
-\reponse[1]\\
+\qa  45,2 kg = . . . . . . . . . . . . . . . . dag.\\
+
+
+\qa  6 541 kg = . . . . . . . . . . . . . . . . t .
+
 \emul
 
 
 \end{Exoapp}
 
+\newpage
 
 \section{Longueur}
 
@@ -646,25 +662,29 @@ Son unité est le mètre, noté m.}\\
 
 \ex
 
- La salle de classe mesure environ . . . de long.\\
+ Votre chambre mesure environ . . . . mètres de long.\\
 
-\subsection{Autres unités de longueurs et conversions}
-
-\vspace*{0.5cm}
+\subsection{Conversions}
 
 \begin{center}
 \includegraphics[scale=1]{mesurelongueur.eps} \\
 \end{center}
 
 
-\underline{\textbf{Exemples :}}\\
+\setlength{\fboxrule}{1.5pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+{\large A NE PAS RECOPIER !!!!}\\
+\underline{\textbf{Exemple:}}\\
+\includegraphics[scale=0.63]{conversions3.eps} \\
 
 
- 1 dam = 1000 cm  \hspace*{1cm} 1 mm = 0,01 dm \\
+\end{minipage}}
+\end{flushleft}
 
 
 \begin{Exoapp}
-Compléter les expressions suivantes :
+Compléter les expressions suivantes \textit{(vous pouvez vous servir du tableau au-dessus)} :
 
 \bmul{2}
  5,6 m = . . . cm.\\
@@ -687,10 +707,12 @@ Compléter les expressions suivantes :
 
 \end{Exoapp}
 
+\newpage
+
 \section{Périmètre d'une figure}
 
 \begin{large}
-\underline{Activité d'introduction}\\
+\underline{\textbf{Activité d'introduction}}\\
 \end{large}
 
 
@@ -723,7 +745,7 @@ Le mot \textbf{périmètre} provient du grec ancien \textit{perimetros} qui signif
 
 \underline{\textbf{Exemple} :} Tracer une figure dont le périmètre mesure 45 mm.\\
 
-\vspace*{2cm}
+\vspace*{2.25cm}
 
 
 
@@ -733,7 +755,9 @@ Le mot \textbf{périmètre} provient du grec ancien \textit{perimetros} qui signif
 
 \df{
 \textbf{Un polygone} est une figure fermée composée de plusieurs côtés
-}\\
+}
+
+\newpage
 
 \prop{
 Pour calculer le périmètre d'un polygone, on effectue la somme des mesures de ses côtés.
@@ -750,9 +774,9 @@ Calculer le périmètre du triangle ci-contre :\\
 \includegraphics[scale=1]{triangles.eps} 
 \emul
 
-\newpage
 
-\textbf{\underline{Cas particuliers :}}
+
+\textbf{\underline{{\large $\rightarrow$ Les cas particuliers :}}}
 
 \bmul{2}
 
@@ -762,7 +786,7 @@ Calculer le périmètre du triangle ci-contre :\\
 
 \includegraphics[scale=1]{rect.eps} \\
 
-\fbox{\textbf{Périmètre du rectangle :}\hspace*{0.5cm} $\mathcal{P} =(l + L) \times 2 $ \hspace*{0.5cm}}
+\fbox{\textbf{Périmètre du rectangle :}\hspace*{0.5cm} \textcolor{red}{$\mathcal{P} =(l + L) \times 2 $} \hspace*{0.5cm}}
 \end{center}
 \columnbreak
 
@@ -772,7 +796,7 @@ Calculer le périmètre du triangle ci-contre :\\
 
 \includegraphics[scale=0.9]{carre2.eps} \\
 
-\fbox{\textbf{Périmètre du carré :}\hspace*{0.5cm}$\mathcal{P} =4 \times c$ \hspace*{0.5cm}}
+\fbox{\textbf{Périmètre du carré :}\hspace*{0.5cm}\textcolor{red}{$\mathcal{P} =4 \times c$ \hspace*{0.5cm}}}
 \end{center}
 
 \emul
@@ -792,6 +816,8 @@ Calculer le périmètre du triangle ci-contre :\\
 \reponse[3]\\
 
 \end{Exoapp}
+
+\newpage
 
 
 \subsection{Périmètre d'un cercle - Circonférence d'un cercle}
@@ -824,6 +850,8 @@ D'où les formules suivantes:\\
 Donner le périmètre d'un cercle de rayon 3 cm.\\
 
 \vspace*{3cm}
+
+\newpage
 
 
 \begin{Exoapp}
@@ -861,6 +889,7 @@ Objectif : Calculer le périmètre des figures suivantes.\\
 
 \vspace*{1cm}
 
+\newpage
 
 \bmul{2}
 

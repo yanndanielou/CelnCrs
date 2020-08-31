@@ -474,15 +474,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}
    {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesection}% apparence du numéro
+   {\sffamily    \color{red} \thesection}% apparence du numéro
    {1em}% espacement numéro/texte
-   {\sffamily }% apparence du titre
+   {\sffamily \color{red}}% apparence du titre
    
 \titleformat{\subsection}
    {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsection}% apparence du numéro
+   {\sffamily \color{blue} \thesubsection}% apparence du numéro
    {1em}% espacement numéro/texte
-   {\sffamily }% apparence du titre
+   {\sffamily \color{blue} }% apparence du titre
 
 \titleformat{\subsubsection}
    {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
@@ -530,18 +530,32 @@
  
 \section{ Activités d'introduction}
 
+{\large \textbf{\underline{Activité 1 :} Unité d'aire}} 
+
+\includegraphics[scale=0.95]{act1aires.eps} \\
+\reponse[4]\\
+
+{\large \textbf{\underline{Activité 2 : } L'aire d'un triangle}}
+
+\includegraphics[scale=0.95]{act2aires.eps} \\
+\reponse[11]\\
+
+
+
 \newpage
 
 \section{Définition et unités}
 
-
+\subsection{Définition}
 
 \df{
 L'aire d'une "figure fermée" est la mesure de sa surface, c'est à dire de la partie recouvrant l'intérieur de cette figure.\\
 }\\
 
 
-\vspace*{0.5cm}
+
+\subsection{Les conversions}
+
 
 L'unité d'aire du Système international de mesure est \textbf{le mètre carré}, noté $m^{2}$.\\
 
@@ -554,27 +568,27 @@ On a donc :
 
 \bmul{4}
 
-$1 km^{2} = . . . .. . . .  hm^{2}$ \\
+$1 km^{2} = 100$  $hm^{2}$ \\
 
-$1 dm^{2} = . . . .. . . .  cm^{2}$ 
-
-\columnbreak
-
-$1 hm^{2} = . . . .. . . .  dam^{2}$ \\
-
-$1 cm^{2} = . . . .. . . .  mm^{2}$ 
+$1 dm^{2} = 100 $ $cm^{2} $
 
 \columnbreak
 
-$1 dam^{2} = . . . .. . . .  m^{2}$ \\
+$1 hm^{2} = 100 $ $dam^{2}$ \\
 
-$1 km^{2} = . . . .. . . .  m^{2}$ 
+$1 cm^{2} = 100 $ $mm^{2} $
 
 \columnbreak
 
-$1 m^{2} = . . . .. . . .  dm^{2}$ \\
+$1 dam^{2} = 100$  $m^{2}$ \\
 
-$1 m^{2} = . . . .. . . .  mm^{2}$ 
+$1 km^{2} = \text{1 000 000}$  $m^{2} $
+
+\columnbreak
+
+$1 m^{2} = 100 $ $dm^{2}$ \\
+
+$1 m^{2} = \text{1 000 000} $ $mm^{2} $
 
 \emul
 
@@ -584,7 +598,35 @@ $1 m^{2} = . . . .. . . .  mm^{2}$
 
 - \textbf{l'hectare (ha)} \hspace*{0.5cm} $1 ha = 1 hm^{2}$ \hspace*{0.75cm} - \textbf{l'are (a)} \hspace*{0.5cm} $1 a = 1 dam^{2}$ \hspace*{0.75cm}  - \textbf{l'centiare (ca)} \hspace*{0.5cm} $1 ca = 1 m^{2}$\\
 
-\vspace*{0.5cm}
+\newpage
+
+{\large\textbf{ Apprendre à convertir des $m^{2}$ :}}\\
+
+ \vspace*{0.5cm}
+
+\underline{- Exemple 1 :}\\
+
+ \vspace*{0.5cm}
+
+Convertir 25 $m^{2}$  en $cm^{2}$.\\
+\qa écrire le nombre 25 dans les $m^{2}$.\\
+\qa Et compléter jusqu'au $cm^{2}$ par des 0.\\
+
+ \includegraphics[scale=0.7]{conversions1.eps} 	 \hspace*{1cm}    \fbox{ 25 $m^{2}$ = 250 000 $cm^{2}$}\\
+ 
+  \vspace*{0.5cm}
+ 
+ \underline{- Exemple 2 :}\\
+ 
+  \vspace*{0.5cm}
+ 
+ Convertir 703 $m^{2}$ en $dam^{2}$.\\
+  \initqa  \qa écrire le nombre 703 dans les $m^{2}$.\\
+\qa placer la virgule à droite du chiffre des unités des $dam^{2}$.\\
+
+ \includegraphics[scale=0.7]{conversions2.eps} \hspace*{1cm}  \fbox{ 703 $m^{2}$ = 7,03 $dam^{2}$}	\\
+ 
+ \vspace*{1cm}
 
 \begin{Exoapp}
 
@@ -713,7 +755,11 @@ On peut aussi utiliser une formule.
 \q Quelle est l'aire d'un rectangle de longueur 0,5 cm et de largeur 1 cm ?\\
 \reponse[4]\\
 
-\q Quelle est l'aire d'un cercle de 20 m de diamètre ?\\
+\q Quelle est l'aire d'un disque de 20 m de diamètre ?\\
+\reponse[4]\\
+
+\q \includegraphics[scale=1]{triangle1.eps} Quelle est l'aire du triangle ci-contre ?
+\\
 \reponse[4]\\
 
 \begin{Exoapp}

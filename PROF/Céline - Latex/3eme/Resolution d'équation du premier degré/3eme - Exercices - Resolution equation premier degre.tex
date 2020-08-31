@@ -1,0 +1,245 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+\usepackage{mathrsfs}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Séance d'exercices: Résolution d'équation du premier degré}{}{}{3ème}{}
+
+\vspace*{0.2cm}
+
+
+{\large \textbf{\underline{PARTIE A :}}  Résolution d'équation}\\
+
+\vspace*{0.25cm}
+
+\exo \\
+
+
+\initq \textbf{\qa} On considère l'équation suivante : \hspace*{0.5cm} $ 5x + 3(8-2x) = 15-(x-9)$\\
+\textbf{4 est-il solution de l'équation ?}\\
+
+\qa On considère l'équation suivante : \hspace*{0.5cm} $(3x+2)^{2} = 9x^{2} + 6x + 4$\\
+\textbf{-2 est-il solution de l'équation ?}\\
+
+\vspace{0.5cm}
+
+\exo 
+
+Résoudre les équations suivantes.
+
+
+\bmul{3}
+\initqa 
+
+\qa $-2+x=11$\\
+
+
+\qa $\dfrac{3}{4}x=5$\\
+
+
+\columnbreak
+
+\qa $9+x=44$\\
+
+\qa $3x=27$\\
+
+
+\columnbreak
+
+\qa $-6 +x =-41$\\
+
+\qa $-6x=-42$\\
+
+
+\emul
+
+\vspace*{0.5cm}
+
+\exo 
+
+Résoudre les équations suivantes.
+
+
+\bmul{3}
+\initqa 
+
+\qa $ 4x - 3 = 79$ \\
+
+\qa $4x-7 = 3x+8$\\
+
+
+\qa $ 3 -(5x+1) = 8x +(4-2x)$\\
+
+
+\columnbreak
+
+\qa $6-8x=16x$\\
+
+
+\qa $-x+11 = \dfrac{3}{5} x+3$\\
+
+\qa $7(2x+5) - 3x = 5 + 8x $\\
+
+
+\columnbreak
+
+\qa $50 = -2x + 35$\\
+
+\qa $-2x +5 = -8x + 10$\\
+
+\qa $( x - 1)( x + 3) = ( x + 5)( x - 4) $ \\
+
+\emul
+
+\vspace*{0.2cm}
+
+{\large \textbf{\underline{PARTIE B :}} Mise en équation} \\
+
+\vspace*{0.5cm}
+
+
+ 
+ 
+ 
+ \exo
+ 
+ Trouve un nombre sachant que son triple augmenté de 2 est égal à son double augmenté de 3.\\
+
+\vspace*{0.5cm}
+
+\exo\\
+
+Noah veut acheter des livres qui coûtent le même prix.\\
+S'il en achète 7, il lui manque 1,20 euros. S'il en achète 6, il lui reste 3,50 euros.\\
+
+Quel est le prix d'un livre ?\\
+\vspace*{0.5cm}
+
+\exo \\
+
+Deux frères, Marc et Jean, possèdent chacun un jardin. L'aire du jardin de Marc vaut les $\dfrac{3}{4}$ de l'aire du jardin de Jean. Les deux frères possèdent en tout 1 470 $ m^{2} $.\\
+
+Quelles sont les aires des jardins de Marc et de Jean  ?\\
+
+
+
+
+
+ 
+ \vspace*{0.5cm}
+ 
+ \exo
+
+Thomas a obtenu 11 et 16 aux deux premiers contrôles de Maths.\\
+Quelle note doit-il avoir au troisième contrôle pour obtenir 15 de moyenne ?\\
+
+\newpage
+ 
+ 
+\exo\\
+ Trouver la valeur de x pour que l'aire de AMNP soit égale au tiers de l'aire du carré ABCD.\\
+ Justifier votre réponse à l'aide d'une équation.\\
+
+
+\begin{center}
+\includegraphics[scale=0.9]{carre.eps} 
+
+\end{center}
+
+\textit{\underline{Indication : } Exprimer l'aire du rectangle AMNP en fonction de x et l'aire du carré ABCD.}\\ 
+
+
+\vspace*{0.5cm}
+
+\exo\\
+
+
+Le point M se déplace sur le segment [AC]. \\
+Est-il possible que les rectangles ADM et EMC aient la même aire ? Justifier votre réponse à l'aide d'une résolution d'équation.\\
+
+
+
+\begin{center}
+\includegraphics[scale=0.7]{equation.eps} 
+
+\end{center}
+
+\textit{\underline{Indication : } Exprimer l'aire des deux triangles en fonction de x.}\\ 
+
+
+
+\end{document}

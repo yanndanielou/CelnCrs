@@ -1,0 +1,199 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Correction séance d'AP 4 : Notions de vitesse}{}{}{3ème}{}
+
+\vspace*{0.2cm}
+
+
+\exo \\
+
+\q Un piéton met 2h pour parcourir 12,8 km. Donc v = 12,8 $\div$ 2 = 6,4 km/h.\\
+
+\q Un camion roule pendant 3h à une vitesse moyenne de 85 km/h.\\
+Donc  $d= v \times t$\\
+ $d= 85 \times 3$\\ 
+ $d = 255 km$.\\
+ 
+ \q Une voiture roule à une vitesse moyenne de 75,5 km/h et parcourt 181,2 km.\\
+ Donc $t= d \div v$\\
+  $t= 181,2 \div 75,5$\\ 
+ $t = 2,4 h$. \\
+ 
+ \begin{tabular}{|c|c|}
+ \hline 
+ 1h & 60 min \\ 
+ \hline 
+ 0,4 h &  ? \\ 
+ \hline 
+ \end{tabular}  On effectue donc un produit en croix : 0,4 x 60 $\div$ 1 = 24 min.\\
+ Donc 2,4 h ou 2h et 24 minutes.\\
+ 
+ \exo \\
+ 
+ Supposons que la hauteur du volcan (de la base jusqu'au sommet) soit de 2 500 m et que la nuée ardente dévale la pente à une vitesse de 4,58 km/min.\\
+
+\initq  \q Calculons la longueur de la pente :\\
+
+On sait que le triangle OAB est rectangle en O. \\
+D'après le théorème de Pythagore, on a :\\
+$AB^{2} = 0B^{2} + AO^{2}$\\
+$AB^{2} = 2 500^{2} + 750^{2}$\\
+$AB^{2} = 6812500$\\
+$AB= \sqrt{6812500}$ or AB>0\\
+$AB \simeq 2610 m$\\
+
+
+\q La vitesse de la pente est de 4,58 km/min.
+
+\qa Conversion en m/s :\\
+
+4,58 km/min = 4 580 m/min, ce qui signifie que l'on parcourt 4 580 m en 1 minute.
+Or 1 minute = 60 secondes. Donc on parcourt 4 580 m en 60 secondes.
+Pour savoir combien de m on parcourt en 1 seconde, on va donc diviser par 60.\\
+4 580 m/min $\simeq$ 76,3 m/s\\
+
+
+\qa Conversion en km/h :\\
+
+4,58 km/min signifie que l'on parcourt 4,58 km en 1 minute. Or 1 heure c'est 60 min, il suffit donc de multiplier par 60.\\
+4,58 km/min = 274,8 km/h.\\
+
+\q On cherche maintenant le temps que la nuée ardente va mettre pour dévaler la pente.\\
+
+$t= d \div v $\\
+$t= 2610 \div 76,3 $ Je choisi la vitesse en m/s car la distance est en m.\\
+$t \simeq 34,2 s $\\
+
+\newpage
+
+\exo \\
+
+8 jours et 22 heures = $8 \times 24 + 22 = 214 heures$\\
+
+On cherche la vitesse moyenne en km/h de la navette :\\
+
+$v = d \div t$\\
+$v = 5,8 \times 10^{6} \div 214$\\
+$v \simeq 27 102,8 km/h$\\
+ 
+\exo \\
+
+\initq \q 
+\initqa \qa Convertir 138,89 m/s en m/h :\\
+
+3 600 s = 1h Donc 138,89 m/s = 138,89 $\times$ 3 600 m/h = 500 004 m/h.\\
+
+\qa Convertir 138,89 m/s en km/h :\\
+
+138,89 m/s = 500 004 m/h = 500,004 km/h.\\
+
+\q $t = d \div v$\\
+$t = 1,3 \div 500,004$ Je choisi la vitesse en km/h car la distance est en km.\\
+$t \simeq 0,0026 h \simeq 0,0026 \times 3600 \simeq 9,4 secondes$\\
+
+La vague atteindra la maison en 9,4 secondes.\\
+
+\q La vague parcourt 138,89 m en 1 seconde, 8 333,4 m en 1 minute, 375 003 m en 45 minutes.\\
+
+\q On cherche une distance :\\
+$d = v \times t$\\
+$d = 8 333,4 \times 18$\\
+$d = 150 001,2 m$\\
+
+Le volcan serait donc à 150 000 m ou bien 150 km environ.\\
+
+\exo \\
+
+On cherche à savoir si Nina peut faire une dernière descente en 10 minutes pour être à l'heure au rendez-vous.\\
+
+Le temps pour la montée :\\
+$t_{M} = d \div v$\\
+$t_{M} = 860 \div 3,33$\\
+$t_{M} \simeq 258,3 s$ soit 4,305 minutes\\
+
+Le temps pour la descente :\\
+La piste fait 2km de long et Nina descend à une vitesse de 15km/h.\\
+$t_{D} = 2 \div 15$\\
+$t_{D} \simeq 0,13 h$ soit $0,13 \times 60 = 8$ minutes\\
+
+Lorsque l'on additionne les 2 temps, on obtient environ 12 minutes, or Nina avait que 10 minutes pour faire un aller-retour donc elle n'a pas le temps de refaire une piste.\\
+
+
+
+\end{document}

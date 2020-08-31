@@ -473,15 +473,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}
    {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesection}% apparence du numéro
+   {\sffamily \color{red} \thesection}% apparence du numéro
    {1em}% espacement numéro/texte
-   {\sffamily }% apparence du titre
+   {\sffamily \color{red}}% apparence du titre
    
 \titleformat{\subsection}
    {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsection}% apparence du numéro
+   {\sffamily \color{blue} \thesubsection}% apparence du numéro
    {1em}% espacement numéro/texte
-   {\sffamily }% apparence du titre
+   {\sffamily \color{blue}}% apparence du titre
 
 \titleformat{\subsubsection}
    {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
@@ -527,9 +527,22 @@
 \newpage
  \setcounter{page}{1}
  
-\includegraphics[scale=0.5]{intro.eps} 
+
 
 \section{Produit nul}
+
+
+\df{
+Une équation produit-nul est une équation qui peut s'écrire sous la forme d'un produit égale à 0.
+}\\
+
+\textbf{Exemples :}\\
+
+$(5x + 3)( 3x - 2) = 0$ est une équation produit-nul.\\
+
+Mais $7(3x + 4) + ( 7x + 1) = 0$ n'est pas une équation produit-nul c'est une somme.\\
+
+\vspace*{0.7cm}
 
 \prop{
 Dans un produit, si l'un des facteurs est nul, alors ce produit est nul.
@@ -560,7 +573,8 @@ Une équation de la forme (ax + b)(cx + d) = 0 est une équation produit.
 
 L'équation $ (3x-5)(9-x)=0$  s'appelle une équation produit nul car :\\
 
-\noindent -	L'un des membres  est un produit de facteurs.\\
+ -	L'un des membres  est un produit de facteurs.\\
+
 -	L'autre membre est 0.
 
 
@@ -584,31 +598,79 @@ second degré.
 
 \begin{Exoapp}
 
- Transformer les équations suivantes pour qu'elles deviennent des équations produits : \\
+ Transformer les équations suivantes pour qu'elles deviennent des équations produits. \\
+ \textit{Il faudra factoriser le membre de gauche après s'être assurer que le membre de droite soit égal à 0. }\\
 
 
 \bmul{2}
 
 \qa $(9x-4)(11-2x) - (5x-6)(9x-4) = 0$\\
-\reponse[3]\\
+
+\color{red}
+$(9x-4)[(11-2x) - (5x-6)] = 0$\\
+
+$(9x-4)[11-2x - 5x+6] = 0$\\
+
+$(9x-4)(17-7x) = 0$\\
+
+\color{black}
 
 \qa $9x^{2} - 144 = 0$\\
-\reponse[3]\\
 
+\color{red}
+$9x^{2} - 144 = 0$\\
+
+$(3x)^{2} - 12^{2} = 0$\\
+
+$(3x-12)(3x+12) = 0$\\
+
+\color{black}
 \qa $12x^{3}=8x^{2}$\\
-\reponse[3]\\
 
+\color{red}
+$12x^{3}-8x^{2}=0$\\
+
+$4x^{2}(3x-2)=0$\\
+
+
+
+\color{black}
 \columnbreak
 
-\qa $(3-x)(2x+7) = (6x-1)(x+1) $\\
-\reponse[3]\\
+\qa $(3-x)(2x+7) = (6x-1)(2x+7) $\\
+
+\color{red}
+$(3-x)(2x+7) - (6x-1)(2x+7)=0 $\\
+
+$(2x+7)[(3-x) - (6x-1)]=0 $\\
+
+$(2x+7)[3-x - 6x+1]=0 $\\
+
+$(2x+7)(4-7x)=0 $\\
+
+\color{black}
 
 \qa $x^{2} = 16 $\\
-\reponse[3]\\
+
+\color{red}
+$x^{2}- 16=0 $\\
+
+$x^{2}- 4^{2}=0 $\\
+
+$(x-4)(x+4)=0$\\
+
+\color{black}
 
 \qa $16x^2 - 8x = -1$\\
-\reponse[3]\\
 
+\color{red}
+$16x^2 - 8x = -1$\\
+
+$16x^2 - 8x +1=0$\\
+
+$(4x-1)^{2}=0$\\
+
+\color{black}
 
 \emul
 
@@ -656,13 +718,9 @@ $ (x-4)(x+3)=0$  \hspace*{3cm} $ (-2x-1)(7-3x)=0$ \hspace*{3cm}  $9x^{2} = 36$\\
 \q Calculer R pour $x = -1$.\\
 \q Résoudre l'équation R = 0.\\
 
-\exo  On donne $A = (3x+7)^{2} + (3x+7)(x-1)$.\\
-\initq
-\q Développer et réduire A.\\
-\q Factoriser A.\\
-\q Calculer A pour $x = 0$.\\
-\q Résoudre l'équation A = 0.\\
 
+
+\vspace*{0.5cm}
 
 
 \exo On donne $E = 9 - (2x - 1)^{2}$.\\

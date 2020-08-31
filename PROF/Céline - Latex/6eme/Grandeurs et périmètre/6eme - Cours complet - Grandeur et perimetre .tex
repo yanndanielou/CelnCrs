@@ -1,0 +1,1069 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paramétrages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,10pt,twoside,french]{article}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% déclaration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caractères
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la géométrie
+	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et séparations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{1cm}{1cm}{1cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'entête
+	%	6 fixe la distance entre l'entête et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
+	\newtheorem{propriete}{\underline{Propriété :}}
+	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{Méthodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom spéciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Repérage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Opérateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombrée
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des thèorème et autres définitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On règle les marges définitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contrôle fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On règle les marges définitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contrôle fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des fonctions mathématiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des numérotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{.75cm}(\arabic{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries
+ }% apparence commune au titre et au numéro
+   {\sffamily \textcolor{red} \thesection}% apparence du numéro
+   {1em}% espacement numéro/texte
+   {\sffamily   \textcolor{red} }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \textcolor{blue} \thesubsection}% apparence du numéro
+   {1em}% espacement numéro/texte
+   {\sffamily \textcolor{blue}}% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \thesubsubsection}% apparence du numéro
+   {0.5em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{Grandeurs et périmètres}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+\newpage
+ \setcounter{page}{1}
+ 
+\begin{center}
+{\Large \textcolor{red}{\underline{CHAPITRE ? :}} \hspace*{0.5cm}\textbf{ Grandeurs et périmètres}}
+\end{center}
+ 
+\textbf{\underline{{\large Mes objectifs:}}}
+
+\begin{itemize}[label=$\hookrightarrow$]
+\item Je dois connaître / utiliser / convertir les unités de longueur ou de masse.
+
+\item Je dois savoir calculer le périmètre d'un polygone, comparer géométriquement des périmètres.
+
+\item  Je dois connaître et savoir utiliser la formule donnant le périmètre d'un cercle.
+
+
+
+\end{itemize}
+
+\vspace*{0.3cm}
+
+\begin{center}
+\textbf{\underline{{\large Activité d'introduction}} 
+}\end{center}
+ 
+Recopier et compléter avec l'unité de longueur appropriée :
+\bi
+
+\item  Une allumette mesure 47 \textcolor{red}{mm} de long et pèse 0,13 \textcolor{red}{dag}
+\item Tom pèse 52,5 \textcolor{red}{kg} pour une taille de 1,60 \textcolor{red}{m}
+\item Un cheval a une hauteur au garrot de 155 \textcolor{red}{cm} pour une masse de 7  \textcolor{red}{q}
+\item La longueur du tour de la Terre est d'environ 40 000 \textcolor{red}{m} \\
+\ei
+
+
+
+
+
+
+
+\section{Masse}
+
+\subsection{Définition et unités de masse}
+
+\df{\textbf{La masse} est la mesure d'une quantité de matière.
+Son unité est le gramme, noté g.}\\
+
+
+\ex
+
+ La masse d'un téléphone portable de nos jours est en moyenne 145 g.
+
+\vspace*{0.5cm}
+
+
+
+
+\subsection{Conversions}
+
+Voici les différentes mesures de masses :
+
+
+\begin{flushleft}
+ \includegraphics[scale=0.65]{conversions0.eps}
+
+\end{flushleft}
+
+\underline{\textbf{Remarques :}}\\
+
+\textbf{- On rappelle que l'on inscrit un seul chiffre par colonne. }\\
+
+\textbf{- 1 q = 100 kg et 1 t = 1000 kg } \\
+
+\newpage
+
+\underline{\textbf{{\large Méthode:}}} \\
+Pour convertir une masse (c'est-à-dire changer d'unité), il faut toujours placer le chiffre des unités dans la colonne de l'unité de masse.\textit{(voir le tableau ci-dessus)}\\
+Vous pouvez vous servir du tableau au-dessus pour faire les exercices qui vont suivre !
+
+\setlength{\fboxrule}{1.5pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+{\large A NE PAS RECOPIER !!!!}\\
+
+\underline{\textbf{Exemple 1:}}\\
+\includegraphics[scale=0.63]{conversions1.eps} \\
+\underline{\textbf{Exemple 2:}}\\
+\includegraphics[scale=0.63]{conversions2.eps} \\
+
+\underline{\textbf{Exemple 3:}}\\
+\includegraphics[scale=0.63]{conversions3.eps} 
+
+\end{minipage}}
+\end{flushleft}
+
+
+
+
+\begin{Exoapp}
+\initq 
+Convertir les masses suivantes :
+\bmul{2}
+\qa 13 hg = \textcolor{red}{1 300} g.\\
+
+
+\qa 43,52 cg = \textcolor{red}{4,352} dg.\\
+
+
+\qa  4,3 g = \textcolor{red}{4 300} mg.
+
+
+\columnbreak
+
+\qa 458 dg = \textcolor{red}{4,58} dag.\\
+
+
+\qa  45,2 kg = \textcolor{red}{4 520} dag.\\
+
+
+\qa  6 541 kg = \textcolor{red}{6,541} t .
+
+\emul
+
+
+\end{Exoapp}
+
+\newpage
+
+\section{Longueur}
+
+\subsection{Définition}
+
+\df{\textbf{La longueur} est la mesure d'une distance.
+Son unité est le mètre, noté m.}\\
+
+
+\ex
+
+ Votre chambre mesure environ . . . . mètres de long.\\
+
+\subsection{Conversions}
+
+\begin{center}
+\includegraphics[scale=1]{mesurelongueur.eps} \\
+\end{center}
+
+
+\setlength{\fboxrule}{1.5pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+{\large A NE PAS RECOPIER !!!!}\\
+\underline{\textbf{Exemple:}}\\
+\includegraphics[scale=0.63]{conversions4.eps} \\
+
+
+\end{minipage}}
+\end{flushleft}
+
+
+\begin{Exoapp}
+Compléter les expressions suivantes \textit{(vous pouvez vous servir du tableau au-dessus)} :
+
+\bmul{2}
+ 5,6 m = \textcolor{red}{560} cm.\\
+
+
+25,8 km = \textcolor{red}{25 800} m.\\
+
+
+ 328 dm = \textcolor{red}{3,28} dam.\\
+
+\columnbreak
+
+ 7,85 m = 7850 \textcolor{red}{mm}   \\
+
+9 dm = 0,009 \textcolor{red}{hm}\\
+
+ 4,036 dam = 40 360 \textcolor{red}{mm}\\
+
+\emul
+
+\end{Exoapp}
+
+\newpage
+
+\section{Périmètre d'une figure}
+
+\begin{large}
+\underline{\textbf{Activité d'introduction}}\\
+\end{large}
+
+
+\initq \q Quel est le périmètre de cette figure sachant que la longueur du côté d'un carreau mesure 1 cm.\\
+
+\bmul{2}
+
+\includegraphics[scale=0.85]{introperimetre1.eps} 
+
+\columnbreak
+
+\color{red}
+
+Pour trouver le périmètre du polygone, on va additionner la longueur de tous ses côtés.\\
+
+$P = ED + DF + FC + CB+BA+AJ+JI+IH+HG+GE$\\
+$P=2+2+3+3+2+1+1+3+2+1$\\
+\fbox{$P=20 cm$}\\
+
+
+
+\color{black}
+
+\emul
+
+\q Ci-dessous, dessiner trois figures qui ont le même périmètre que la figure de la question 1). \\
+\includegraphics[scale=0.75]{perimetrecorr1.eps} \\
+
+\textcolor{red}{Ce sont des exemples de correction, il y en a beaucoup d'autres possibles.}
+
+
+
+\subsection{Vocabulaire}
+
+\df{
+
+Le mot \textbf{périmètre} provient du grec ancien \textit{perimetros} qui signifie "mesure du tour", c'est donc la longueur du contour d'une figure.
+
+
+}\\
+
+\underline{\textbf{Exemple} :} Tracer une figure dont le périmètre mesure 45 mm.
+
+\begin{center}
+\includegraphics[scale=0.9]{perimetrecorr2.eps} 
+
+\end{center}
+
+
+
+
+\subsection{Périmètre d'un polygone}
+
+\df{
+\textbf{Un polygone} est une figure fermée composée de plusieurs côtés
+}
+
+
+\prop{
+Pour calculer le périmètre d'un polygone, on effectue la somme des mesures de ses côtés.
+}\\
+
+\ex 
+
+\bmul{2}
+Calculer le périmètre du triangle ci-contre :\\
+\color{red}
+
+Pour trouver le périmètre du triangle, on va additionner la longueur de tous ses côtés.\\
+
+$P_{ABC} = AB+BC+CA $\\
+$P_{ABC} = 1,7+3,5+2,8$\\
+\fbox{$P_{ABC} =8 cm $}\\
+
+
+\color{black}
+
+\columnbreak
+
+\includegraphics[scale=1]{triangles.eps} 
+\emul
+
+
+
+\textbf{\underline{{\large $\rightarrow$ Les cas particuliers :}}}
+
+\bmul{2}
+
+\begin{center}
+\underline{\textbf{Le rectangle} }
+
+
+\includegraphics[scale=1]{rect.eps} \\
+
+\fbox{\textbf{Périmètre du rectangle :}\hspace*{0.5cm} \textcolor{red}{$\mathcal{P} =(l + L) \times 2 $} \hspace*{0.5cm}}
+\end{center}
+\columnbreak
+
+\begin{center}
+\underline{\textbf{Le carré} }
+
+
+\includegraphics[scale=0.9]{carre2.eps} \\
+
+\fbox{\textbf{Périmètre du carré :}\hspace*{0.5cm}\textcolor{red}{$\mathcal{P} =4 \times c$ \hspace*{0.5cm}}}
+\end{center}
+
+\emul
+
+\newpage
+
+
+\begin{Exoapp}
+
+\initq \q Donner le périmètre d'un triangle équilatéral de côté 4cm.\\
+\color{red}
+
+Un triangle équilatéral possède 3 côtés de même longueur donc :\\
+
+$P_{triangle} = 3 \times 4 $\\
+\fbox{$P_{triangle} =12  $ cm}\\
+
+
+\color{black}
+
+\q Donner le périmètre d'un carré de côté 9 cm.\\
+\color{red}
+On utilise la formule :
+$P_{carre} =4 \times c $\\
+$P_{carre} = 4 \times 9 $\\
+\fbox{$P_{carre} = 36  $ cm}\\
+
+
+\color{black}
+
+\q Donner le périmètre d'un rectangle de longueur 10 cm et de largeur 4 cm.\\
+\color{red}
+On utilise la formule :
+$P_{rectangle} =(l + L ) \times 2 $\\
+$P_{rectangle} = (4 + 10 ) \times 2 $\\
+$P_{rectangle} = 14 \times 2$\\
+\fbox{$P_{rectangle} = 28 $ cm}\\
+
+\color{black}
+
+
+\end{Exoapp}
+
+
+
+
+\subsection{Périmètre d'un cercle - Circonférence d'un cercle}
+
+\begin{large}
+\underline{Faire l'activité d'introduction sur $\pi$}\\
+\end{large}
+
+\vspace*{0.75cm}
+
+\df{
+
+La lettre grecque $\pi$ désigne un nombre particulier. Il est définit par le rapport constant de la circonférence d'un cercle à son diamètre dans un plan .\\
+ Une approximation de $\pi$ : $\pi \approx 3,1415926$
+
+}\\
+
+\vspace*{0.2cm}
+
+\df{
+Soit (C) un cercle de rayon r et de diamètre d.\\
+La longueur d'un cercle (ou la circonférence d'un cercle) s'obtient en multipliant son diamètre d par le nombre $\pi$.
+D'où les formules suivantes:\\
+
+\hspace*{3cm} $\mathcal{P} = \pi \times d$ \hspace*{1cm} ou \hspace*{1cm}  $ \mathcal{P} = 2 \times \pi \times r$
+}\\
+
+\ex
+
+Donner le périmètre d'un cercle de rayon 3 cm.
+\bmul{2}
+\includegraphics[scale=0.6]{perimetrecorr3.eps} 
+
+\columnbreak
+
+\color{red}
+On utilise la formule :
+$P_{cercle} = 2 \times \pi \times r $\\
+$P_{cercle} = 2 \times \pi \times 3 $\\
+$P_{cercle} \approx 2 \times 3,14 \times 3$\\
+\fbox{$P_{cercle} \approx 18,84 $ cm}\\
+
+\color{black}
+
+\emul
+
+\newpage
+
+
+\begin{Exoapp}
+
+\initq
+\q Donner la circonférence d'un cercle de diamètre 30 dm.\\
+\color{red}
+On utilise la formule :
+$P_{cercle} =  \pi \times d $\\
+$P_{cercle} =  \pi \times 30 $\\
+$P_{cercle} \approx  3,14 \times 30$\\
+\fbox{$P_{cercle} \approx 94,2 $ dm}\\
+
+\color{black}
+
+
+\q Donner le périmètre d'un cercle de rayon 4 cm.\\
+\color{red}
+On utilise la formule :
+$P_{cercle} = 2 \times \pi \times r $\\
+$P_{cercle} = 2 \times \pi \times 4 $\\
+$P_{cercle} \approx 2 \times 3,14 \times 4$\\
+\fbox{$P_{cercle} \approx 25,12 $ cm}\\
+
+\color{black}
+
+\q Construite pour l'exposition universelle de 1900, la grande roue de Paris avait un diamètre de 100 m. Calculer la longueur d'un tour de roue. Donner la valeur approchée par excès au dixième près.\\
+\color{red}
+On utilise la formule :
+$P_{cercle} =  \pi \times d $\\
+$P_{cercle} =  \pi \times 100 $\\
+$P_{cercle} \approx  3,14 \times 100$\\
+\fbox{$P_{cercle} \approx 314 $ m}\\
+
+\color{black}
+
+\end{Exoapp}
+
+
+\subsection{Périmètre de figures composées}
+
+{\large \underline{Objectif :} Calculer le périmètre des figures composées suivantes.}\\ 
+
+\bmul{2}
+
+\color{red}
+\textbf{\underline{RÉSOLUTION}}\\
+
+La figure est composée de 5 segments dont 2 de même longueur.
+
+On convertit toutes les longueurs en cm :\\
+
+18 mm = 1,8 cm \hspace{0.5cm} et 0,22 dm = 2,2 cm \\
+
+
+
+\color{black}
+
+\columnbreak
+
+\includegraphics[scale=0.7]{fig3.eps} \\
+
+\emul
+
+\color{red}
+
+On additionne ensuite toutes les longueurs qui composent la figure :\\
+
+$P = AB+BC+CD+DE+EA$\\
+
+$P = 2+1,8+2,2+2+3$\\
+
+\fbox{$P = 11 $cm}\\
+
+
+
+
+\color{black}
+\vspace*{1cm}
+
+\newpage
+
+
+\bmul{2}
+
+\color{red}
+\textbf{\underline{RÉSOLUTION}}\\
+
+La figure est composée de 4 segments de même longueur et d'un quart de cercle de rayon 3,5 cm.\\
+
+- Les segments :\\
+
+$P_{segments} = 4 \times 3,5$\\
+
+$P_{segments} = 14 $ cm\\
+
+\color{black}
+
+\columnbreak
+
+\begin{center}
+\includegraphics[scale=0.9]{exoperimetre.eps} 
+\end{center}
+
+\emul
+
+\color{red}
+
+- Le quart de cercle : 
+
+Pour calculer le périmètre d'un quart de cercle, on va calculer le périmètre d'un cercle et le diviser par 4.
+\bmul{2}
+
+$P_{cercle} = 2 \times \pi \times r $\\
+
+$P_{cercle} = 2 \times \pi \times 3,5 $\\
+
+$P_{cercle} \approx 2 \times 3,14 \times 3,5 $\\
+
+$P_{cercle} \approx 21,98$ cm\\
+
+\columnbreak
+
+$P_{quart de cercle} \approx 21,98 \div 4$\\
+
+$P_{quart de cercle} \approx 5,495$ cm\\
+
+\emul
+
+- On additionne ensuite toutes les longueurs qui composent la figure :\\
+
+$P_{TOTAL} = P_{segments} + P_{quart de cercle} $\\
+
+$P_{TOTAL} \approx 14 + 5,495 $\\
+
+\fbox{$P_{TOTAL} \approx 19,495 $ cm} \\
+
+
+
+
+\color{black}
+
+\setlength{\fboxrule}{1.5pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+{\large Pour aller plus loin}\\
+
+Si la formule pour \textbf{le périmètre d'un cercle} est : $P_{cercle} = 2 \times \pi \times r $\\
+
+alors la formule pour le périmètre \textbf{d'un demi-cercle} est : $P_{demicercle} = \pi \times r $ \textit{(car un demi-cercle est 2 fois plus petit qu'un cercle)}\\
+
+et \textbf{le périmètre d'un quart de cercle} est : $P_{quart de cercle}  = \pi \times r \div 2 $\textit{(car un quart-cercle est 2 fois plus petit qu'un demi-cercle)}\\
+
+\end{minipage}}
+\end{flushleft}
+
+
+\end{document}
