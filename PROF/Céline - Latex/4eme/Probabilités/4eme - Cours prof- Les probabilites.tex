@@ -562,9 +562,13 @@ On réalise les trois expériences suivantes :
 \bmul{2}
 
 
-Cette expérience admet . . . . issues :\\
-\vspace*{2cm}
+Cette expérience admet \textcolor{red}{2} issues :\\
 
+\color{red}
+- "Obtenir Pile"\\
+
+- "Obtenir Face"\\
+\color{black}
 \columnbreak
 
 \includegraphics[scale=0.9]{pf.eps}  
@@ -577,9 +581,16 @@ Cette expérience admet . . . . issues :\\
 \bmul{2}
 
 
-Cette expérience admet . . . . issues :\\
-\vspace*{3cm}
+Cette expérience admet \textcolor{red}{6} issues :\\
 
+\color{red}
+- "Obtenir 1" 			- "Obtenir 4"\\
+- "Obtenir 2"			- "Obtenir 5"\\
+
+- "Obtenir 3"			- "Obtenir 6"\\
+
+
+\color{black}
 
 \columnbreak
 
@@ -594,9 +605,17 @@ Cette expérience admet . . . . issues :\\
 \bmul{2}
 
 
-Cette expérience admet . . . . issues :\\
-\vspace*{3cm}
+Cette expérience admet \textcolor{red}{5} issues :\\
 
+\color{red}
+- "Obtenir perdu" 			- "Obtenir peluche"\\
+
+- "Obtenir Gros lot"			- "Obtenir rejouer"\\
+
+- "Obtenir ballon"			\\
+
+
+\color{black}
 
 \columnbreak
 
@@ -637,17 +656,17 @@ On appelle \textbf{événement} une condition qui peut ou non être réalisée lors d
 \hline 
 Événements & Issues possibles pour qu'il soit réalisé &  Type d'évènement \\ 
 \hline 
-A = "Obtenir 1" &    &  \\ 
+A = "Obtenir 1" & \textcolor{red}{1}   & \textcolor{red}{évènement élémentaire} \\ 
 \hline 
-B = "Obtenir 5" &  &  \\ 
+B = "Obtenir 5" & \textcolor{red}{5} & \textcolor{red}{évènement élémentaire}  \\ 
 \hline 
-C = "Obtenir un nombre pair" &    &  \\ 
+C = "Obtenir un nombre pair" & \textcolor{red}{2, 4 ou 6}   &  \\ 
 \hline 
-G = "Obtenir un multiple de 3" &   &  \\ 
+G = "Obtenir un multiple de 3" &  \textcolor{red}{3 ou 6} &  \\ 
 \hline 
-T = "Obtenir un nombre plus grand ou égal à 1" &   &  \\ 
+T = "Obtenir un nombre plus grand ou égal à 1" &  \textcolor{red}{1, 2, 3, 4, 5 ou 6} &  \textcolor{red}{évènement certain} \\ 
 \hline 
-M = "Obtenir 7" &   &  \\ 
+M = "Obtenir 7" & \textcolor{red}{/}   & \textcolor{red}{évènement impossible}  \\ 
 \hline 
 \end{tabular} 
 \end{flushleft}
@@ -661,11 +680,11 @@ M = "Obtenir 7" &   &  \\
 
 \df{ 
 \bi
-\item 	Un évènement qui ne peut être réalisé que par une seule issue est appelé un évènement élémentaire.\\
+\item 	Un évènement qui ne peut être réalisé que par une seule issue est appelé \textbf{un évènement élémentaire}.\\
 
- \item Un évènement qui a une probabilité égale à 1 est un évènement certain.\\
+ \item Un évènement qui a une probabilité égale à 1 est \textbf{un évènement certain}.\\
  
-\item Un évènement qui a une probabilité égale à 0 est un évènement impossible.\\
+\item Un évènement qui a une probabilité égale à 0 est \textbf{un évènement impossible}.\\
 \ei
 }\\
 
@@ -689,37 +708,57 @@ Dans  une  expérience  aléatoire, \textbf{la probabilité d'un évènement} est éga
 
 \underline{\textbf{Remarque :}} Une probabilité peut s'écrire :\\
 
+\color{red}
 
+- sous la forme d'un pourcentage (exemple : 50$\%$)\\
 
-\vspace*{3cm}
+- sous la forme d'une fraction (exemple : 1/2)\\
 
-\textbf{La probabilité d'un événement est un nombre positif inférieur à 1.}\\
+- sous la forme d'un nombre décimal (exemple : 0,5)\\
+
+\color{black}
+
+\vspace*{0.3cm}
+$\rightarrow$ \textbf{La probabilité d'un événement est un nombre positif inférieur à 1.}\\
 \vspace*{0.3cm}
 
 
 \underline{\textbf{Exemple} }: On considère à nouveau une expérience aléatoire où on lance un dé bien équilibré et on note le chiffre sur la face du dessus.\\
 
 Les seuls événements élémentaires de l'expérience du lancer de dé sont :\\
-      \vspace*{3cm}
+      \vspace*{0.3cm}
+      
+      \color{red}
+- "Obtenir 1" 			- "Obtenir 4"\\
+
+- "Obtenir 2"			- "Obtenir 5"\\
+
+- "Obtenir 3"			- "Obtenir 6"\\
+
+
+\color{black}
        
-     Chacune de ces probabilités est égale à . . . \\
+     Chacune de ces probabilités est égale à \textcolor{red}{$\dfrac{1}{6}$} \\
      
      \vspace*{0.5cm}
     
      
- \df{ Lorsque tous les événements élémentaires ont la même probabilité d'être réalisé, on dit qu'il y a . . . . . . . . . . . . . . . . . . . . . . . .}\\
+ \df{ Lorsque tous les événements élémentaires ont la même probabilité d'être réalisé, on dit qu'il y a \textbf{équiprobabilité}.}\\
  
  \vspace*{0.5cm}
 \underline{\textbf{Retour à l'exemple} }:\\
 
 Lorsque l'on additionne les probabilités de chaque évènement élémentaire, on obtient :\\
 
+ \color{red}
+
+$\dfrac{1}{6}+\dfrac{1}{6}+\dfrac{1}{6}+\dfrac{1}{6}+\dfrac{1}{6}+\dfrac{1}{6} = \dfrac{6}{6}=1$\\
+\color{black}
+       
+\vspace*{0.5cm}
 
 
-\vspace*{3.5cm}
-
-
-\prop{La somme des probabilités de tous les événements élémentaires est . . . . . . . . . . . .}\\
+\prop{La somme des probabilités de tous les événements élémentaires est \textcolor{red}{égale à 1}.}\\
 
 
 
@@ -732,8 +771,10 @@ Lorsque l'on additionne les probabilités de chaque évènement élémentaire, on obt
 L'expérience consiste à tirer une bille dans un sac contenant 2 billes vertes, une bille rouge et une bille blanche. \\
 
 \q Quelles sont les issues possibles ?\\
-\reponse[2]\\
 
+\color{red}
+Les issues possibles sont : "Obtenir du rouge", "Obtenir du vert" ou "Obtenir du blanc"\\
+\color{black}
 \columnbreak
 
 
@@ -744,19 +785,39 @@ L'expérience consiste à tirer une bille dans un sac contenant 2 billes vertes, u
 
 \vspace*{0.25cm}
 
-\q Citer les événements élémentaires et déterminer leur probabilité. (vérifiez que leur somme fait 1)\\
-\reponse[4]\\
+\q Déterminer leur probabilité. (vérifiez que leur somme fait 1)\\
+
+\color{red}
+Soit R l'évènement "Obtenir du rouge", $p(R)=\dfrac{1}{4}$\\
+
+Soit V l'évènement "Obtenir du vert", $p(V)=\dfrac{2}{4}=\dfrac{1}{2}$\\
+
+Soit B l'évènement "Obtenir du blanc", $p(B)=\dfrac{1}{4}$\\
+\color{black}
 
 \q Sommes-nous dans une situation d'équiprobabilité ?    \\ 
-\reponse[2]\\
 
+\color{red}
 
+Les probabilités des évènements élémentaires ci-dessus ne sont pas égales, il n'y a donc pas d'équiprobabilité.
+
+\color{black}
 
 \q Citer un événement certain.\\
-\reponse[1]\\
+
+\color{red}
+
+
+Soit C un évènement certain "Obtenir une bille"\\
+\color{black}
 
 \q Citer un événement impossible.\\   
-\reponse[1]\\
+
+\color{red}
+
+
+Soit C un évènement certain "Obtenir une bille violette"\\
+\color{black}
 
 
 \end{document}

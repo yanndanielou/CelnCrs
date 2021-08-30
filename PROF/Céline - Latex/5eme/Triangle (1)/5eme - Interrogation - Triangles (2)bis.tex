@@ -1,0 +1,137 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{textcomp} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation 2: Triangles(1)}{Nom :}{Prénom :}{Classe}{Date}
+
+\textit{Attention au soin de la copie ! Les figures sont à tracer au crayon à papier.}\\
+
+\vspace*{0.5cm}
+
+\exo{1} Donner la définition d'un triangle équilatéral et la définition de l'hypoténuse d'un triangle rectangle.\\
+\reponse[4]\\
+
+\exo{3} Reproduire chacun de ces triangles à partir de la figure à main levée proposée.
+\bmul{2}
+
+\includegraphics[scale=0.5]{interrotriangle2.eps} 
+
+\columnbreak
+
+\includegraphics[scale=0.5]{interrotriangle1.eps} 
+\emul
+
+\vspace*{7cm}
+
+\exo{3} (Pensez à faire un schéma à main levée avant de construire vos triangles.)\\
+
+\initq 
+
+
+\q Construire un triangle EFG tel que : EF = 8 cm, FG = 6 cm et $\widehat{EFG} = 30$°.\\
+
+\vspace*{6.5 cm}
+
+\newpage
+
+\vspace*{0.5cm}
+
+\q Construire un triangle PRS tel que : $\widehat{PSR} = 124$°, $\widehat{SPR} = 18$° et SP = 5,5 cm.\\
+
+\vspace*{7 cm}
+
+
+\exo{3} La figure ci-dessous a été tracée à l'aide d'un logiciel de géométrie. \\
+Les points A, B et E sont alignés. \\
+Construire en vraie grandeur cette figure.
+
+
+\includegraphics[scale=0.75]{interrotriangle4.eps} \\
+
+
+\vspace*{7 cm}
+
+\exo{}BONUS\\
+
+\qa Dans la figure précédente, mesurer à l'aide de votre rapporteur les angles du triangles CDB et noter-les.\\
+
+\qa Quelle est la nature du triangle CDB ? Que remarquez-vous sur ses angles ?\\
+
+\noindent \reponse[4]
+
+\end{document}
