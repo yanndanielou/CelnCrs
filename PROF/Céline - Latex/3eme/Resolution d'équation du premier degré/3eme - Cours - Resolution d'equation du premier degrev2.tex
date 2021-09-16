@@ -1,0 +1,976 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paramétrages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,10pt,twoside,french]{article}
+\usepackage{etex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% déclaration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caractères
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la géométrie
+	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ \usepackage{cancel}
+\usepackage{mathrsfs}  
+ \usepackage{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et séparations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{1cm}{1cm}{1cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'entête
+	%	6 fixe la distance entre l'entête et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
+	\newtheorem{propriete}{\underline{Propriété :}}
+	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{Méthodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom spéciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Repérage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Opérateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombrée
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des thèorème et autres définitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On règle les marges définitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contrôle fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On règle les marges définitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contrôle fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des fonctions mathématiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des numérotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{.75cm}(\arabic{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \color{red}\thesection}% apparence du numéro
+   {1em}% espacement numéro/texte
+   {\sffamily  \color{red}}% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \color{blue} \thesubsection}% apparence du numéro
+   {1em}% espacement numéro/texte
+   {\sffamily \color{blue}}% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily \thesubsubsection}% apparence du numéro
+   {0.5em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{Équation du premier degré}
+
+\newcommand{\numchapitre}{}
+
+
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+\newpage
+ \setcounter{page}{1}
+ 
+ 
+\begin{center}
+{\Large  \textbf{\underline{CHAPITRE . . . :}} Résolution d'équation du premier degré}
+\end{center}
+ 
+ 
+ 
+\vspace*{1cm}
+
+ 
+ 
+
+\textbf{\underline{{\large Mes objectifs:}}}
+
+\begin{itemize}[label=$\hookrightarrow$]
+
+\item Je dois savoir tester si un nombre est solution d'une équation,
+
+\item Je dois savoir résoudre algébriquement une équation du premier degré,
+
+\item 	Je dois savoir introduire une lettre pour désigner une valeur inconnue et mettre un problème en équation.\\
+
+
+
+\end{itemize}
+
+\vspace*{1cm}
+
+\textbf{INTRODUCTION}
+\begin{center}
+ \includegraphics[scale=1]{alkhawarizmi.eps} 
+\end{center}
+ 
+A travers la vidéo " petits contes mathématiques les équations ", découvrir comment résoudre une équation et qui est Al-Khwârizmî.\\
+
+\vspace*{1cm}
+
+
+
+
+
+
+ 
+\section{Généralités sur les équations}
+ 
+\subsection{Définition}
+
+\df{
+Une équation est \textbf{une égalité} dans laquelle figure \textbf{un nombre inconnu}, désigné en général par une lettre qui est appelée l'inconnue.
+}\\
+
+\underline{\textbf{Exemple} }:\\
+
+
+2x - 11 = 7 - x est une équation dans laquelle l'inconnue est désignée par $x$. \\
+
+\begin{center}
+$\underbrace{2x-11}_{\text{Premier membre}} = \underbrace{7-x}_{\text{Second membre}}$\\
+\end{center}
+
+\vspace*{0.5cm}
+\subsection{Comment savoir si un nombre est solution d'une équation ?}
+
+\df{
+\textbf{Résoudre une équation d'inconnue $x$}, c'est trouver toutes les valeurs possibles du nombre $x$ (si elles existent) qui vérifient l'égalité, c'est-à-dire que l'égalité soit vraie.\\
+Chacune de ces valeurs est \textbf{une solution de l'équation}.
+}\\
+
+
+
+\textbf{$\blacktriangleright$ Le nombre 3 est-il solution de l'équation $2x - 11 = 7 - x$ ?}\\
+
+\bmul{2}
+D'une part, $2 \times 3 -11 = \underline{- 5}$
+
+\columnbreak
+
+D'autre part, $7- 3 = \underline{4}$
+\emul
+
+L'égalité n'est donc pas vérifiée pour $x=3$.\\
+
+\underline{Conclusion }: Le nombre 3 n'est pas solution de l'équation.\\
+
+\vspace*{0.5cm}
+
+\textbf{$\blacktriangleright$ Le nombre 6 est-il solution de l'équation $2x - 11 = 7 - x$ ?}
+
+\bmul{2}
+D'une part, $2 \times 6 -11 = \underline{1}$
+
+\columnbreak
+
+D'autre part, $7- 6 = \underline{1}$
+\emul
+
+L'égalité est donc vérifiée pour $x=6$\\
+
+\underline{Conclusion }: Le nombre 6 est une solution de l'équation.\\
+
+\vspace*{0.5cm}
+
+
+
+\begin{Exoapp}
+
+\initq \q -2 est-il solution de l'équation $54-11x= 25x + 126 $?\\
+\reponse[4]\\
+
+
+\q 5 est-il solution de l'équation $7x-3=6(x-1)$?\\
+\reponse[4]\\
+
+\end{Exoapp}
+
+
+
+
+\section{Méthodes de résolution d'équation}
+
+
+
+
+ 
+\subsection{Première propriété}
+
+\vspace*{0.5cm}
+
+\prop{
+Une égalité reste vraie si l'on \textbf{additionne} (ou l'on \textbf{soustrait}) le même nombre à \textbf{chacun de ses membres}.\\
+}\\
+\newpage
+
+$\rightarrow$ \textbf{Résoudre l'équation $3+x=7$.}\\
+
+
+\begin{align*}
+3+x &= 7 \\
+\cancel{3} + x \textcolor{red}{- \cancel{ 3}}  &=  7 \textcolor{red}{- 3}\\
+x&=7-3\\
+x&=4
+\end{align*}
+
+
+
+
+
+\textbf{La solution de l'équation $3 + x = 7$ est le nombre 4. \hspace*{0.75cm} On notera alors $\mathscr{S}$ = $\left\{4\right\}$.}\\
+
+\vspace*{0.5cm}
+
+
+\begin{Exoapp}
+Résoudre les équations suivantes :\\
+
+\bmul{2}
+
+\begin{center}
+$x-2=11$\\
+\end{center}
+\reponse[2]
+
+
+\columnbreak
+
+\begin{center}
+$9+x=-44$\\
+\end{center}
+\reponse[2]
+
+\emul
+
+
+
+
+\end{Exoapp}
+
+
+
+
+\subsection{Deuxième propriété}
+
+\vspace*{0.5cm}
+
+\prop{
+Une égalité reste vraie si l'on \textbf{multiplie} (ou l'on \textbf{divise}) le même nombre non nul (c'est-à-dire différent de 0) à \textbf{chacun de ses membres}.
+}\\
+
+$\rightarrow$ \textbf{Résoudre l'équation $5x = 30$}.\\
+
+
+
+
+\begin{align*}
+5x &= 30\\
+\dfrac{\cancel{5}x}{\textcolor{red}{{\cancel{5}}}} &= \dfrac{30}{\textcolor{red}{5}}\\
+x &= \dfrac{30}{5}\\
+ x &= 6\\
+\end{align*}
+
+\textbf{La solution de l'équation $5x = 30$ est le nombre 6. \hspace*{0.75cm} On notera alors $\mathscr{S}$ = $\left\{6\right\}$.}\\
+
+\vspace*{0.5cm}
+
+
+
+\begin{Exoapp}
+Résoudre les équations suivantes :\\
+
+\bmul{2}
+
+\begin{center}
+$-6x=-42$\\
+\end{center}
+\reponse[2]\\
+
+\begin{center}
+$-5x=24$\\
+\end{center}
+\reponse[2]\\
+
+
+\columnbreak
+
+\begin{center}
+$3x=27$\\
+\end{center}
+\reponse[2]\\
+
+\begin{center}
+$\dfrac{3}{4}x=5$\\
+\end{center}
+\reponse[2]\\
+
+\emul
+
+
+
+
+\end{Exoapp}
+
+
+
+\subsection{Méthode de résolution des équations  avec des inconnues dans les 2 membres }
+
+\vspace*{0.3cm}
+
+$\rightarrow$ \textbf{Résoudre l'équation $7x - 2 = 6 + 5x$}.\\
+
+\bmul{2}
+
+
+
+$$7x - 2 = 6 + 5x$$
+
+$$7x - 2 \textcolor{red}{- 5x} = 6 + 5x \textcolor{red}{- 5x}$$
+
+$$2x - 2 = 6$$
+
+$$2x - 2 \textcolor{red}{+ 2 }= 6 \textcolor{red}{+ 2}$$
+
+$$2x = 8$$
+
+$$\dfrac{\cancel{2}x}{\textcolor{red}{\cancel{2}}} = \dfrac{8}{\textcolor{red}{2}}$$
+
+$$\fbox{x=4}$$
+
+
+
+
+
+\columnbreak
+
+\begin{center}
+\textbf{\underline{Les étapes :}}
+\end{center}
+
+$\rightarrow$ On commence par isoler l'inconnue dans un des deux membres.\\
+
+$\rightarrow$ On regroupe ensuite les nombres sans $x$ dans l'autre
+membre.\\
+
+$\rightarrow$ On utilise alors les méthodes de résolution vues juste avant.\\
+
+$\rightarrow$ On n'oublie pas de donner la ou les solution(s).\\
+
+\emul
+
+
+
+\textbf{La solution de l'équation $7x - 2 = 6 + 5x$ est le nombre 4. \hspace*{0.75cm} $\mathscr{S}$ = $\left\{4\right\}$.}\\
+
+\vspace*{0.5cm}
+
+\begin{Exoapp}
+
+\bmul{2}
+
+\begin{center}
+$4x-3=11$\\
+\end{center}
+\reponse[2]\\
+
+\begin{center}
+$4x+3x=63$\\
+\end{center}
+\reponse[4]\\
+
+
+
+
+\columnbreak
+
+\begin{center}
+$7-8x=56$\\
+\end{center}
+\reponse[2]\\
+
+\begin{center}
+$9-2x=11+4x$\\
+\end{center}
+\reponse[4]\\
+
+
+
+\emul
+
+
+
+
+\end{Exoapp}
+
+
+\section{Mise en équation}
+
+\subsection{Énigme 1}
+
+\underline{\textbf{Énoncé}} : Alexandra et Thomas choisissent un même nombre. Alexandra multiplie ce nombre par 5 et ajoute 14 au résultat.\\
+Thomas ajoute 29 au nombre choisi. Ils trouvent le même résultat.\\
+\textbf{Quel est le nombre qu'ils ont choisi au départ ?}\\
+
+ 
+
+\underline{\textbf{Résolution}} : \\
+
+\textbf{\initq \q} \textbf{Choisir une inconnue et la décrire} : \hspace*{1cm}  On choisi $x$ le nombre choisi au départ.\\ 
+
+\textbf{\q}  \textbf{Traduire le problème par une équation:}\hspace*{1cm} $5x+14=x+29$\\
+
+\textbf{\q}  \textbf{Résoudre l'équation:}\\
+
+\begin{align*}
+5x+14&=x+29\\
+5x+14 \textcolor{red}{-x} &= \cancel{x}+29 \textcolor{red}{-\cancel{x}}\\
+4x+14&=29\\
+4x +\cancel{14}\textcolor{red}{-\cancel{ 14}}&=29\textcolor{red}{-14} \\
+4x&=15\\
+\dfrac{4x}{\textcolor{red}{4}}&=\dfrac{15}{\textcolor{red}{4}}\\
+x&=3,75
+\end{align*}
+
+
+\textbf{\q}  \textbf{Vérifier et conclure. }  \\
+
+D'une part: $5 \times 3,75 +14 = 18,75 + 14 = 32,75$ \hspace*{1cm} D'autre part : $3,75 +29 = 32,75$\\
+\textbf{Le nombre choisi est bien 3,75.}
+
+\subsection{Énigme 2}
+
+\underline{\textbf{Énoncé}} : Mathieu a 2 billes de plus que Pierre mais 3 fois moins de billes que Bryan.\\
+Ils ont à eux trois 53 billes.\\
+\textbf{Combien ont-ils de billes chacun?}\\
+
+\vspace*{0.5cm}
+\underline{\textbf{Résolution}} : \\
+
+\initq
+\textbf{ \q} \textbf{Choisir une inconnue et la décrire} : \hspace*{1cm}   On choisi $x$ le nombre de billes de Mathieu.\\
+
+\textbf{\q}  \textbf{Traduire le problème par une équation.}\\
+
+
+
+Pour cela, choisir une grandeur qui peut être exprimée de deux façons différentes.\\
+
+Ici, il s'agit du nombre de billes qu'ils ont à eux 3.\hspace*{1cm} Il y a 53 billes en tout.\\
+
+Mais cela peut aussi s'écrire : Mathieu + Pierre + Bryan = 53\\
+
+On sait que :
+\bi
+\item \textcolor{green}{Mathieu = x}
+
+\item Pierre a 2 billes de moins que Mathieu, à savoir \textcolor{blue}{Pierre = x - 2}
+
+\item Bryan a 3 fois plus de billes que Mathieu, à savoir \textcolor{orange}{Bryan = 3x}\\
+\ei
+
+$\rightarrow$ L'équation à résoudre est donc : \hspace*{1cm} \textbf{\textcolor{green}{Mathieu} + \textcolor{blue}{Pierre} + \textcolor{orange}{Bryan} = 53}\\ 
+ \hspace*{7.5cm}\textcolor{green}{ x} \hspace*{0.5cm} + \hspace*{0.1cm}\textcolor{blue}{(x - 2)} \hspace*{0.1cm} + \hspace*{0.1cm} \textcolor{orange}{3x} \hspace*{0.1cm} \textbf{= 53}\\
+
+\textbf{\q}  \textbf{Résoudre l'équation:}
+
+\begin{center}
+$$x+ (x-2)+3x=53$$
+
+
+$$x+ x-2+3x=53$$
+
+$$5x - 2=53$$
+
+$$5x - 2  \textcolor{red}{+2} = 53 \textcolor{red}{+2}$$
+
+$$5x=55$$
+
+$$\dfrac{5x}{\textcolor{red}{5}}=\dfrac{55}{\textcolor{red}{5}}$$
+
+\fbox{$x = 11$}\\
+\end{center}
+\newpage
+\vspace*{0.2cm}
+
+\textbf{\q} \textbf{ Vérifier} que la solution de l'équation a du sens avec le problème concret.\\
+     Ici, x étant un nombre de billes, la solution du problème doit être un nombre strictement positif.\\
+
+   
+
+\textbf{\q}  \textbf{Conclure. }  \\
+
+On en conclut que :
+\bi
+\item \textcolor{green}{x = 11} \hspace*{0.75cm} Donc Mathieu possède 11 billes.
+
+\item \textcolor{blue}{x - 2 = 11 - 2 = 9}\hspace*{0.75cm} Donc Pierre possède 9 billes.
+
+\item\textcolor{orange}{$3x = 3 \times 11 = 33$ } \hspace*{0.75cm} Donc Bryan possède 33 billes.\\
+\ei
+
+
+\vspace*{1cm}
+\includegraphics[scale=0.8]{bilanfinchap.eps} 
+
+
+
+\end{document}
