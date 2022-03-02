@@ -1,0 +1,206 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{xlop}
+
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Contrôle sur les divisions euclidiennes }{Nom :}{Prénom :}{Classe}{Date}
+
+
+\vspace*{0.5cm}
+\begin{flushleft}
+\begin{tabular}{|m{9.5cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|}
+\hline 
+\textbf{Compétences} & \begin{center}
+\textbf{N.E.}
+\end{center} & \begin{center}
+\textbf{M.I.}
+\end{center} & \begin{center}
+\textbf{M.F.}
+\end{center}  & \begin{center}
+\textbf{M.S.}
+\end{center} & \begin{center}
+\textbf{T.B.M.}
+\end{center} \\ 
+\hline 
+Je dois connaître et savoir utiliser le vocabulaire : dividende, diviseur, quotient et reste & & &  & &\\
+\hline
+Je dois connaître et savoir utiliser le vocabulaire : multiple, diviseur et divisible& & &  & & \\ 
+\hline
+Je dois connaître et savoir utiliser les critères de divisibilité par 2 ; 3 ; 4 ; 5 ; 9 ou 10 & & &  & & \\ 
+\hline 
+
+
+\end{tabular}  
+\end{flushleft}
+
+\textit{N.E = Non évalué ; M.I. = Maîtrise insuffisante ; M.F. = Maîtrise fragile ; M.S. = Maîtrise satisfaisante ; T.B.M. = Très bonne maîtrise}\\
+
+
+
+\vspace*{0.15cm}
+
+
+\textbf{Les exercices avec le symbole \includegraphics[scale=0.4]{trefle.eps} sont à faire directement sur le sujet. Les autres sont à faire sur la copie double.}\\
+
+
+
+
+
+\vspace*{0.35cm}
+
+\exo{5} \includegraphics[scale=0.4]{trefle.eps} COURS
+
+\q  \qa Compléter les bulles avec le bon vocabulaire.
+
+\begin{center}
+\includegraphics[scale=0.85]{diveucli1.eps} 
+\end{center}
+
+
+\qa Écrire l'égalité qui correspond à la divisions ci-dessus. Que peut-on dire des nombres 8 246 et 14 ?\\
+\reponse[2]\\
+
+\q Compléter les phrases avec le vocabulaire suivant : un multiple,  un diviseur ou divisible.      
+ 
+ \bmul{2}
+  35 est . . . . . . . . . . . . . . . . . . . . . . . . . . . . . de 7. \\
+  
+  1448 est . . . . . . . . . . . . . . . . . . . . . . par 2 et 4.\\ 
+   
+  \columnbreak
+  
+  1 450 est . . . . . . . . . . . . . . . . . . . . . . . de 10.\\
+  
+  8 est . . . . . . . . . . . . . . . . . . . . . . . . . . . . de 56 .\\
+  
+                                         
+\emul
+  
+
+
+
+\newpage
+\vspace*{0.5cm}
+
+\exo{5} Poser et effectuer les divisions euclidiennes sur votre copie. \\
+Pour chaque division ci-dessous, \textbf{écrire l'égalité} vue dans le cours.\\
+\includegraphics[scale=0.8]{acompleter1.eps} \hspace*{2.75cm} \includegraphics[scale=0.8]{acompleter2.eps} \\
+
+\begin{center}
+ \includegraphics[scale=0.8]{acompleter3.eps}
+\end{center}
+ 
+             \vspace*{0.5cm}
+
+\exo{5}Sur votre copie double.\\
+\initq
+
+\q Citer le critère de divisibilité par 9.\\
+
+
+\q Parmi les nombres suivants : \hspace*{0.25cm} 14 \hspace*{0.25cm}; \hspace*{0.25cm} 233 \hspace*{0.25cm} ; \hspace*{0.25cm} 2115 \hspace*{0.25cm} ;\hspace*{0.25cm} 2523 \hspace*{0.25cm}; \hspace*{0.25cm} 210  \hspace*{0.25cm} ; \hspace*{0.25cm} 468 \hspace*{0.25cm} ;\hspace*{0.25cm} 57\\
+
+
+\initqa \qa	Quel(s) sont ceux qui sont divisibles par 2 ?\\
+\qa	Quel(s) sont ceux qui sont divisibles par 3 ?\\
+\qa	Quel(s) sont ceux qui sont divisibles par 4 ?\\
+\qa	Quel(s) sont ceux qui sont divisibles par 9 ?\\
+
+\vspace*{0.5cm}
+\exo{3} Pour le C.D.I. du collège, la documentaliste reçoit 370 livres qu'elle doit ranger sur des étagères. Elle ne peut transporter que 13 livres à la fois. \\
+
+\initq \q Combien de voyages devra-t-elle faire au minimum ? \textit{(Justifier votre réponse.)}\\
+  \\
+\q Combien de livres transportera-t-elle au dernier voyage ?\\
+
+
+\vspace*{0.5cm}
+
+\exo{2}
+A la fête foraine, le tour de manège coûte 5 euros. Antoine a 32 euros.\\
+
+\initq \q Combien de tours de manège  peut-il faire ? \textit{(Justifier votre réponse.)}\\
+  \\
+\q Combien d'euros lui manque-t-il pour pouvoir effectuer un tour supplémentaire ? \textit{(Justifier votre réponse.)}\\
+  \\
+
+
+
+
+
+\end{document}

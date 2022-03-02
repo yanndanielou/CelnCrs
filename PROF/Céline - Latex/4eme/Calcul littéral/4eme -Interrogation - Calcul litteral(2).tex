@@ -1,0 +1,199 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation : Calcul littéral (1) }{Nom :}{Prénom :}{Classe}{Date}
+
+\vspace*{0.75cm}
+
+\begin{flushleft}
+\begin{tabular}{|m{9.5cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|}
+\hline 
+\textbf{Compétences} & \begin{center}
+\textbf{N.E.}
+\end{center} & \begin{center}
+\textbf{M.I.}
+\end{center} & \begin{center}
+\textbf{M.F.}
+\end{center}  & \begin{center}
+\textbf{M.S.}
+\end{center} & \begin{center}
+\textbf{T.B.M.}
+\end{center} \\ 
+\hline 
+Je dois savoir simplifier une expression littérale &  &  & & &\\
+\hline 
+Je dois savoir réduire une expression littérale &  &  & & &\\
+\hline
+Je dois savoir tester une égalité &  &  & & &\\ 
+\hline
+
+
+\end{tabular} 
+\end{flushleft}
+
+\textit{N.E = Non évalué ; M.I. = Maîtrise insuffisante ; M.F. = Maîtrise fragile ; M.S. = Maîtrise satisfaisante ; T.B.M. = Très bonne maîtrise}\\
+
+\vspace*{0.75cm}
+
+\exo{2}\textbf{Simplifier} si possible chacune des écritures suivantes en supprimant les symboles "$\times$" :
+\bmul{2}
+\begin{flushleft}
+$9 \times a \times 5 \times b = ....................... $ \\
+\end{flushleft}
+
+\begin{flushleft}
+$ 4 \times (6 \times
+c +7) - 25\times b  =  . . . . . . . . . . . . . . . . . . . . . . . . . . $
+\end{flushleft}
+
+\columnbreak
+
+\begin{flushleft}
+	$  z \times 9 \times z \times z + 5 \times c \times 8 \times c = .............................. $ \\
+	\end{flushleft}	
+	
+
+
+
+
+\begin{flushleft}
+        $ ( x \times 3 - 1,7) \times (t - 5)       = .............................. $ \\   
+        \end{flushleft}        
+
+\emul
+
+\vspace*{0.5cm}
+
+\exo{2} \textbf{Réduire} les expressions suivantes :\\
+
+
+\bmul{2}
+
+
+$S = 2x^{2} - 28  + x^{2} - 35x -11$\\
+\reponse[5]\\
+
+
+
+
+\columnbreak
+
+$L = 3y^{2} - 4y + 5 - 4y^{2} + 2y + 3$\\
+\reponse[5]\\
+
+
+\emul
+
+	
+\vspace*{0.5cm}
+
+
+\exo{2} \textit{Calculer une expression littérale.}\\
+
+Calculer chaque expression littérale pour $n=2$\\
+
+a) $4n-6$ 		\hspace*{0.5cm} b) $3(n+5)$\\ 
+\reponse[7]\\
+
+\newpage
+
+\vspace*{0.5cm}
+
+\exo{4} \textit{Tester une égalité.}\\
+
+\initq \q  Tester si l'égalité $2t-9=t+1$ est vraie  pour $t=4$.\\
+\reponse[9]\\
+
+ \q Tester si l'égalité $4(t-1)=t^{2}$ est vraie  pour $t=2$.\\
+\reponse[9]\\
+
+	
+\vspace*{0.5cm}
+
+
+\exo{} BONUS\\
+Pour construire cette grille de $2 \times 2$ carrés, Léo a utilisé 9 boulettes de pâte à modeler et 12 allumettes.\\
+
+\includegraphics[scale=0.4]{allumettescalcul.eps} \\
+
+\textbf{$\rightarrow$ Combien de boulettes et d'allumettes sont nécessaires pour faire une grille de $3 \times 3$ carrés ?}\\
+\reponse[6]\\
+
+
+
+\end{document}

@@ -1,0 +1,193 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation: Multiplications }{Nom :}{Prénom :}{Classe}{Date}
+
+
+\vspace*{0.5cm}
+\begin{flushleft}
+\begin{tabular}{|m{9.5cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|m{1.25cm}|}
+\hline 
+\textbf{Compétences} & \begin{center}
+\textbf{N.E.}
+\end{center} & \begin{center}
+\textbf{M.I.}
+\end{center} & \begin{center}
+\textbf{M.F.}
+\end{center}  & \begin{center}
+\textbf{M.S.}
+\end{center} & \begin{center}
+\textbf{T.B.M.}
+\end{center} \\ 
+\hline 
+Je dois savoir multiplier des nombres décimaux (calcul mental ou posé) & & &  & &\\
+\hline
+Je dois savoir multiplier par 10, 100, 1000 etc& & &  & & \\ 
+\hline
+Je dois savoir multiplier par 0,1; 0,01 ; 0,001 etc & & &  & & \\ 
+\hline 
+
+
+\end{tabular}  
+\end{flushleft}
+
+\textit{N.E = Non évalué ; M.I. = Maîtrise insuffisante ; M.F. = Maîtrise fragile ; M.S. = Maîtrise satisfaisante ; T.B.M. = Très bonne maîtrise}\\
+
+\exo{2} Poser et calculer les opérations suivantes :\\
+
+$869 \times 34$ \hspace*{6cm} $7,6 \times 84,2$\\
+
+\vspace*{7cm}
+
+\vspace*{0.5cm}
+
+\exo{1.5}   Compléter par le nombre manquant :\\
+
+\bmul{3}
+
+
+
+$1,7 \times \hspace*{0.3cm}. . .\hspace*{0.3cm} =$ 0,17 \\
+
+$13,6 \times \hspace*{0.3cm}. . .\hspace*{0.3cm} =$ 1,36 \\
+
+
+\columnbreak
+
+
+
+$0,16 \times \hspace*{0.3cm}. . .\hspace*{0.3cm} =$ 1600 \\
+
+$\hspace*{0.3cm}. . .\hspace*{0.3cm} \times 100 =$ 52,5\\
+
+\columnbreak
+
+
+$543  \times \hspace*{0.3cm}. . .\hspace*{0.3cm} =$ 0,543 \\
+
+$\hspace*{0.3cm}. . .\hspace*{0.3cm} \times 1 =$ 27,3 \\
+
+\emul
+
+\exo{2.5} Calculer astucieusement en détaillant les étapes de calculs.\\
+
+\bmul{2}
+
+$K = 50 \times 12,39 \times 2 \times 10$\\
+\reponse[5]\\
+
+\columnbreak
+
+$K = 2,5 \times 50 \times 4 \times 0,0256 \times 2 $\\
+\reponse[5]\\
+
+\emul
+
+
+
+\exo{4}\\
+Une famille composée des deux parents, du fils aîné Pierre, âgé de 16 ans, des deux jumelles Mathilde et Noémie, âgées de 8 ans et du petit dernier Gabin âgé de 4 ans décide de passer 4 jours à la montagne.\\
+La location du logement est déjà réglée. Pierre et son père feront du snowboard alors que les jumelles, Gabin et leur mère feront du ski. Ils doivent louer le matériel.\\
+
+\initq \textbf{\q	Calculer la somme totale dépensée pour toute la famille pour le matériel de ski et de snowboard pendant les 4 jours, sachant que :}\\
+
+Pour une journée de location :	\hspace*{1cm}- une paire de skis coûte 10,50 euros ;\\
+\hspace*{6.8cm}- un snowboard coûte 14,60 euros.\\
+
+
+\noindent \reponse[9]\\
+
+\textbf{\q	Calculer la somme totale dépensée pour les forfaits permettant d'accéder aux pistes sachant que :}\\
+
+Pour une semaine : 	\hspace*{1cm}	- le forfait « adulte » et « plus de 13 ans » coûte 180 euros ;\\
+\hspace*{5.1cm}- le forfait pour les enfants de 5 à 13 ans coûte 148 euros;\\
+\hspace*{5cm}   	- le forfait est gratuit pour les enfants de moins de 5 ans.\\
+
+\noindent \reponse[10]\\
+
+\exo{}BONUS\\
+Pour assurer la sécurité du musée, l'accès à la salle des trésors nécessite non pas un mais deux codes de 5 chiffres.\\
+Étonnamment, les gardiens ont le même moyen mnémotechnique pour se souvenir de ces deux suites de chiffres : la somme du deuxième et du cinquième chiffre donne le quatrième.\\
+Le dernier chiffre est plus grand que le premier et leur produit donne le deuxième.\\
+La somme du premier et du deuxième chiffre donne le troisième.\\
+Il n'y a pas les chiffres 0, 5 et 7.
+\textbf{Quels sont les deux codes qui permettent d'ouvrir la salle ?}\\
+\reponse[1]
+
+
+\end{document}

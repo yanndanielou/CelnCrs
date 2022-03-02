@@ -1,0 +1,132 @@
+\documentclass[12pt,a4paper]{article}
+
+%******************************* Paquetages ******************************
+
+%Conventions fran\c{c}aises
+\usepackage[francais]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{listing}
+%Pour la g\'eom\'etrie.
+\usepackage{pstricks-add}
+\usepackage{fp}
+%\droite gradu\'ee{Nb de divisions de la longueur unit\'e}{longueur axe}
+\newcommand{\droite}[2]{
+  \psline{->}(0,0)(#2,0)
+\FPdiv{\division}{1}{#1}%Variable pour la division de la longueur Unit\'e.
+\FPmul{\produit}{#1}{#2}%Variable pour les graduations sur toute la longueur de l'axe.
+\FPclip{\produit}{\produit}%Supression des z\'eros inutiles.
+  \multido{\r=0+\division}{\produit}%Boucle PsTricks
+  {
+  \psline(\r,-0.075)(\r,0.075)
+  }
+}
+
+%\droite gradu\'ee avec nombres{Nb de divisions de la longueur unit\'e}{longueur axe}
+\newcommand{\droitenombres}[2]{
+  \psline{->}(0,0)(#2,0)
+\FPdiv{\division}{1}{#1}
+\FPmul{\produit}{#1}{#2}
+\FPclip{\produit}{\produit}
+  \multido{\r=0+\division}{\produit}
+  {
+  \psline(\r,-0.075)(\r,0.075)
+  }
+\multido{\i=0+1}{#2}{
+\psline[linewidth=0.03](\i,-0.15)(\i,0.15)
+\rput(\i,0.35){\i}}
+}
+
+%\droite gradu\'ee avec nombres{Nb de divisions de la longueur unit\'e}{longueur axe}{nb d\'epart}
+\newcommand{\droitenombresorigine}[3]{
+  \psline{->}(0,0)(#2,0)
+\FPdiv{\division}{1}{#1}
+\FPmul{\produit}{#1}{#2}
+\FPclip{\produitentier}{\produit}
+  \multido{\r=0+\division}{\produitentier}
+  {
+  \psline(\r,-0.075)(\r,0.075)
+  }
+
+\FPset{\nbchoisi}{#3}
+\multido{\i=0+1}{#2}{
+\psline[linewidth=0.03](\i,-0.15)(\i,0.15)
+\rput(\i,0.35){\nbchoisi}
+\FPadd{\nbchoisi}{1}{\nbchoisi}
+\FPclip{\nbchoisi}{\nbchoisi}
+}
+}
+
+
+%\droite gradu\'ee avec nombres{Nb de divisions de la longueur unit\'e}{longueur axe}{nb d\'epart}{pas}
+\newcommand{\droitenombresoriginepas}[4]{
+  \psline{->}(0,0)(#2,0)
+\FPdiv{\division}{1}{#1}
+\FPmul{\produit}{#1}{#2}
+\FPclip{\produitentier}{\produit}
+  \multido{\r=0+\division}{\produitentier}
+  {
+  \psline(\r,-0.075)(\r,0.075)
+  }
+\FPset{\nbchoisi}{#3}
+\multido{\i=0+1}{#2}{
+\psline[linewidth=0.03](\i,-0.15)(\i,0.15)
+\rput(\i,0.35){\nbchoisi}
+\FPadd{\nbchoisi}{#4}{\nbchoisi}
+\FPclip{\nbchoisi}{\nbchoisi}
+}
+}
+
+
+\begin{document}
+
+\begin{pspicture}(-1,-1)(8,1)
+ \droite{5}{8}
+\end{pspicture}
+
+
+\begin{pspicture}(-1,-1)(8,1)
+ \droitenombres{4}{6}
+\end{pspicture}
+
+
+\begin{pspicture}(-1,-1)(8,1)
+ \droitenombresorigine{10}{8}{-5}
+\end{pspicture}
+
+
+\begin{pspicture}(-1,-1)(8,1)
+ \droitenombresoriginepas{2}{8}{-5}{0.2}
+\end{pspicture}
+
+
+\noindent
+Exercice 1:\\
+D\'eterminer les abscisses des points $A$, $B$, $C$ et $D$.\\
+\begin{pspicture}(-1,-1)(8,2)
+\rput(1.2,1){A}
+\psline{->}(1.2,0.75)(1.2,0.075)
+\rput(2.8,1){B}
+\psline{->}(2.8,0.75)(2.8,0.075)
+\rput(4.5,1){C}
+\psline{->}(4.5,0.75)(4.5,0.075)
+\rput(6.7,1){D}
+\psline{->}(6.7,0.75)(6.7,0.075)
+\droitenombresorigine{10}{8}{-5}
+\end{pspicture}
+
+Exercice 2:\\
+D\'eterminer les abscisses des points $A$, $B$, $C$ et $D$.\\
+\begin{pspicture}(-1,-1)(8,2)
+\rput(1.2,1){A}
+\psline{->}(1.2,0.75)(1.2,0.075)
+\rput(2.8,1){B}
+\psline{->}(2.8,0.75)(2.8,0.075)
+\rput(4.4,1){C}
+\psline{->}(4.4,0.75)(4.4,0.075)
+\rput(6.2,1){D}
+\psline{->}(6.2,0.75)(6.2,0.075)
+\droitenombresorigine{5}{8}{0}
+\end{pspicture}
+
+\end{document}
