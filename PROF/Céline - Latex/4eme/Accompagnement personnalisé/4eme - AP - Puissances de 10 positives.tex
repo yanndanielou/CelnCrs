@@ -1,0 +1,299 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Séance d'AP  : les puissances positives de 10}{}{}{4ème}{}
+
+\vspace*{0.2cm}
+
+\setlength{\fboxrule}{2pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+
+\vspace*{0.5cm}
+
+\underline{\textbf{{\large Cours}}}\\
+
+\textbf{Les puissances de 10} servent souvent à écrire les nombres très grands ou très petits.\\
+
+
+
+
+\textbf{Définition 1:} Un multiple de 10 peut s'écrire sous la forme d'un produit $10^{n}$, où est un entier positif non nul.
+ \begin{center}
+  $10^{n}$ est le produit de $n$ facteurs égaux à 10 : \hspace*{1.5cm}  $10^{n} = \underbrace{10 \times ... \times 10}_{n fois}= \underbrace{10...0}_{n zero}$ 
+   \end{center}  
+
+\textbf{Remarques :} \hspace*{1cm}  Si n=1 alors $10^{1}=10$\\
+\hspace*{3.5cm}  Si n=2 alors $10^{2}=10 \times 10 = 100$\\
+\hspace*{3.5cm}  Si n=3 alors $10^{3}=10 \times 10 \times 10 = 1000$\\
+\hspace*{3.5cm}  Si n=4 alors $10^{4}=10 \times 10 \times 10 \times 10= 10000$\\
+
+\textbf{Applications : } 1 Méga octets = 1 millions d'octets = $10^{6}  $ o = 1 MO
+\end{minipage}}
+\end{flushleft}
+
+
+\renewcommand{\arraystretch}{1.5}
+
+
+\exo \\
+Un nouveau virus informatique est détecté ; il se nomme « Puis Sens Disse », nom de code : PS10. \\
+Ce virus envahit un secteur du disque dur et le rend inutilisable. Au bout d’une heure, PS10 a infecté dix nouveaux
+secteurs, et ainsi de suite : durant chaque heure suivante, chaque secteur contamine dix nouveaux secteurs sains.\\
+
+\q Combien de secteur sont contaminés :\\
+
+\includegraphics[scale=1]{virus.eps} \\
+\q L’ordinateur est contaminé depuis 8 heures. Sur l’écran, on peut lire : "$10^{8}$ secteurs détruits durant la 8ème heure". Pourquoi a-t-on cette notation $10^{8}$? Donner l’écriture de ce nombre.\\
+\reponse[2]\\
+\q Cent mille millions de secteurs viennent d’être contaminés. Quel message peut-on lire à l’écran ? \\
+\reponse[1]\\
+
+\vspace*{1cm}
+
+
+\bmul{2}
+\exo \\
+Écrire les nombres suivants sous forme de puissance de 10. \\
+
+
+
+\noindent 1 000 = . . . . . . . . .\\
+100 000 000 = . . . . . . . \\
+100 = . . . . . . . . \\
+10 000 = . . . . . . . . . \\
+10 000 000 000 = . . . . . . . . . . .\\
+ 
+
+\columnbreak
+
+\exo \\
+Calculer les expressions suivantes.
+
+\bmul{2}
+
+$2,345 \times 10^{2} = $ . . . . .\\
+
+
+$0,03 \times 10^{2} = $ . . . . .\\
+
+$752 \times 10^{1} = $ . . . . .\\
+
+\columnbreak
+
+
+$35,98  \times 10^{5} = $ . . . . .\\
+
+$0,89 \times 10^{7} = $ . . . . .\\
+
+$3,592  \times 10^{4} = $ . . . . .\\
+
+\emul
+
+
+
+
+\emul
+
+\newpage
+
+\vspace*{0.2cm}
+
+\setlength{\fboxrule}{2pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+
+
+\underline{\textbf{Cours}}\\
+
+
+\textbf{Définition 2 :}\textbf{ L'écriture scientifique }d'un nombre décimal est l'unique écriture de ce nombre sous la forme $a \times 10^{n}$, où:
+\bi
+\item $a$ est un nombre décimal compris entre 1 et 10, 10 étant exclu ;
+\item $n$ est un nombre entier relatif (positif ou négatif).\\
+\ei
+\vspace*{0.2cm}
+
+\textbf{Exemples :}  $2,145 \times 10^{5}$ est l'écriture scientifique du nombre 214 500\\
+ \hspace*{ 1.8cm}               $1,25 \times 10^{-2}$  est l'écriture scientifique du nombre 0, 0125
+
+
+\vspace*{0.5cm}
+\end{minipage}}
+\end{flushleft}
+
+\vspace*{0.25cm}
+\bmul{2}
+\exo \\
+Associer les écritures scientifiques avec les nombres auxquels elles correspondent. \\
+
+
+
+\noindent $2,718 \times 10^{3}$ \hspace*{2cm} 2,718\\
+$2,718 \times  10^{0}$    \hspace*{2cm} 2 718\\
+$2,718 \times  10^{2}$    \hspace*{2cm} 27,18\\
+$2,718 \times  10^{1}$    \hspace*{2cm} 27 180\\
+$2,718 \times  10^{5}$   \hspace*{2cm} 271,8\\
+$2,718 \times  10^{-2}$   \hspace*{1.8cm} 0,02718\\
+
+
+\columnbreak
+
+\exo \\
+Comparer ces nombres en écriture scientifique, avec les signes $<$ ou $>$:\\
+
+\initqa 
+\qa $9,45 \times 10^{8} $ . . . . $8,31 \times 10^{8} $\\
+
+\qa $9 \times 10^{3} $ . . . . $9 \times 10^{2} $\\
+
+\qa $3,5 \times 10^{13} $ . . . . $2,65 \times 10^{12} $\\
+
+\qa $7,2 \times 10^{15} $ . . . . $7,2 \times 10^{13} $\\
+
+\qa $1,6 \times 10^{9} $ . . . . $1,5 \times 10^{10} $\\
+
+\emul
+
+\vspace*{0.25cm}
+
+\exo \\ Le tableau suivant donne les distances, en kilomètres, entre les planètes du système solaire et le Soleil :\\
+
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+\textbf{Planètes} & \textbf{Distances} & \textbf{Écritures scientifiques }& \textbf{Ordre des planètes} \\ 
+\hline 
+\textbf{Saturne}  & $1,427 \times 10^{9}$ &  &  \\ 
+\hline 
+\textbf{Terre} &  $149,6 \times 10^{6}$  &  &  \\ 
+\hline 
+\textbf{Jupiter} &  $7,78 \times 10^{8}$  &  &  \\ 
+\hline 
+\textbf{Neptune} &  $44,97 \times 10^{8}$  &  &  \\ 
+\hline 
+\textbf{Mercure} &  $57,9 \times 10^{6}$  &  & 1 \\ 
+\hline 
+\textbf{Vénus} &  $108 \times 10^{6}$  &  &  \\ 
+\hline 
+\textbf{Mars} &  $228 \times 10^{6}$  &  &  \\ 
+\hline 
+\textbf{Uranus} &  $2,871 \times 10^{9}$  &  &  \\ 
+\hline 
+\end{tabular} 
+
+\vspace*{0.25cm}
+
+$\rightarrow $ Après avoir écrit les distances des planètes au Soleil en écriture scientifique,indique leur ordre \textbf{de la plus proche à la plus éloignée du soleil}.
+
+
+
+
+
+\setlength{\fboxrule}{2pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+
+\vspace*{0.5cm}
+
+\begin{center}
+\underline{\textbf{Pour information}}
+\end{center}
+
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Préfixe & Symbole & Puissances de 10 & Préfixe & Symbole & Puissance de 10 \\ 
+\hline 
+Téra & T & $10^{12}$ & Kilo & k & $10^{3}$\\ 
+\hline 
+Giga & G & $10^{9}$ & Hecto & h & $10^{2}$ \\ 
+\hline 
+Méga & M & $10^{6}$ & Déca & da & $10^{1}$ \\ 
+\hline 
+\end{tabular} 
+
+
+\vspace*{0.5cm}
+\end{minipage}}
+\end{flushleft}
+
+\newpage
+
+
+\end{document}
