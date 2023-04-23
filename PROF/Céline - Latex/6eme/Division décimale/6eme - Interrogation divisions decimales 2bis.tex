@@ -1,0 +1,140 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Division décimale  }{Nom :}{Prénom :}{Classe}{Date}
+
+
+
+\exo{} \q Poser et effectuer la division décimale suivante : $159 \div 60$ \\
+
+\vspace*{5.5cm}
+
+
+\q Poser, effectuer les divisions décimales suivantes et donner les résultats \textit{arrondis au millième près} :\\
+ $31,7 \div 12$ \hspace*{2.5cm} $3,59 \div 2,1$\\
+
+\vspace*{6cm}
+
+
+\exo{4} Répondre aux problèmes ci-dessous en détaillant vos réponses.\\
+
+\initqa
+\qa Gérard a payé 28,56 euros pour 12 pieds de tomates. Quel est le prix d'un pied de tomate ?\\
+\reponse[5]\\
+
+\qa Bastien a économisé tout son argent de poche de cette année. Ses parents lui ont donné la même somme d'argent tous les mois. Cela représente une somme de 480 euros.\\
+ Combien d'argent ses parents lui donnait tous les mois ? \\
+ \reponse[5]\\
+ 
+\newpage 
+
+\vspace*{0.5cm}
+
+ \qa 6 amis se partagent au goûter une bouteille de 1,5L de soda. Combien de litre de soda boiront-ils chacun ?\\
+\reponse[5]\\
+
+\vspace*{0.5cm}
+
+\exo{4}
+Mélissa dispose de 20 euros. Elle achète 3 cahiers identiques et 8 stylos de couleur. \\
+	Chaque stylo coûte  1,25 euros . La caissière lui rend 2,80 euros.\\
+	 Quel est le prix d’un cahier ?\\
+\reponse[12]\\
+
+
+\vspace*{0.35cm}
+
+\exo{} BONUS
+
+Sur une planète, où poussent des fleurs immenses, un amoureux en cueille une
+dont la corolle a 258 839 pétales !\\
+
+Il commence à l’effeuiller et il dit « Elle m'aime » en enlevant le premier pétale, « un peu » en enlevant
+le second, « beaucoup » en enlevant le troisième, puis « passionnément », « à la folie », « pas du
+tout ». \\
+Et il recommence : « Elle m'aime », « un peu », « beaucoup »...\\
+\textbf{Que va-t-il dire en effeuillant le dernier pétale ? Justifie ta réponse.}\\
+\reponse[7]\\
+
+
+
+
+
+
+
+\end{document}

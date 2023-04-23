@@ -1,0 +1,130 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Séance d'AP : Les pourcentages}{}{}{4ème}{}
+
+\vspace*{0.2cm}
+
+
+\setlength{\fboxrule}{2pt}
+\begin{flushleft}
+\framebox{\begin{minipage}{\linewidth}
+
+\vspace*{0.5cm}
+
+\underline{\textbf{{\large Cours} : Augmentation et réduction}}\\
+
+\textbf{(a) Le prix d'un manteau de 160 euros est augmenté de 20 \% .\textit{ Quel est le nouveau prix ?}}\\
+
+On calcule d'abord, le montant de l'augmentation :\hspace*{1cm} $\dfrac{20}{100} \times 160 = 0,2 \times 160 =32$ \\
+On calcule ensuite le prix après augmentation :\hspace*{1.5cm} 160 + 32 = 192\\
+Le nouveau prix est de 192 euros.\\
+
+\textbf{(b) Le prix d'un DVD est de 17 euros. \textit{Quel est le nouveau prix après 15 \%  de réduction ?}}\\
+
+On calcule d'abord, le montant de la réduction : \hspace*{1cm} $\dfrac{15}{100} \times 17 = 0,15 \times 17 =2,55$ \\
+On calcule ensuite le prix après réduction : \hspace*{1.5cm} 17 - 2,55 = 14,45\\
+Le nouveau prix est de 14,45 euros.\\
+
+
+
+\end{minipage}}
+\end{flushleft}
+
+
+\vspace*{0.5cm}
+
+\exo \\ \textit{Des prix.}\\
+
+\initqa \qa Julie obtient une réduction de 15 $\%$ sur un vélo valant 158 euros . Quel est le montant de la réduction obtenue par Julie ?\\
+
+
+
+\qa Patrick a obtenu une réduction de 27 euros sur une console de jeu qui valait 225 euros. Quel pourcentage de réduction a-t-il obtenu ?\\
+
+
+\qa Paul a obtenu une baisse de 45 euros sur un appareil photo, soit une baisse de 30 $\%$ du prix initial. Quel était le prix initial de l'appareil photo ?\\
+
+\vspace*{0.4cm}
+
+\exo \\ Une montre coûtait 175 euros en 2006. Son prix est augmenté de 3 $\%$
+en 2007, puis de 4 $\%$ en 2008.\\
+\initq \q Calculer le prix de cette montre en 2007, puis en 2008.\\
+\q Calculer le pourcentage d'augmentation sur les deux années.\\
+
+\end{document}

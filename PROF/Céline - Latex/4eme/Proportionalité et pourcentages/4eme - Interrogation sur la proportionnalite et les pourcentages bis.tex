@@ -1,0 +1,143 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation : Proportionnalité et pourcentages}{Nom :}{Prénom :}{Classe}{Date}
+
+
+
+\exo{1.5}\textbf{ Résoudre ce problème à l'aide de la recherche de la quatrième proportionnelle.}\\
+
+Avec 275 g de café , on peut préparer 40 expresso. Quelle masse de café faut-il pour préparer 12 expresso ?\\
+\reponse[6]\\
+
+
+
+
+\exo{2.5} Un véhicule automobile consomme en moyenne 6,4 litres (L) de carburant pour faire 100 km.\\
+
+\q Compléter le tableau de proportionnalité suivant (en arrondissant au dixième s’il y a plus de chiffres) :\\
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+\textbf{Distance (km)} & 100 & 120 & 450 & 325 & 1000 & . . . \\ 
+\hline 
+\textbf{Quantité de carburant (L)} & . . . & . . . & . . . & . . . & . . . & 44 \\ 
+\hline 
+\end{tabular} 
+
+\vspace*{0.5cm}
+
+\q Un litre d’essence coûte 1,014 €. Quel budget doit-on prévoir pour parcourir 1 225 km (on arrondira au centime près) ?\\
+\reponse[5]\\
+
+
+
+
+\exo{3}  Dans le jardin de Céleste, il y a deux volière.\\
+Dans l'une, il y a 50 oiseaux dont 48 $\%$ sont des hirondelles.\\
+Dans l'autre, il y a 60 oiseaux dont 25 $\%$  sont des hirondelles.\\
+Céleste ouvre la porte des 2 volières et tous les oiseaux s'envolent.\\
+$\rightarrow $ Quel est le pourcentage d'hirondelles parmi les oiseaux qui se sont envolés?\\
+\reponse[10]\\
+
+\newpage
+\reponse[5]\\
+
+
+\exo{3} 
+
+\initqa \qa Un scooter coûte 980 euros. Son prix augmente de 5 $\%$.\\
+Quel est le nouveau prix ?\\
+\reponse[5]\\
+
+\qa Un pantalon était vendu 85 euros.
+Le commerçant fait une remise de 15 $\%$.\\
+Quel est le nouveau prix du pantalon après la remise ?\\
+\reponse[5]\\
+
+
+\qa Gilles profite d'une promotion pour un voyage en Egypte : 675 euros au lieu de 800 euros.\\
+Quel est le pourcentage de réduction dont il a bénéficié ?\\
+\reponse[7]\\
+
+
+
+
+
+\end{document}
