@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%
-% Paramétrages du document %
+% Paramï¿½trages du document %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper,10pt,twoside,french]{article}
@@ -8,7 +8,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% déclaration des packages
+% dï¿½claration des packages
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -17,21 +17,21 @@
 
 	\usepackage{fullpage}
 	\usepackage[french]{babel}
-	\usepackage[latin1]{inputenc}
+	%\usepackage[latin1]{inputenc}
 	%\usepackage[latin9]{inputenc}
-	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+	\usepackage{amsmath,amssymb} % Les bibliothï¿½ques LaTeX de l'American Mathematical Society sont pleines de macros intï¿½ressantes (voire indispensables).
 
-	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractï¿½res accentuï¿½s norme iso-8859, cela risque de ne pas marcher avec des fichiers crï¿½ï¿½s sous windows
 	
 	\usepackage{frcursive}
 	\usepackage{cmbright}
-% Packages de polices de caractères
+% Packages de polices de caractï¿½res
 	%\usepackage{txfonts} % Times
 	%\usepackage{pxfonts} % Palatino
 	%\usepackage{fourier} % Utopia
 
-% Packages pour la géométrie
-	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+% Packages pour la gï¿½omï¿½trie
+	\usepackage[x11names,table]{xcolor} % Gï¿½re les couleurs - Liste des couleurs dans le document xcolor.pdf
 	\usepackage{pst-eucl} % Document Euclide.pdf
 	\usepackage{pst-all}
 	\usepackage{pstricks}
@@ -48,8 +48,8 @@
 	
 % Package de maths
 	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
-	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
-	\usepackage{tikz,tkz-tab}
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
 % Packages de mise en page
 	\usepackage{vmargin}
 	\usepackage{fancybox}
@@ -84,7 +84,7 @@
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Parametrage des marges et séparations
+% Parametrage des marges et sï¿½parations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -94,14 +94,14 @@
 	%	2 est la marge en haut
 	%	3 est la marge droite
 	%	4 est la marge en bas
-	%	5 fixe la hauteur de l'entête
-	%	6 fixe la distance entre l'entête et le texte
+	%	5 fixe la hauteur de l'entï¿½te
+	%	6 fixe la distance entre l'entï¿½te et le texte
 	%	7 fixe la hauteur du pied de page
 	%	8 fixe la distance entre le texte et le pied de page
 	
-	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnseprule}{0pt} % largeur du filet de sï¿½paration des colonnes : mettre en commentaire pour supprimer ce filet.
 	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
-	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portï¿½e par shadowbox
 	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
 
 
@@ -111,12 +111,12 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
-	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
-	\newtheorem{propriete}{\underline{Propriété :}}
-	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Thï¿½orï¿½me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Dï¿½finition} :}}
+	\newtheorem{propriete}{\underline{Propriï¿½tï¿½ :}}
+	\newtheorem{propcar}{\underline{Propriï¿½tï¿½s caractï¿½ristiques :}}
 	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
-	\newtheorem{methode}{\underline{Méthodologie :}}
+	\newtheorem{methode}{\underline{Mï¿½thodologie :}}
 	%\newtheorem{exo}{\underline{Exercice }}
 
 	% Ensembles de nombres
@@ -131,11 +131,11 @@
 	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
 	\newcommand{\e}{\ensuremath{\mathrm{e}}}
 	
-	% Nom spéciaux
+	% Nom spï¿½ciaux
 	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
 	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
 
-	% Repérage et coordonnees
+	% Repï¿½rage et coordonnees
 	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
 	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
 	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
@@ -146,12 +146,12 @@
 		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
 	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
 	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
-		% Opérateurs
+		% Opï¿½rateurs
 	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
 	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
 	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
 	
-	%  Redifinition d'une boite ombrée
+	%  Redifinition d'une boite ombrï¿½e
 	\makeatletter 
 	\let\shadowboxori\shadowbox 
 	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
@@ -162,7 +162,7 @@
 	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
 	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
 
-	% Mise en page des thèorème et autres définitions ...
+	% Mise en page des thï¿½orï¿½me et autres dï¿½finitions ...
 	
 			% Couleurs perso
 			\newrgbcolor{RougePale}{1 0.95 0.96}
@@ -182,7 +182,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -200,7 +200,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -218,7 +218,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -234,7 +234,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -253,7 +253,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriï¿½tï¿½}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -327,9 +327,9 @@
 		% Danger dans box
 		\newsavebox{\infobox}
  
-% On règle les marges définitivement ici
+% On rï¿½gle les marges dï¿½finitivement ici
 \newlength{\marge}\setlength{\marge}{5mm}
-% Contrôle fin pour le panneau
+% Contrï¿½le fin pour le panneau
 \newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{information}{%
@@ -353,7 +353,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Huge\Info}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
   \vspace*{\marge}
@@ -364,9 +364,9 @@
 		% Danger dans box
 		\newsavebox{\dangerbox}
  
-%% On règle les marges définitivement ici
+%% On rï¿½gle les marges dï¿½finitivement ici
 %\newlength{\marge}\setlength{\marge}{5mm}
-%% Contrôle fin pour le panneau
+%% Contrï¿½le fin pour le panneau
 %\newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{Danger}{%
@@ -390,7 +390,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Large\textdbend}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
   \vspace*{\marge}
@@ -420,14 +420,14 @@
   %}
   % Affiche le panneau
   \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
   \vspace*{\marge}
 \bigskip}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des fonctions mathématiques
+% Dï¿½finition des fonctions mathï¿½matiques
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -437,7 +437,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des numérotations
+% Dï¿½finition des numï¿½rotations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -474,22 +474,22 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}
-   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\color{red}}
    {\sffamily }% apparence du titre
    
 \titleformat{\subsection}
-   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesubsection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
 
 \titleformat{\subsubsection}
-   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsubsection}% apparence du numéro
-   {0.5em}% espacement numéro/texte
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesubsubsection}% apparence du numï¿½ro
+   {0.5em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
    
    \newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
@@ -498,7 +498,7 @@
   \newtheorem{exot}{\sffamily Exercice-type }
 \newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
  
-\newcommand{\chapitre}{Nombres entiers et nombres décimaux}
+\newcommand{\chapitre}{Nombres entiers et nombres dï¿½cimaux}
 
 \newcommand{\numchapitre}{}
 
@@ -538,15 +538,15 @@
 
 \begin{itemize}[label=$\hookrightarrow$]
 
-\item Je dois savoir écrire un nombre en toutes lettres,
+\item Je dois savoir ï¿½crire un nombre en toutes lettres,
 
-\item Je dois connaître l'écriture décimale et utiliser la valeur des chiffres en fonction de leur rang dans l'écriture, 
+\item Je dois connaï¿½tre l'ï¿½criture dï¿½cimale et utiliser la valeur des chiffres en fonction de leur rang dans l'ï¿½criture, 
 
-\item 	Je dois savoir utiliser et représenter les grands nombres entiers,
+\item 	Je dois savoir utiliser et reprï¿½senter les grands nombres entiers,
 
-\item Je dois connaitre et utiliser les fractions décimales pour écrire ou décomposer un nombre décimal,
+\item Je dois connaitre et utiliser les fractions dï¿½cimales pour ï¿½crire ou dï¿½composer un nombre dï¿½cimal,
 
-\item Je dois maîtriser les différentes écritures des nombres décimaux (en lettres, en chiffre et en décomposition).
+\item Je dois maï¿½triser les diffï¿½rentes ï¿½critures des nombres dï¿½cimaux (en lettres, en chiffre et en dï¿½composition).
 
 
 \end{itemize}
@@ -559,7 +559,7 @@
 
 
 \df{
-. . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm} sont des symboles qui servent à écrire tous . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm} que l'on connaît. \\
+. . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm} sont des symboles qui servent ï¿½ ï¿½crire tous . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm} que l'on connaï¿½t. \\
 Il n'existe que . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}: . . . . . . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}. \\
 C'est  pourquoi  l'on parle de . . . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}.
 }\\
@@ -567,8 +567,8 @@ C'est  pourquoi  l'on parle de . . . . . . . . . . . . . . . . . . . . . .  \hsp
 \vspace*{0.5cm}
 
 \df{
-. . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm} représentent une quantité, une valeur et peuvent être écrits avec un ou plusieurs \hspace*{0.1cm}. . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}. \\
-L'ordre de lecture est important et on lit toujours de gauche à droite.\\
+. . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm} reprï¿½sentent une quantitï¿½, une valeur et peuvent ï¿½tre ï¿½crits avec un ou plusieurs \hspace*{0.1cm}. . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}. \\
+L'ordre de lecture est important et on lit toujours de gauche ï¿½ droite.\\
 Quand on utilise une virgule, les nombres sont . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}.
 }\\
 
@@ -576,18 +576,18 @@ Quand on utilise une virgule, les nombres sont . . . . . . . . . . . . . . . . .
 
 \section{Les nombres entiers}
 
-\subsection{Écriture d'un nombre entier en chiffres}
+\subsection{ï¿½criture d'un nombre entier en chiffres}
 
 \vspace*{0.2cm}
 
-Pour  faciliter  la  lecture  d'un  nombre  entier, on  regroupe  les  chiffres  \textbf{par  groupe de trois}  à  partir  de la droite.\\
+Pour  faciliter  la  lecture  d'un  nombre  entier, on  regroupe  les  chiffres  \textbf{par  groupe de trois}  ï¿½  partir  de la droite.\\
 
 
-\underline{\textbf{Exemple :}} \hspace*{0.3cm} 24375216 s'écrit . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}. \\
+\underline{\textbf{Exemple :}} \hspace*{0.3cm} 24375216 s'ï¿½crit . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}. \\
 \vspace*{0.5cm}
 
 \begin{Exoapp}
- Écrire correctement les nombres suivants à l'aide du tableau ci-dessous : 5083232  et 102039422\\ 
+ ï¿½crire correctement les nombres suivants ï¿½ l'aide du tableau ci-dessous : 5083232  et 102039422\\ 
 
 
  
@@ -601,7 +601,7 @@ Pour  faciliter  la  lecture  d'un  nombre  entier, on  regroupe  les  chiffres 
 
 \vspace*{0.3cm}
 
-\textbf{Chaque chiffre dans un nombre à une position bien particulière.}\\
+\textbf{Chaque chiffre dans un nombre ï¿½ une position bien particuliï¿½re.}\\
 
 Un exemple, dans 12 360, le chiffre 6 est le . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm} alors que 2 est . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}.\\
 
@@ -614,7 +614,7 @@ A ne pas confondre avec . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}
 Dans le nombre 5 203 149 : \\
 \hspace*{5cm} - le chiffre des dizaines est . . .\\
 \hspace*{5cm} - le chiffre des centaines de mille est . . .\\
-\hspace*{5cm} - le chiffre des unités de millions est . . .\\
+\hspace*{5cm} - le chiffre des unitï¿½s de millions est . . .\\
 \hspace*{5cm} - le nombre de centaines est . . . . . \\
 \hspace*{5cm} - le nombre de millions est . . . . .\\
 
@@ -623,15 +623,15 @@ Dans le nombre 5 203 149 : \\
 \vspace*{0.3cm}
 
 \prop{
-\underline{\textbf{Zéros inutiles}}\\
-Un zéro est inutile s'il se trouve . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}
+\underline{\textbf{Zï¿½ros inutiles}}\\
+Un zï¿½ro est inutile s'il se trouve . . . . . . . . . . . . . . . . . . . .  \hspace*{0.1cm}
 
 }\\
 
 \vspace*{0.3cm}
 
 \begin{Exoapp}
- Supprimer les zéros inutiles et rétablir les espaces si besoin.
+ Supprimer les zï¿½ros inutiles et rï¿½tablir les espaces si besoin.
 
 \bmul{3}
 
@@ -659,13 +659,13 @@ Un zéro est inutile s'il se trouve . . . . . . . . . . . . . . . . . . . .  \hsp
 
 \vspace*{0.3cm}
 
-\subsection{Écriture d'un nombre entier en lettres}
+\subsection{ï¿½criture d'un nombre entier en lettres}
 
-\underline{\textbf{Les Règles d'orthographe}}\\
+\underline{\textbf{Les Rï¿½gles d'orthographe}}\\
 \vspace*{0.2cm}
 
 \prop{
-La plupart des mots qui servent à écrire un nombre sont \textbf{invariables}.\\
+La plupart des mots qui servent ï¿½ ï¿½crire un nombre sont \textbf{invariables}.\\
 }\\
 
 \underline{\textbf{Exemples :}}\\
@@ -689,11 +689,11 @@ Les noms \textbf{million et milliard} s'accordent au pluriel.\\
 
 \vspace*{2.2cm}
 
-\subsection{Plusieurs écritures pour un nombre entier}
+\subsection{Plusieurs ï¿½critures pour un nombre entier}
 
 \vspace*{0.4cm}
 
-Prenons le nombre 1 234, on peut écrire ce nombre de 3 façons différentes. Quelles sont-elles ?\\
+Prenons le nombre 1 234, on peut ï¿½crire ce nombre de 3 faï¿½ons diffï¿½rentes. Quelles sont-elles ?\\
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\\
 \vspace*{0.5cm}
 
@@ -703,7 +703,7 @@ Prenons le nombre 1 234, on peut écrire ce nombre de 3 façons différentes. Quell
 
 \begin{Exoapp}
 
- Compléter le tableau suivant :
+ Complï¿½ter le tableau suivant :
 
 \vspace*{0.4cm}
 
@@ -712,7 +712,7 @@ Prenons le nombre 1 234, on peut écrire ce nombre de 3 façons différentes. Quell
 
 \begin{tabular}{|C{3cm}|C{7.5cm}|C{5.5cm}|}
 \hline 
-\textbf{{\large En chiffres}} & \textbf{{\large En lettres}} & \textbf{{\large Décomposition}} \\ 
+\textbf{{\large En chiffres}} & \textbf{{\large En lettres}} & \textbf{{\large Dï¿½composition}} \\ 
 \hline 
  &  & (5 x 1 000) + (8 x 100) + 6 \\ 
 \hline 
@@ -728,9 +728,9 @@ Prenons le nombre 1 234, on peut écrire ce nombre de 3 façons différentes. Quell
 
 \newpage
 
-\section{Les nombres décimaux}
+\section{Les nombres dï¿½cimaux}
 
-\subsection{Fractions décimales}
+\subsection{Fractions dï¿½cimales}
 
 \begin{flushleft}
 \includegraphics[scale=1]{frac.eps} 
@@ -738,7 +738,7 @@ Prenons le nombre 1 234, on peut écrire ce nombre de 3 façons différentes. Quell
 
 \vspace*{0.4cm}
 
-\df{Une \textbf{fraction décimale} est une fraction dont le \textbf{dénominateur} est . . . . . . . . . . . . . . . . . . . . . .
+\df{Une \textbf{fraction dï¿½cimale} est une fraction dont le \textbf{dï¿½nominateur} est . . . . . . . . . . . . . . . . . . . . . .
 }\\
 
 \vspace*{0.2cm}
@@ -748,13 +748,13 @@ Prenons le nombre 1 234, on peut écrire ce nombre de 3 façons différentes. Quell
 
 \vspace*{0.2cm}
 
-\hspace*{1.5cm} cinq dixièmes : \hspace*{4.5cm} ; \hspace*{1cm} cent vingt trois centièmes : \hspace*{4cm}\\
+\hspace*{1.5cm} cinq dixiï¿½mes : \hspace*{4.5cm} ; \hspace*{1cm} cent vingt trois centiï¿½mes : \hspace*{4cm}\\
 
 \vspace*{0.5cm}
 
 \begin{Exoapp}
 
-Compléter :\\
+Complï¿½ter :\\
 
 \bmul{4}
 
@@ -781,11 +781,11 @@ $ 9,105 = \dfrac{. ... .}{. ... .}$
 
 \vspace*{0.5cm}
 
-\subsection{Définitions et propriétés}
+\subsection{Dï¿½finitions et propriï¿½tï¿½s}
 
 \vspace*{0.4cm}
 
-L'écriture décimale d'un nombre décimal se compose . . . . . . . . . . . . . . . . . . . . .  et . . . . . . . . . . . . . . . . . . . . . .\\
+L'ï¿½criture dï¿½cimale d'un nombre dï¿½cimal se compose . . . . . . . . . . . . . . . . . . . . .  et . . . . . . . . . . . . . . . . . . . . . .\\
 
 \vspace*{0.4cm}
 
@@ -803,7 +803,7 @@ L'écriture décimale d'un nombre décimal se compose . . . . . . . . . . . . . . .
 \newpage
 
 \df{
-Un nombre est un nombre décimal s'il peut s'écrire sous la forme d'une fraction décimale (fraction dont le dénominateur est une puissance de 10).
+Un nombre est un nombre dï¿½cimal s'il peut s'ï¿½crire sous la forme d'une fraction dï¿½cimale (fraction dont le dï¿½nominateur est une puissance de 10).
 }\\
 
 \vspace*{0.2cm}
@@ -813,21 +813,21 @@ Un nombre est un nombre décimal s'il peut s'écrire sous la forme d'une fraction 
 
 \vspace*{1cm}
 
-\underline{\textbf{Zéros inutiles :}}\\
+\underline{\textbf{Zï¿½ros inutiles :}}\\
 
-On peut écrire ou supprimer des zéros à droite de la partie décimale d'un nombre sans changer ce nombre.\\
+On peut ï¿½crire ou supprimer des zï¿½ros ï¿½ droite de la partie dï¿½cimale d'un nombre sans changer ce nombre.\\
 
 \underline{\textbf{Exemples :}}\\
 
 \hspace*{0.3cm} 0083,50 = 83,5  \hfill  07 025,350 = . . . . . .    \hfill 00,5200 = . . . . . .   \hfill 12 780,00 = . . . . . .  \hspace*{0.3cm}\\
 
 
-\subsection{Nombre décimal et nombre entier}
+\subsection{Nombre dï¿½cimal et nombre entier}
 
 \vspace*{0.3cm}
 
 \df{
-Un nombre décimal dont la partie décimale est zéro est . . . . . . . . . . . . . . . . .\\
+Un nombre dï¿½cimal dont la partie dï¿½cimale est zï¿½ro est . . . . . . . . . . . . . . . . .\\
 Donc un nombre entier est aussi  . . . . . . . . . . . . . . . . . . . . . . . .}\\
 
 
@@ -840,49 +840,49 @@ Donc un nombre entier est aussi  . . . . . . . . . . . . . . . . . . . . . . . .
 
 
 
-\subsection{Écrire un nombre décimal et connaître la valeur de ses chiffres}
+\subsection{ï¿½crire un nombre dï¿½cimal et connaï¿½tre la valeur de ses chiffres}
 
-\textbf{Tableau de numération :}
+\textbf{Tableau de numï¿½ration :}
 
 \includegraphics[scale=1]{tableau.eps} 
 \medskip
 
-Lire et écrire le nombre écrit dans le tableau de numération de différentes manières.\\
+Lire et ï¿½crire le nombre ï¿½crit dans le tableau de numï¿½ration de diffï¿½rentes maniï¿½res.\\
 
 \noindent \reponse[2]\\
 
 \begin{Exoapp}
-\initq \q Compléter par les nombres qui conviennent :\\
+\initq \q Complï¿½ter par les nombres qui conviennent :\\
 
 \bmul{2}
 
-1 unité = . . . . . . centièmes\\
+1 unitï¿½ = . . . . . . centiï¿½mes\\
 
-1 dixième = . . . . . . millièmes\\
+1 dixiï¿½me = . . . . . . milliï¿½mes\\
 
 \columnbreak
 
-1 dixième = . . . . . . centièmes\\
+1 dixiï¿½me = . . . . . . centiï¿½mes\\
 
-1 centaine = . . . . . . centièmes\\
+1 centaine = . . . . . . centiï¿½mes\\
 
 \emul
 
-\q Dans 129,043 quel est \textbf{le chiffre} des dixièmes ? . . . . . . . . . . . . .\\
+\q Dans 129,043 quel est \textbf{le chiffre} des dixiï¿½mes ? . . . . . . . . . . . . .\\
 
-\q Dans 129,043 quel est \textbf{le nombre} de dixièmes ? . . . . . . . . . . . . .\\
+\q Dans 129,043 quel est \textbf{le nombre} de dixiï¿½mes ? . . . . . . . . . . . . .\\
 
 \end{Exoapp}
 
 \vspace*{0.4cm}
 
 
-\subsection{Différentes écritures possibles pour un nombre décimal}
+\subsection{Diffï¿½rentes ï¿½critures possibles pour un nombre dï¿½cimal}
 
 \vspace*{0.4cm}
 
 
-Un nombre décimal peut s'écrire sous différentes formes :\\
+Un nombre dï¿½cimal peut s'ï¿½crire sous diffï¿½rentes formes :\\
 
 
 \setlength{\shadowsize}{1pt}
@@ -896,7 +896,7 @@ Un nombre décimal peut s'écrire sous différentes formes :\\
 
 \item $53,145 = \dfrac{53 145}{1000} $ \hspace*{1.5cm} \psline[linewidth=2pt]{<-}(3.7,-1.1)
 
-\item $53,145 = 53 + \dfrac{145}{1000} $ \hspace*{2cm} \psline[linewidth=2pt]{<-}(2.6,0)  \hspace*{2.6cm} \shadowbox{Exemples de décompositions avec des fractions décimales}\\
+\item $53,145 = 53 + \dfrac{145}{1000} $ \hspace*{2cm} \psline[linewidth=2pt]{<-}(2.6,0)  \hspace*{2.6cm} \shadowbox{Exemples de dï¿½compositions avec des fractions dï¿½cimales}\\
 
 \item $53,145 = (5 \times 10) + 3 + \dfrac{1}{10} + \dfrac{4}{100}  + \dfrac{5}{1000}$ \ \hspace*{0.3cm} \psline[linewidth=2pt]{<-}(0.7,1.1)
 
@@ -908,7 +908,7 @@ Un nombre décimal peut s'écrire sous différentes formes :\\
 
 
 \textbf{A vous de jouer !}\\
-Décomposer de 5 façons différentes le nombre 927,13.\\
+Dï¿½composer de 5 faï¿½ons diffï¿½rentes le nombre 927,13.\\
 
 \noindent \reponse[11]
 

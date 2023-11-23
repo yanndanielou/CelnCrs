@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%
-% Paramétrages du document %
+% Paramï¿½trages du document %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper,10pt,twoside,french]{article}
@@ -8,7 +8,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% déclaration des packages
+% dï¿½claration des packages
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -17,23 +17,24 @@
 
 	\usepackage{fullpage}
 	\usepackage[french]{babel}
-	\usepackage[latin1]{inputenc}
+	%\usepackage[latin1]{inputenc}
 	%\usepackage[latin9]{inputenc}
-	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+	\usepackage{amsmath,amssymb} % Les bibliothï¿½ques LaTeX de l'American Mathematical Society sont pleines de macros intï¿½ressantes (voire indispensables).
 
-	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractï¿½res accentuï¿½s norme iso-8859, cela risque de ne pas marcher avec des fichiers crï¿½ï¿½s sous windows
 	\usepackage{yhmath}
-	
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+% \usepackage{tikz,tkz-tab}	
 
 	\usepackage{frcursive}
 	\usepackage{cmbright}
-% Packages de polices de caractères
+% Packages de polices de caractï¿½res
 	%\usepackage{txfonts} % Times
 	%\usepackage{pxfonts} % Palatino
 	%\usepackage{fourier} % Utopia
 
-% Packages pour la géométrie
-	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+% Packages pour la gï¿½omï¿½trie
+	\usepackage[x11names,table]{xcolor} % Gï¿½re les couleurs - Liste des couleurs dans le document xcolor.pdf
 	\usepackage{pst-eucl} % Document Euclide.pdf
 	\usepackage{pst-all}
 	\usepackage{pstricks}
@@ -50,8 +51,7 @@
 	\usepackage{mathrsfs}
 % Package de maths
 	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
-	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
-	\usepackage{tikz,tkz-tab}
+	
 % Packages de mise en page
 	\usepackage{vmargin}
 	\usepackage{fancybox}
@@ -86,7 +86,7 @@
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Parametrage des marges et séparations
+% Parametrage des marges et sï¿½parations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -96,14 +96,14 @@
 	%	2 est la marge en haut
 	%	3 est la marge droite
 	%	4 est la marge en bas
-	%	5 fixe la hauteur de l'entête
-	%	6 fixe la distance entre l'entête et le texte
+	%	5 fixe la hauteur de l'entï¿½te
+	%	6 fixe la distance entre l'entï¿½te et le texte
 	%	7 fixe la hauteur du pied de page
 	%	8 fixe la distance entre le texte et le pied de page
 	
-	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnseprule}{0pt} % largeur du filet de sï¿½paration des colonnes : mettre en commentaire pour supprimer ce filet.
 	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
-	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portï¿½e par shadowbox
 	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
 
 
@@ -113,12 +113,12 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
-	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
-	\newtheorem{propriete}{\underline{Propriété :}}
-	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Thï¿½orï¿½me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Dï¿½finition} :}}
+	\newtheorem{propriete}{\underline{Propriï¿½tï¿½ :}}
+	\newtheorem{propcar}{\underline{Propriï¿½tï¿½s caractï¿½ristiques :}}
 	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
-	\newtheorem{methode}{\underline{Méthodologie :}}
+	\newtheorem{methode}{\underline{Mï¿½thodologie :}}
 	%\newtheorem{exo}{\underline{Exercice }}
 
 	% Ensembles de nombres
@@ -133,11 +133,11 @@
 	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
 	\newcommand{\e}{\ensuremath{\mathrm{e}}}
 	
-	% Nom spéciaux
+	% Nom spï¿½ciaux
 	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
 	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
 
-	% Repérage et coordonnees
+	% Repï¿½rage et coordonnees
 	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
 	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
 	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
@@ -148,12 +148,12 @@
 		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
 	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
 	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
-		% Opérateurs
+		% Opï¿½rateurs
 	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
 	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
 	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
 	
-	%  Redifinition d'une boite ombrée
+	%  Redifinition d'une boite ombrï¿½e
 	\makeatletter 
 	\let\shadowboxori\shadowbox 
 	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
@@ -164,7 +164,7 @@
 	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
 	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
 
-	% Mise en page des thèorème et autres définitions ...
+	% Mise en page des thï¿½orï¿½me et autres dï¿½finitions ...
 	
 			% Couleurs perso
 			\newrgbcolor{RougePale}{1 0.95 0.96}
@@ -184,7 +184,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -202,7 +202,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -220,7 +220,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -236,7 +236,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -255,7 +255,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriï¿½tï¿½}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -327,9 +327,9 @@
 		% Danger dans box
 		\newsavebox{\infobox}
  
-% On règle les marges définitivement ici
+% On rï¿½gle les marges dï¿½finitivement ici
 \newlength{\marge}\setlength{\marge}{5mm}
-% Contrôle fin pour le panneau
+% Contrï¿½le fin pour le panneau
 \newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{information}{%
@@ -353,7 +353,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Huge\Info}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
   \vspace*{\marge}
@@ -364,9 +364,9 @@
 		% Danger dans box
 		\newsavebox{\dangerbox}
  
-%% On règle les marges définitivement ici
+%% On rï¿½gle les marges dï¿½finitivement ici
 %\newlength{\marge}\setlength{\marge}{5mm}
-%% Contrôle fin pour le panneau
+%% Contrï¿½le fin pour le panneau
 %\newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{Danger}{%
@@ -390,7 +390,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Large\textdbend}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
   \vspace*{\marge}
@@ -420,14 +420,14 @@
   %}
   % Affiche le panneau
   \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
   \vspace*{\marge}
 \bigskip}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des fonctions mathématiques
+% Dï¿½finition des fonctions mathï¿½matiques
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -437,7 +437,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des numérotations
+% Dï¿½finition des numï¿½rotations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -474,28 +474,28 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}
-   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \color{red} \thesection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \color{red} \thesection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily \color{red}}% apparence du titre
    
 \titleformat{\subsection}
-   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \color{blue} \thesubsection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \color{blue} \thesubsection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily \color{blue} }% apparence du titre
 
 \titleformat{\subsubsection}
-   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsubsection}% apparence du numéro
-   {0.5em}% espacement numéro/texte
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesubsubsection}% apparence du numï¿½ro
+   {0.5em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
   
   
   \newtheorem{exot}{\sffamily Exercice-type }
 \newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
  
-\newcommand{\chapitre}{Pyramide et cône}
+\newcommand{\chapitre}{Pyramide et cï¿½ne}
 
 \newcommand{\numchapitre}{}
 
@@ -529,32 +529,32 @@
 \newpage
  \setcounter{page}{1}
  
-\section{Définitions}
+\section{DÃ©finitions}
 
 \subsection{La pyramide}
 
 \df{
 \textbf{Une pyramide }est un solide dont :\\
-- toutes les faces latérales sont des triangles ayant un sommet commun appelé \textbf{sommet de la pyramide} , \\
-- l'autre face est un polygone quelconque appelé \textbf{base de la pyramide}.
+- toutes les faces latÃ©rales sont des triangles ayant un sommet commun appelÃ© \textbf{sommet de la pyramide} , \\
+- l'autre face est un polygone quelconque appelÃ© \textbf{base de la pyramide}.
 }\\
 
-\textbf{Schéma en perspective cavalière :}
+\textbf{SchÃ©ma en perspective cavaliÃ¨re :}
 \begin{center}
 \includegraphics[scale=0.7]{vol4.eps} 
 \end{center}
 
 
 
-\subsection{Le cône de révolution}
+\subsection{Le cÃ´ne de rÃ©volution}
 
 \df{
-\textbf{Un cône de révolution de sommet S} est le solide engendré par la rotation d'un triangle SOM rectangle en O autour de la droite (SO).\\
-Le disque de centre O et de rayon OM est \textbf{la base de ce cône}.\\
-Le segment [SO] (ou la longueur SO) est \textbf{la hauteur de ce cône}. \\
+\textbf{Un cÃ´ne de rÃ©volution de sommet S} est le solide engendrÃ© par la rotation d'un triangle SOM rectangle en O autour de la droite (SO).\\
+Le disque de centre O et de rayon OM est \textbf{la base de ce cÃ´ne}.\\
+Le segment [SO] (ou la longueur SO) est \textbf{la hauteur de ce cÃ´ne}. \\
 }\\
 
-\textbf{Schéma en perspective cavalière :}
+\textbf{SchÃ©ma en perspective cavaliÃ¨re :}
 \begin{center}
 \includegraphics[scale=1]{vol3.eps} 
 \end{center}
@@ -565,14 +565,15 @@ Le segment [SO] (ou la longueur SO) est \textbf{la hauteur de ce cône}. \\
 \section{Les patrons}
 
 \df{
-Un patron d'un solide est une surface plane qui, après pliage, permet de fabriquer ce solide sans superposition de deux faces. 
+Un patron d'un solide est une surface plane qui, aprÃ¨s pliage, permet de fabriquer ce solide sans superposition de deux faces. 
 }\\
 
-Il y a plusieurs patrons possibles pour un même solide. \\
+Il y a plusieurs patrons possibles pour un mÃªme solide. \\
 
 \subsection{Le patron d'une pyramide}
+
  	
- 	\textbf{Un patron d'une pyramide} est composé de la base et de triangles. Il y a autant de triangles que de côtés du polygone de base. \\
+ 	\textbf{Un patron d'une pyramide} est composÃ© de la base et de triangles. Il y a autant de triangles que de cÃ´tÃ©s du polygone de base. \\
  	
  	
  	
@@ -582,7 +583,7 @@ Il y a plusieurs patrons possibles pour un même solide. \\
  	\includegraphics[scale=0.8]{pyramide1.eps} 
  	\end{center}
  	
- 	\textbf{Méthode : }\\
+ 	\textbf{MÃ©thode : }\\
 1) On trace d'abord \textbf{la base} de la pyramide : le triangle HBC.\\
 2) Puis, on trace les triangles rectangles SHB et SHC.\\
 3) Enfin, on reporte les longueurs SB et SC au compas pour la face SBC. \\
@@ -595,27 +596,27 @@ Il y a plusieurs patrons possibles pour un même solide. \\
 
 \vspace*{1cm}
 
-{\large Je vous conseille de prendre une feuille de brouillon et d'essayer de tracer ce patron pour bien comprendre la méthode !}
+{\large Je vous conseille de prendre une feuille de brouillon et d'essayer de tracer ce patron pour bien comprendre la mÃ©thode !}
 
 
 \newpage
-\subsection{Le patron d'un cône de révolution}
+\subsection{Le patron d'un cÃ´ne de rÃ©volution}
 \vspace*{0.5cm}
 
-\textbf{Un patron d'un cône de révolution} est composé du disque de base et d'un secteur circulaire. \\
-  \textcolor{red}{La longueur de l'arc de  cercle de ce secteur est égal au périmètre de la base.}\\
+\textbf{Un patron d'un cÃ´ne de rÃ©volution} est composÃ© du disque de base et d'un secteur circulaire. \\
+  \textcolor{red}{La longueur de l'arc de  cercle de ce secteur est Ã©gale au pÃ©rimÃ¨tre de la base.}\\
   
   \vspace*{0.5cm}
   
-   	\textbf{\underline{Exemple :}} Construire un patron du cône de révolution ci-dessous. 
+   	\textbf{\underline{Exemple :}} Construire un patron du cÃ´ne de rÃ©volution ci-dessous. 
    	 \bmul{2}
-\textbf{Schéma en perspective cavalière :}  \\
+\textbf{SchÃ©ma en perspective cavaliÃ¨re :}  \\
  \hspace*{1cm} \includegraphics[scale=0.5]{coneprpatron.eps}
 
 
 \columnbreak
 
- \textbf{Patron du cône attendu :}
+ \textbf{Patron du cÃ´ne attendu :}
 \begin{flushleft}
 \includegraphics[scale=0.5]{patrocone.eps}
 \end{flushleft}
@@ -623,7 +624,7 @@ Il y a plusieurs patrons possibles pour un même solide. \\
 \emul
 
 
-\textbf{\underline{{\large Construction pas à pas :}}}\\
+\textbf{\underline{{\large Construction pas Ã  pas :}}}\\
 
 \textbf{1)} On commence par tracer \textbf{la base}: un cercle de centre O et de rayon 2 cm.\\
 
@@ -633,29 +634,29 @@ Il y a plusieurs patrons possibles pour un même solide. \\
 
 \textbf{\underline{Calculs :}}\\
 
-On sait que \textcolor{red}{la longueur de l'arc $\wideparen{AB}$} est égale \textcolor{red}{ au périmètre de la base} \textit{(voir schéma)}.
+On sait que \textcolor{red}{la longueur de l'arc $\wideparen{AB}$} est Ã©gale \textcolor{red}{ au pÃ©rimÃ¨tre de la base} \textit{(voir schÃ©ma)}.
 
 \bmul{2}
 
-Périmètre de la base \textit{(\textcolor{red}{en rouge)}} :\\
+PÃ©rimÃ¨tre de la base \textit{(\textcolor{red}{en rouge)}} :\\
 $P = 2 \times \pi \times r$\\
 $P = 2 \times \pi \times 2 \approx 12,56$ cm \\
 
-On en déduit que l'arc de cercle $\wideparen{AB}$ est égal environ à 12,56 cm.\\
+On en dÃ©duit que l'arc de cercle $\wideparen{AB}$ est Ã©gal environ Ã  12,56 cm.\\
 
 \columnbreak
 
-Périmètre du grand cercle \textit{\textcolor{red}{(en rouge pointillé)}} :\\
+PÃ©rimÃ¨tre du grand cercle \textit{\textcolor{red}{(en rouge pointillÃ©)}} :\\
 $P = 2 \times \pi \times r$\\
 $P = 2 \times \pi \times 5 \approx 31,4$ cm \\
 
-On en déduit que le périmètre du grand cercle est égal environ à 31,4 cm.\\
+On en dÃ©duit que le pÃ©rimÃ¨tre du grand cercle est Ã©gal environ Ã  31,4 cm.\\
 
 \emul
 
-La longueur du grand cercle est tracée en prenant un angle de 360\degre. (C'est un cercle entier)\\
+La longueur du grand cercle est tracÃ©e en prenant un angle de 360\degre. (C'est un cercle entier)\\
 
-On va donc pouvoir trouver l'angle $x = \widehat{ASB}$ pour tracer l'arc de cercle $\wideparen{AB}$, puisqu'il y a proportionnalité.\\
+On va donc pouvoir trouver l'angle $x = \widehat{ASB}$ pour tracer l'arc de cercle $\wideparen{AB}$, puisqu'il y a proportionnalitÃ©.\\
 
 \bmul{2}
 \begin{tabular}{|c|c|c|}
@@ -679,26 +680,26 @@ $x =\dfrac{12,56 \times 360}{31,4}$\\
 \color{black}
 \emul
 
-\textbf{Il ne vous reste plus qu'à tracer l'angle $\widehat{ASB}$ et c'est terminé !}
+\textbf{Il ne vous reste plus qu'Ã  tracer l'angle $\widehat{ASB}$ et c'est terminÃ© !}
 
 \newpage
 
 \section{Les volumes}
 
-\subsection{Le pavé droit et le cube}
+\subsection{Le pavÃ© droit et le cube}
 
 \vspace*{1cm}
 
 \bmul{2}
 
-\textbf{{\underline{ Le pavé droit :}}\\}
+\textbf{{\underline{ Le pavÃ© droit :}}\\}
 
 \includegraphics[scale=1]{lepavedroit.eps} 
 
 
 \columnbreak
 
-\textbf{{\underline{ Un pavé droit particulier, le cube :}}\\}
+\textbf{{\underline{ Un pavÃ© droit particulier, le cube :}}\\}
 
 \includegraphics[scale=1]{aires4.eps} 
 
@@ -708,10 +709,10 @@ $x =\dfrac{12,56 \times 360}{31,4}$\\
 
 \begin{Exoapp}
 
-\initq \q Quel est le volume d'un pavé de droit de longueur 1 dm, de largeur 5 cm et de hauteur 30 mm ?\\
+\initq \q Quel est le volume d'un pavÃ© de droit de longueur 1 dm, de largeur 5 cm et de hauteur 30 mm ?\\
 
 \color{red}
-On commence par convertir les longueurs dans une même unité.
+On commence par convertir les longueurs dans une mÃªme unitÃ©.
 1 dm = 10 cm et 30 mm = 3 cm.\\
 
 J'applique la formule : $ V = L \times l \times h$\\
@@ -720,7 +721,7 @@ $ V = 150 cm^{3}$\\
 
 
 \color{black}
-\q Quel est le volume d'un cube de côté 3 m ?\\
+\q Quel est le volume d'un cube de cÃ´tÃ© 3 m ?\\
 \color{red}
 
 
@@ -735,11 +736,13 @@ $ V = 27 m^{3}$\\
 
 
 
-\subsection{La pyramide et le cône de révolution}
+\subsection{La pyramide et le cÃ´ne de rÃ©volution}
 \prop{
-Le volume d'une pyramide ou d'un cône de révolution est donné par la relation : $\mathscr{V} = \dfrac{\mathscr{B}  \times h}{3}$
+Soit $\mathscr{B}$ l'aire de la base du solide et $h$ sa hauteur.\\
+Le volume d'une pyramide ou d'un cÃ´ne de rÃ©volution est donnÃ© par la relation : $\mathscr{V} = \dfrac{\mathscr{B}  \times h}{3}$
 }
 
+\newpage
 \begin{Exoapp}
 
 \bmul{2}
@@ -783,10 +786,10 @@ $ V = \dfrac{6  \times 5,5}{3}$\\
 
 \columnbreak
 
-\initqa \qa Calculer le volume du cône de révolution ci-contre.\\
+\initqa \qa Calculer le volume du cÃ´ne de rÃ©volution ci-contre.\\
 
 \color{red}
-On commence par calculer l'aire de la base (ici un disque de diamètre 6cm, donc de rayon 3cm).\\
+On commence par calculer l'aire de la base (ici un disque de diamÃ¨tre 6cm, donc de rayon 3cm).\\
 $A_{disque}= \pi \times r^{2}$\\
 $A_{disque}\approx 3,14 \times 3^{2}$\\
 $A_{disque}\approx 3,14 \times 9$\\

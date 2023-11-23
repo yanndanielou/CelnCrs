@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%
-% Paramétrages du document %
+% Paramï¿½trages du document %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper,10pt,twoside,french]{article}
@@ -8,7 +8,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% déclaration des packages
+% dï¿½claration des packages
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -17,21 +17,21 @@
 
 	\usepackage{fullpage}
 	\usepackage[french]{babel}
-	\usepackage[latin1]{inputenc}
+	%\usepackage[latin1]{inputenc}
 	%\usepackage[latin9]{inputenc}
-	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+	\usepackage{amsmath,amssymb} % Les bibliothï¿½ques LaTeX de l'American Mathematical Society sont pleines de macros intï¿½ressantes (voire indispensables).
 
-	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractï¿½res accentuï¿½s norme iso-8859, cela risque de ne pas marcher avec des fichiers crï¿½ï¿½s sous windows
 	
 	\usepackage{frcursive}
 	\usepackage{cmbright}
-% Packages de polices de caractères
+% Packages de polices de caractï¿½res
 	%\usepackage{txfonts} % Times
 	%\usepackage{pxfonts} % Palatino
 	%\usepackage{fourier} % Utopia
 
-% Packages pour la géométrie
-	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+% Packages pour la gï¿½omï¿½trie
+	\usepackage[x11names,table]{xcolor} % Gï¿½re les couleurs - Liste des couleurs dans le document xcolor.pdf
 	\usepackage{pst-eucl} % Document Euclide.pdf
 	\usepackage{pst-all}
 	\usepackage{pstricks}
@@ -48,8 +48,8 @@
 	
 % Package de maths
 	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
-	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
-	\usepackage{tikz,tkz-tab}
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+%	\usepackage{tikz,tkz-tab}
 % Packages de mise en page
 	\usepackage{vmargin}
 	\usepackage{fancybox}
@@ -84,7 +84,7 @@
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Parametrage des marges et séparations
+% Parametrage des marges et sï¿½parations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -94,14 +94,14 @@
 	%	2 est la marge en haut
 	%	3 est la marge droite
 	%	4 est la marge en bas
-	%	5 fixe la hauteur de l'entête
-	%	6 fixe la distance entre l'entête et le texte
+	%	5 fixe la hauteur de l'entï¿½te
+	%	6 fixe la distance entre l'entï¿½te et le texte
 	%	7 fixe la hauteur du pied de page
 	%	8 fixe la distance entre le texte et le pied de page
 	
-	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnseprule}{0pt} % largeur du filet de sï¿½paration des colonnes : mettre en commentaire pour supprimer ce filet.
 	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
-	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portï¿½e par shadowbox
 	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
 
 
@@ -111,12 +111,12 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
-	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
-	\newtheorem{propriete}{\underline{Propriété :}}
-	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Thï¿½orï¿½me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Dï¿½finition} :}}
+	\newtheorem{propriete}{\underline{Propriï¿½tï¿½ :}}
+	\newtheorem{propcar}{\underline{Propriï¿½tï¿½s caractï¿½ristiques :}}
 	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
-	\newtheorem{methode}{\underline{Méthodologie :}}
+	\newtheorem{methode}{\underline{Mï¿½thodologie :}}
 	%\newtheorem{exo}{\underline{Exercice }}
 
 	% Ensembles de nombres
@@ -131,11 +131,11 @@
 	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
 	\newcommand{\e}{\ensuremath{\mathrm{e}}}
 	
-	% Nom spéciaux
+	% Nom spï¿½ciaux
 	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
 	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
 
-	% Repérage et coordonnees
+	% Repï¿½rage et coordonnees
 	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
 	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
 	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
@@ -146,12 +146,12 @@
 		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
 	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
 	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
-		% Opérateurs
+		% Opï¿½rateurs
 	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
 	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
 	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
 	
-	%  Redifinition d'une boite ombrée
+	%  Redifinition d'une boite ombrï¿½e
 	\makeatletter 
 	\let\shadowboxori\shadowbox 
 	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
@@ -162,7 +162,7 @@
 	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
 	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
 
-	% Mise en page des thèorème et autres définitions ...
+	% Mise en page des thï¿½orï¿½me et autres dï¿½finitions ...
 	
 			% Couleurs perso
 			\newrgbcolor{RougePale}{1 0.95 0.96}
@@ -182,7 +182,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -200,7 +200,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -218,7 +218,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -234,7 +234,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -253,7 +253,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriï¿½tï¿½}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -325,9 +325,9 @@
 		% Danger dans box
 		\newsavebox{\infobox}
  
-% On règle les marges définitivement ici
+% On rï¿½gle les marges dï¿½finitivement ici
 \newlength{\marge}\setlength{\marge}{5mm}
-% Contrôle fin pour le panneau
+% Contrï¿½le fin pour le panneau
 \newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{information}{%
@@ -351,7 +351,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Huge\Info}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
   \vspace*{\marge}
@@ -362,9 +362,9 @@
 		% Danger dans box
 		\newsavebox{\dangerbox}
  
-%% On règle les marges définitivement ici
+%% On rï¿½gle les marges dï¿½finitivement ici
 %\newlength{\marge}\setlength{\marge}{5mm}
-%% Contrôle fin pour le panneau
+%% Contrï¿½le fin pour le panneau
 %\newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{Danger}{%
@@ -388,7 +388,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Large\textdbend}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
   \vspace*{\marge}
@@ -418,14 +418,14 @@
   %}
   % Affiche le panneau
   \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
   \vspace*{\marge}
 \bigskip}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des fonctions mathématiques
+% Dï¿½finition des fonctions mathï¿½matiques
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -435,7 +435,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des numérotations
+% Dï¿½finition des numï¿½rotations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -472,21 +472,21 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}
-   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
    
 \titleformat{\subsection}
-   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesubsection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
 
 \titleformat{\subsubsection}
-   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsubsection}% apparence du numéro
-   {0.5em}% espacement numéro/texte
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesubsubsection}% apparence du numï¿½ro
+   {0.5em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
   
   
@@ -535,10 +535,10 @@
 \begin{itemize}[label=$\hookrightarrow$]
 \item Je dois savoir utiliser les notations et le vocabulaire des fonctions,
 
-\item Je dois savoir déterminer, à partir de tous les modes de représentation, l'image d'un nombre.
+\item Je dois savoir dï¿½terminer, ï¿½ partir de tous les modes de reprï¿½sentation, l'image d'un nombre.
 
-\item Je dois savoir déterminer un antécédent à partir d'une représentation graphique ou d'un tableau de valeurs d'une fonction,
-\item Je dois savoir déterminer de manière algébrique l'antécédent par une fonction, dans des cas se ramenant à la résolution d'une équation du premier degré.
+\item Je dois savoir dï¿½terminer un antï¿½cï¿½dent ï¿½ partir d'une reprï¿½sentation graphique ou d'un tableau de valeurs d'une fonction,
+\item Je dois savoir dï¿½terminer de maniï¿½re algï¿½brique l'antï¿½cï¿½dent par une fonction, dans des cas se ramenant ï¿½ la rï¿½solution d'une ï¿½quation du premier degrï¿½.
 
 
 
@@ -549,10 +549,10 @@
 
 \section{La notion de fonction}
 
-\subsection{Définition}
+\subsection{Dï¿½finition}
 
 \df{
-\textbf{Une fonction} est une application qui, à un nombre, fait correspondre un unique autre nombre.\\
+\textbf{Une fonction} est une application qui, ï¿½ un nombre, fait correspondre un unique autre nombre.\\
 
 On note f : x $ \mapsto$ f(x) et on lit : "f la fonction qui au nombre x associe le nombre f(x)".
 }\\
@@ -562,44 +562,44 @@ On note f : x $ \mapsto$ f(x) et on lit : "f la fonction qui au nombre x associe
 \ex 
 
 
-- Soit f la fonction qui à x associe \textbf{son double}.
+- Soit f la fonction qui ï¿½ x associe \textbf{son double}.
 On peut noter cette fonction f : x $ \mapsto$ 2x ou $f(x) = 2x$.\\
 
-- Soit g la fonction qui à x associe \textbf{son carré}.
+- Soit g la fonction qui ï¿½ x associe \textbf{son carrï¿½}.
 On peut noter la fonction g : x $ \mapsto x^{2}$ou $g(x) = x^{2}$.\\
 
 \begin{Exoapp}
 
-Compléter :\\
+Complï¿½ter :\\
 
-\q Soit f la fonction qui à x associe le nombre $4 - x^{2}$
+\q Soit f la fonction qui ï¿½ x associe le nombre $4 - x^{2}$
 Alors f : x $ \mapsto$ \textcolor{red}{4 - $x^{2}$}  et f(x) = \textcolor{red}{$4 - x^{2}$} \\
 
-\q On définit une fonction f, par le programme de calcul suivant : " Élever au carré le nombre choisi et ajouter 1".\\
+\q On dï¿½finit une fonction f, par le programme de calcul suivant : " ï¿½lever au carrï¿½ le nombre choisi et ajouter 1".\\
 
-\qa Compléter le tableau ci-dessous à l'aide du programme et de la fonction f :\\
+\qa Complï¿½ter le tableau ci-dessous ï¿½ l'aide du programme et de la fonction f :\\
 
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
-Nombre de départ & 4 \hspace*{0.3cm}& 6 \hspace*{0.3cm} & 7 \hspace*{0.3cm}& 8 \hspace*{0.3cm}\\ 
+Nombre de dï¿½part & 4 \hspace*{0.3cm}& 6 \hspace*{0.3cm} & 7 \hspace*{0.3cm}& 8 \hspace*{0.3cm}\\ 
 \hline 
 Nombre correspondant & \textcolor{red}{ $4^{2} + 1 = 17$}& \textcolor{red}{ 37 }& \textcolor{red}{50} &\textcolor{red}{ 65} \\ 
 \hline 
 \end{tabular} \\
 
-\qa De façon générale, on dit que la fonction f, à un nombre x, fait correspondre, \textcolor{red}{son carré plus un.} \\
+\qa De faï¿½on gï¿½nï¿½rale, on dit que la fonction f, ï¿½ un nombre x, fait correspondre, \textcolor{red}{son carrï¿½ plus un.} \\
 Donc $f(x) =  \textcolor{red}{x^{2}+1}$
 
 
 \end{Exoapp}
 
 
-\subsection{Représentation graphique}
+\subsection{Reprï¿½sentation graphique}
 
 
 
 \df{
-Dans un repère, la représentation graphique, ou courbe représentative, d'une fonction f est formée de l'ensemble des points de coordonnées (x; f(x)).
+Dans un repï¿½re, la reprï¿½sentation graphique, ou courbe reprï¿½sentative, d'une fonction f est formï¿½e de l'ensemble des points de coordonnï¿½es (x; f(x)).
 }\\
 
 
@@ -608,16 +608,16 @@ Dans un repère, la représentation graphique, ou courbe représentative, d'une fon
 \end{flushleft}
 
 
-$\rightarrow $ \textbf{Comment tracer la représentation graphique d'une fonction ?}
+$\rightarrow $ \textbf{Comment tracer la reprï¿½sentation graphique d'une fonction ?}
 
-Traçons la représentation graphique de la fonction f : x $ \mapsto$  $x^{2} - 1$ dans un repère.\\
+Traï¿½ons la reprï¿½sentation graphique de la fonction f : x $ \mapsto$  $x^{2} - 1$ dans un repï¿½re.\\
 
-On commence par compléter le tableau suivant :
+On commence par complï¿½ter le tableau suivant :
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline 
-x \textit{(les antécédents)} & -3 & -2 & -1 & 0 & 1 & 2 & 3 \\ 
+x \textit{(les antï¿½cï¿½dents)} & -3 & -2 & -1 & 0 & 1 & 2 & 3 \\ 
 \hline 
 f(x) \textit{(les images)} & \textcolor{red}{8}  & \textcolor{red}{3} & \textcolor{red}{0} & \textcolor{red}{-1}  & \textcolor{red}{0} & \textcolor{red}{3} & \textcolor{red}{8}\\ 
 \hline 
@@ -629,7 +629,7 @@ f(x) \textit{(les images)} & \textcolor{red}{8}  & \textcolor{red}{3} & \textcol
 \includegraphics[scale=1]{coursfonctions5.eps} 
 \end{center}
 
-\textcolor{red}{Attention, il ne vous reste plus qu'à relier les points à la main \textbf{sans} la règle}\\
+\textcolor{red}{Attention, il ne vous reste plus qu'ï¿½ relier les points ï¿½ la main \textbf{sans} la rï¿½gle}\\
 
 \newpage
 
@@ -637,7 +637,7 @@ f(x) \textit{(les images)} & \textcolor{red}{8}  & \textcolor{red}{3} & \textcol
 \section{Image d'un nombre par une fonction}
 
 \df{
-Par la fonction f, à un nombre a correspond un nombre b.\\
+Par la fonction f, ï¿½ un nombre a correspond un nombre b.\\
 Le nombre\textbf{ b} s'appelle \textbf{l'image} du nombre a par la fonction f.
 }\\
 
@@ -647,36 +647,36 @@ Le nombre\textbf{ b} s'appelle \textbf{l'image} du nombre a par la fonction f.
 
 \bi
 
-\item On considère la fonction f : x $ \mapsto$  $x^{2}$. On sait alors que f(x) = $x^{2}$.\\
+\item On considï¿½re la fonction f : x $ \mapsto$  $x^{2}$. On sait alors que f(x) = $x^{2}$.\\
 Quelle est l'image de 0 et de 3 par la fonction f ?\\
 \textcolor{red}{ On remplace x par 3 : $f(3)= 3^{2} = 9$ \hspace*{1cm} L'image de 3 est donc 9}\\
 \textcolor{red}{ On remplace x par 0 : $f(0)= 0^{2} = 0$ \hspace*{1cm} L'image de 0 est donc 0}\\
 
 
-\item On considère maintenant la fonction h suivante. Quelle est l'image de -2 et de 4 par la fonction h?\\
+\item On considï¿½re maintenant la fonction h suivante. Quelle est l'image de -2 et de 4 par la fonction h?\\
 \begin{flushleft}
 \includegraphics[scale=0.75]{coursfonctions3.eps} 
 \end{flushleft}
 
 \ei
 
-\section{Antécédent d'un nombre par une fonction}
+\section{Antï¿½cï¿½dent d'un nombre par une fonction}
 
 \df{
-Par la fonction f, à un nombre a correspond un nombre b.\\
-Le nombre\textbf{ a} s'appelle \textbf{un} \textbf{antécédent} du nombre b par la fonction f.
+Par la fonction f, ï¿½ un nombre a correspond un nombre b.\\
+Le nombre\textbf{ a} s'appelle \textbf{un} \textbf{antï¿½cï¿½dent} du nombre b par la fonction f.
 }\\
 
-\rem On peut trouver un antécédent d'un nombre soit par calcul soit par lecture graphique. Pour l'instant, on le cherchera uniquement par lecture graphique.\\
+\rem On peut trouver un antï¿½cï¿½dent d'un nombre soit par calcul soit par lecture graphique. Pour l'instant, on le cherchera uniquement par lecture graphique.\\
 \newpage
 
 \ex
 
 \bi
 
-\item On considère la fonction f : x $ \mapsto$  $-3x+12$. On sait alors que f(x) = $-3x+12$.\\
-Quel est l'antécédent de 15 par la fonction f ?\\
-\textcolor{red}{ Pour trouver l'antécédent de 15 par la fonction f, il faut résoudre l'équation : $-3x+12 = 15$}\\
+\item On considï¿½re la fonction f : x $ \mapsto$  $-3x+12$. On sait alors que f(x) = $-3x+12$.\\
+Quel est l'antï¿½cï¿½dent de 15 par la fonction f ?\\
+\textcolor{red}{ Pour trouver l'antï¿½cï¿½dent de 15 par la fonction f, il faut rï¿½soudre l'ï¿½quation : $-3x+12 = 15$}\\
 
 \textcolor{red}{ $-3x+12 = 15$}\\
 \textcolor{red}{ $-3x+12-12 = 15-12$}\\
@@ -684,11 +684,11 @@ Quel est l'antécédent de 15 par la fonction f ?\\
 \textcolor{red}{ $\dfrac{-3}{-3}x = \dfrac{3}{-3}$}\\
 \textcolor{red}{ $x = -1$}\\
 
-\textcolor{red}{ L'antécédent de 15 par la fonction f est -1.}\\
+\textcolor{red}{ L'antï¿½cï¿½dent de 15 par la fonction f est -1.}\\
 
 
 
-\item Soit la fonction h définie ci-dessous :\\
+\item Soit la fonction h dï¿½finie ci-dessous :\\
 \begin{flushleft}
 \includegraphics[scale=0.9]{coursfonctions4.eps} 
 
