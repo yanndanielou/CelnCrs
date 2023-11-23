@@ -1,0 +1,1000 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Param�trages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,10pt,twoside,french]{article}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% d�claration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	%\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les biblioth�ques LaTeX de l'American Mathematical Society sont pleines de macros int�ressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caract�res accentu�s norme iso-8859, cela risque de ne pas marcher avec des fichiers cr��s sous windows
+	
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caract�res
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la g�om�trie
+	\usepackage[x11names,table]{xcolor} % G�re les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+		\usepackage{mathrsfs}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ \usepackage{cancel}
+\usepackage{mathrsfs}  
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et s�parations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{1cm}{1cm}{1cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'ent�te
+	%	6 fixe la distance entre l'ent�te et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de s�paration des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre port�e par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Th�or�me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily D�finition} :}}
+	\newtheorem{propriete}{\underline{Propri�t� :}}
+	\newtheorem{propcar}{\underline{Propri�t�s caract�ristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{M�thodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom sp�ciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Rep�rage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Op�rateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombr�e
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des th�or�me et autres d�finitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{D�finition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{D�finition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Th�or�me}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Th�or�me}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propri�t�}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On r�gle les marges d�finitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contr�le fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On r�gle les marges d�finitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contr�le fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des fonctions math�matiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des num�rotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{.75cm}(\arabic{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsubsection}% apparence du num�ro
+   {0.5em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{Aires et volumes}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+\newpage
+ \setcounter{page}{1}
+ 
+ 
+
+ \vspace*{0.2cm}
+
+\textbf{\underline{{\large Mes objectifs:}}}
+
+\begin{itemize}[label=$\hookrightarrow$]
+\item Je dois savoir calculer le volume d'un parallélépipède rectangle, d'un prisme droit, d'un cylindre de révolution, d'une pyramide et d'un cône de révolution à l'aide d'une formule.
+
+\item Je dois savoir calculer l'aire d'une sphère de rayon donné.
+
+\item Je dois savoir calculer le volume d'une boule de rayon donné.
+
+
+
+\end{itemize}
+
+ \vspace*{0.5cm}
+
+
+ 
+ 
+\section{Aires}
+ 
+\underline{\textbf{{\large Les différentes formules de calculs d'aires}}} :\\
+
+\includegraphics[scale=1.1]{aires.eps} \\
+
+
+
+
+\begin{Exoapp}
+
+\q Détermine l'aire des deux surfaces grisées (Les figures ne sont pas en vraie grandeur).\\
+
+\includegraphics[scale=1]{aire2.eps} 
+
+\color{red}
+
+\underline{\textbf{Figure 1 : }}On va découper cette figure en 3 figures usuelles : 2 triangles et un rectangle.
+
+\bmul{3}
+
+$A_{DAH}=\dfrac{b \times h}{2}$\\
+
+$A_{DAH}=\dfrac{3 \times 8}{2}$\\
+
+$A_{DAH}=\dfrac{24}{2}$\\
+
+$A_{DAH}=12 cm^{2}$\\
+
+
+\columnbreak
+
+$A_{CKB}=\dfrac{b \times h}{2}$\\
+
+BK = 10 - 8 = 2 cm\\
+
+$A_{CKB}=\dfrac{2 \times 8}{2}$ \\
+
+$A_{CKB}=\dfrac{16}{2}$\\
+
+$A_{CKB}=8 cm^{2}$\\
+
+\columnbreak
+
+$A_{DCKH} = L \times l$\\
+
+$A_{DCKH} = 5 \times 8$\\
+
+$A_{DCKH} = 40 cm^{2}$\\
+
+
+\emul
+
+On va maintenant additionner toutes les aires :\\
+
+$A_{total}=A_{DAH} + A_{CKB} + A_{DCKH}= 12 + 8 + 40 = 60 cm^{2}$\\
+
+
+
+\underline{\textbf{Figure 2 : }}On va calculer l'aire du grand rectangle HGFE et soustraire ensuite l'aire du petit rectangle ONML.\\
+\bmul{2}
+
+$A_{HGFE} = L \times l$\\
+
+$A_{HGFE} = 10 \times 5$\\
+
+$A_{HGFE} = 50 cm^{2}$\\
+
+\columnbreak
+
+
+$A_{ONML} = L \times l$\\
+
+$A_{ONML} = 4 \times 2$\\
+
+$A_{ONML} = 8 cm^{2}$\\
+
+\emul
+
+$A_{total}=A_{HGFE} - A_{ONML}$\\
+
+$A_{total}= 50 - 8$\\
+
+$A_{total}= 42 cm^{2}$
+
+\color{black}
+
+
+\q Calculer l'aire violette.
+
+\begin{center}
+\includegraphics[scale=0.6]{aires3.eps} 
+\end{center}
+
+
+\end{Exoapp}
+
+\newpage
+
+\section{Volumes de solide}
+
+\subsection{Le pavé droit et le cube}
+
+\vspace*{1cm}
+
+\bmul{2}
+
+\textbf{{\underline{ Le pavé droit :}}\\}
+
+\includegraphics[scale=1]{lepavedroit.eps} 
+
+
+\columnbreak
+
+\textbf{{\underline{ Un pavé droit particulier, le cube :}}\\}
+
+\includegraphics[scale=1]{aires4.eps} 
+
+\emul
+
+\vspace*{1cm}
+
+\begin{Exoapp}
+
+\initq \q Quel est le volume d'un pavé de droit de longueur 1 dm, de largeur 5 cm et de hauteur 30 mm ?\\
+
+\color{red}
+On commence par convertir les longueurs dans une même unité.
+1 dm = 10 cm et 30 mm = 3 cm.\\
+
+J'applique la formule : $ V = L \times l \times h$\\
+$ V = 10 \times 5 \times 3$\\
+$ V = 150 cm^{3}$\\
+
+
+\color{black}
+\q Quel est le volume d'un cube de côté 3 m ?\\
+\color{red}
+
+
+J'applique la formule : $ V = c^{3}$\\
+$ V = 3^{3}$\\
+$ V = 27 m^{3}$\\
+
+
+\color{black}
+
+\end{Exoapp}
+
+
+\subsection{Le prisme droit}
+
+
+\df{
+\textbf{Un prisme droit }est un solide dont :\\
+- Deux faces sont des polygones superposables et parallèles ; on les appelle \textbf{les bases} ;\\
+- Les autres faces sont des rectangles ; on les appelle \textbf{les faces latérales}.
+
+}\\
+
+\underline{\textbf{Exemple:}}
+Un prisme droit à base triangulaire.\\
+
+\begin{center}
+\includegraphics[scale=1]{prismedroit.eps} 
+\end{center}
+
+ \prop{
+Le volume d'un prisme droit est le produit de l'aire de sa base par sa hauteur : $\mathscr{V} = \mathscr{B}  \times h$
+}\\
+
+\begin{Exoapp}
+
+\bmul{2}
+
+\includegraphics[scale=0.7]{vol6.eps}  
+\columnbreak
+
+Calculer le volume du prisme ci-contre.\\
+\color{red}
+On commence par calculer l'aire de la base (ici un triangle).\\
+$A_{triangle}= \dfrac{b \times h}{2}$\\
+$A_{triangle}= \dfrac{4 \times 6}{2}$\\
+$A_{triangle}= 12 cm^{2}$\\
+
+J'applique la formule : $ V =\mathscr{B}  \times h$\\
+$ V = 12 \times 10 $\\
+\fbox{$ V = 120 cm^{3}$}\\
+
+
+\color{black}
+
+\emul
+\end{Exoapp}
+
+
+\subsection{Le cylindre}
+
+\df{
+\textbf{Un cylindre de révolution} est un solide qui possède: \\
+- \textbf{deux bases} sont deux disques superposables et parallèles,
+
+-\textbf{ une face latérale} qui s'enroule autour des bases et qui est perpendiculaire aux bases. 
+}\\
+
+
+\begin{center}
+\includegraphics[scale=1]{vol2.eps}
+\end{center}
+
+
+ \prop{
+Le volume du cylindre est le produit de l'aire de sa base par
+sa hauteur :$\mathscr{V} = \mathscr{B}  \times h = \pi r^{2} \times h$
+}
+
+\begin{Exoapp}
+
+\bmul{2}
+
+\includegraphics[scale=0.4]{vol7.eps}  
+\columnbreak
+
+\qa Calculer le volume du cylindre ci-contre.\\
+\color{red}
+On commence par calculer l'aire de la base (ici un disque de rayon 3cm).\\
+$A_{disque}= \pi \times r^{2}$\\
+$A_{disque}\approx 3,14 \times 3^{2}$\\
+$A_{disque}\approx 3,14 \times 9$\\
+$A_{disque}\approx 28,26 cm^{2}$\\
+
+J'applique la formule : $ V = \mathscr{B}  \times h$\\
+$ V =  28,26 \times 3$\\
+\fbox{$ V = 84,78 cm^{3}$}\\
+
+
+\color{black}
+
+
+\emul
+
+\qa Calculer le volume du cylindre ci-dessus.\\
+\color{red}
+On commence par calculer l'aire de la base (ici un disque de rayon 1cm).\\
+$A_{disque}= \pi \times r^{2}$\\
+$A_{disque}\approx 3,14 \times 1^{2}$\\
+$A_{disque}\approx 3,14 \times 1$\\
+$A_{disque}\approx 3,14 cm^{2}$\\
+
+J'applique la formule : $ V = \mathscr{B}  \times h$\\
+$ V =  3,14 \times 6$\\
+\fbox{$ V = 18,84 cm^{3}$}\\
+
+
+\color{black}
+
+\end{Exoapp}
+
+
+
+\subsection{Le cône de révolution}
+
+\df{
+Un cône de révolution est un solide formé :\\
+-	d'un disque appelé \textbf{base} ;\\
+-	d'une surface courbe appelé \textbf{face latérale} ;\\
+-	d'un point appelé \textbf{sommet du cône}.
+
+}\\
+
+\begin{center}
+\includegraphics[scale=1]{vol3.eps} 
+\end{center}
+
+\prop{
+Le volume d'un cône de révolution est le tiers du produit de l'aire de sa base par sa hauteur :\\
+\begin{center}
+$\mathscr{V} = \dfrac{\mathscr{B}  \times h}{3} = \dfrac{\pi r^{2} \times h}{3}$
+\end{center}
+}\\
+
+
+\begin{Exoapp}
+
+\bmul{2}
+
+\includegraphics[scale=0.4]{vol8.eps}\\
+
+\vspace*{2cm}
+
+\includegraphics[scale=0.8]{vol9.eps}   
+\columnbreak
+
+\initqa \qa Calculer le volume du cône de révolution ci-contre.\\
+\color{red}
+On commence par calculer l'aire de la base (ici un disque de diamètre 6cm, donc de rayon 3cm).\\
+$A_{disque}= \pi \times r^{2}$\\
+$A_{disque}\approx 3,14 \times 3^{2}$\\
+$A_{disque}\approx 3,14 \times 9$\\
+
+$A_{disque}\approx 28,26 cm^{2}$\\
+
+J'applique la formule : $ V = \dfrac{\mathscr{B}  \times h}{3}$\\
+$ V = \dfrac{28,26  \times 8}{3}$\\
+\fbox{$ V = 75,36 cm^{3}$}\\
+
+
+\color{black}
+
+\qa Calculer le volume du cône de révolution ci-contre.\\
+\color{red}
+On connait déjà l'aire la base, ici $12cm^{2}$.\\
+
+
+J'applique la formule : $ V = \dfrac{\mathscr{B}  \times h}{3}$\\
+$ V = \dfrac{12  \times 5}{3}$\\
+\fbox{$ V = 20 cm^{3}$}\\
+
+
+\color{black}
+
+\emul
+
+
+\end{Exoapp}
+
+
+\subsection{La pyramide}
+
+\df{
+\textbf{Une pyramide }est un solide dont :\\
+- toutes les faces latérales sont des triangles ayant un sommet commun appelé \textbf{sommet de la pyramide} , \\
+- l'autre face est un polygone quelconque appelé \textbf{base de la pyramide}.
+}\\
+
+
+\begin{center}
+\includegraphics[scale=0.7]{vol4.eps} 
+\end{center}
+
+\prop{
+Le volume d'une pyramide est le tiers du produit de l'aire de sa base par sa hauteur : $\mathscr{V} = \dfrac{\mathscr{B}  \times h}{3}$
+}
+
+\begin{Exoapp}
+
+\bmul{2}
+
+\includegraphics[scale=0.7]{vol10.eps}\\
+
+
+\vspace*{2cm}
+
+\includegraphics[scale=1]{vol11.eps}\\
+
+\columnbreak
+\initqa \qa Calculer le volume de la pyramide ci-contre.\\
+\color{red}
+On commence par calculer l'aire de la base (ici le triangle EFG).\\
+$A_{triangle}= \dfrac{b \times h}{2}$\\
+$A_{triangle}= \dfrac{3 \times 4}{2}$\\
+$A_{triangle}= 6 cm^{2}$\\
+
+J'applique la formule : $ V = \dfrac{\mathscr{B}  \times h}{3}$\\
+$ V = \dfrac{6  \times 5,5}{3}$\\
+\fbox{$ V = 11 cm^{3}$}\\
+
+
+\color{black}
+
+\qa Calculer le volume de la pyramide ci-contre.\\
+\color{red}
+On connait déjà l'aire de la base (ici 15 $cm^{2}$).\\
+
+
+J'applique la formule : $ V = \dfrac{\mathscr{B}  \times h}{3}$\\
+$ V = \dfrac{15  \times 4}{3}$\\
+\fbox{$ V = 20 cm^{3}$}\\
+
+
+\color{black}
+
+\emul
+
+
+\end{Exoapp}
+
+\subsection{Une boule}
+
+\df{
+\textbf{La boule de centre O et de rayon R} est l'ensemble des points de l'espace dont la distance à O est inférieure ou égale à R.
+}\\
+
+\begin{center}
+\includegraphics[scale=1]{vol5.eps} 
+\end{center}
+
+\prop{
+Le volume d'une boule de rayon R est : $\mathscr{V} = \dfrac{4}{3} \pi r^{3}$
+}
+
+\begin{Exoapp}
+
+\bmul{2}
+
+\includegraphics[scale=0.6]{vol12.eps}\\
+
+\includegraphics[scale=0.9]{vol13.eps}\\
+
+\columnbreak
+
+\initqa \qa Calculer le volume de la boule ci-contre.\\
+\color{red}
+On connait le rayon de la boule qui est 7 cm.\\
+J'applique la formule : $\mathscr{V} = \dfrac{4}{3} \pi r^{3}$\\
+$\mathscr{V} = \dfrac{4}{3} \pi \times 7^{3}$ \\
+\fbox{$\mathscr{V} = 1 436,76 cm^{3}$}\\
+
+\color{black}
+\qa Calculer le volume de la figure ci-contre.\\
+\color{red}
+Nous allons calculer le volume d'une boule de rayon 8 cm et le volume d'un cylindre.\\
+
+\textbf{Volume de la boule :}\\
+J'applique la formule : $\mathscr{Vb} = \dfrac{4}{3} \pi r^{3}$\\
+$\mathscr{Vb} = \dfrac{4}{3} \pi \times 8^{3}$ \\
+\fbox{$\mathscr{Vb} = 2 144,7 cm^{3}$}\\
+
+\textbf{Volume du cylindre :}$A_{disque}= \pi \times r^{2}$\\
+$A_{disque}\approx 3,14 \times 8^{2}$\\
+$A_{disque}\approx 3,14 \times 64$\\
+$A_{disque}\approx 201 cm^{2}$\\
+
+J'applique la formule : $ Vc = \mathscr{B}  \times h$\\
+$ Vc =  201 \times 50$\\
+\fbox{$ Vc = 10 050 cm^{3}$}\\
+
+\textbf{Volume total :}$ Vc + Vb = 2 144,7 + 10 050 = 12 194,7 cm^{3}$
+
+\color{black}
+
+\emul
+
+\end{Exoapp}
+
+\end{document}

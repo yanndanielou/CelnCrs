@@ -1,0 +1,127 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Exercices sur les nombres entiers (2)}{}{}{6ème}{}
+
+\vspace*{0.2cm}
+
+
+\exo \\ Trouver le nombre entier qui précède chacun de
+ces nombres :\\
+
+a. .............. < 1 000  \hspace*{0.5cm} b. .............. < 1 000 001 \hspace*{0.5cm} c. .............. < 1 000 000 \\
+
+d. .............. < 2 \hspace*{0.5cm} e. .............. < 9 786 000 \hspace*{0.5cm}f. .............. < 740 000\\
+
+
+\vspace*{0.5cm}
+
+\exo \\ \textbf{Comparer} les nombres suivants.\\
+
+34 895 ......... 234 113 \hspace*{0.5cm} 86 325 ......... 85 981 \hspace*{0.5cm} 202 598 ......... 22 598 \hspace*{0.5cm} 056 640 ......... 56 640 \\
+
+ 87 479.........87 489  \hspace*{0.5cm}641 200 199.........641 199 \hspace*{0.5cm} 200 19 450.........19 405\\
+
+\vspace*{0.5cm}
+ \exo \\ Ranger ces nombres \textbf{par ordre croissant}.\\
+ 
+26 014 ; 26 140 ; 26 104 ; 26410 ; 26 401\\
+
+. . . . . . . . . . . < . . . . . . . . . . . < . . . . . . . . . . . < . . . . . . . . . . . < . . . . . . . . . . .\\
+
+\vspace*{0.5cm}
+ \exo \\ Ranger ces nombres \textbf{par ordre décroissant}.\\
+ 
+101 010 ; 1 000 101 ; 11 001 ; 100 110 ; 101 111\\
+
+. . . . . . . . . . . > . . . . . . . . . . . > . . . . . . . . . . . > . . . . . . . . . . . > . . . . . . . . . . .\\
+
+\vspace*{0.5cm}
+
+ \exo \\ Encadrer les nombres suivants par des entiers.\\
+ 
+a)  . . . . . . . . . . . < 50 < . . . . . . . . . . .\\
+ 
+ b) . . . . . . . . . . . <  75 359 433 < . . . . . . . . . . .\\
+ 
+c) . . . . . . . . . . . < 9 999 < . . . . . . . . . . .\\
+
+d) . . . . . . . . . . . < 122 000 000 < . . . . . . . . . . .
+
+
+\end{document}

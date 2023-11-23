@@ -1,0 +1,244 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} \usepackage[french]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{color}
+\usepackage{ulem}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Correction de l'interrogation : Notions de fonctions}{Nom :}{Prénom :}{Date}{Classe}
+
+\vspace*{0.5cm}
+
+\exo{2} Soit $f$ une fonction définie par le graphique ci-dessous.
+
+\bmul{2}
+
+\includegraphics[scale=0.95]{interrograph.eps} 
+
+
+\columnbreak
+
+
+\initq \q Lire graphiquement l'image par la fonction $f$ de :\\
+\hspace*{0.5cm} \qa 2 ? \hspace*{0.5cm} \qa 8 ?  \\
+
+\color{red}
+
+L'image de 2 par la fonction f est 3.\\
+
+
+L'image de 8 par la fonction f est 3.\\
+
+
+
+\color{black}
+ 
+
+\emul
+
+\q Lire graphiquement le ou les antécédents par la fonction $f$ de :\\
+ \initqa
+\hspace*{0.5cm} \qa 3 ?  \hspace*{0.5cm} \qa 1 ?\\
+
+
+\color{red}
+
+L'antécédent de 1 par la fonction f est 0.\\
+
+
+Les antécédents de 3 par la fonction f sont 2 et 8.\\
+
+
+\color{black}
+
+
+\vspace*{1cm}
+
+
+
+\exo{2.5} Voici un tableau de valeur d'une fonction $h$.\\
+
+\includegraphics[scale=0.65]{interrograph2.eps} \\
+
+\initq \q Compléter les inégalités suivantes : \hspace*{0.5cm} $h$(\textcolor{red}{0} ) = 2 \hspace*{0.75cm} $h(-2)=$ \textcolor{red}{1,4}  \\
+
+\q Donner le ou les antécédents de -1,5 par la fonction $h$.\\
+\color{red}
+
+
+
+
+Les antécédents de -1,5 par la fonction h sont -3 et -1.\\
+
+
+\color{black}
+
+\q Quelle est l'image de -0,5 par la fonction $h$ ?\\
+\color{red}
+
+
+
+
+L'image de -0,5 par la fonction h est 0,25.\\
+
+
+\color{black}
+
+\newpage
+
+\exo{2.5} Soit $f$ la fonction définie par $f(x) = 7x-9$. \\
+
+\initqa
+
+
+\qa Calculer l'image de -5 par la fonction $f$.\\
+\color{red}
+Pour calculer l'image de -5 par la fonction f, on remplace x par -5.\\
+
+$f(-5)= 7 \times (-5) -9 $\\
+
+$f(-5)= -35 -9 $\\
+
+$f(-5)= -44 $\\
+
+
+\color{black}
+
+\qa Calculer l'antécédent de 33 par la fonction $f$.\\
+\color{red}
+Pour calculer l'antécédent de 33 par la fonction f, on résout l'équation f(x)=33.\\
+
+$7x-9= 33 $\\
+
+$7x= 33+9 $\\
+
+$7x= 42 $\\
+
+$x= \dfrac{42}{7}=6 $\\
+
+\color{black}
+
+\vspace*{0.25cm}
+
+\exo{3} Soit $g$ la fonction définie par $g(x) = -2x^{2}+1$. \\
+
+
+\initq
+\q Calculer $g(-1)$. \\
+
+\color{red}
+Pour calculer l'image de -1 par la fonction g, on remplace x par -1.\\
+
+$g(-1)=-2 \times (-1)^{2} +1$\\
+
+$g(-1)=-2 \times 1 +1$\\
+
+$g(-1)=-2 +1 =-1$\\
+
+\color{black}
+
+\q Est-il vrai que l'antécédent de -7 par la fonction g est 2 ?\\
+
+\color{red}
+Pour vérifier, nous allons calculer l'image de 2  par la fonction g, on remplace alors x par 2.\\
+
+$g(2)=-2 \times (2)^{2} +1$\\
+
+$g(2)=-2 \times 4 +1$\\
+
+$g(2)=-8 +1 =-7$\\
+
+On peut donc conclure que -7 est bien l'antécédent de 2.\\
+
+\color{black}
+
+\q Est-ce que $g(1)=g(-1)$?\\
+\color{red}
+Nous avons calculer dans la question 1) l'image de -1 par la fonction g, g(-1)=-1.\\
+
+Calculons maintenant g(1) :\\
+
+$g(1)=-2 \times (1)^{2} +1$\\
+
+$g(1)=-2 \times 1 +1$\\
+
+$g(1)=-2 +1 =-1$ \hspace*{1cm} On peut donc conclure que $g(-1)=g(1)$.
+
+
+\color{black}
+
+\end{document}
