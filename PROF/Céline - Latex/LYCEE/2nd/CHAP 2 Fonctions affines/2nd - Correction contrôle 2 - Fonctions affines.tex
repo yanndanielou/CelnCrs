@@ -1,0 +1,195 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{2cm}{1cm}{2cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi)}  }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Correction contrôle 2 : Fonctions affines }{Nom :}{Prénom :}{\textbf{2nd 8}}{Date:}
+
+
+
+\exo{5.5} Les fonctions suivantes sont-elles affines ? Si oui ,donner leurs coefficients directeurs et leurs ordonnées à l'origine.\\
+
+\initqa \qa $f(x)=-5x+8$ \qa $g(x)=2x^2-11$ \qa $h(x)=-3(4-2x)$\\
+
+ \qa $j(x)=\dfrac{5}{4x}$ \qa $f(x)=\dfrac{x-4}{9}$\\
+
+\color{purple}
+
+\initqa \qa La fonction $f$ est une fonction affine avec m = -5 et p = 8.\\
+\qa La fonction $g$ n'est pas une fonction affine car $x$ est au carré.\\
+\qa $h(x)=-12+6x$ donc la fonction $h$ est une fonction affine avec m = 6 et p = -12.\\
+\qa La fonction $j$ n'est pas une fonction affine car $x$ est au dénominateur.\\
+\qa $f(x)=\dfrac{x}{9}-\dfrac{4}{9}$ donc la fonction $f$ est une fonction affine avec $m=\dfrac{1}{9}$  et $p=-\dfrac{4}{9}$.\\
+
+
+\color{black}
+
+\vspace*{0.5cm}
+
+\exo{4.5}On munit le plan d’un repère orthogonal.\\
+Sur le graphique ci-contre, on a représenté deux fonctions $f$ et $g$ sur l'intervalle [-10;14].\\
+On note $D_f$  et $D_g$ les droites qui représentent respectivement les fonctions affines $f$ et $g$.\\
+\includegraphics[scale=1.5]{lecturegraphique.eps} \\
+
+ \initq \q Quelle est l'image de -1 par la fonction $g$ ? \textcolor{purple}{L'image de -1 par la fonction $g$ est 2.}\\
+
+\q Quelle est l'image de 8 par la fonction $f$ ? \textcolor{purple}{L'image de 8 par la fonction $f$ est 1.}\\
+
+\q Déterminer $f(0)$? \textcolor{purple}{f(0)=5.}\\
+
+\q Lire le ou les antécédent(s) de 5 par la fonction $f$ ?\textcolor{purple}{L'antécédent de 5 par la fonction $f$ est 0.}\\
+
+\q Lire le ou les antécédent(s) de -2  par la fonction $g$ ?\textcolor{purple}{L'antécédent de -2 par la fonction $g$ est -7.}\\
+
+\q Quelle est l'abscisse du point de $C_f$ d'ordonnée 9 ?\textcolor{purple}{L'abscisse  du point de $C_f$ d'ordonnée 9  est -8.}\\
+
+\q Quel est l'ensemble des solutions de l'équation $f(x)=4$ ? \textcolor{purple}{Cela revient à chercher l'antécédent de 4 par $f$, l'ensemble solution est $S=\lbrace 4\rbrace$.}\\
+
+\q Quel est l'ensemble des solutions de l'équation $g(x)>0$ ?\textcolor{purple}{Cela revient à chercher tous les $x$ pour lesquels la fonction $g$ est positive, l'ensemble solution est $S=]-4;11]$.}\\
+
+\vspace*{0.5cm}
+
+\exo{6} Soient $f$ et $g$ deux fonctions affines définies par $f(x)=-5x+21$ et  $g(x)=\dfrac{4-3x}{10}$.\\
+
+
+
+ \initq \q Calculer l'image de -3 par la fonction $f$ .\\
+ 
+ \color{purple}
+ $f(-3)=-5 \times (-3)+21$\\
+  $f(-3)=15+21$\\
+ \fbox{$f(-3)=36$}\\
+  \color{black}
+
+\q Calculer l'image de 0 par la fonction $g$ .\\
+
+\color{purple}
+ $g(0)=\dfrac{4-3\times 0}{10}$\\
+  $g(0)=\dfrac{4}{10}$\\
+ \fbox{$g(0)=0,4$}\\
+  \color{black}
+
+
+\q  Calculer $f\left(\dfrac{2}{3}\right)$.\\
+
+ \color{purple}
+ $f\left(\dfrac{2}{3}\right)=-5 \times \dfrac{2}{3} +21$\\
+ $f\left(\dfrac{2}{3}\right)=-\dfrac{10}{3} +\dfrac{63}{3}$\\
+ \fbox{$f\left(\dfrac{2}{3}\right)=\dfrac{53}{3} $}\\
+  \color{black}
+
+\q Déterminer les antécédents éventuels de -3 par f .\\
+
+ \color{purple}
+Pour cela, nous allons résoudre l'équation suivante  $f(x)=-3$.\\
+Soit, $-5x+21=-3$ $\Leftrightarrow$ $-5x=-24$ $\Leftrightarrow$ \fbox{$x=\dfrac{24}{5}= 4,8$}\\
+  \color{black}
+  
+\q Quelle est l'abscisse du point de $C_f$ d'ordonnée 0 ?\\
+
+\color{purple}
+Pour cela, nous allons résoudre l'équation suivante  $f(x)=0$.\\
+Soit, $-5x+21=0$ $\Leftrightarrow$ $-5x=-21$ $\Leftrightarrow$ \fbox{$x=\dfrac{21}{5}= 4,2$}\\
+  \color{black}
+\newpage
+
+
+\exo{4} Pour les trois droites représentées ci-dessous, déterminer
+leurs coefficients directeurs, leurs ordonnées à l'origine puis les expressions des fonctions affines correspondant aux droites.
+\bmul{2}
+\includegraphics[scale=1.2]{representation.eps} 
+
+\columnbreak
+
+\color{purple}
+Cherchons les coefficients $m$ et $p$ pour chacune des fonctions affines.\\
+
+\bi
+\item La fonction g est une fonction constante avec m = 0 et p = 7. Donc $g(x)=7$\\
+\item La fonction $f$ est une fonction affine avec m = 4 et p = 1. Donc $f(x)=4x+1$\\
+\item La fonction $h$ est une fonction affine avec m = -2 et p = 4. Donc $h(x)=-2x+4$\\
+\item La fonction $j$ est une fonction affine avec $m=-\dfrac{3}{2}=-1,5$ et p = -2. Donc $j(x)=-1,5x-2$\\
+\ei
+
+  \color{black}
+
+
+\emul
+
+\exo{} \textbf{BONUS} \\
+\textbf{Reprenons l'exercice 2.} D'abord graphiquement puis par le calcul, déterminer l'ensemble des solutions de l'équation $f(x)=g(x)$?\\
+
+\end{document}

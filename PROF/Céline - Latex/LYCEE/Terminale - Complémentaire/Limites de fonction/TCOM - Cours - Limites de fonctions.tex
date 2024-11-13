@@ -1,0 +1,982 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Param�trages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt,twoside,french]{extarticle}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% d�claration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	%\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les biblioth�ques LaTeX de l'American Mathematical Society sont pleines de macros int�ressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caract�res accentu�s norme iso-8859, cela risque de ne pas marcher avec des fichiers cr��s sous windows
+	\usepackage{amssymb} 
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caract�res
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la g�om�trie
+	\usepackage[x11names,table]{xcolor} % G�re les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et s�parations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{2cm}{1cm}{2cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'ent�te
+	%	6 fixe la distance entre l'ent�te et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de s�paration des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre port�e par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Th�or�me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily D�finition} :}}
+	\newtheorem{propriete}{\underline{Propri�t� :}}
+	\newtheorem{propcar}{\underline{Propri�t�s caract�ristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{M�thodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom sp�ciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Rep�rage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Op�rateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombr�e
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des th�or�me et autres d�finitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{20.9cm}{p{0.5cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{purple}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{purple}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi) } }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba}) }}
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\textbf{\setcounter{enumtaba}{0}}}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On r�gle les marges d�finitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contr�le fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On r�gle les marges d�finitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contr�le fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des fonctions math�matiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des num�rotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\color{red}\Roman{section}.}
+	\renewcommand{\thesubsection}{\color{blue}\hspace{1cm}\color{blue}\arabic{subsection})}
+	\renewcommand{\thesubsubsection}{\hspace{2cm}(\alph{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\color{red}}
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{14pt}{16pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\color{blue}}
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsubsection}% apparence du num�ro
+   {0.5em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+   
+   \newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{\textbf{Chapitre 1 :} Limites de fonctions}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+
+ \setcounter{page}{1}
+ 
+ 
+ \newpage
+ \vspace*{0.25cm}
+\textbf{\underline{ Activité d'introduction 1 :}} \hspace*{0.25cm} Notion de limites, notion d'asymptote\\ 
+ On donne les représentations des fonctions cube $x\mapsto x^3$, inverse au carré  $x\mapsto \dfrac{1}{x^2}$ et racine carrée $x\mapsto \sqrt{x}$.
+
+\includegraphics[scale=1.2]{actintro1.eps} 
+
+\noindent \initq \q En lisant les courbes, donner les limites suivantes :  $\lim\limits_{x \rightarrow +\infty} x^3$ et  $\lim\limits_{x \rightarrow -\infty} x^3$\\
+
+\noindent \q \initqa \qa Donner les limites suivantes : $\lim\limits_{x \rightarrow +\infty} \dfrac{1}{x^2}$ et $\lim\limits_{x \rightarrow -\infty} \dfrac{1}{x^2}$.\\
+\qa Comment se comporte la courbe en $+\infty$ et en $-\infty$ de $\dfrac{1}{x^2}$ par rapport à l'axe des abscisses ? \\
+\textit{On dit alors que l'axe des abscisses est asymptote à la courbe en $+\infty$.}\\
+
+\noindent \q \initqa \qa Donner la limite suivante : $\lim\limits_{x \rightarrow 0} \dfrac{1}{x^2}$\\
+\qa Comment se comporte la courbe en 0 de $\dfrac{1}{x^2}$ par rapport à l'axe des ordonnées ? \\
+\textit{On dit alors que l'axe des ordonnées est asymptote à la courbe en 0.}\\
+
+\noindent \q  Donner la limite suivante : $\lim\limits_{x \rightarrow +\infty} \sqrt{x}$.\\
+
+
+  \vspace*{0.75cm}
+\textbf{\underline{ Activité d'introduction 2 :}} \hspace*{0.25cm} Faire des opérations sur les limites\\
+
+Soit la fonction $f$ définie sur $\mathbb{R}$ par : $f(x)=x^2+2x-3$.\\
+
+\noindent \initq \q Donner les limites suivantes :  $\lim\limits_{x \rightarrow +\infty} x^2$ et  $\lim\limits_{x \rightarrow +\infty} 2x-3$. Pourquoi peut-on affirmer que : $\lim\limits_{x \rightarrow +\infty} f(x)=+\infty$.\\
+
+\noindent \q Donner les limites suivantes :  $\lim\limits_{x \rightarrow -\infty} x^2$ et  $\lim\limits_{x \rightarrow -\infty} 2x-3$. Peut-on en déduire la limite de f en $-\infty$ ? Pourquoi ?
+
+\noindent \q Vérifier que pour $x \neq 0$, on a : $f(x)=x^2\left( 1+\dfrac{2}{x}-\dfrac{3}{x^2}\right)$. Donner la limite $\lim\limits_{x \rightarrow -\infty} 1+\dfrac{2}{x}-\dfrac{3}{x^2}$.\\
+Peut-on en déduire la limite de f en $-\infty$ ? Pourquoi ?\\
+
+ \newpage
+ 
+ \section{Limites de fonctions}
+ 
+ \subsection{Limite en l'infini }
+ 
+ \subsubsection{Limite finie et asymptote horizontale}
+ 
+ \vspace*{0.5cm}
+ 
+ \dfTitre{Asymptote horizontale}{
+ Soit $a$ un réel.\\
+Dire que $f (x)$ tend vers $a$ quand $x$ tend vers $-\infty$ ou $+\infty$ signifie que $f (x)$ est aussi proche que l'on veut de $a$, pour $x$ suffisamment grand (ou petit).\\
+
+On écrit $\lim\limits_{x \rightarrow -\infty} f(x)=a$ ou $\lim\limits_{x \rightarrow +\infty} f(x)=a$\\
+
+On dit que la droite d'équation $y = a$ est asymptote à la courbe en $-\infty$ ou en $+\infty$.
+ }
+
+\underline{Exemples :} Soient  $f(x)=3 + \dfrac{1}{x}$ définie sur $\R\backslash\left\lbrace0\right\rbrace$ et $g(x)=tan^{-1}(x)$ définie sur $\R$ :
+\begin{center}
+ \includegraphics[scale=1.4]{asympthoriz1.eps}\\ \includegraphics[scale=1.4]{asympthoriz2.eps}
+\end{center}
+
+
+
+\subsubsection{Limite infinie }
+  
+ \df{  On dit que la fonction $f$ admet pour limite  $+\infty$ en $+\infty$, si $f (x)$ est aussi grand que l'on veut pourvu que $x$ soit suffisamment grand.\\
+ 
+ On écrit alors que $\lim\limits_{x \rightarrow +\infty} f(x)=+\infty$
+
+}
+
+\newpage
+  
+\rem 
+On définit de façon analogue :\\
+
+$\lim\limits_{x \rightarrow +\infty} f(x)=-\infty$ \hspace*{0.2cm};\hspace*{0.2cm}  $\lim\limits_{x \rightarrow -\infty} f(x)=+\infty$\hspace*{0.2cm} et \hspace*{0.2cm} $\lim\limits_{x \rightarrow -\infty} f(x)=-\infty$\\
+
+\underline{Exemples :} Soient  $f(x)=-0,5x^3+1,5$ et $g(x)=-x^5+4x$ définies sur $\R$ :\\
+\includegraphics[scale=1.7]{limiteinfineninfini1.eps} \hspace*{0.5cm} \includegraphics[scale=1.7]{limiteinfineninfini2.eps}\\
+
+\rems
+\bi
+\item Une fonction qui tend vers  $+\infty$ lorsque $x$ tend vers  $+\infty$ n'est pas nécessairement croissante.
+\item Il existe des fonctions qui ne possèdent pas de limite en l'infini. C'est le cas des fonctions sinusoïdales.
+\ei
+
+   
+\subsubsection{Limite des fonctions de références}
+
+\vspace*{0.25cm}
+   
+   \renewcommand{\arraystretch}{2}
+   
+   \begin{tabular}{|c|c|c|c|p{2.5cm}|c|c|p{2.2cm}|}
+   \hline 
+  \cellcolor{lightgray} $f(x)=$ & \cellcolor{lightgray}  $\dfrac{1}{x}$  &  \cellcolor{lightgray}  $x^2$ & \cellcolor{lightgray}  $x^3$ & \cellcolor{lightgray}  $x^n$  & \cellcolor{lightgray}  $\sqrt{x}$ &  \cellcolor{lightgray} $e^x$ & \cellcolor{lightgray}  $e^{ax}$ \\ 
+   \hline 
+  \cellcolor{lightgray}  $\lim\limits_{x \rightarrow -\infty} f(x)=$ & 0 &  $+\infty$ & $-\infty$ & $+\infty$ si n pair $-\infty$ si n impair &$+\infty$ & non définie &  $0$ si $a>0$  $-\infty$ si $a<0$   \\ 
+   \hline 
+  \cellcolor{lightgray}   $\lim\limits_{x \rightarrow +\infty} f(x)=$ & 0 & $+\infty$ & $+\infty$ & $+\infty$ & $+\infty$  & $+\infty$ & $+\infty$ si $a>0$  $0$ si $a<0$   \\ 
+   \hline 
+   \end{tabular} 
+   \newpage
+   
+   
+ \subsection{Limite en un point}
+ 
+  \subsubsection{Limite infinie et asymptote verticale}
+ \df{
+ Soit un réel $a$ qui appartient ou est une borne de l’ensemble de définition de $f$.\\
+Dire que $f(x)$ tend vers $+\infty$ quand $x$ tend vers $a$ signifie que $f(x)$ prend des valeurs aussi grandes que l'on veut pour $x$ très proche de $a$.\\
+
+On écrit $\lim\limits_{x \rightarrow a} f(x)= + \infty$ \\
+
+On dit que la droite d’équation $x = a$ est asymptote à la courbe.
+ }\\
+ 
+ \rems
+ \bi
+\item De manière analogue, $\lim\limits_{x \rightarrow a} f(x)= -\infty$ si $f(x)$ prend des valeurs négatives de plus en plus grandes en valeur absolue quand $x$ est très proche de $a$. 
+\item Il peut y a voir une limite à droite et à gauche.\\
+\ei
+ 
+\underline{Exemples :} Soient  $g(x)=\dfrac{2}{(x-4)^2}$ définie sur $\R\backslash\left\lbrace4\right\rbrace$  et $f(x)=\dfrac{1}{x-3}$ définie sur $\R\backslash\left\lbrace3\right\rbrace$ :\\
+
+\vspace*{0.25cm}
+
+\includegraphics[scale=1.8]{asymptverti2.eps} `\hspace*{0.5cm} \includegraphics[scale=1.7]{asymptverti1.eps}
+
+
+\newpage
+
+\subsubsection{Limite à gauche et à droite }
+
+\vspace*{0.5cm}
+
+\underline{Exemple:} Considérons la fonction inverse définie sur $\R^*$ par $f(x)=\dfrac{1}{x}$\\
+\bmul{2}
+La fonction $f$ admet des limites différentes en 0 selon que : \\
+ $x > 0$ \textit{(soit $0^+$)} \hspace*{0.25cm} ou \hspace*{0.25cm} $x < 0$ \textit{(soit $0^-$)}.\\
+ 
+ Déterminons ces 2 limites :
+ 
+ \bi
+\item\underline{ \textbf{Si $x > 0$ :}} \textit{(on parle de limite à droite de 0)}\\
+$\lim\limits_{\substack{x \rightarrow 0 \\ x>0}} f(x) = +\infty$\hspace*{0.2cm} ou \hspace*{0.2cm} $\lim\limits_{x \rightarrow 0^+} f(x)= +\infty$
+
+
+\item \underline{\textbf{Si $x < 0$ :}} \textit{(on parle de limite à gauche de 0)}\\
+$\lim\limits_{\substack{x \rightarrow 0 \\ x<0}} f(x) = -\infty$\hspace*{0.2cm} ou \hspace*{0.2cm} $\lim\limits_{x \rightarrow 0^-} f(x)= -\infty$
+\ei
+
+\rem 
+Les limites à gauche et à droite de $\dfrac{1}{x}$ en 0 ne sont pas égales, \textbf{on dit donc que la limite de la fonction $f$ en 0 n'existe pas}.
+
+
+\columnbreak
+\includegraphics[scale=1.7]{fonctioninverse.eps} 
+
+\emul
+
+
+\vspace*{0.25cm}
+
+  \subsubsection{Limite finie }
+  
+   \vspace*{0.5cm}
+  
+  \df{  
+Soit une fonction définie sur un intervalle $I$. Soient $a$ et $\ell$ deux réels.\\
+On dit que $f$ admet ue limite $\ell$ lorsque $x$ tend vers $a$ si les valeurs de $f(x)$ sont aussi proches de $\ell$ que l'on veut quand $x$ est très proche de $a$.\\
+
+Òn écrit : $\lim\limits_{x \rightarrow a} f(x)= \ell$
+  }\\
+ 
+ \underline{Exemple :} Soit la fonction $f$ définie sur $\R$ par $f(x)=x^3-5$\\
+   
+  Quand x prend des valeurs de plus en plus proches de 2, $x^3$ est très proche de 8, donc $f(x)$ prend des valeurs de plus en plus proches de $f (2) = 3$.\\
+  
+  Donc, $\lim\limits_{x \rightarrow 2} f(x)= 3$.\\
+  
+  
+  
+   \subsubsection{Limite des fonctions de références}
+   
+   
+   \vspace*{0.5cm}
+   
+   \renewcommand{\arraystretch}{2}
+   
+   \begin{tabular}{|c|c|c|p{2.5cm}|c|}
+   \hline 
+  \cellcolor{lightgray} $f(x)=$ & \cellcolor{lightgray}  $\dfrac{1}{x}$  &  \cellcolor{lightgray}  $\dfrac{1}{x^2}$ &\cellcolor{lightgray}  $\dfrac{1}{x^n}$ & \cellcolor{lightgray}  $\dfrac{1}{\sqrt{x}}$ \\ 
+   \hline 
+  \cellcolor{lightgray}  $\lim\limits_{\substack{x \rightarrow 0 \\ x>0}} f(x) = $ & $+\infty$ &  $+\infty$ & $+\infty$ & $+\infty$   \\ 
+   \hline 
+  \cellcolor{lightgray}   $\lim\limits_{\substack{x \rightarrow 0 \\ x<0}} f(x) = $ & $-\infty$ & $+\infty$ & $+\infty$ si n pair $-\infty$ si n impair  & non définie \\ 
+   \hline 
+   \end{tabular} 
+   
+
+ \section{Opération sur les limites}
+ 
+f et g désignent deux fonctions, $\ell$ et $\ell'$ sont deux réels.\\
+  $\alpha$ peut désigner $+\infty$, $-\infty$ ou un nombre réel.
+ 
+ \subsection{Limite d'une somme}
+ 
+ \begin{tabular}{|c|c|c|c|c|c|c|}
+ \hline 
+ $\lim\limits_{x \rightarrow \alpha} f(x)=$ & $\ell$ & $\ell$ & $\ell$ &  $+\infty$ &  $-\infty$ & \cellcolor{yellow} $+\infty$ \\ 
+ \hline 
+ $\lim\limits_{x \rightarrow \alpha} g(x)=$ & $\ell'$ & $+\infty$ &  $-\infty$ &  $+\infty$ & $-\infty$  &\cellcolor{yellow} $-\infty$  \\ 
+ \hline 
+ $\lim\limits_{x \rightarrow \alpha} [f(x)+g(x)]=$ & $\ell+ \ell'$ & $+\infty$ &  $-\infty$ &  $+\infty$ & $-\infty$ &\cellcolor{yellow} \textcolor{red}{F.I.*}\\ 
+ \hline 
+ \end{tabular} 
+ \vspace*{0.25cm}
+ 
+ \textcolor{red}{*Forme indéterminée :} On ne peut pas prévoir la limite.\\
+ 
+ \underline{Exemples:} Déterminer les limites suivantes :
+ \bmul{2}
+ \initqa \qa  \textbf{$\lim\limits_{x \rightarrow + \infty} x+3+\dfrac{1}{x}=$ ?}\
+ 
+ On a : $\lim\limits_{x \rightarrow + \infty} x+3= +\infty$ et $\lim\limits_{x \rightarrow + \infty} \dfrac{1}{x}= 0$\\
+\textbf{ Par somme,} $\lim\limits_{x \rightarrow + \infty} x+3+\dfrac{1}{x}= +\infty$ 
+ 
+ \columnbreak
+ 
+ \qa  \textbf{$\lim\limits_{x \rightarrow - \infty} x^2+x-3=$ ?}\\
+  On a : $\lim\limits_{x \rightarrow - \infty} x^2= +\infty$ et $\lim\limits_{x \rightarrow -\infty} x-3= -\infty$\\
+  
+Donc,   $\lim\limits_{x \rightarrow - \infty} x^2+x-3=$ est \textbf{une forme indéterminée},  on ne peut donc rien conclure.
+ \emul
+ 
+ 
+ 
+ \subsection{Limite d'un produit}
+ 
+ 
+ \begin{tabular}{|c|c|c|c|c|}
+ \hline 
+ $\lim\limits_{x \rightarrow \alpha} f(x)=$ & $\ell \neq 0$ & $\ell$ & $\infty$ & \cellcolor{yellow}  0  \\ 
+ \hline 
+ $\lim\limits_{x \rightarrow \alpha} g(x)=$ & $\ell'$ & $\infty$ & $\infty$ & \cellcolor{yellow}   $\infty$  \\ 
+ \hline 
+ $\lim\limits_{x \rightarrow \alpha} [f(x) \times g(x)]=$ & $\ell \times \ell'$ & $\infty$ &  $\infty$ &\cellcolor{yellow} \textcolor{red}{F.I.}\\ 
+ \hline 
+ \end{tabular} 
+ \vspace*{0.25cm}
+ 
+ \underline{$\infty$ désigne   $+\infty$ ou $-\infty$} : on applique la règle des signes pour déterminer si le produit est positif ou négatif.\\
+ 
+
+ 
+ 
+ \newpage
+ 
+   \underline{Exemples:} Déterminer les limites suivantes :
+ \bmul{2}
+ \initqa \qa  \textbf{$\lim\limits_{x \rightarrow - \infty} (x-3)(5+x^2)=$ ?}\
+ 
+ On a : $\lim\limits_{x \rightarrow - \infty} x-3= -\infty$ et \\
+  $\lim\limits_{x \rightarrow -\infty}x^2= + \infty$ donc $\lim\limits_{x \rightarrow -\infty}5+x^2= + \infty$  \\
+  
+\textbf{ Par produit,} $\lim\limits_{x \rightarrow - \infty} (x-3)(5+x^2)= -\infty$ \\
+ 
+ \columnbreak
+ 
+ \qa  \textbf{$\lim\limits_{x \rightarrow + \infty} \left( \dfrac{1}{x}-1\right) \sqrt{x}=$ ?}\\
+  On a : $\lim\limits_{x \rightarrow + \infty} \dfrac{1}{x}= 0$ donc $\lim\limits_{x \rightarrow + \infty} \dfrac{1}{x}-1= -1$ \\
+  et $\lim\limits_{x \rightarrow +\infty} \sqrt{x}= +\infty$\\
+  
+\textbf{ Par produit,} $\lim\limits_{x \rightarrow + \infty} \left( \dfrac{1}{x}-1\right) \sqrt{x}= -\infty$ \\
+ \emul
+   
+   
+   
+ \subsection{Limite d'un quotient}
+ 
+ \begin{tabular}{|c|c|c|c|c|c|c|}
+ \hline 
+ $\lim\limits_{x \rightarrow \alpha} f(x)=$ & $\ell$ & $\ell \neq 0$ & $\ell$ &  $\infty$ & \cellcolor{yellow}  $\infty$ & \cellcolor{yellow} $0$ \\ 
+ \hline 
+ $\lim\limits_{x \rightarrow \alpha} g(x)=$ & $\ell' \neq 0$ & $0$ &  $\infty$ &  $\ell$ & \cellcolor{yellow} $\infty$  &\cellcolor{yellow} $0$  \\ 
+ \hline 
+ $\lim\limits_{x \rightarrow \alpha} \dfrac{f(x)}{g(x)}=$ & $\dfrac{\ell}{\ell'}$ & $\infty$ &  $0$ &    $\infty$ & \cellcolor{yellow} \textcolor{red}{F.I.} &\cellcolor{yellow} \textcolor{red}{F.I.}\\ 
+ \hline 
+
+ \end{tabular} 
+ 
+ 
+ 
+ \vspace*{0.5cm}
+ 
+   \underline{Exemples:} Déterminer les limites suivantes :
+ \bmul{2}
+ \initqa \qa  \textbf{$\lim\limits_{\substack{x \rightarrow 3 \\ x<3}} \dfrac{1-2x}{x-3}=$ ?}\\
+ 
+ On a : $\lim\limits_{\substack{x \rightarrow 3 \\ x<3}} 1-2x= -5$ et \\
+ $\lim\limits_{\substack{x \rightarrow 3 \\ x<3}} x-3= 0^-$  \\
+  
+\textbf{ Par quotient,} $\lim\limits_{\substack{x \rightarrow 3 \\ x<3}} \dfrac{1-2x}{x-3}=+ \infty$\\
+ 
+ \columnbreak
+ 
+ \qa  \textbf{$\lim\limits_{x \rightarrow 0^+}  \dfrac{7-x}{\sqrt{x}}=$ ?}\\
+  On a : $\lim\limits_{x \rightarrow 0^+} 7-x= 7$ \\
+  et $\lim\limits_{x \rightarrow 0^+} \sqrt{x}= 0^+$\\
+  
+\textbf{ Par quotient,} $\lim\limits_{x \rightarrow 0^+}  \dfrac{7-x}{\sqrt{x}}= + \infty$
+ \emul
+   
+   
+   \newpage
+  
+  
+  
+  
+  
+  
+  \section{Continuité d'une fonction}
+  
+  La notion de continuité d'une fonction $f$ est très importante, car elle permet,entre autre, de déterminer l'existence de solution(s)
+pour des équations du type $f (x) = k$.\\
+
+
+  
+  \subsection{Notion intuitive de continuité}
+  
+  \df{
+  On considère une fonction définie sur un intervalle I de $\R$.\\
+On dit que $f$ est continue sur I si on peut tracer sa courbe représentative sans lever le crayon.
+  }\\
+  
+   \underline{Exemples et contre-exemples:}\\
+  \includegraphics[scale=2]{continuite.eps} 
+  
+  \subsection{Continuité des fonctions de références}
+  
+  
+  \prop{
+  Soit $f$ une fonction définie sur un intervalle I . Soit $a \in I$ .\\
+  
+$f$ est continue en $a$ si, et seulement si, $\lim\limits_{x \rightarrow a} f(x)  = f(a) $.\\
+}
+  
+  
+  
+\textbf{  Remarque :} jusqu'à présent la flèche oblique dans un tableau de variation traduisait la stricte monotonie d'une fonction, on convient à partir de maintenant qu'elle traduit aussi la continuité de la fonction sur l'intevalle considéré.
+\newpage
+
+\includegraphics[scale=1.6]{continuite2.eps} 
+
+
+\newpage
+
+  \subsection{Théorème des valeurs intermédiaires}
+  
+\textbf{Activité d'introduction :} On donne le tableau de variations de la fonction $f$.\\
+  \includegraphics[scale=1.8]{introtvi.eps} \\
+Lire dans le tableau de variation de la fonction $f$ le ou les solution(s) des équations suivantes:\\
+\initq \q $f(x)=18$ sur l'intervalle ]-1;1[  \\
+\color{purple}
+f(-1)=-1 et f(1)=19 Donc, 18 est compris entre -1 et 19. L'équation $f(x)=18$ possède une solution dans l'intervalle ]-1;1[.\\
+\color{black}
+  \q $f(x)=0$ sur l'intervalle ]-1;1[  \\
+  \color{purple}
+f(-1)=-1 et f(1)=19 Donc, 0 est compris entre -1 et 19. L'équation $f(x)=0$ possède une solution dans l'intervalle ]-1;1[.\\
+\color{black}
+  \q $f(x)=0$ sur l'intervalle ]-4;1[  \\
+  \color{purple}
+0 est compris entre -1 et 3, entre 3 et -1 et entre -1 et 19. L'équation $f(x)=0$ possède une solution dans chacun des intervalles suivants ]-4;-3[, ]-3;-1[ et ]-1;1[.\\
+\color{black}
+  \q $f(x)=-3$ sur l'intervalle ]-4;1[  \\
+   \color{purple}
+L'équation $f(x)=-3$ ne possède pas de solution.\\
+\color{black}
+    \q $f(x)=3$ sur l'intervalle ]-4;1[  \\
+     \color{purple}
+L'équation $f(x)=3$ possède 2 solutions : l'une égale à -3, l'autre comprise dans l'intervalle $]-1 ; 1[$.\\	
+\color{black}
+    
+  Comme nous l'avons dit en introduction, la continuité a une application très importante : la détermination de l'existence de solutions à pour des équations du type $f (x) = k$.
+
+
+\subsubsection{Cas général}
+
+
+\prop{
+Soit $f$ une \textbf{fonction continue} sur un intervalle $[a; b]$. Pour tout réel $k$ compris entre $f(a)$ et $f(b)$, l'équation $f(x) = k$ admet \textbf{au moins une solution} sur l'intervalle $[a; b]$.
+}
+
+\includegraphics[scale=1.6]{tvigal.eps} 
+\newpage
+
+\underline{Exemple :}\\
+On considère la fonction $f$ définie sur $\R$ par $f(x)=x^3-4x^2+6$.\\
+\textbf{Démontrer que l'équation f(x)=  2 admet au moins une solution sur [-1 ; 4].}\\
+
+
+\color{purple}
+ 
+\bi 
+\item $f$ est continue sur [-1 ; 4] car une fonction polynôme est continue sur $\R$.
+\item $f(-1)=1 $ et $f(4)=6$\\
+Donc 2 est compris entre  $f(-1)$ et $f(4)$.
+\ei
+
+ D'après le théorème des valeurs intermédiaires, on en déduit que l'équation f(x) = 2 admet au moins une solution sur l'intervalle [-1 ; 4].\\
+
+\color{black}
+
+
+
+\subsubsection{Cas des fonctions strictement monotones}
+
+
+\prop{
+Soit $f$ une fonction continue et \textbf{strictement monotone} sur un intervalle $[a; b]$. Pour tout réel $k$ compris entre $f(a)$ et $f(b)$, l'équation $f(x) = k$ admet \textbf{une unique solution} sur l'intervalle $[a; b]$.
+}\\
+
+\includegraphics[scale=2]{tvimonotone.eps} \\
+
+
+
+
+\underline{Exemple :}\\
+Soit $f(x)=\sqrt{x}+2x-12$ sur [4 ; 9].\\
+\textbf{Montrer que l'équation f(x) = 0 admet une solution unique sur [4 ; 9].}\\
+
+\color{purple}
+ 
+\bi 
+\item On admet que f est continue sur [4 ; 9] (car la somme de
+fonctions continues est continue)
+\item $f'(x)=\dfrac{1}{2\sqrt{x}}+2 >0$ sur [4 ; 9] donc $f$ est strictement croissante sur [4 ; 9].
+\item $f(4)=-6 $ et $f(9)=9$\\
+Donc 0 est compris entre  $f(4)$ et $f(9)$.
+\ei
+
+D'après le cas particulier du théorème des valeurs intermédiaires, l'équation f (x) = 0 admet une unique solution dans [4 ; 9].
+
+\color{black}
+
+	
+
+
+
+\end{document}

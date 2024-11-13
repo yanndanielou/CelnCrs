@@ -1,0 +1,140 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi.  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+
+\begin{center}
+\textbf{ {\large Comment trouver tous les nombres premiers inférieur à 100 ? }}
+\end{center}
+
+
+
+
+
+Cette activité met en \oe{uvre} un algorithme appelé "le crible d'Erathostène" permettant de trouver tous les nombres premiers inférieurs à 100.\\
+\begin{flushleft}
+\includegraphics[scale=1.15]{Erathostene2.eps} 
+\end{flushleft}
+
+\q \qa Le nombre 1 n'est pas premier donc  \textbf{barrer-le dans la grille}.\\
+ \qa Le nombre 2 ne possède aucun diviseur autre que 1 et lui-même. 2 est donc un nombre premier. \textbf{Entourer le nombre 2.}\\
+\qa Barrer tous les multiples de 2, qui ne sont donc pas des nombres premiers.\\
+\q \initqa  \qa Entourer ensuite le 3 et barrer tous ses multiples.\\
+\qa Poursuivre de la même façon jusqu'à ce que le plus petit nombre non barré soit supérieur à 10. \\
+Tous les nombres non barrés dans la liste, sont les nombres qui n'ont pas d'autre diviseur que 1 ou eux-mêmes. \textbf{On obtient tous les nombres premiers inférieur à 100.}\\
+
+\q Écrire tous les nombres premiers inférieur à 40 : \\
+\reponse[1]
+
+
+\vspace*{1cm}
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{ {\large Comment trouver tous les nombres premiers inférieur à 100 ? }}
+\end{center}
+
+
+
+
+
+Cette activité met en \oe{uvre} un algorithme appelé "le crible d'Erathostène" permettant de trouver tous les nombres premiers inférieurs à 100.\\
+
+\begin{flushleft}
+\includegraphics[scale=1.15]{Erathostene2.eps} 
+\end{flushleft}
+\initq \initqa
+\q \qa Le nombre 1 n'est pas premier donc  \textbf{barrer-le dans la grille}.\\
+ \qa Le nombre 2 ne possède aucun diviseur autre que 1 et lui-même. 2 est donc un nombre premier. \textbf{Entourer le nombre 2.}\\
+\qa Barrer tous les multiples de 2, qui ne sont donc pas des nombres premiers.\\
+\q \initqa  \qa Entourer ensuite le 3 et barrer tous ses multiples.\\
+\qa Poursuivre de la même façon jusqu'à ce que le plus petit nombre non barré soit supérieur à 10. \\
+Tous les nombres non barrés dans la liste, sont les nombres qui n'ont pas d'autre diviseur que 1 ou eux-mêmes. \textbf{On obtient tous les nombres premiers inférieur à 100.}\\
+
+\q Écrire tous les nombres premiers inférieur à 40 : \\
+\reponse[1]
+
+
+
+\end{document}

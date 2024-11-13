@@ -1,0 +1,112 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi)}  }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation 1 : Ensembles de nombres }{Nom :}{Prénom :}{\textbf{2nd 8}}{Date:}
+
+
+\exo{3} QUESTIONS DE COURS\\ 
+
+\initq \q Donner la définition de l'ensemble des nombres décimaux.\\
+\reponse[3]\\
+
+\q Compléter les phrases suivantes :\\
+
+\initqa \qa $\Z$ est . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\\
+
+\qa . . . . . . . . est l'ensemble des nombres rationnels positifs.\\
+
+\qa $\mathbb{D}^*$ est . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\\
+
+\qa . . . . . . . . est l'ensemble des nombres entiers naturels négatifs\\
+
+\q Représenter le diagramme de Venn avec tous les ensembles de nombres vus en classe.\\
+\vspace*{6cm}
+
+\exo{2} Citer : \\
+\initqa \qa un nombre appartenant à $\mathbb{D}$ mais pas à $\mathbb{Z}$ \hspace*{0.5cm} 	\qa un nombre appartenant à $\mathbb{R}$ mais pas à $\mathbb{Q}$.\\
+\reponse[4]\\
+\vspace*{0.25cm}
+
+\exo{4}
+Compléter en utilisant le symbole qui convient parmi $\in$, $\notin$, $\subset$ ou $\not\subset$ les phrases suivantes :\\
+
+\hspace*{0.5cm}$\mathbb{N}$ . . . . $\Z$\hspace*{0.35cm}; \hspace*{0.35cm}  $-2,6767\underline{67}$ . . . . $\mathbb{Q}$ \hspace*{0.35cm}; \hspace*{0.35cm} $\dfrac{3}{4}$ . . . . $\mathbb{D	}$ \hspace*{0.35cm}; \hspace*{0.35cm} $\dfrac{7}{9}$ . . . . $\mathbb{D	}$ \\
+
+\hspace*{0.5cm}$\sqrt{36}$ . . . . $\Z$ \hspace*{0.35cm}; \hspace*{0.35cm}  $\{-1;1\}$ . . . . $\N$ \hspace*{0.35cm}; \hspace*{0.35cm} $\{2 ; \dfrac{10}{2}\}$ . . . . $\N$ \hspace*{0.35cm}; \hspace*{0.35cm} $\mathbb{Q}$ . . . . $\mathbb{D}$ \\
+
+\end{document}

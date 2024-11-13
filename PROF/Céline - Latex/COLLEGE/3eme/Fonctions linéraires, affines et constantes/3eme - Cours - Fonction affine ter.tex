@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%
-% Paramétrages du document %
+% Paramï¿½trages du document %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper,10pt,twoside,french]{article}
@@ -8,7 +8,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% déclaration des packages
+% dï¿½claration des packages
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -17,21 +17,21 @@
 
 	\usepackage{fullpage}
 	\usepackage[french]{babel}
-	\usepackage[latin1]{inputenc}
+	%\usepackage[latin1]{inputenc}
 	%\usepackage[latin9]{inputenc}
-	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+	\usepackage{amsmath,amssymb} % Les bibliothï¿½ques LaTeX de l'American Mathematical Society sont pleines de macros intï¿½ressantes (voire indispensables).
 
-	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractï¿½res accentuï¿½s norme iso-8859, cela risque de ne pas marcher avec des fichiers crï¿½ï¿½s sous windows
 	
 	\usepackage{frcursive}
 	\usepackage{cmbright}
-% Packages de polices de caractères
+% Packages de polices de caractï¿½res
 	%\usepackage{txfonts} % Times
 	%\usepackage{pxfonts} % Palatino
 	%\usepackage{fourier} % Utopia
 
-% Packages pour la géométrie
-	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+% Packages pour la gï¿½omï¿½trie
+	\usepackage[x11names,table]{xcolor} % Gï¿½re les couleurs - Liste des couleurs dans le document xcolor.pdf
 	\usepackage{pst-eucl} % Document Euclide.pdf
 	\usepackage{pst-all}
 	\usepackage{pstricks}
@@ -48,8 +48,8 @@
 	
 % Package de maths
 	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
-	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
-	\usepackage{tikz,tkz-tab}
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
 % Packages de mise en page
 	\usepackage{vmargin}
 	\usepackage{fancybox}
@@ -84,7 +84,7 @@
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Parametrage des marges et séparations
+% Parametrage des marges et sï¿½parations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -94,14 +94,14 @@
 	%	2 est la marge en haut
 	%	3 est la marge droite
 	%	4 est la marge en bas
-	%	5 fixe la hauteur de l'entête
-	%	6 fixe la distance entre l'entête et le texte
+	%	5 fixe la hauteur de l'entï¿½te
+	%	6 fixe la distance entre l'entï¿½te et le texte
 	%	7 fixe la hauteur du pied de page
 	%	8 fixe la distance entre le texte et le pied de page
 	
-	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnseprule}{0pt} % largeur du filet de sï¿½paration des colonnes : mettre en commentaire pour supprimer ce filet.
 	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
-	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portï¿½e par shadowbox
 	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
 
 
@@ -111,12 +111,12 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
-	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
-	\newtheorem{propriete}{\underline{Propriété :}}
-	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Thï¿½orï¿½me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Dï¿½finition} :}}
+	\newtheorem{propriete}{\underline{Propriï¿½tï¿½ :}}
+	\newtheorem{propcar}{\underline{Propriï¿½tï¿½s caractï¿½ristiques :}}
 	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
-	\newtheorem{methode}{\underline{Méthodologie :}}
+	\newtheorem{methode}{\underline{Mï¿½thodologie :}}
 	%\newtheorem{exo}{\underline{Exercice }}
 
 	% Ensembles de nombres
@@ -131,11 +131,11 @@
 	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
 	\newcommand{\e}{\ensuremath{\mathrm{e}}}
 	
-	% Nom spéciaux
+	% Nom spï¿½ciaux
 	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
 	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
 
-	% Repérage et coordonnees
+	% Repï¿½rage et coordonnees
 	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
 	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
 	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
@@ -146,12 +146,12 @@
 		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
 	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
 	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
-		% Opérateurs
+		% Opï¿½rateurs
 	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
 	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
 	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
 	
-	%  Redifinition d'une boite ombrée
+	%  Redifinition d'une boite ombrï¿½e
 	\makeatletter 
 	\let\shadowboxori\shadowbox 
 	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
@@ -162,7 +162,7 @@
 	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
 	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
 
-	% Mise en page des thèorème et autres définitions ...
+	% Mise en page des thï¿½orï¿½me et autres dï¿½finitions ...
 	
 			% Couleurs perso
 			\newrgbcolor{RougePale}{1 0.95 0.96}
@@ -182,7 +182,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -200,7 +200,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -218,7 +218,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -234,7 +234,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -253,7 +253,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriï¿½tï¿½}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -325,9 +325,9 @@
 		% Danger dans box
 		\newsavebox{\infobox}
  
-% On règle les marges définitivement ici
+% On rï¿½gle les marges dï¿½finitivement ici
 \newlength{\marge}\setlength{\marge}{5mm}
-% Contrôle fin pour le panneau
+% Contrï¿½le fin pour le panneau
 \newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{information}{%
@@ -351,7 +351,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Huge\Info}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
   \vspace*{\marge}
@@ -362,9 +362,9 @@
 		% Danger dans box
 		\newsavebox{\dangerbox}
  
-%% On règle les marges définitivement ici
+%% On rï¿½gle les marges dï¿½finitivement ici
 %\newlength{\marge}\setlength{\marge}{5mm}
-%% Contrôle fin pour le panneau
+%% Contrï¿½le fin pour le panneau
 %\newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{Danger}{%
@@ -388,7 +388,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Large\textdbend}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
   \vspace*{\marge}
@@ -418,14 +418,14 @@
   %}
   % Affiche le panneau
   \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
   \vspace*{\marge}
 \bigskip}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des fonctions mathématiques
+% Dï¿½finition des fonctions mathï¿½matiques
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -435,7 +435,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des numérotations
+% Dï¿½finition des numï¿½rotations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -472,28 +472,28 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}
-   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
    
 \titleformat{\subsection}
-   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesubsection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
 
 \titleformat{\subsubsection}
-   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsubsection}% apparence du numéro
-   {0.5em}% espacement numéro/texte
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesubsubsection}% apparence du numï¿½ro
+   {0.5em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
   
   
   \newtheorem{exot}{\sffamily Exercice-type }
 \newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
  
-\newcommand{\chapitre}{Fonctions affines, linéaires et constantes}
+\newcommand{\chapitre}{Fonctions affines, linÃ©aires et constantes}
 
 \newcommand{\numchapitre}{}
 
@@ -531,91 +531,59 @@
 
 \section{Introduction}
 
-\underline{\textbf{{\large Enoncé :}}}\\
+\underline{\textbf{{\large EnoncÃ© :}}}\\
+Un club multi-sports propose Ã  sa clientÃ©le de choisir entre les trois formules suivantes :\\
+\textbf{Formule A} : 10 euros par sÃ©ance.\\
+\textbf{Formule B} : Un forfait annuel de 150 \euro  auquel s'ajoute une participation de 5 \euro par sÃ©ance.\\
+\textbf{Formule C} : Un forfait annuel de 500 \euro permettant l'accÃ¨s illimitÃ© aux sÃ©ances.\\
 
-Un club multi-sports propose à sa clientèle de choisir entre les trois formules suivantes :\\
-\textbf{Formule A} : 10 euros par séance.\\
-\textbf{Formule B} : Un forfait annuel de 150 \euro  auquel s'ajoute une participation de 5 \euro par séance.\\
-\textbf{Formule C} : Un forfait annuel de 500 \euro permettant l'accès illimité aux séances.\\
+\initq \q Calculer pour chaque formule la dÃ©pense annuelle pour   40 sÃ©ances. \\
+\reponse[1]
 
-\initq \q Calculer pour chaque formule la dépense annuelle pour :
-15 séances ;  40 séances ; 50 séances ; 75 séances ; 90 séances.
-Dans chaque cas, quelle est la formule la plus intéressante ?\\
-
-\q Soit x le nombre de séances pendant une année. Exprimer en fonction de x la dépense annuelle pour chaque formule.\\
+\q Soit x le nombre de sÃ©ances pendant une annÃ©e. Exprimer en fonction de x la dÃ©pense annuelle pour chaque formule.
 
 
-\q \initqa\qa Pour chaque formule, représenter sur un même graphique la dépense annuelle en fonction du nombre d'entrées.\\
-\qa Déterminer graphiquement la formule la plus avantageuse en fonction du nombre de séances.\\
-
-\textbf{{\large \underline{Résolution : }}}\\
-
-\initq \q 
-
-\begin{tabular}{|c|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
-\hline 
- & \textbf{15} & \textbf{40} & \textbf{50} & \textbf{75} & \textbf{90} \\ 
-\hline 
-\textbf{Formule A} &  &  &  &  &  \\ 
-\hline 
-\textbf{Formule B} &  &  &  &  &  \\ 
-\hline 
-\textbf{Formule C} &  &  & &  &  \\ 
-\hline 
-\end{tabular} 
-\vspace*{0.5cm}
-
-\q Les différentes formules :\\
-
-\textbf{Formule A }: \\
-\reponse[2]\\
-On a alors défini une . . . . . . . . . . .  . . . . . . . . . . .\\
+\textbf{Formule A }: \reponse[1]
+La \textbf{Formule A } est une . . . . . . . . . . .  . . . . . . . . . . .\\
 
 
 
-\textbf{Formule B} :\\
-\reponse[2]\\
-On a alors défini une . . . . . . . . . . .  . . . . . . . . . . .\\
+\textbf{Formule B} : \reponse[1]
+La \textbf{Formule B } est  une . . . . . . . . . . .  . . . . . . . . . . .\\
 
 
-\textbf{Formule C }:\\
-\reponse[2]\\
-On a alors défini une . . . . . . . . . . .  . . . . . . . . . . .\\
+\textbf{Formule C }: \reponse[1]
+La \textbf{Formule C } est  une . . . . . . . . . . .  . . . . . . . . . . .\\
 
+\q \initqa\qa Pour chaque formule, reprÃ©senter sur un mÃªme graphique la dÃ©pense annuelle en fonction du nombre d'entrÃ©es.\\
 
-\newpage
-
-\q 
-\initqa \qa 
-Les représentations graphiques :\\
 
 \begin{center}
-\includegraphics[scale=1]{grille.eps}\\ 
+\includegraphics[scale=0.9]{grille.eps}\\ 
 \end{center}
 
-
-
+\qa DÃ©terminer graphiquement la formule la plus avantageuse en fonction du nombre de sÃ©ances.\\
+\reponse[1]\\
 
 \section{Fonctions affines}
 
-\subsection{Définition}
+\subsection{Dï¿½finition}
 
 \df{
 On dit qu'une fonction f est affine s'il existe deux nombres a
 et b tel que f : $f:x\longmapsto ax + b$.\\
-Le nombre \textbf{a} est appelé \textbf{coefficient directeur} de la fonction f et le nombre \textbf{b} est appelé \textbf{ordonnée à l'origine}.\\
+Le nombre \textbf{a} est appelï¿½ \textbf{coefficient directeur} de la fonction f et le nombre \textbf{b} est appelï¿½ \textbf{ordonnï¿½e ï¿½ l'origine}.\\
 }
 
 \vspace*{0.5cm}
 
 \rem
-\bi \item \textbf{Une fonction linéaire} est une fonction affine où . . . . . . . .\\
-\item \textbf{Une fonction constante} est une fonction affine où . . . . . . . . . . \\
+\bi \item \textbf{Une fonction linï¿½aire} est une fonction affine oï¿½ . . . . . . . .\\
+\item \textbf{Une fonction constante} est une fonction affine oï¿½ . . . . . . . . . . \\
 \ei
 
 
 
-\newpage
 
 \ex
 
@@ -624,7 +592,7 @@ Le nombre \textbf{a} est appelé \textbf{coefficient directeur} de la fonction f 
 {\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|l|l|l|}
 	\hline
-	\textbf{Fonction} & \textbf{Linéaire ? Constante ? Affine ?} & \textbf{Coefficients ?}\\
+	\textbf{Fonction} & \textbf{Linï¿½aire ? Constante ? Affine ?} & \textbf{Coefficients ?}\\
 	\hline \hline
 	$f:x\longmapsto 5x$ & & \\
 	\hline
@@ -641,7 +609,7 @@ Le nombre \textbf{a} est appelé \textbf{coefficient directeur} de la fonction f 
 
 \begin{Exoapp}
 
-\textbf{Calculer des images connaissant les antécédents.}\\
+\textbf{Calculer des images connaissant les antï¿½cï¿½dents.}\\
 
 On donne $f:x \longmapsto -4x+2$ et $g:x \longmapsto \displaystyle{\frac{x-1}{2}}$ . Calculer $f(3)$, $g(-1)$ et $g(1)$.
 
@@ -653,9 +621,9 @@ On donne $f:x \longmapsto -4x+2$ et $g:x \longmapsto \displaystyle{\frac{x-1}{2}
 
 \begin{Exoapp}
 
-\textbf{Déterminer des antécédents connaissant les images.}\\
+\textbf{Dï¿½terminer des antï¿½cï¿½dents connaissant les images.}\\
 
-On donne la fonction $f:x\longmapsto -2x+3$. Déterminer les antécédents de -5 et de 3.
+On donne la fonction $f:x\longmapsto -2x+3$. Dï¿½terminer les antï¿½cï¿½dents de -5 et de 3.
 
 \reponse[3]
 
@@ -668,17 +636,17 @@ On donne la fonction $f:x\longmapsto -2x+3$. Déterminer les antécédents de -5 et
 
 
 
-\subsection{Représentation graphique}
+\subsection{Reprï¿½sentation graphique}
 
 \prop{
-La représentation graphique d'une fonction affine est une droite
+La reprï¿½sentation graphique d'une fonction affine est une droite
 }\\
 \vspace*{0.5cm}
 
-\underline{\textbf{Méthode : }}\\
+\underline{\textbf{Mï¿½thode : }}\\
 
-On remplit le tableau suivant où l'on choisit librement (mais
-intelligemment !) les deux nombres de la première ligne et on
+On remplit le tableau suivant oï¿½ l'on choisit librement (mais
+intelligemment !) les deux nombres de la premiï¿½re ligne et on
 calcule leur image.\\
 
 \begin{center}\begin{tabular}{|l|l|l|l|}
@@ -689,15 +657,15 @@ calcule leur image.\\
 	\hline
 \end{tabular}\end{center}
 
-On place ensuite les deux points dont les coordonnées sont en colonnes et on trace la droite.\\
+On place ensuite les deux points dont les coordonnï¿½es sont en colonnes et on trace la droite.\\
 
 \vspace*{0.5cm}
 
 \ex
 
-Tracer les représentations graphiques des fonctions f et g telles que $g(x) = 6x-7$ et $f(x)=\dfrac{x}{2}-4$\\
+Tracer les reprï¿½sentations graphiques des fonctions f et g telles que $g(x) = 6x-7$ et $f(x)=\dfrac{x}{2}-4$\\
 
-Vous pouvez commencer par exemple à remplir les tableaux de valeurs ci-dessous. Nous voulons obtenir une droite donc 2 valeurs suffisent pour les $x$.\\
+Vous pouvez commencer par exemple ï¿½ remplir les tableaux de valeurs ci-dessous. Nous voulons obtenir une droite donc 2 valeurs suffisent pour les $x$.\\
 
 \vspace*{0.5cm}
 

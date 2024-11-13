@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+\usepackage{mathrsfs}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi)}  }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} \alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\Large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\titre{Accompagnement  : Modéliser avec une fonction affine}{}{}{2nd}{}
+Nola réfléchit à son déménagement. Il a fait réaliser deux devis.\\
+
+\bmul{2}
+\textbf{PARTIE A :}\\
+L'entreprise X lui a communiqué le graphique ci-dessous.\\
+Celui-ci représente le coût du déménagement en fonction du volume à transporter.\\
+\initqa \qa Quel serait le coût pour un volume de 20 $m^3$ ? \\
+\qa Le coût est-il proportionnel au volume transporté ? \\
+\qa Soit $g$ la fonction qui à $x$, volume à déménager en $m^3$, associe le coût du déménagement avec cette entreprise.\\
+Exprimer $g(x)$ en fonction de $x$.\\
+
+\textbf{PARTIE B  :}\\
+L'entreprise Y lui a communiqué une formule :\\
+ $f(x) = 10x + 800$ où $x$ est le volume (en $m^3$) à transporter et $f(x)$ le prix à payer (en euros).\\
+\initqa \qa Calculer $f(80)$. Que signifie le résultat obtenu ?
+
+
+\columnbreak
+
+\includegraphics[scale=1.5]{accp2.eps} 
+
+\emul
+
+\noindent \qa Déterminer par le calcul l’antécédent de 3 500 par la fonction $f$.\\
+\qa Représenter graphiquement la fonction $f$ sur le graphique.\\
+\qa Résoudre l'inéquation $g(x) \le f(x)$. Que peut en déduire Nola ?\\
+
+\titre{Accompagnement  : Modéliser avec une fonction affine}{}{}{2nd}{}
+Nola réfléchit à son déménagement. Il a fait réaliser deux devis.\\
+
+\bmul{2}
+\textbf{PARTIE A :}\\
+L'entreprise X lui a communiqué le graphique ci-dessous.\\
+Celui-ci représente le coût du déménagement en fonction du volume à transporter.\\
+\initqa \qa Quel serait le coût pour un volume de 20 $m^3$ ? \\
+\qa Le coût est-il proportionnel au volume transporté ? \\
+\qa Soit $g$ la fonction qui à $x$, volume à déménager en $m^3$, associe le coût du déménagement avec cette entreprise.\\
+Exprimer $g(x)$ en fonction de $x$.\\
+
+\textbf{PARTIE B  :}\\
+L'entreprise Y lui a communiqué une formule :\\
+ $f(x) = 10x + 800$ où $x$ est le volume (en $m^3$) à transporter et $f(x)$ le prix à payer (en euros).\\
+\initqa \qa Calculer $f(80)$. Que signifie le résultat obtenu ?
+
+
+\columnbreak
+
+\includegraphics[scale=1.5]{accp2.eps} 
+
+\emul
+
+\noindent \qa Déterminer par le calcul l’antécédent de 3 500 par la fonction $f$.\\
+\qa Représenter graphiquement la fonction $f$ sur le graphique.\\
+\qa Résoudre l'inéquation $g(x) \le f(x)$. Que peut en déduire Nola ?\\
+
+
+\end{document}

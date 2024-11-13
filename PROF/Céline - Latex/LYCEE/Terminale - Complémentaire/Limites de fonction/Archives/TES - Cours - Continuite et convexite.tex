@@ -1,0 +1,846 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paramétrages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,10pt,french]{article}
+\usepackage{etex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                          %%
+%%    A LIRE                                                                %%
+%%                                                                          %%
+%%    Pour profiter des package de dessin pstle document                    %%
+%%    doit d'abord être complité au format ps, puis ensuite au format pdf.  %%
+%%    Sous TexNiccenter, créer un profil LaTeX=>PS=>PDF                     %%
+%%                                                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% déclaration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+%\usepackage{fetamont}
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	\usepackage{cmbright}
+	%\usepackage{lmodern}
+% Packages de polices de caractères
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+	
+%\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+
+%\renewcommand*\sfdefault{uop}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+%\usepackage[T1]{fontenc}
+
+% Packages pour la géométrie
+	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 \usepackage{pst-func}
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+		
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ \usepackage{xlop}
+ \usepackage{moreverb}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et séparations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{1cm}{1cm}{1cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'entête
+	%	6 fixe la distance entre l'entête et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{0pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+% Définition des marges  : Rappel 1cm=28,4 pt
+	% \setlength{\oddsidemargin}{nouvelle_taille} %% Espace entre le texte et la marge de gauche
+	% \setlength{\topmargin}{nouvelle_taille} %% Espace entre le bord haut et l'entete
+	% \setlength{\headheight}{nouvelle_taille}  %% Hauteur de l'entete
+	% \setlength{\headsep}{nouvelle_taille} %% Espace entre entete et texte
+	% \setlength{\textheight}{nouvelle_taille} %% Hauteur du texte
+	% \setlength{\textwidth}{nouvelle_taille}  %% largeur du texte
+	% \setlength{\marginparsep}{nouvelle_taille}  %% espace entre texte et note de droite
+	% \setlength{\marginparwidth}{nouvelle_taille}  %% largeur note de droite 
+	% \setlength{\footskip}{nouvelle_taille}  %% espace entre texte et le bas du pied de page
+	% \setlength{\marginparpush}{nouvelle_taille} 
+	% \setlength{\hoffset}{nouvelle_taille}  %% distance bord de gauche - texte = 1 pouce +¨\hoffset
+	% \setlength{\voffset}{nouvelle_taille}  %% distance bord haut - texte  = 1 pouce +¨\voffset
+	% \setlength{\paperwidth}{nouvelle_taille}  %% largeur de la page : A4=597pt
+	% \setlength{\paperheight}{nouvelle_taille}  %% hauteur de la page : A4=845 pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
+	\newtheorem{propriete}{\underline{Propriété :}}
+	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{Méthodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom spéciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Repérage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Opérateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombrée
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des thèorème et autres définitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+%	 \newcommand{\definition}[1]{\psframebox[linestyle=none,opacity=0.3,fillstyle=solid,fillcolor=VertPale,gradbegin=VertPale,gradend=VertPale,gradmidpoint=1,gradangle=-90]{\shadowbox[DarkSeaGreen3]{\begin{minipage}{18cm}\begin{defi}\normalfont #1 \end{defi}\end{minipage}}}}	\newcommand{\theoreme}[1]{\psframebox[linestyle=none,fillstyle=gradient,gradbegin=RougePale,gradend=RougePale,gradmidpoint=1,gradangle=-90]{\shadowbox[IndianRed2]{\begin{minipage}{18cm}\begin{theo}\normalfont #1 \end{theo}\end{minipage}}}}
+%	\newcommand{\preuve}[1]{\shadowbox[gray]{\begin{minipage}{18cm}\begin{pre}\normalfont \color{LightSteelBlue4}#1\end{pre}\end{minipage}}}
+%	\newcommand{\prop}[1]{\importantOval{\begin{propriete}\normalfont #1 \end{propriete}}}
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+%\newcommand{\definition}[1]{
+%\setlength{\arrayrulewidth}{1pt}
+%\arrayrulecolor{DarkOliveGreen3}
+%\begin{tabularx}{18.9cm}{lXX}
+%\cline{1-2}
+%	\multicolumn{2}{|c|}{\cellcolor{DarkOliveGreen3} \rule[-8pt]{0pt}{24pt}\textcolor{white}{\sffamily \textbf{Définition}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+%	\cline{1-2}
+%	 & \multicolumn{2}{||l}{\begin{minipage}{17.5cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+%	%\setlength{\arrayrulewidth}{1pt}
+%	\arrayrulecolor{DarkOliveGreen3}
+%	\cline{2-3} 
+%\end{tabularx}
+%\arrayrulecolor{black}
+%\setlength{\arrayrulewidth}{0.75pt}
+%\medskip}
+
+\newcommand{\definition}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\definitionPetit}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{10cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\definitionTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+%\newcommand{\theoreme}[1]{
+%\setlength{\arrayrulewidth}{1pt}
+%\arrayrulecolor{Red1}
+%\begin{tabularx}{18.9cm}{lXX}
+%\cline{1-2}
+%	\multicolumn{2}{|c|}{\cellcolor{Red1} \rule[-8pt]{0pt}{24pt}\textcolor{white}{\sffamily \textbf{Théorème}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+%	\cline{1-2}
+%	 & \multicolumn{2}{||l}{\begin{minipage}{17.5cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+%	%\setlength{\arrayrulewidth}{1pt}
+%	\arrayrulecolor{Red1}
+%	\cline{2-3} 
+%\end{tabularx}
+%\arrayrulecolor{black}
+%\setlength{\arrayrulewidth}{0.75pt}
+%\medskip}
+
+\newcommand{\theoreme}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\theoremeTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+%%%
+
+%\makebox[largeur]{\hrule[-hauteur]{0pt}{2xhauteur} texte} et \psframebox, avec \psset{framesep=0pt}.
+%%%
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{SlateGray3}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=SlateGray1,gradend=SlateGray4, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{SlateGray3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcommand{\propTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{SlateGray3}
+\begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=SlateGray1,gradend=SlateGray4, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{SlateGray3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcommand{\propPetit}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{SlateGray3}
+\begin{tabularx}{10cm}{lXX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=SlateGray1,gradend=SlateGray4, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{SlateGray3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+%\newcommand{\preuve}[1]{
+%\begin{tabularx}{18.9cm}{lXX}
+%%\cline{1-2}
+%	\multicolumn{2}{c}{\cellcolor{GrisPale} \rule[-8pt]{0pt}{24pt}\sffamily \textbf{Preuve}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+%	\cline{1-2}
+%	 & \multicolumn{2}{||l}{\begin{minipage}{17.5cm}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+%	\cline{2-3} 
+%\end{tabularx}
+%\bigskip
+%}
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\preuveEx}[1]{
+\begin{tabularx}{18.9cm}{lXX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\cellcolor{GrisPale} \rule[-8pt]{0pt}{24pt}\sffamily \textbf{Preuve} - (\textbf{\textit{Exigible}})}  \tabularnewline  %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\cline{1-2}
+	 & \multicolumn{2}{||l}{\begin{minipage}{17.5cm}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	\cline{2-3} 
+\end{tabularx}
+\bigskip
+}
+
+\newcommand{\preuveTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} & #1 \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\code}[1]{
+\setlength{\arrayrulewidth}{2pt}
+\arrayrulecolor{gray}
+\begin{tabularx}{15cm}{p{0.8cm}XX}
+%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{16cm}\setlength{\arrayrulewidth}{2pt}\arrayrulecolor{gray} \normalfont  {#1 }  \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+%\newcommand{\prop}[1]{
+%\setlength{\arrayrulewidth}{1pt}
+%\arrayrulecolor{SlateGray3}
+%\begin{tabularx}{18.9cm}{lXX}
+%\cline{1-2}
+%	\multicolumn{2}{|c|}{\cellcolor{SlateGray3}\rule[-8pt]{0pt}{24pt}\textcolor{white}{\sffamily \textbf{Propriété}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+%	\cline{1-2}
+%	 & \multicolumn{2}{||l}{\begin{minipage}{17.5cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+%	 %\setlength{\arrayrulewidth}{1pt}
+%	\arrayrulecolor{SlateGray3}
+%	\cline{2-3} 
+%\end{tabularx}
+%\setlength{\arrayrulewidth}{0.75pt}
+%\arrayrulecolor{black}
+%\medskip}
+
+
+	\newcommand{\exple}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exples}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On règle les marges définitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contrôle fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput*(2\marge,0){\Huge\Info}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On règle les marges définitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contrôle fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{ExoType}
+\newsavebox{\exotypebox}
+\newenvironment{ExoType}{%
+\sffamily
+  \refstepcounter{ExoType}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exo-Type \theExoType}}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exos}
+\newsavebox{\exosbox}
+\newenvironment{Exos}{%
+\sffamily
+  \refstepcounter{Exos}\par
+  \begin{lrbox}{\exosbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exosbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Applications}}
+  % Réserve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exosbox+\dp\exosbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des fonctions mathématiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Définition des numérotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\Alph{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{.75cm}(\arabic{subsubsection})}
+
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily}% \thesection}% apparence du numéro
+   {0em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily}% \thesubsection}% apparence du numéro
+   {1em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
+   {\sffamily}% \thesubsubsection}% apparence du numéro
+   {0.5em}% espacement numéro/texte
+   {\sffamily }% apparence du titre
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+   
+   
+\newcommand{\chapitre}{ Fonctions- Continuité et convexité \hfill \textbf{La continuité et ses applications ...}}
+
+\newcommand{\numchapitre}{1}
+
+\newcommand{\sommaire}{\shorttoc{Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\hrulefill ~ \sffamily Taux d'évolution successifs ; Taux d'évolution réciproque \hrulefill }%\thepage}
+\fancyfoot[C]{}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%\usepackage{cellspace}
+%\usepackage{slashbox}
+%
+%\newcolumntype{C}{Sc}
+%\newcolumntype{L}{Sl}
+%\setlength{\cellspacetoplimit}{4pt}
+%\setlength{\cellspacebottomlimit}{4pt}
+
+
+%%%%%%%%%%%
+	\setcounter{page}{0}
+	\begin{document}
+
+\noindent La notion de continuité d'une fonction $f$ est très importante, car elle permet,entre autre, de déterminer l'existence de solution(s) pour des équations du type $f(x)=k$.
+	
+	\section{Continuité d'une fonction et valeurs intermédiaires}
+	
+	\definition{Une fonction $f$ est dite \grasDef{continue} sur un intervalle si on peut la représenter \og sans lever le crayon \fg (c'est à dire tracer d'une seul tenant).\\
+	\begin{multicols}{2}
+\psset{xunit=0.9cm,yunit=0.9cm}
+\begin{pspicture}(-4,-1)(5,6)
+\psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(-4,-1)(5,6)
+\psset{xunit=0.9cm,yunit=0.9cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2]{->}(0,0)(-4,-1)(5,6)
+\psplot[plotpoints=200,arrows=-*]{-4.0}{1.0}{-x+2}
+\psplot[plotpoints=200]{1.0}{5.0}{x}
+\end{pspicture}
+\begin{center}
+Fonction $f$ continue en $x=1$
+\end{center}
+
+\hfill
+
+\columnbreak
+
+\psset{xunit=0.9cm,yunit=0.9cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture}(-4,-1)(6,6)
+\psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(-4,-1)(5,6)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=0]{->}(0,0)(-4,-1)(5,6)
+\psplot[plotpoints=200,arrows=-*]{-2.0}{1.0}{x+1}
+\psplot[plotpoints=200,arrows=)-]{1.0}{4.0}{x+2}
+\end{pspicture}
+\begin{center}
+Fonction $f$ non continue en $x=1$
+\end{center}
+
+Ici, on a, par lecture graphique $f(1)=2$ (c'est le point). Or si $x$ se rapproche de 1 par la droite, on voit que $f(x)$ se rapproche de 3 et non de 2.\\
+Il y a \og discontinuité \fg en 1.
+
+\end{multicols}
+}\\
+
+\noindent Nous admettrons un certains nombre de résultats sur le fonctions que nous connaissons, à savoir :\\
+
+\bigskip
+
+\propTitre{Continuité des fonctions de référence}{\begin{enumerate}
+\item Les fonctions affines, la fonction carré et la fonction cube sont continue sur \R.
+\item Les fonctions polynômes de degré 2 sont continues sur \R
+\item La fonction inverse est continue sur $]-\infty;0[$ et sur continue sur $]0;+\infty[$.
+\item La fonction racine carrée est continue sur $[0;+\infty[$
+\end{enumerate}
+}\\
+
+\bigskip
+
+\propTitre{Continuité et dérivabilité}{Toute fonction dérivable sur un intervalle est continue sur cet intervalle.}\\
+
+\bigskip
+
+\noindent \textbf{Convention} :\\
+Nous savons qu'une flèche oblique dans un tableau de variations traduit la stricte monotonie,  nous admettrons également la convention suivante : \og \grasTheo{\emph{une flèche oblique dans un tableau de variations traduit la continuité sur l'intervalle}} \fg.\\
+
+\newpage
+
+\section{Applications}
+Comme nous l'avons dit en introduction, la continuité a une application très importante : la détermination de l'existence de solutions à pour des équations du type $f(x)=k$ :\\
+
+\theoremeTitre{ des valeurs intermédiaires}{Soit $f$ une fonction continue sur un intervalle $[a;b]$. Pour tout réel $k$ compris entre $f(a)$ et $f(b)$, l'équation $f(x)=k$ admet \emph{au moins} une solution sur l'intervalle $[a;b]$}\\
+
+\bigskip
+
+Ce théorème possède un résultat plus fort si l'on suppose que la fonction est monotone.\\
+
+\theoremeTitre{ des valeurs intermédiaires appliqué au fonction strictement monotones}{Soit $f$ une fonction continue et strictement monotone sur un intervalle $[a;b]$. Pour tout réel $k$ compris entre $f(a)$ et $f(b)$, l'équation $f(x)=k$ admet une \emph{unique}  solution sur l'intervalle $[a;b]$}\\
+
+\bigskip
+
+Le théorème précédent est très souvent utilisé pour résoudre les équations du type $f(x)=0$. On peut d'ailleurs formulé le résultat suivant :\\
+
+
+\theoreme{Soit $f$ une fonction continue et strictement monotone sur un intervalle $[a;b]$. Si $f(a)$ et $f(b)$ sont de signes contraires, alors l'équation $f(x)=0$ admet une \emph{unique}  solution sur l'intervalle $[a;b]$}
+
+%\begin{center}
+%\fbox{\Large \sffamily\textbf{A la découverte de la notion de continuité)}}
+%\end{center}
+
+%\section{Les bizarreries de l'ISF}
+%
+%Le tableau suivant donne les 5 premières tranches du barème de l'impôt sur les grandes fortunes (l'ISF) pour l'année 2011, en fonction du montant du patrimoine taxable de 2010.
+%
+%\begin{center}
+%\begin{tabular}{|>{\centering\arraybackslash} m{3cm}|>{\centering\arraybackslash} m{4cm}|>{\centering\arraybackslash} m{3cm}|}
+%\hline
+%\textbf{Tranche du revenu 2010}  & $x_i$ montant du patrimoine taxable, en milliers d'euros	& Taux d'imposition 2011 \\
+%\hline
+%Tranche 1 & $x \leqslant 800$ & 0 \% \\
+%\hline
+%Tranche 2 & $800 < x \leqslant \np{1310}$ & 0,55 \% \\
+%\hline
+%Tranche 3 & $\np{1310} < x \leqslant \np{2570}$ & 0,75 \% \\
+%\hline
+%Tranche 4 & $\np{2570} < x \leqslant \np{4040}$ & 1,00 \% \\
+%\hline
+%Tranche 5 & $\np{4040} < x \leqslant \np{7710}$ & 1,30 \% \\
+%\hline
+%\end{tabular}
+%\end{center}
+
+%\exple Si $x=\np{1400}$ alors $I=(\np{1310}-\np{800})\times \dfrac{0,55}{100}+(\np{1400}-\np{1310)
+%\setcounter{section}{0}
+%\begin{center}
+%\fbox{\Large \sffamily\textbf{A RETENIR}}
+%\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                 %%%
+%%%%   APPLICATIONS  %%%
+%%%%                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\vspace{1cm}
+%\begin{center}
+%\fbox{\Large \sffamily\textbf{APPLICATIONS}}
+%\end{center}
+
+
+
+%\setcounter{section}{0}
+%\begin{center}
+%\fbox{\Large \sffamily\textbf{METHODES}}
+%\end{center}
+
+
+
+\end{document}

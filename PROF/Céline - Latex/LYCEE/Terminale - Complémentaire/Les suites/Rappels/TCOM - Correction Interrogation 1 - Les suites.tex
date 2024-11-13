@@ -1,0 +1,159 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+
+\setmarginsrb{2.5cm}{0.5cm}{2.5cm}{2cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi)}  }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation 1 : Les suites}{Nom :}{Prénom :}{\textbf{TCOM}}{Date:}
+
+\vspace*{1cm}
+\exo{4} Etudier le sens de variation des suites suivantes.\\
+
+\initqa \qa La suite arithmétique $(u_n)$ de premier terme -2 et de raison 11.\\
+
+\color{purple}
+On sait que la suite $(u_n)$ est une suite arithmétique de raison $r=200$.\\
+ Or, $r>0$ donc d'après la propriété vue en cours la suite $(u_n)$ est croissante.\\
+
+\color{black}
+
+\qa La $(v_n)$ une suite géométrique définie par $v_0=-12$ et $v_{n+1} = 0,5vn$. \\
+
+\color{purple}
+On sait que la suite $(v_n)$ est une suite géométrique de raison $q=0,5$.\\
+ Or, $0<q<1$ par conséquent la suite $(q^n)$ est une suite décroissante.\\
+Seulement $v_0$ étant négatif, la suite $(v_n)$ varie dans le sens contraire de la suite $(q^n)$.\\
+Donc la suite $(v_n)$ est croissante.\\
+
+
+
+\color{black}
+
+\qa La suite $(w_n)$ définie par $w_n=3+\dfrac{2}{n}$\\
+
+\color{purple}
+Exprimons $w_{n+1}-w_n$:\\
+
+$w_{n+1}-w_n= 3+\dfrac{2}{n+1}-\left(3+\dfrac{2}{n}\right)$\\
+
+$w_{n+1}-w_n= 3+\dfrac{2}{n+1}-3-\dfrac{2}{n}$\\
+
+$w_{n+1}-w_n= \dfrac{2}{n+1}-\dfrac{2}{n}$ \hspace*{0.5cm}\textit{(mettre au même dénominateur)}\\
+
+$w_{n+1}-w_n= \dfrac{2\times n}{(n+1)n}-\dfrac{2\times(n+1)}{n(n+1)}$\\
+
+ $w_{n+1}-w_n= \dfrac{2\times n -2\times(n+1)}{(n+1)n}$\\
+ 
+$w_{n+1}-w_n= \dfrac{2n -2n-1}{(n+1)n}$\\
+
+$w_{n+1}-w_n= \dfrac{-1}{(n+1)n}$\\
+
+$\forall n \in \N^*$, on a $n(n+1)>0$ et $-1<0$. Donc $w_{n+1}-w_n <0$\\
+Ainsi la suite $(w_n)$ est décroissante.\\
+
+\color{black}
+
+\vspace*{0.75cm}
+
+\exo{6} \\ 
+
+
+\underline{\textbf{A. Premier modèle :}}\\
+
+
+\noindent \initq \q Calculer le nombre de smartphones vendus le 3e mois.\\
+
+
+
+
+\q Exprimer $u_{n+1}$ en fonction de $u_n$. Quelle est la nature de la suite $(u_n)$?\\
+\q En déduire l'expression de $u_n$ en fonction de $n$ .\\
+
+
+
+\underline{\textbf{B. Deuxième modèle :}}\\
+Le taux variation des ventes reste constant.
+On note $v_n$ le nombre de smartphones vendus le $n$-ème mois.\\
+ On a donc $v_1=5000$ et $v_2=5200$.\\
+
+\noindent \initq \q Justifier que le taux de variation des ventes du premier au deuxième mois est de +4\%.\\
+\q En supposant que ce taux reste constant ensuite, exprimer $v_{n+1}$ en fonction de $v_n$. \\
+Quelle est la nature de la suite $(v_n)$?\\
+\q En déduire l'expression de $v_n$ en fonction de $n$ .\\
+
+\underline{\textbf{BONUS :}} Déterminer le nombre total de smartphones vendus durant les douze premiers mois suivant les 2 modèles. Quel est le modèle le plus avantageux?
+
+
+\end{document}

@@ -1,0 +1,771 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Param�trages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt,twoside,french]{extarticle}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% d�claration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	%\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les biblioth�ques LaTeX de l'American Mathematical Society sont pleines de macros int�ressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caract�res accentu�s norme iso-8859, cela risque de ne pas marcher avec des fichiers cr��s sous windows
+	\usepackage{amssymb} 
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caract�res
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la g�om�trie
+	\usepackage[x11names,table]{xcolor} % G�re les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et s�parations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{2cm}{1cm}{2cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'ent�te
+	%	6 fixe la distance entre l'ent�te et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de s�paration des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre port�e par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Th�or�me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily D�finition} :}}
+	\newtheorem{propriete}{\underline{Propri�t� :}}
+	\newtheorem{propcar}{\underline{Propri�t�s caract�ristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{M�thodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom sp�ciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Rep�rage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Op�rateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombr�e
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des th�or�me et autres d�finitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{20.9cm}{p{0.5cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{purple}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{purple}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi) } }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba}) }}
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\textbf{\setcounter{enumtaba}{0}}}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On r�gle les marges d�finitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contr�le fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On r�gle les marges d�finitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contr�le fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des fonctions math�matiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des num�rotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\color{red}\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\color{red}}
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{14pt}{16pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsubsection}% apparence du num�ro
+   {0.5em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+   
+   \newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{\textbf{Chapitre 2 :} Suites arithmético-géométriques}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+\newpage
+ \setcounter{page}{1}
+ 
+ \vspace*{0.5cm}
+ 
+ \textbf{\underline{{\large Activité d'introduction 1}}}\\
+ 
+\textbf{ PARTIE A}\\
+ On s'intéresse au nombre d'abonnés d'une plate-forme de streaming  de musique de France.\\
+ En 2020, on compte 30 000 abonnés à la plate-forme. Chaque année, 90 \% des abonnés se réabonnent, et il y a 10 000 nouveaux abonnés.\\
+ 
+ \noindent \initq \q Déterminer le nombre d'abonnés en 2021 et en 2022. \\
+ \q On note $u_n$ le nombre d'abonnés en milliers en 2020 + $n$.\\
+ \initqa \qa Exprimer $u_{n+1}$ en fonction de $u_n$. Calculer ensuite les valeurs $u_{40}$ et $u_{50}$  à l'aide de la calculatrice.\\
+ \qa Représenter graphiquement la suite sur la calculatrice. Interpréter.\\
+
+ 
+ \textbf{ PARTIE B}\\
+ On s'intéresse à l'évolution d'une population de singe dans une réserve naturelle.\\
+ En 2020, il y a 100 singes dans la réserve. Chaque année, la population de singes augmente  de 10 \% par rapport à l'année précédente.\\
+ 
+ \noindent \initq \q Déterminer le nombre de singes en 2021 et en 2022. \\
+ \q On note $v_n$ le nombre de singes en 2020 + $n$.\\
+ \initqa \qa Exprimer $v_n$ en fonction de $n$. Calculer ensuite les valeurs $v_{40}$ et $v_{50}$\\
+ \qa Représenter graphiquement la suite sur la calculatrice. Interpréter. Que peut-on penser de cette évolution ?\\
+ 
+  
+  
+ 
+ \section{Limites de suites}
+ 
+ Étudier la limite d'une suite $(u_n)$ c'est chercher ce que deviennent les nombres $u_n$ lorsque $n$ devient grand (tend vers l'infini) ; plus précisément :\\
+- Les nombres $u_n$ finissent-ils par se rapprocher d'un nombre fixe ?\\
+- Les nombres $u_n$ finissent-ils par dépasser n'importe quel nombre aussi grand que l'on veut ?\\
+
+
+
+ \subsection{Limite d'une suite}
+ 
+ \vspace*{0.5cm}
+ 
+
+\dfTitre{Les suites convergentes}{
+
+Une suite $u$ converge lorsqu'il existe un réel $\ell$ tel que tout intervalle ouvert I centré en $\ell$ contient tous les termes de la suite à partir d'un certain rang.\\
+
+On écrit : \hspace*{0.5cm} $\limite{n}{+\infty}u_n=\ell$\\
+}\\
+
+\begin{center}
+\includegraphics[scale=1]{convergente1.eps} 
+\end{center}
+
+
+ \dfTitre{Les suites divergentes}{
+ 
+ Une suite $u$ diverge vers $+\infty$ (respectivement $-\infty$) si, pour tout réel $A>0$ (respectivement $B<0$), il existe un rang $p$ à partir duquel tous les termes de la suite sont plus grands que A (respectivement B).\\
+ 
+ On écrit : \hspace*{0.5cm} $\limite{n}{+\infty}u_n=+\infty $ (respectivement $\limite{n}{+\infty}u_n=-\infty $) \\
+ }\\
+ 
+\begin{center}
+ \includegraphics[scale=1]{divergente1.eps} 
+\end{center}
+
+ 
+ \underline{Exemples:}
+ \bi
+
+\item Déterminer $\limite{n}{+\infty}\left( -\dfrac{2}{n} \right)$ et en déduire si la suite converge ou diverge.\\
+ \reponse[3]
+
+
+\item Déterminer $\limite{n}{+\infty}\left( \dfrac{1}{e^n}+n^2 \right)$ et en déduire si la suite converge ou diverge.\\
+ \reponse[3]
+
+\item  Déterminer $\limite{n}{+\infty}\left( \dfrac{3-e^n}{1+e^{-n}} \right)$ et en déduire si la suite converge ou diverge.\\
+ \reponse[3]
+\ei 
+
+ 
+  \subsection{Limites et comparaison}
+  
+  \prop{
+  
+ Soient deux suites $(u_n)$ et $(v_n)$ telles que, à partir d'un certain rang, $u_n \le v_n$.
+ \bi
+ 
+\item $\limite{n}{+\infty}u_n=+\infty$ alors  $\limite{n}{+\infty}v_n=+\infty$
+
+\item $\limite{n}{+\infty}v_n=-\infty$ alors  $\limite{n}{+\infty}u_n=-\infty$
+
+\ei  
+
+  }
+  
+ \begin{center}
+  \includegraphics[scale=1.6]{comparaison1.eps} 
+ \end{center}
+ 
+  \underline{Exemples:}\\
+  
+  \initq \q Etudier la limite de la suite $(u_n)$ définie sur $\N$ par $u_n=(-1)^n+3n$\\
+  \reponse[3]\\
+  
+  \q Soit $(u_n)$ la suite définie sur $\N$ par $u_n=n+2sin(n)$.\\
+   Montrer que pour tout $n \in \N$, $u_n\ge n-2$ et en déduire la limite de la suite $(u_n)$.\\
+  \reponse[3]\\
+  
+  
+  \thmTitre{Théorème des gendarmes}{
+  Soient trois suites $(u_n)$, $(v_n)$ et $(w_n)$  telles que, à partir d'un certain rang,\\ $u_n \le v_n \le w_n$.\\
+  Si $\limite{n}{+\infty}u_n= \ell$ et si $\limite{n}{+\infty}w_n= \ell$ alors $\limite{n}{+\infty}v_n= \ell$  
+  }\\
+  
+  \includegraphics[scale=1.5]{gendarme1.eps} \\
+  
+  \underline{Exemple:} Etudier la limite de la suite $(u_n)$ définie sur $\N^*$ par $u_n=3+\dfrac{(-1)^n}{n}$\\
+  \reponse[5]\\
+  
+   \subsection{Comportement des suites géométriques}
+  
+  Revenons un instant sur les suites géométriques. \\
+   
+   \thm{Soit la suite de terme général $q^n$, où $q$ est un réel positif.
+\begin{itemize}
+	\item[\textbullet] Si $q>1$ alors la suite a pour limite $+\infty$. On note alors $\limite{n}{+\infty}q^n=+\infty$ et on dit que la suite est divergente.
+	\item[\textbullet] Si $q=1$ alors la suite est constante égale à 1.
+	\item[\textbullet] Si $0<q<1$ alors la suite a pour limite 0. On note $\limite{n}{+\infty}q^n=0$. On dit, dans ce cas, que la suite converge vers 0.
+\end{itemize}
+}
+
+
+\newpage
+
+\prop{
+Soit $a \in \R$.\\
+-  Si $\limite{n}{+\infty}q^n=0$ alors  $\limite{n}{+\infty}aq^n=0$\\
+- Si $\limite{n}{+\infty}q^n=+\infty$ alors $\limite{n}{+\infty}aq^n=+\infty$ si $a>0$.\\
+\hphantom{Si $\limite{n}{+\infty}q^n=+\infty$ alors }$\limite{n}{+\infty}aq^n=-\infty$ si $a<0$.\\
+  }\\
+  
+  
+   \underline{Exemples :} \\
+   \initq \q Soit $(u_n)$ une suite géométrique de raison 0,5 et de premier terme $u_0=-3$.\\
+    Déterminer l'expression de $u_n$ en fonction de $n$, puis la limite de $(u_n)$.\\
+  \reponse[5]\\
+  \q Soit $(v_n)$ une suite géométrique de raison $\dfrac{\sqrt{2}}{2}$ et de premier terme $v_0=5$.\\
+   Déterminer l'expression de $v_n$ en fonction de $n$.\\
+    Exprimer $S_n$, la somme des $n+1$ premiers termes de cette suite puis la limite de cette somme .\\
+  \reponse[5]\\
+  
+
+\section{Recherche d'un seuil}
+
+\noindent La recherche d'un seuil consiste � d�terminer l'entier $n_0$ � partir duquel la suite est plus petite qu'une valeur donn�e (cas des suites convergentes) ou plus grand qu'une valeur donn�e (cas des suite ayant pour limite $+\infty$).\\
+
+\noindent Consid�rons comme exemple la suite g�om�trique $(u_n)$ d�finie pour tout entier $n$ par $u_n=\left(\dfrac{3}{4}\right)^n$.\\
+Cette suite est d�croissante car sa raison est inf�rieure � 1 et converge vers 0.\\
+
+\noindent On se propose de d�terminer un seuil � partir duquel $u_n$ est plus petit que $10^{-40}$, c'est-�-dire trouver le plus petit entier $n_0$ tel que si $n \geqslant n_0$  alors $\left(\dfrac{3}{4}\right)^n<10^{-40}$ .\\
+
+\noindent On �labore pour cela un algorithme permettant la recherche de ce seuil 
+\begin{multicols}{2}
+\medskip
+
+
+\columnbreak
+
+
+\noindent \vphantom{\LARGE A}1 est le premier terme de la suite\\
+$K$ d�signe $n_0$ cherch�.\\
+Tant que $u_K > 10^{-40}$, on effectue ce qui suit :\\
+- � chaque boucle, on incr�mente l'indice de 1 ;\\
+- on calcule $u_K$ \vphantom{$\dfrac{3}{4}$}\\
+La boucle s'arr�te lorsque $u_K<10^{-40}$
+\end{multicols}
+\noindent La valeur affich�e apr�s la mise en oeuvre de cet algorithme fournit le seuil $n_0$ cherch�. Dans cet exemple on obtient $n_0=321$. Ainsi, si $n$ est sup�rieur ou �gal � 321, alors $\left(\dfrac{3}{4}\right)^n < 10^{-40}$.
+
+\noindent Cet algorithme se programme sur la calculatrice Texas Instrument de cette mani�re :
+
+
+\noindent Dans le cas des suite qui tendent vers $+\infty$, on remplacera la condition dans la boucle \emph{tant que} par une condition du type $A<10^{40}$.\\ 
+
+\noindent \textbf{Application} : \\
+
+\noindent Soit $(u_n)$ la suite g�om�trique de raison $\dfrac{1}{3}$ et de premier terme $u_0=10$.\\
+\noindent �crire un algorithme permettant de d�terminer le plus petit entier $n_0$ tel que si $n > n_0$ alors $u_n < 10^{-90}$. Programmer cet algorithme � l'aide de la calculatrice et en d�duire la valeur de $n_0$.\\
+
+
+\noindent \textbf{Correction} :\\
+
+
+\section{Suites arithmético-géométriques}
+
+\df{On appelle suite arithm�tico-g�om�trique une suite d�finie par son premier terme et pour tout entier naturel $n$, par une relation de la forme :
+$$u_{n+1}=au_n+b \text{ o� } a \text{ et } b \text{ sont deux r�els donn�s}$$}
+
+\rem : si $a=1$ alors la suite est arithm�tique ; si $b=0$ alors la suite est g�om�trique. Vous comprendrez donc le nom donn� � ces suites !\\
+
+L'�tude d'une suite arithm�tico-g�om�trique se ram�ne � l'�tude d'une suite auxiliaire g�om�trique. Cette suite est \og toujours \fg donn�e par l'�nonc�.\\
+
+
+\noindent \textbf{Petite activit� pr�paratoire} : un couple d�pose au premier janvier 2011 une somme de 10 000 euros sur un compte r�mun�r� au taux annuel de 4 \%. Par la suite, ce couple poss�de une capacit� annuelle de 3 000 euros, �pargne vers�e tous les premiers  janvier sur le compte pr�c�dent.\\
+Les int�r�ts sont capitalis�s au 31 d�cembre de chaque ann�e. Pour tout entier naturel $n$, on note $S_n$ la somme dont le couple dispose au 1\ier janvier de l'ann�e (2011+n$n$).
+\begin{enumerate}
+\item \begin{enumerate}
+\item Calculer les valeur $S_0$, $S_1$, $S_2$ et $S_3$.
+\item La suite $(S_n)$ est-elle arithm�tique ? g�om�trique ?
+\end{enumerate}9
+\item \begin{enumerate}
+\item Montrer que l'expression de $S_{n+1}$ en fonction de $S_n$ est donn�e par la relation :
+$$S_{n+1}=(1,04)S_n+3000$$
+\item � l'aide de la calculatrice, obtenir le tableau de valeurs de $S_n$ pour $n$ variant de 0 � 20.
+\item Au 1\ier janvier de quelle ann�e le couple poss�dera-t-il une �pargne sup�rieure � 50 000 euros ?
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+Une entreprise du secteur du BTP doit r�duire la quantit� de d�chets qu'elle rejette .\\
+Elle s'engage, � terme, � rejeter moins de \np{30000} tonnes de d�chets par na.\\
+En 2007, l'entreprise rejetait \np{40000} tonnes de d�chets.\\
+Depuis cette date, l'entreprise r�duit chaque ann�e la quantit� de d�chets qu'elle rejette de 5 \%  par rapport � la quantit� rejet�e l'ann�e pr�c�dente, mais elle produit par ailleurs 200 tonnes de nouveaux d�chets par an en raison du d�veloppement de nouvelles activit�s.\\
+On note $r_n$ la quantit�, en tonnes, des d�chets rejet�s pour l'ann�e (2007+$n$).
+\begin{enumerate}
+\item Justifier que, pour tout entier naturel $n$, on  a $r_{n+1}=0,95n+200$.
+\item Soit $(s_n)$ la suite d�finie pour tout entier naturel $n$ par $s_n=r_n-\np{4000}$.
+\begin{enumerate}
+\item D�montrer que la suite $(s_n)$ est une suite g�om�trique de raison 0,95. Donner son premier terme.\\
+En d�duire l'expression de $s_n$ en fonction de $n$.
+\item Prouver que, pour tout entier naturel $n$, on a $r_n=\np{36000} \times 0,95^n+\np{4000}$.
+\item Le contexte restant le m�me, � partir de quelle ann�e l'entreprise r�ussira-t-elle � respecter son engagement ?
+\end{enumerate}
+\end{enumerate}
+
+
+
+\end{document}

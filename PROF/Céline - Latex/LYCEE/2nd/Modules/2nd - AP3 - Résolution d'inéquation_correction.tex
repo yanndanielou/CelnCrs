@@ -1,0 +1,165 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+\usepackage{mathrsfs}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\stepcounter{enumtaba} \textbf{(\alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\Large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\titre{Séance d'AP 3 : Résolution d'inéquation}{}{}{2nd}{}
+
+
+\textbf{\textcolor{green}{\underline{UNE INEQUATION}}}\\
+Une inéquation est une inégalité qui contient une inconnue $x$.\\
+Résoudre une inéquation, c'est trouver toutes les valeurs de x qui vérifient cette inégalité. \\
+Il s'agit d'un ensemble de valeurs.\\
+
+\textbf{\textcolor{purple}{\underline{PROPRIETES}}}
+\bi
+\item On peut ajouter ou soustraire un même nombre aux deux membres d'une inégalité sans en changer le sens.
+\item On peut multiplier ou diviser les deux membres d'une inégalité par un même nombre strictement positif sans en changer le sens.
+\item  \textbf{Si on multiplie ou on divise par un même nombre strictement négatif les deux membres d'une inégalité alors on change le sens de cette inégalité.}\\
+\ei
+
+
+\vspace*{0.5cm}
+
+\underline{Exemples:} Résoudre les inéquations suivantes.\\
+
+\bmul{2} 
+
+\qa $x+1 \ge 4$  \\
+
+$x+1\textcolor{red}{-1} \ge 4 \textcolor{red}{-1}$  \\
+
+$x \ge 3$  \\
+
+\vspace*{0.5cm}
+
+
+\qa $2x-9 < 0$  \\
+ 
+ $2x-9\textcolor{red}{+9} < 0 \textcolor{red}{+9}$  \\
+
+$\dfrac{2x}{\textcolor{red}{2}} < \dfrac{9}{\textcolor{red}{2}}$  \\
+
+$x < \dfrac{9}{2}$  \\
+
+
+\vspace*{0.5cm}
+
+
+  \qa $-5x+10 \le 0$\\
+  
+  $-5x+10\textcolor{red}{-10} \le 0 \textcolor{red}{-10}$  \\
+
+$\dfrac{-5x}{\textcolor{red}{-5}} \textcolor{red}{\ge} \dfrac{-10}{\textcolor{red}{-5}}$  \\
+
+$x \textcolor{red}{\ge} 2$  \\
+  
+   
+\columnbreak
+
+
+
+
+
+Les solutions sont tous les nombres supérieurs ou éqaux à 3.\\
+
+L'ensemble des solutions de l'inéquation est donc l'intervalle : $S=[3;+\infty[$.\\
+
+ 
+\vspace*{1.2cm}
+Les solutions sont tous les nombres strictement inférieurs à $\dfrac{9}{2}$.\\
+
+L'ensemble des solutions de l'inéquation est donc l'intervalle : $S=]-\infty;\dfrac{9}{2}[$.\\
+
+
+\vspace*{1cm}
+ 
+ Les solutions sont tous les nombres supérieurs ou égaux à 2.\\
+
+L'ensemble des solutions de l'inéquation est donc l'intervalle : $S=[2;+\infty[$.\\
+ 
+
+
+   \emul
+   
+   
+\end{document}

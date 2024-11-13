@@ -1,0 +1,207 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+\usepackage{mathrsfs}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\Large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\titre{Séance d'AP 2 : Rédiger une démonstration}{}{}{2nd}{}
+
+\vspace*{0.2cm}
+
+\section{Rappels d'arithmétique}
+
+
+
+\textbf{\textcolor{violet}{\underline{MULTIPLE - DIVISEUR}}}\\
+Soient $a$ et $b$ deux nombres entiers relatifs ($b$ non nul).\\
+S'il existe un entier relatif $k$ tel que $a = bk$, on dit que $a$ est un \textbf{multiple} de $b$ et que $b$ est un \textbf{diviseur} de $a$.\\
+
+\underline{Exemples :}
+\bi
+\item\textit{Montrer que 21 est un multiple de 7 : }\\
+\reponse[2]\\
+
+\item \textit{Montrer que tout multiple de 9 est multiple de 3 :} \\
+\reponse[6]\\
+\ei
+
+\vspace*{0.5cm}
+
+\textbf{\textcolor{violet}{\underline{PAIR - IMPAIR - PREMIER}}}\\
+Soit $a$ un nombre entier relatif.
+\bi 
+\item $a$ est \textbf{pair} si 2 est un diviseur de $a$, c'est-à-dire s'il existe un nombre entier relatif $k$ tel que $a = 2k$.
+\item $a$ est \textbf{impair} si 2 n’est pas un diviseur de $a$, c'est-à-dire s'il existe un nombre entier relatif $k$ tel que $a = 2k + 1$.
+\item $a$ est \textbf{premier} s'il a exactement deux diviseurs positifs : 1 et lui-même.\\
+\ei
+
+\underline{Exemples :}
+\bi
+\item \textit{Montrer que 37 est un nombre impair :}\\
+\reponse[2]\\
+ 
+\item \textit{Montrer que la somme de deux nombres impairs est un nombre pair :}\\
+ \reponse[6]\\
+\ei
+
+
+
+\newpage
+\vspace*{0.5cm}
+
+Sur votre cahier d'exercices rédiger les démonstrations suivantes :
+
+\vspace*{0.5cm}
+
+\textbf{Démonstration 1}\\
+\textit{Propriété 1 : "La somme de deux multiples de $a$ est un multiple de $a$."}
+
+\vspace*{0.5cm}
+
+
+\textbf{Démonstration 2}\\
+\textit{Propriété 2 : "Le carré d'un nombre impair est impair."}\\
+
+
+
+\textbf{Démonstration 3}\\
+\textit{Propriété 3 : "$\dfrac{1}{7}$ n'est pas un nombre décimal."}\\
+
+\vspace*{0.5cm}
+\vspace*{0.5cm}
+
+Sur votre cahier d'exercices rédiger les démonstrations suivantes :
+\vspace*{0.5cm}
+
+\textbf{Démonstration 1}\\
+\textit{Propriété 1 : "La somme de deux multiples de $a$ est un multiple de $a$."}
+
+\vspace*{0.5cm}
+
+\textbf{Démonstration 2}\\
+\textit{Propriété 2 : "Le carré d'un nombre impair est impair."}\\
+
+
+
+\textbf{Démonstration 3}\\
+\textit{Propriété 3 : "$\dfrac{1}{7}$ n'est pas un nombre décimal."}\\
+\vspace*{0.5cm}
+\vspace*{0.5cm}
+Sur votre cahier d'exercices rédiger les démonstrations suivantes :
+\vspace*{0.5cm}
+
+
+\textbf{Démonstration 1}\\
+\textit{Propriété 1 : "La somme de deux multiples de $a$ est un multiple de $a$."}
+
+\vspace*{0.5cm}
+
+
+\textbf{Démonstration 2}\\
+\textit{Propriété 2 : "Le carré d'un nombre impair est impair."}\\
+
+
+
+\textbf{Démonstration 3}\\
+\textit{Propriété 3 : "$\dfrac{1}{7}$ n'est pas un nombre décimal."}\\
+
+\vspace*{0.5cm}
+\vspace*{0.5cm}
+Sur votre cahier d'exercices rédiger les démonstrations suivantes :
+\vspace*{0.5cm}
+
+
+\textbf{Démonstration 1}\\
+\textit{Propriété 1 : "La somme de deux multiples de $a$ est un multiple de $a$."}
+
+\vspace*{0.5cm}
+
+
+\textbf{Démonstration 2}\\
+\textit{Propriété 2 : "Le carré d'un nombre impair est impair."}\\
+
+
+
+\textbf{Démonstration 3}\\
+\textit{Propriété 3 : "$\dfrac{1}{7}$ n'est pas un nombre décimal."}\\
+
+\vspace*{0.5cm}
+\end{document}

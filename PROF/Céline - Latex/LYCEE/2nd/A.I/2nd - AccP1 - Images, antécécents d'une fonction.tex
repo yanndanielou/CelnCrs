@@ -1,0 +1,140 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+\usepackage{mathrsfs}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi)}  }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} \alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\Large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\titre{Accompagnement 1 : Images et antécédents}{}{}{2nd}{}
+
+
+\vspace*{0.5cm}
+
+\exo \\ \textbf{\textit{Lecture d'images et d'antécédents.}}\\
+On munit le plan d'un repère orthogonal.\\
+Sur le graphique ci-contre, on a représenté deux fonctions $f$ et $g$ sur l'intervalle $[−3 ; 5]$.\\
+On note $C_f$ la courbe représentative de $f$ et $D_g$ la droite qui représente $g$.\\
+
+\includegraphics[scale=1.85]{accp1graphique.eps} 
+
+\bmul{2}
+
+\initq \q \initqa \qa Quelle est l'image de -3 par la fonction $f$ ?\\
+\qa Quelle est l'image de 3 par la fonction $f$ ?\\
+\qa Quelle est l'image de -1 par la fonction $g$ ?\\
+\qa Quelle est l'image de 0 par la fonction $g$ ?\\
+\qa Déterminer $f(-1)$ ?\\
+\qa Déterminer $g(4)$ ?\\
+\qa Quelle est l'ordonnée du point de $C_f$ d'abscisse 2 ?
+
+\columnbreak
+
+\q \initqa \qa Lire le ou les antécédent(s) de -4 par la fonction $f$ ?\\
+\qa Lire le ou les antécédent(s) de 5 par la fonction $f$ ?\\
+\qa Lire le ou les antécédent(s) de 1 par la fonction $g$ ?\\
+\qa Lire le ou les antécédent(s) de -7 par la fonction $g$ ?\\
+\qa Quelle est l'abscisse du point de $C_f$ d'ordonnée 12 ?
+
+\emul
+
+\q Quel est l'ensemble des solutions de l'équation $f (x) = −3$ ?\\
+
+\q Quel est l'ensemble des solutions de l'équation $f (x) \ge 0$ ?\\
+
+\vspace*{0.5cm}
+
+\exo \\ \textbf{\textit{Calculs d'images et d'antécédents 1.}}\\
+Soit $f$ la fonction définie sur $\R$ par $f (x) = 1 - 3x$. Soit $C_f$ sa représentation graphique.\\
+\initq \q \initqa \qa Calculer l'image de -2 par la fonction $f$ .\\
+\qa  Calculer $f(\dfrac{2}{9})$.\\
+\qa Quelle est l'ordonnée du point de $C_f$ d'abscisse 8 ?\\
+\q \initqa \qa  Déterminer les antécédents éventuels de -4 par $f$ .\\
+\qa Quelle est l'abscisse du point de $C_f$ d'ordonnée -8 ?\\
+
+\vspace*{0.5cm}
+
+\exo \\ \textbf{\textit{Calculs d'images et d'antécédents 2.}}\\
+Soit $g$ la fonction définie sur $\R$ par $g(x) = -3x^2+x-10$. Soit $C_g$ sa représentation graphique.\\
+ \initqa \qa Calculer l'image de 0 par la fonction $g$ .\\
+\qa  Calculer $g(-1)$.\\
+\qa Quelle est l'ordonnée du point de $C_g$ d'abscisse 2 ?\\
+
+
+\end{document}

@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%
-% Paramétrages du document %
+% Paramï¿½trages du document %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper,10pt,twoside,french]{article}
@@ -8,7 +8,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% déclaration des packages
+% dï¿½claration des packages
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -17,21 +17,21 @@
 
 	\usepackage{fullpage}
 	\usepackage[french]{babel}
-	\usepackage[latin1]{inputenc}
+	%\usepackage[latin1]{inputenc}
 	%\usepackage[latin9]{inputenc}
-	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+	\usepackage{amsmath,amssymb} % Les bibliothï¿½ques LaTeX de l'American Mathematical Society sont pleines de macros intï¿½ressantes (voire indispensables).
 
-	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractï¿½res accentuï¿½s norme iso-8859, cela risque de ne pas marcher avec des fichiers crï¿½ï¿½s sous windows
 	
 	\usepackage{frcursive}
 	\usepackage{cmbright}
-% Packages de polices de caractères
+% Packages de polices de caractï¿½res
 	%\usepackage{txfonts} % Times
 	%\usepackage{pxfonts} % Palatino
 	%\usepackage{fourier} % Utopia
 
-% Packages pour la géométrie
-	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+% Packages pour la gï¿½omï¿½trie
+	\usepackage[x11names,table]{xcolor} % Gï¿½re les couleurs - Liste des couleurs dans le document xcolor.pdf
 	\usepackage{pst-eucl} % Document Euclide.pdf
 	\usepackage{pst-all}
 	\usepackage{pstricks}
@@ -48,8 +48,8 @@
 	
 % Package de maths
 	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
-	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
-	\usepackage{tikz,tkz-tab}
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
 % Packages de mise en page
 	\usepackage{vmargin}
 	\usepackage{fancybox}
@@ -84,7 +84,7 @@
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Parametrage des marges et séparations
+% Parametrage des marges et sï¿½parations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -94,14 +94,14 @@
 	%	2 est la marge en haut
 	%	3 est la marge droite
 	%	4 est la marge en bas
-	%	5 fixe la hauteur de l'entête
-	%	6 fixe la distance entre l'entête et le texte
+	%	5 fixe la hauteur de l'entï¿½te
+	%	6 fixe la distance entre l'entï¿½te et le texte
 	%	7 fixe la hauteur du pied de page
 	%	8 fixe la distance entre le texte et le pied de page
 	
-	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnseprule}{0pt} % largeur du filet de sï¿½paration des colonnes : mettre en commentaire pour supprimer ce filet.
 	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
-	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portï¿½e par shadowbox
 	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
 
 
@@ -111,12 +111,12 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
-	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
-	\newtheorem{propriete}{\underline{Propriété :}}
-	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Thï¿½orï¿½me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Dï¿½finition} :}}
+	\newtheorem{propriete}{\underline{Propriï¿½tï¿½ :}}
+	\newtheorem{propcar}{\underline{Propriï¿½tï¿½s caractï¿½ristiques :}}
 	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
-	\newtheorem{methode}{\underline{Méthodologie :}}
+	\newtheorem{methode}{\underline{Mï¿½thodologie :}}
 	%\newtheorem{exo}{\underline{Exercice }}
 
 	% Ensembles de nombres
@@ -131,11 +131,11 @@
 	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
 	\newcommand{\e}{\ensuremath{\mathrm{e}}}
 	
-	% Nom spéciaux
+	% Nom spï¿½ciaux
 	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
 	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
 
-	% Repérage et coordonnees
+	% Repï¿½rage et coordonnees
 	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
 	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
 	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
@@ -146,12 +146,12 @@
 		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
 	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
 	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
-		% Opérateurs
+		% Opï¿½rateurs
 	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
 	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
 	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
 	
-	%  Redifinition d'une boite ombrée
+	%  Redifinition d'une boite ombrï¿½e
 	\makeatletter 
 	\let\shadowboxori\shadowbox 
 	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
@@ -162,7 +162,7 @@
 	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
 	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
 
-	% Mise en page des thèorème et autres définitions ...
+	% Mise en page des thï¿½orï¿½me et autres dï¿½finitions ...
 	
 			% Couleurs perso
 			\newrgbcolor{RougePale}{1 0.95 0.96}
@@ -182,7 +182,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -200,7 +200,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -218,7 +218,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -234,7 +234,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -253,7 +253,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriï¿½tï¿½}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -325,9 +325,9 @@
 		% Danger dans box
 		\newsavebox{\infobox}
  
-% On règle les marges définitivement ici
+% On rï¿½gle les marges dï¿½finitivement ici
 \newlength{\marge}\setlength{\marge}{5mm}
-% Contrôle fin pour le panneau
+% Contrï¿½le fin pour le panneau
 \newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{information}{%
@@ -351,7 +351,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Huge\Info}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
   \vspace*{\marge}
@@ -362,9 +362,9 @@
 		% Danger dans box
 		\newsavebox{\dangerbox}
  
-%% On règle les marges définitivement ici
+%% On rï¿½gle les marges dï¿½finitivement ici
 %\newlength{\marge}\setlength{\marge}{5mm}
-%% Contrôle fin pour le panneau
+%% Contrï¿½le fin pour le panneau
 %\newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{Danger}{%
@@ -388,7 +388,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Large\textdbend}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
   \vspace*{\marge}
@@ -418,14 +418,14 @@
   %}
   % Affiche le panneau
   \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
   \vspace*{\marge}
 \bigskip}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des fonctions mathématiques
+% Dï¿½finition des fonctions mathï¿½matiques
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -435,7 +435,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des numérotations
+% Dï¿½finition des numï¿½rotations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -472,28 +472,28 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}
-   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
    
 \titleformat{\subsection}
-   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \textcolor{red} \thesubsection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \textcolor{red} \thesubsection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily \textcolor{red} }% apparence du titre
 
 \titleformat{\subsubsection}
-   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \textcolor{blue} \thesubsubsection}% apparence du numéro
-   {0.5em}% espacement numéro/texte
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \textcolor{blue} \thesubsubsection}% apparence du numï¿½ro
+   {0.5em}% espacement numï¿½ro/texte
    {\sffamily \textcolor{blue} }% apparence du titre
   
   
   \newtheorem{exot}{\sffamily Exercice-type }
 \newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
  
-\newcommand{\chapitre}{Identités remarquables}
+\newcommand{\chapitre}{Identitï¿½s remarquables}
 
 \newcommand{\numchapitre}{}
 
@@ -529,11 +529,11 @@
  
  \begin{center}
  \textbf{\begin{large}
- Activité d'introduction 1
+ Activitï¿½ d'introduction 1
  \end{large}}
  \end{center}
  
-\q Développer les expressions suivantes :
+\q Dï¿½velopper les expressions suivantes :
 
 
 \bmul{2}
@@ -563,17 +563,17 @@ $(2x-9)^{2}$ = \textcolor{red}{$(2x-9)(2x-9) = 4x^{2} -18x-18x+81$}\\
 
 \emul
 
-\q En déduire une formule pour développer plus rapidement qu'avec la double distributivité.\\
+\q En dï¿½duire une formule pour dï¿½velopper plus rapidement qu'avec la double distributivitï¿½.\\
 
 \vspace*{0.5cm}
 
  
  \textcolor{red}{On remarque que $(a+b)^{2} = a^{2} + 2ab + b^{2}$ \hspace*{1cm} et \hspace*{1cm}    $(a-b)^{2} = a^{2} - 2ab + b^{2}$}  \\
  
- \section{Développer avec les identités remarquables}
+ \section{Dï¿½velopper avec les identitï¿½s remarquables}
  
  
- \subsection{Première et deuxième identités remarquables : carré d'une somme et carré d'une différence}
+ \subsection{Premiï¿½re et deuxiï¿½me identitï¿½s remarquables : carrï¿½ d'une somme et carrï¿½ d'une diffï¿½rence}
  
  \vspace*{0.5cm}
  
@@ -588,7 +588,7 @@ $(2x-9)^{2}$ = \textcolor{red}{$(2x-9)(2x-9) = 4x^{2} -18x-18x+81$}\\
  
  \vspace*{0.5cm}
  
-\underline{\textbf{Démonstration :}}
+\underline{\textbf{Dï¿½monstration :}}
 Pour tous nombres a et b, on a :
 \bmul{2}
 $(a+b)^{2} = (a+b)(a+b)$\\
@@ -610,7 +610,7 @@ $(a-b)^{2} = a^{2} -ab -ba +b^{2}$\\
 \vspace*{1cm}
  
 
-\textbf{\underline{Exemples :}} Développer les expressions suivantes à l'aide des identités remarquables : \\
+\textbf{\underline{Exemples :}} Dï¿½velopper les expressions suivantes ï¿½ l'aide des identitï¿½s remarquables : \\
 
    \color{red}
    
@@ -647,11 +647,11 @@ $(a-b)^{2} = a^{2} -ab -ba +b^{2}$\\
    
   \begin{center}
  \textbf{\begin{large}
- Activité d'introduction 2
+ Activitï¿½ d'introduction 2
  \end{large}}
  \end{center}
  
-\initq \q Développer les expressions suivantes :
+\initq \q Dï¿½velopper les expressions suivantes :
 
 \bmul{3}
 
@@ -679,7 +679,7 @@ $(3x-4)(3x+4)$ = \textcolor{red}{$9x^{2} + 12x - 12x -16$}\\
 
 \emul
 
-\q En déduire une formule pour développer plus rapidement qu'avec la double distributivité.\\
+\q En dï¿½duire une formule pour dï¿½velopper plus rapidement qu'avec la double distributivitï¿½.\\
 
 \vspace*{0.5cm}
 
@@ -687,7 +687,7 @@ $(3x-4)(3x+4)$ = \textcolor{red}{$9x^{2} + 12x - 12x -16$}\\
  
  \vspace*{0.5cm}
  
- \subsection{Troisième identité remarquable}
+ \subsection{Troisiï¿½me identitï¿½ remarquable}
 
  \prop{
  Pour tous nombres a et b, 
@@ -700,7 +700,7 @@ $(3x-4)(3x+4)$ = \textcolor{red}{$9x^{2} + 12x - 12x -16$}\\
  
  \vspace*{0.5cm}
  
-\underline{\textbf{Démonstration :}} Pour tous nombres a et b, on a :
+\underline{\textbf{Dï¿½monstration :}} Pour tous nombres a et b, on a :
 
 \begin{center}
  $(a+b)(a-b) = a^{2} -ab +ba -b^{2}$\\
@@ -711,7 +711,7 @@ $(3x-4)(3x+4)$ = \textcolor{red}{$9x^{2} + 12x - 12x -16$}\\
 
 \vspace*{1cm}
  
- \textbf{\underline{Exemples :}} Développer les expressions suivantes à l'aide des identités remarquables : \\
+ \textbf{\underline{Exemples :}} Dï¿½velopper les expressions suivantes ï¿½ l'aide des identitï¿½s remarquables : \\
  
 
 
@@ -746,11 +746,11 @@ $(3x-4)(3x+4)$ = \textcolor{red}{$9x^{2} + 12x - 12x -16$}\\
    \color{black}
 \newpage
 
-\subsection{Développements plus difficiles}
+\subsection{Dï¿½veloppements plus difficiles}
 
-Développer puis réduire $A = \textcolor{blue}{( 2 x + 6 ) ²} + \textcolor{green}{( x + 1 ) ( x - 1 )}$\\
+Dï¿½velopper puis rï¿½duire $A = \textcolor{blue}{( 2 x + 6 ) ï¿½} + \textcolor{green}{( x + 1 ) ( x - 1 )}$\\
 
-On reconnait les identités remarquables : \textcolor{red}{$(a+b)^{2} = a^{2} + 2ab + b^{2}$ \hspace*{1cm} et \hspace*{1cm} $(a+b)(a-b) = a^{2} - b^{2}$}\\
+On reconnait les identitï¿½s remarquables : \textcolor{red}{$(a+b)^{2} = a^{2} + 2ab + b^{2}$ \hspace*{1cm} et \hspace*{1cm} $(a+b)(a-b) = a^{2} - b^{2}$}\\
 
 
 
@@ -758,13 +758,13 @@ On obtient :\\
 
 \color{red}
 
-$A = \textcolor{blue}{( 2 x + 6 ) ²} + \textcolor{green}{( x + 1 ) ( x - 1 )}$\\
+$A = \textcolor{blue}{( 2 x + 6 ) ï¿½} + \textcolor{green}{( x + 1 ) ( x - 1 )}$\\
 
 $A = \textcolor{blue}{(2x)^{2} + 2 \times 2x \times 6 + 6^{2}} + \textcolor{green}{x^{2}-1}$\\
 
 $A = \textcolor{blue}{4x^{2} + 24x + 36} + \textcolor{green}{x^{2}-1}$\\
 
-$A = \textcolor{blue}{4x^{2} + 24x + 36} + \textcolor{green}{x^{2}-1}$ \hspace*{0.5cm} \textit{(Ensuite, on réduit l'expression)}\\
+$A = \textcolor{blue}{4x^{2} + 24x + 36} + \textcolor{green}{x^{2}-1}$ \hspace*{0.5cm} \textit{(Ensuite, on rï¿½duit l'expression)}\\
 
 $A = 5x^{2} + 24x +35$
 \color{black}
@@ -772,50 +772,50 @@ $A = 5x^{2} + 24x +35$
 
 \begin{Exoapp}
 \initq
-\q Développer et réduire B  : $B= ( x - 7 ) ( x + 7 ) - ( x - 5 ) ²	 		$ \\
+\q Dï¿½velopper et rï¿½duire B  : $B= ( x - 7 ) ( x + 7 ) - ( x - 5 ) ï¿½	 		$ \\
 
 \color{red}
 $B= x^{2} - 7^{2} - [ x^{2} - 2 \times x \times 5 + 5^{2}] 		$ \\
 
 $B= x^{2} - 49 - [ x^{2} - 10 x + 25] 		$ \\
 
-$B= x^{2} - 49 -  x^{2} + 10 x - 25] 		$  \textit{(On change les signes pour supprimer les parenthèses)}\\
+$B= x^{2} - 49 -  x^{2} + 10 x - 25] 		$  \textit{(On change les signes pour supprimer les parenthï¿½ses)}\\
 
 $B=   10 x -74 		$\\
 
 \color{black}
-\q Développer et réduire F  puis calculer F pour x = -1 : 		 $F = ( x + 4 ) ² - 2 ( 5 x + 1 )(5x-1)$\\
+\q Dï¿½velopper et rï¿½duire F  puis calculer F pour x = -1 : 		 $F = ( x + 4 ) ï¿½ - 2 ( 5 x + 1 )(5x-1)$\\
 
 \color{red}
 $F = x^{2} + 2 \times x \times 4 +4^{2} -2[(5x)^{2}-1] 		$ \\
 
-$F = x^{2} + 8x + 16 -2[25x^{2}-1] 		$  \textit{(On développe)}\\
+$F = x^{2} + 8x + 16 -2[25x^{2}-1] 		$  \textit{(On dï¿½veloppe)}\\
 
-$F = x^{2} + 8x + 16 -50x^{2} +2		$ \textit{(On réduit)}\\
+$F = x^{2} + 8x + 16 -50x^{2} +2		$ \textit{(On rï¿½duit)}\\
 
 $B=   -49 x^{2} +8x + 18		$\\
 
 \color{black}
 
-\q Calculer $58²$, $21²$ et $73 \times 67$.\\
+\q Calculer $58ï¿½$, $21ï¿½$ et $73 \times 67$.\\
 
 \color{red}
 \bmul{2}
-$58² = (60 -2)^{2}= 60^{2} - 2 \times 60 \times 2 + 2^{2}$\\
-$58²  =3600 - 240 + 4$\\
-$58²  =3364$\\
+$58ï¿½ = (60 -2)^{2}= 60^{2} - 2 \times 60 \times 2 + 2^{2}$\\
+$58ï¿½  =3600 - 240 + 4$\\
+$58ï¿½  =3364$\\
 
 \columnbreak
 
-$21² = (20 +1)² = 20²+ 2 \times 20 \times 1 + 1²$\\
-$21² =400 +40 + 1$\\
-$21² =441$\\
+$21ï¿½ = (20 +1)ï¿½ = 20ï¿½+ 2 \times 20 \times 1 + 1ï¿½$\\
+$21ï¿½ =400 +40 + 1$\\
+$21ï¿½ =441$\\
 
 \emul
 
 
 $ 73 \times 67 = (70 +3 )(70-3)$\\
-$ 73 \times 67 = 70²-3²$\\
+$ 73 \times 67 = 70ï¿½-3ï¿½$\\
 $ 73 \times 67 = 4900-9$\\
 $ 73 \times 67 = 4891$\\
 
@@ -827,9 +827,9 @@ $ 73 \times 67 = 4891$\\
 
 \vspace*{2cm}
 
-\section{Factoriser avec les identités remarquables}
+\section{Factoriser avec les identitï¿½s remarquables}
 
- \subsection{Première et deuxième identités remarquables : carré d'une somme et carré d'une différence}
+ \subsection{Premiï¿½re et deuxiï¿½me identitï¿½s remarquables : carrï¿½ d'une somme et carrï¿½ d'une diffï¿½rence}
  
 \vspace*{0.5cm}
  
@@ -844,7 +844,7 @@ Pour tous  nombres a  et b, on a :
 
 
 
- \textbf{\underline{Exemples :}} Factoriser les expressions suivantes à l'aide des identités remarquables : \\
+ \textbf{\underline{Exemples :}} Factoriser les expressions suivantes ï¿½ l'aide des identitï¿½s remarquables : \\
  
 $K=x^{2} + 2x + 1 $ \hspace*{2cm}  $H=9x^{2} + 30x + 25$  \hspace*{2cm} $D=x^{2} - 2x + 1$  \hspace*{2cm}  $Y=4 x^{2} - 12 x + 9$ 
 
@@ -853,60 +853,60 @@ $K=x^{2} + 2x + 1 $ \hspace*{2cm}  $H=9x^{2} + 30x + 25$  \hspace*{2cm} $D=x^{2}
 \bmul{2}
  \underline{$ \rightarrow K=x^{2} + 2x + 1$}\\
 
-Je remarque que c'est la première identité remarquable $a^{2} + 2ab + b^{2} = (a+b)^{2}$.\\
+Je remarque que c'est la premiï¿½re identitï¿½ remarquable $a^{2} + 2ab + b^{2} = (a+b)^{2}$.\\
 
-Je repère les valeurs de $a$ et de $b$ : \\
+Je repï¿½re les valeurs de $a$ et de $b$ : \\
 
 $a^{2}= x^{2}$ Donc $a=x$ \hspace*{1cm} $b^{2}= 1$ Donc $b=1$ \\
 
 Je peux donc factoriser : \fbox{$K=x^{2} + 2x + 1 = (x+1)^{2}$}\\
-\textit{(Je peux ensuite développer pour me vérifier)
+\textit{(Je peux ensuite dï¿½velopper pour me vï¿½rifier)
 }
 \columnbreak
 
   \underline{$ \rightarrow H=9x^{2} + 30x + 25$ }\\
 
-Je remarque que c'est la première identité remarquable $a^{2} + 2ab + b^{2} = (a+b)^{2}$.\\
+Je remarque que c'est la premiï¿½re identitï¿½ remarquable $a^{2} + 2ab + b^{2} = (a+b)^{2}$.\\
 
-Je repère les valeurs de $a$ et de $b$ : \\
+Je repï¿½re les valeurs de $a$ et de $b$ : \\
 
 $a^{2}= 9x^{2}$ Donc $a=3x$ \hspace*{1cm} $b^{2}= 25$ Donc $b=5$ \\
 
 Je peux donc factoriser : \fbox{$H=9x^{2} + 30x + 25 = (3x+5)^{2}$}\\
-\textit{(Je peux ensuite développer pour me vérifier)
+\textit{(Je peux ensuite dï¿½velopper pour me vï¿½rifier)
 }
 \emul
 
 \bmul{2}
  \underline{$ \rightarrow D=x^{2} - 2x + 1$}\\
 
-Je remarque que c'est la deuxième identité remarquable $a^{2} - 2ab + b^{2} = (a-b)^{2}$.\\
+Je remarque que c'est la deuxiï¿½me identitï¿½ remarquable $a^{2} - 2ab + b^{2} = (a-b)^{2}$.\\
 
-Je repère les valeurs de $a$ et de $b$ : \\
+Je repï¿½re les valeurs de $a$ et de $b$ : \\
 
 $a^{2}= x^{2}$ Donc $a=x$ \hspace*{1cm} $b^{2}= 1$ Donc $b=1$ \\
 
 Je peux donc factoriser : \fbox{$D=x^{2} - 2x + 1 = (x-1)^{2}$}\\
-\textit{(Je peux ensuite développer pour me vérifier)
+\textit{(Je peux ensuite dï¿½velopper pour me vï¿½rifier)
 }
 \columnbreak
 
   \underline{$ \rightarrow Y=4 x^{2} - 12 x + 9$ }\\
 
-Je remarque que c'est la deuxième identité remarquable $a^{2} - 2ab + b^{2} = (a-b)^{2}$.\\
+Je remarque que c'est la deuxiï¿½me identitï¿½ remarquable $a^{2} - 2ab + b^{2} = (a-b)^{2}$.\\
 
-Je repère les valeurs de $a$ et de $b$ : \\
+Je repï¿½re les valeurs de $a$ et de $b$ : \\
 
 $a^{2}= 4x^{2}$ Donc $a=2x$ \hspace*{1cm} $b^{2}= 9$ Donc $b=3$ \\
 
 Je peux donc factoriser : \fbox{$Y=4 x^{2} - 12 x + 9 = (2x-3)^{2}$}\\
-\textit{(Je peux ensuite développer pour me vérifier)
+\textit{(Je peux ensuite dï¿½velopper pour me vï¿½rifier)
 }
 \emul
 
 \color{black}
  
- \subsection{Troisième identité remarquable}
+ \subsection{Troisiï¿½me identitï¿½ remarquable}
 
 
 \prop{
@@ -921,7 +921,7 @@ Pour tous  nombres a  et b, on a :
 \vspace*{0.5cm}
 
 
-\textbf{\underline{Exemples :}} Factoriser les expressions suivantes à l'aide des identités remarquables : \\
+\textbf{\underline{Exemples :}} Factoriser les expressions suivantes ï¿½ l'aide des identitï¿½s remarquables : \\
 
 $M=x^{2} - 4$  \hspace*{3cm} $B=25 x^{2} -49$   \hspace*{3cm} $G=81 - 121x^{2}$ \\
 
@@ -929,41 +929,41 @@ $M=x^{2} - 4$  \hspace*{3cm} $B=25 x^{2} -49$   \hspace*{3cm} $G=81 - 121x^{2}$ 
 \bmul{2}
  \underline{$ \rightarrow M=x^{2} - 4$}\\
 
-Je remarque que c'est la troisième identité remarquable $a^{2} - b^{2} = (a+b)(a-b)$.\\
+Je remarque que c'est la troisiï¿½me identitï¿½ remarquable $a^{2} - b^{2} = (a+b)(a-b)$.\\
 
-Je repère les valeurs de $a$ et de $b$ : \\
+Je repï¿½re les valeurs de $a$ et de $b$ : \\
 
 $a^{2}= x^{2}$ Donc $a=x$ \hspace*{1cm} $b^{2}= 4$ Donc $b=2$ \\
 
 Je peux donc factoriser : \fbox{$M=x^{2} - 4 = (x+2)(x-2)$}\\
-\textit{(Je peux ensuite développer pour me vérifier)
+\textit{(Je peux ensuite dï¿½velopper pour me vï¿½rifier)
 }
 \columnbreak
 
    \underline{$ \rightarrow B=25 x^{2} -49$}\\
 
-Je remarque que c'est la troisième identité remarquable $a^{2} - b^{2} = (a+b)(a-b)$.\\
+Je remarque que c'est la troisiï¿½me identitï¿½ remarquable $a^{2} - b^{2} = (a+b)(a-b)$.\\
 
-Je repère les valeurs de $a$ et de $b$ : \\
+Je repï¿½re les valeurs de $a$ et de $b$ : \\
 
 $a^{2}= 25x^{2}$ Donc $a=5x$ \hspace*{1cm} $b^{2}= 49$ Donc $b=7$ \\
 
 Je peux donc factoriser : \fbox{$B=25 x^{2} -49 = (5x+7)(5x-7)$}\\
-\textit{(Je peux ensuite développer pour me vérifier)
+\textit{(Je peux ensuite dï¿½velopper pour me vï¿½rifier)
 }
 \emul
 
 
    \underline{$ \rightarrow G=81 - 121x^{2}$}\\
 
-Je remarque que c'est la troisième identité remarquable $a^{2} - b^{2} = (a+b)(a-b)$.\\
+Je remarque que c'est la troisiï¿½me identitï¿½ remarquable $a^{2} - b^{2} = (a+b)(a-b)$.\\
 
-Je repère les valeurs de $a$ et de $b$ : \\
+Je repï¿½re les valeurs de $a$ et de $b$ : \\
 
 $a^{2}= 81$ Donc $a=9$ \hspace*{1cm} $b^{2}= 121x^{2}$ Donc $b=11x$ \\
 
 Je peux donc factoriser : \fbox{$G=81 - 121x^{2} = (9+11x)(9-11x)$}\\
-\textit{(Je peux ensuite développer pour me vérifier)
+\textit{(Je peux ensuite dï¿½velopper pour me vï¿½rifier)
 }
 
 \color{black}
@@ -976,15 +976,15 @@ Je peux donc factoriser : \fbox{$G=81 - 121x^{2} = (9+11x)(9-11x)$}\\
 \vspace*{0.5cm}
 
 
-Factoriser et réduire l'expression suivante : $ H = ( 2 x + 1 )^{2} - ( 4 x + 2 )^{2}$\\
+Factoriser et rï¿½duire l'expression suivante : $ H = ( 2 x + 1 )^{2} - ( 4 x + 2 )^{2}$\\
 \vspace*{0.5cm}
 
 
 \color{red}
 \textbf{SOLUTION}\\
 
-On souhaite factoriser, donc dans ce cas là, nous allons utiliser la troisième identité remarquable $a^{2} - b^{2} = (a+b)(a-b)$. \\
-\textit{(Si on avait voulu développé, on aurait utilisé la 1ère et la 2ème.)}\\
+On souhaite factoriser, donc dans ce cas lï¿½, nous allons utiliser la troisiï¿½me identitï¿½ remarquable $a^{2} - b^{2} = (a+b)(a-b)$. \\
+\textit{(Si on avait voulu dï¿½veloppï¿½, on aurait utilisï¿½ la 1ï¿½re et la 2ï¿½me.)}\\
 
 $ H = \underbrace{( 2 x + 1 )^{2}}_{a^{2}} - \underbrace{( 4 x + 2 )^{2}}_{b^{2}}$\\
 
@@ -994,7 +994,7 @@ $a^{2}= ( 2 x + 1 )^{2}$ Donc $a = 2x+1$  \hspace*{1.75cm} $b^{2}= ( 4 x + 2 )^{
 
 On peut donc factoriser : $ H = ( 2 x + 1 )^{2} - ( 4 x + 2 )^{2}= [\underbrace{(2x+1)}_{a}+\underbrace{(4x+2)}_{b}][\underbrace{(2x+1)}_{a}-\underbrace{(4x+2)}_{b}]$\\
 
-On simplifie ensuite entre les crochets : $H=[2x+1+4x+2][2x+1\underbrace{-4x-2}_{\text{on pense à changer les signes}}]$ \\
+On simplifie ensuite entre les crochets : $H=[2x+1+4x+2][2x+1\underbrace{-4x-2}_{\text{on pense ï¿½ changer les signes}}]$ \\
 
 \fbox{$H=(6x+3)(-2x-1)$}
 
@@ -1017,16 +1017,16 @@ On simplifie ensuite entre les crochets : $H=[2x+1+4x+2][2x+1\underbrace{-4x-2}_
 
 \begin{Exoapp}
 
-\initq \q  Factoriser et réduire l'expression suivante : $I = (x-4)^{2} - (5-x)^{2}$ \\
+\initq \q  Factoriser et rï¿½duire l'expression suivante : $I = (x-4)^{2} - (5-x)^{2}$ \\
 \color{red}
 
-On utilise la même méthode que précédemment. \\
+On utilise la mï¿½me mï¿½thode que prï¿½cï¿½demment. \\
 $a =x-4$  et $b=5-x$\\
 
 On peut donc factoriser : $ I = (x-4)^{2} - (5-x)^{2}= [\underbrace{(x-4)}_{a}+\underbrace{(5-x)}_{b}][\underbrace{(x-4)}_{a}-\underbrace{(5-x)}_{b}]$\\
 
 
-On simplifie : $I = (x-4+5-x)(x-4-5+x)$  \textit{On oublie pas de changer les signes dans le 2ème crochet}\\
+On simplifie : $I = (x-4+5-x)(x-4-5+x)$  \textit{On oublie pas de changer les signes dans le 2ï¿½me crochet}\\
 
 \fbox{$I= 1(2x-9)= 2x-9$}\\
 
@@ -1034,16 +1034,16 @@ On simplifie : $I = (x-4+5-x)(x-4-5+x)$  \textit{On oublie pas de changer les si
 
 \color{black}
 
-\q Factoriser et réduire l'expression suivante : $G = 81 - (11x-7)^{2}  $ \\
+\q Factoriser et rï¿½duire l'expression suivante : $G = 81 - (11x-7)^{2}  $ \\
 \color{red}
 
-On utilise la même méthode que précédemment. \\
+On utilise la mï¿½me mï¿½thode que prï¿½cï¿½demment. \\
 $a^{2}=81$ Donc $a=9$              et $b=11x-7$\\
 
 On peut donc factoriser : $ G = 81 - (11x-7)^{2}= [\underbrace{9}_{a}+\underbrace{(11x-7)}_{b}][\underbrace{9}_{a}-\underbrace{(11x-7)}_{b}]$\\
 
 
-On simplifie : $G = (9+11x-7)(9-11x+7)$  \textit{On oublie pas de changer les signes dans le 2ème crochet}\\
+On simplifie : $G = (9+11x-7)(9-11x+7)$  \textit{On oublie pas de changer les signes dans le 2ï¿½me crochet}\\
 
 \fbox{$G= (2+11x)(16-11x)$}\\
 
@@ -1051,21 +1051,21 @@ On simplifie : $G = (9+11x-7)(9-11x+7)$  \textit{On oublie pas de changer les si
 
 \color{black}
 
-\q  Factoriser et réduire l'expression suivante : $M = 49 + 121s^{2} + 154s$ \\
+\q  Factoriser et rï¿½duire l'expression suivante : $M = 49 + 121s^{2} + 154s$ \\
 \color{red}
 
 
 
-On reconnaît ici la première identité remarquable mais dans le désordre.\\
+On reconnaï¿½t ici la premiï¿½re identitï¿½ remarquable mais dans le dï¿½sordre.\\
 
 $M = 49 + 121s^{2} + 154s= 121s^{2} + 154s+49 $\\
 
-Je repère les valeurs de $a$ et de $b$ : \\
+Je repï¿½re les valeurs de $a$ et de $b$ : \\
 
 $a^{2}= 121s^{2}$ Donc $a=11s$ \hspace*{1cm} $b^{2}= 49$ Donc $b=7$ \\
 
 Je peux donc factoriser : \fbox{$M= 121s^{2} + 154s+49 = (11s+7)^{2}$}\\
-\textit{(Je peux ensuite développer pour me vérifier)
+\textit{(Je peux ensuite dï¿½velopper pour me vï¿½rifier)
 }
 
 

@@ -1,0 +1,106 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi)}  }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Interrogation 4 : Fonctions affines }{Nom :}{Prénom :}{\textbf{2nd 8}}{Date:}
+
+
+\initq \q Donner la définition d'une fonction affine.\\ 
+\reponse[6]\\
+
+\q Parmi les fonctions affines, dire celles qui sont affines, puis préciser la valeur de $m$ et de $p$.\\
+\initqa \qa $f :x \mapsto -5x+12$ \hfill \qa $m :x \mapsto 2-x	$ \hfill \qa $g :x \mapsto \dfrac{2}{x}-5$ \hspace*{2cm} \\
+\qa $j :x \mapsto 5x^2-4$ \hfill  \qa $h :x \mapsto \dfrac{x-3}{11}$ \hfill \qa $k :x \mapsto 11,5	$  \hspace*{2cm} \\
+\reponse[5]\\
+
+\vspace*{0.75cm}
+
+\titre{Interrogation 4 : Fonctions affines }{Nom :}{Prénom :}{\textbf{2nd 8}}{Date:}
+
+
+\initq \q Donner la définition d'une fonction affine.\\ 
+\reponse[6]\\
+
+\q Parmi les fonctions affines, dire celles qui sont affines, puis préciser la valeur de $m$ et de $p$.\\
+\initqa \qa $f :x \mapsto 7-x$ \hfill \qa $m :x \mapsto -3x+9	$ \hfill \qa $g :x \mapsto \dfrac{x-4}{5}$ \hspace*{2cm} \\
+\qa $j :x \mapsto 3x^3-11$ \hfill  \qa $h :x \mapsto \dfrac{3}{x}-2$ \hfill \qa $k :x \mapsto 52,5	$  \hspace*{2cm} \\
+\reponse[5]
+\newpage
+\noindent \reponse[38]
+
+
+\end{document}

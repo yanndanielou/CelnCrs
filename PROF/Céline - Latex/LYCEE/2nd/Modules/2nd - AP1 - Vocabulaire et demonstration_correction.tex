@@ -1,0 +1,251 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+\usepackage{mathrsfs}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\Large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\titre{Correction de la séance d'AP 1 : Outils pour la démonstration}{}{}{2nd}{}
+
+\vspace*{0.2cm}
+
+
+
+\vspace*{0.5cm}
+
+\begin{large}
+\textbf{EXERCICE 1}\\
+\end{large}
+Pour chaque ligne du tableau, dire si la proposition P implique la proposition Q, si la proposition Q implique la proposition P ou s'il y a équivalence.\\
+
+\renewcommand{\arraystretch}{2}
+
+\begin{tabular}{|p{5cm}|p{5cm}|c|c|c|}
+\hline 
+\textbf{Proposition $P$} & \textbf{Proposition $Q$} & $\mathbf{P \Rightarrow Q}$ & $\mathbf{Q \Rightarrow P}$ & $\mathbf{P \Leftrightarrow Q}$ \\ 
+\hline 
+M est une point de la médiatrice
+de [AB] & M équidistant de A et de B & • & • & \textcolor{purple}{{\Large X}} \\ 
+\hline 
+Je réside en France & Je réside en Europe & \textcolor{purple}{{\Large X}}  & • & • \\ 
+\hline 
+Je suis majeur(e) & J’ai 19 ans & • & \textcolor{purple}{{\Large X}}  & • \\ 
+\hline 
+CDEF est un parallélogramme & CDEF est un carré & • & \textcolor{purple}{{\Large X}}  & • \\ 
+\hline 
+$x = 3$ & $x^{2} = 9$ & \textcolor{purple}{{\Large X}}  & • & • \\ 
+\hline 
+MNP est rectangle en M & $MP^{2} +MN^{2} = NP^{2}$ & • & • & \textcolor{purple}{{\Large X}}  \\ 
+\hline 
+$x\ge -2$ & $x\ge -1$ & • & \textcolor{purple}{{\Large X}}  & • \\ 
+\hline 
+$a+b=5$& a = 2 et b = 3 & • & \textcolor{purple}{{\Large X}}  & • \\ 
+\hline 
+$4x-(x-5)=7$ & $x=\dfrac{2}{3}$ & • & • & \textcolor{purple}{{\Large X}}  \\ 
+\hline 
+$(ax+b)(cx+d)=0$ &  $ax+b=0$ ou $cx+d=0$ & • & • & \textcolor{purple}{{\Large X}} \\ 
+\hline 
+\end{tabular} 
+
+
+\vspace*{1cm}
+
+
+\begin{large}
+\textbf{EXERCICE 2}\\
+\end{large}
+Toutes les affirmations suivantes sont fausses. Pour chacune, donner un contre exemple.\\
+
+\noindent \q Si $x^{2}$ > 4, alors $x > 2$.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $x=-3$, $x^2=(-3)^2=9>4$ Cependant, $x=-3<2$.\\
+\color{black}
+
+\q Pour tout couple de réels $(x; y)$, on a $(x + y)^{3} = x^{3} + y^{3}$.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $x=-1$ et $y=2$, d'une part : $(-1+2)^3=1^3=1$\\
+D'autre part, $(-1)^3+2^3=-1+8=7$ Or $1 \neq 7$ \\
+\color{black}
+
+\q Si $x^{2}$ = 9 alors $x = 3$.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $x=-3$ alors $x^2=9$.Il y a donc une autre solution. 3 n'est pas la seule solution.\\
+\color{black}
+
+\q Pour tout couple de réels positifs $(a; b)$, on a $\sqrt{a} + \sqrt{b} = \sqrt{a+b}$.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $a=1$ et $b=2$, d'une part : $\sqrt{1}+\sqrt{2}\approx 1,4$\\
+D'autre part, $\sqrt{1+2}=\sqrt{3}\approx 1,7$ Or $1,7 \neq 1,4$ \\
+\color{black}
+\newpage
+
+
+\vspace*{0.25cm}
+\q Pour tout réel $p$, le réel $−10p$ est négatif.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $p$ réel tel que $p=4$, alors $10p=40>0$\\
+\color{black}
+
+
+\q Tous les réels ont un inverse.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $x$ réel tel que $x=0$, l'inverse de ce réel n'existe pas.\\
+\color{black}
+
+\q Tous les multiples de 5 sont des multiples de 10.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons  par exemple 15 qui est bien un multiple de 5. Néanmoins 5 n'est pas multiple de 10.\\
+\color{black}
+
+\q Si $x(x - 3) = 0$, alors $x = 3$.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $x=30$ alors $3(3-3)=3 \times 0 =0$\\
+\color{black}
+
+\q Si $x < 1$, alors $x < 0$.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons Si $x<1 $ alors $x$ peut être égale à 0. Or 0 n'est pas strictement inférieur à 0.\\
+\color{black}
+
+\q Si $x < 2$, alors $x^{2} < 4$.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $x=-4$ alors $(-4)^2=16 >4$\\
+\color{black}
+
+\q Pour tout $x$, $−x$ est un nombre négatif.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $x=105$ alors $x$ n'est pas négatif.\\
+\color{black}
+
+
+\q Pour tout entier n, si n est divisible par 3, il est divisible par 6.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $n=21$, 21 = 3 x 7 donc 21 est bien un multiple de 3. Cependant 21 n'est pas un multiple de 6.\\
+\color{black}
+
+\q Si $1 \le x \le 3$ alors $x \in ]1;3[$.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $x$ tel que $1 \le x \le 3$, $x$ peut être égale à 1 ou à 3, or dans l'intervalle les nombres 1 et 3 sont exclus.\\
+\color{black}
+
+\q Si $x \in [1 ; 5[$, alors $1 \le x \le 5$.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Prenons $x$ tel que $x \in [1 ; 5[$, $x$ est donc différent de 5. Or, dans l'inégalité il est inclu.\\
+\color{black}
+
+\q Si $x \in [0 ; 10]$, alors $x$ est un entier naturel.\\
+\color{purple}
+\underline{Contre-exemple:}\\
+Dans l'intervalle $[0 ; 10]$, il y a une infinité de nombres. Par exemple : 0,5 ; $\dfrac{1}{3}$ ; $\sqrt{2}$
+\color{black}
+
+\vspace*{1cm}
+
+\begin{large}
+\textbf{EXERCICE 3}\\
+\end{large}
+Pour aller plus loin.\\
+ Ecrire la démonstration de la propriété suivante : "La somme de deux nombres impairs est un nombre pair."\\
+ 
+ \color{purple}
+
+Prenons deux nombres impairs.\\
+Le premier est $2n + 1$ et le second $2p + 1$.  \\
+
+Nous avons :\\
+$( 2n + 1 ) + ( 2p + 1 ) = 2n + 1 + 2p + 1 = 2 n + 2p + 2 = 2( n + p + 1 )$\\
+
+Ce résultat est de la forme $2k$, (multiple de 2), donc la somme est paire. \\
+
+\end{document}

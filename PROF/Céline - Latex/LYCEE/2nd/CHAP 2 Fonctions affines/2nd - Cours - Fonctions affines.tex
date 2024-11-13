@@ -1,0 +1,870 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Param�trages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,14pt,twoside,french]{extarticle}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% d�claration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	%\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les biblioth�ques LaTeX de l'American Mathematical Society sont pleines de macros int�ressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caract�res accentu�s norme iso-8859, cela risque de ne pas marcher avec des fichiers cr��s sous windows
+	\usepackage{amssymb} 
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caract�res
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la g�om�trie
+	\usepackage[x11names,table]{xcolor} % G�re les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et s�parations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{2cm}{1cm}{2cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'ent�te
+	%	6 fixe la distance entre l'ent�te et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de s�paration des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre port�e par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Th�or�me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily D�finition} :}}
+	\newtheorem{propriete}{\underline{Propri�t� :}}
+	\newtheorem{propcar}{\underline{Propri�t�s caract�ristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{M�thodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom sp�ciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Rep�rage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Op�rateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombr�e
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des th�or�me et autres d�finitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{20.9cm}{p{0.5cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{purple}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{purple}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On r�gle les marges d�finitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contr�le fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On r�gle les marges d�finitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contr�le fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des fonctions math�matiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des num�rotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\color{red}\Roman{section}.}
+	\renewcommand{\thesubsection}{\color{blue}\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{17pt}{19pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\color{red}}
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+    {\color{blue}}
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{15pt}{16pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsubsection}% apparence du num�ro
+   {0.5em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+   
+   \newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{Chapitre 2 : Fonctions affines}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+\newpage
+ \setcounter{page}{1}
+ 
+
+ \section{Introduction}
+ 
+\textit{ (Voir cahier d'exercices)}
+
+ 
+  \section{Fonction affine}
+  
+  \subsection{Définition}
+  
+  \df{Une fonction $f$, définie sur $\R$, est \textcolor{DarkOliveGreen3}{\textbf{affine}} s'il existe deux réels $m$ et $p$ tel que, pour tout $x$, $f (x) = mx + p$.\\
+  
+Où $m$ est \textcolor{DarkOliveGreen3}{\textbf{le coefficient directeur}} et $p$ est \textcolor{DarkOliveGreen3}{\textbf{l'ordonnée à l'origine}}.
+}\\
+
+
+\underline{\textbf{Exemples :}}
+
+\initqa  \qa $f:x \mapsto -2x+7$ est une fonction affine \\
+\hspace*{2.5cm}car $-2x+7=mx+p$ \hspace*{0.2cm} avec \hspace*{0.2cm} $\left\{ 
+\begin{array}{l}
+ m = -2 \\
+  p = 7 
+\end{array}
+\right.$\\
+
+
+\qa $f:x \mapsto \dfrac{8x-5}{9}$ est une fonction affine \\
+\hspace*{2.5cm}car $\dfrac{8x-5}{9}=\dfrac{8}{9}x-\dfrac{5}{9}=mx+p$ \hspace*{0.2cm} avec \hspace*{0.2cm} $\left\{ 
+\begin{array}{l}
+ m = \dfrac{8}{9} \\
+  p = -\dfrac{5}{9}
+\end{array}
+\right.$\\
+
+
+\qa $f:x \mapsto 11x$ est une fonction affine \\
+\hspace*{2.5cm}car $11x=mx+p$ \hspace*{0.2cm} avec \hspace*{0.2cm} $\left\{ 
+\begin{array}{l}
+ m = 11 \\
+  p = 0 
+\end{array}
+\right.$\\
+On dit alors que $f$ est \textbf{une fonction linéaire.}\\
+
+\qa $f:x \mapsto 450$ est une fonction affine \\
+\hspace*{2.5cm}car $450=mx+p$ \hspace*{0.2cm} avec \hspace*{0.2cm} $\left\{ 
+\begin{array}{l}
+ m = 0 \\
+  p = 450 
+\end{array}
+\right.$\\
+On dit alors que $f$ est \textbf{une fonction constante.}\\
+
+\qa $f:x \mapsto 11-\sqrt{2}x$ est une fonction affine \\
+\hspace*{2.5cm}car $11-\sqrt{2}x=-\sqrt{2}x+11=mx+p$ \hspace*{0.2cm} avec \hspace*{0.2cm} $\left\{ 
+\begin{array}{l}
+ m = -\sqrt{2} \\
+  p = 11 
+\end{array}
+\right.$\\
+
+
+\qa $f:x \mapsto 12x^2+30$ \textbf{n'est pas une fonction affine}. \\
+
+
+\qa $f:x \mapsto \dfrac{3}{x}-\dfrac{1}{2}$ \textbf{n'est pas une fonction affine}.
+
+\newpage
+
+  \df{Soit $f$ une fonction \textcolor{DarkOliveGreen3}{\textbf{affine}} définie sur $\R$ par $f (x) = mx + p$.
+  
+\bi
+\item Si $p=0$ alors $f (x) = mx $. La fonction $f$ est alors \textcolor{DarkOliveGreen3}{\textbf{une fonction linéaire}}.
+\item Si $m=0$ alors $f (x) = p $. La fonction $f$ est alors \textcolor{DarkOliveGreen3}{\textbf{une fonction constante}}.
+\ei
+}
+
+
+
+  
+  
+  
+   \subsection{Réprésentation graphique d'une fonction affine}
+   
+\subsubsection{Propriétés}   
+
+\prop{
+Soit $f : x \mapsto mx +p$ une fonction affine.\\
+ La représentation graphique d'une fonction affine est \textcolor{purple}{\textbf{une droite}}.\\
+
+On appelle $m$ \textbf{le coefficient directeur} et $p$ \textbf{l'ordonnée à l'origine}.\\
+Autrement dit, $p$ est l'ordonnée du point d'intersection de la droite représentative de $f$ avec l'axe des ordonnées, soit l'image de 0 par la fonction $f$.
+} \\
+
+\rems
+\bi
+\item Lorsque la fonction est linéaire, elle est représentée par une droite passant par l'origine du repère.
+\item Lorsque la fonction est constante, elle est représentée par une droite parallèle à l'axe des abscisses.\\
+    \ei
+        \newpage
+        
+ \prop{
+ Soient $f$ une fonction affine définie par $f (x) = mx + p$ et $(d)$ la droite qui la représente dans un repère.\\
+Soient $A(x_A ; y_A)$ et $B(x_B ; y_B)$ deux points \textbf{quelconques} de $(d)$.
+
+\bi \item $m=\dfrac{f(x_B)-f(x_A)}{x_B-x_A}=\dfrac{y_B-y_A}{x_B-x_A}=\dfrac{\Delta y}{\Delta x}$\\
+
+Lorsque $\Delta x=x_B- x_A = 1$, alors $\Delta y = y_B - y_A = m$
+
+\item $p$ est l'image de 0 par la fonction f, c'est donc l'ordonnée du point d'intersection de la droite représentative de $f$ avec l'axe des ordonnées. 
+\ei
+        }\\
+        
+        
+    
+\underline{\textbf{Exemples :}} A partir des représentations graphiques ci-dessous, retrouver l'expression algébrique de chaque fonction.
+
+\includegraphics[scale=1.3]{equationdedroite1.eps} \hspace*{0.5cm} \includegraphics[scale=1.4]{equationdedroite3.eps}
+
+\includegraphics[scale=1.3]{equationdedroite2.eps}
+
+
+    
+    
+    \newpage
+    
+    
+    
+    \subsubsection{Comment représenter graphiquement une fonction affine}  
+    
+    
+ \bi \item \underline{\textbf{En utilisant 2 points et leur image :}}\\
+ 
+    
+On veut représenter graphiquement la fonction affine $f : x \mapsto \dfrac{1}{3}x+2$.\\
+ On sait que la représentation graphique de $f$ est une droite. \\
+Pour tracer une droite, il suffit de connaître \textbf{deux points} de celle-ci. Pour cela, nous allons choisir deux abscisses quelconques et calculer ensuite l'image de chacune d'elles par la fonction $f$.\\
+
+
+\begin{tabular}{|c|c|c|}
+\hline 
+\textbf{$x$} & . . . . . . . . . & . . . . . . . . . \\ 
+\hline 
+\textbf{$f(x)$} & . . . . . . . . . & . . . . . . . . . \\ 
+\hline 
+\end{tabular} 
+
+On place ensuite les deux points dont les coordonnées se lisent en colonnes dans le tableau et on trace la droite.\\
+    
+    \includegraphics[scale=1]{grille.eps} \\
+    
+    \newpage
+    
+      
+    \item \underline{\textbf{En utilisant le coefficient directeur ($m$) :}}\\
+    
+   On veut représenter graphiquement la fonction affine $g : x \mapsto 2x+3$.\\
+   
+   La fonction $g$ est une fonction affine, donc sa représentation graphique est une droite $d$.\\
+   Son ordonnée à l'origine est égale à $p=3$, donc le point $A(0 ; 3)$ appartient à $d$.\\
+   Le coefficient directeur est $m=2$, donc $\dfrac{\Delta y}{\Delta x}=2$  c’est-à-dire $\Delta y=2 \times \Delta x$.\\
+    On choisit par exemple $\Delta x=1$; on obtient
+alors $\Delta y=2$.\\
+ \textit{En partant de A, on se déplace de 1 en abscisses, et alors de 2 en ordonnées.}\\
+ 
+          \includegraphics[scale=1.2]{grille.eps} 
+        	\ei
+        	
+        	\newpage
+        	
+        	\vspace*{0.25cm}
+        	
+        	\underline{\textbf{Exemples :}} A partir des expressions algébriques de chaque fonction, tracer les représentations graphiques de celle-ci dans un repère orthonormé.\\
+        	On définit deux fonctions affines telles que $f(x)=-5x+1$
+ et $g(x)=\dfrac{1}{4}x-3$  \\
+ 
+ \includegraphics[scale=1.25]{grille.eps} \\
+ \newpage
+ 
+    \section{Variations et signe d'une fonction affine}
+   
+    \subsection{Variations d'une fonction affine}
+  
+  \df{
+  \textbf{Une fonction $f$ est croissante} sur un intervalle I signifie que sur l'intervalle I , si les valeurs de la variable $x$ augmentent, alors les images $f(x)$ augmentent aussi.\\
+\textbf{\textit{Traduction mathématique :}} Pour tous $x_1$ et $x_2$ de I tels que $x_1 \le x_2$, alors $f(x_1) \le f(x_2)$.\\
+\textit{(On dit qu'une fonction croissante conserve l’ordre.)}
+    }\\
+    
+    Illustration graphique : \\
+       \includegraphics[scale=1.8]{croissante.eps} 
+  
+  
+   \df{
+  \textbf{Une fonction $f$ est décroissante} sur un intervalle I signifie que sur l'intervalle I , si les valeurs de la variable $x$ augmentent, alors les images $f(x)$ diminuent aussi.\\
+\textbf{\textit{Traduction mathématique :}} Pour tous $x_1$ et $x_2$ de I tels que $x_1 \le x_2$, alors $f(x_1) \ge f(x_2)$.\\
+\textit{(On dit qu'une fonction décroissante inverse l’ordre.)}
+    }\\
+    
+    Illustration graphique :\\
+    \includegraphics[scale=2]{decroissante.eps} 
+    
+    \newpage
+    
+    \thm{
+    Soit $f$ une fonction affine définie par : $f(x) =mx +p$.
+\bi
+\item $f$ est croissante si, et seulement si, $m > 0$.
+\item $f$ est constante si, et seulement si, $m = 0$.
+\item $f$ est décroissante si, et seulement si, $m < 0$.
+ \ei   }\\
+    
+    
+\textbf{ DEMONSTRATION :}\\
+Soient $x_1$ et $x_2$ deux nombres réels tels que $x_1 < x_2$ et une fonction affine f telle que $f(x)=mx+p$\\
+On a $f(x_2)-f(x_1)=(mx_2+p)-(mx_1+p)=mx_2+p-mx_1-p=mx_2-mx_1$\\
+Donc $f(x_2)-f(x_1)=m(x_2-x_1)$.\\
+
+On sait que $x_1 < x_2$ donc $ x_2-x_1>0$.\\
+Le signe de $f(x_2)-f(x_1)$ est alors le même que celui de $m$.\\
+
+Trois cas sont possibles :
+\bi
+\item Si $m>0$ alors $f(x_2)-f(x_1)>0$ soit $f(x_2)>f(x_1)$\\
+Donc $f$ est croissante.
+\item Si $m=0$ alors $f(x_2)-f(x_1)=0$ soit $f(x_2)=f(x_1)$\\
+Donc $f$ est constante.
+\item Si $m<0$ alors $f(x_2)-f(x_1)<0$ soit $f(x_2)<f(x_1)$\\
+Donc $f$ est décroissante.\\
+\ei
+
+\textbf{Construction des tableaux de variations.}\\
+On en déduit les tableaux de variations possibles de $f$, selon le signe de $m$.
+\bmul{2}
+\bi \item Pour $m>0$ :\\
+
+\begin{variations}
+x       & \mI &   &  & \pI \\
+\filet
+$\m{f}$ &     & \c  & & \\
+\end{variations}
+
+\columnbreak
+\item  Pour $m<0$ :\\
+
+\begin{variations}
+x       & \mI &   &  & \pI \\
+\filet
+$\m{f}$ &     & \d  & & \\
+\end{variations}
+\ei
+\emul
+
+
+
+
+\newpage
+
+\vspace*{0.5cm}
+  
+   \subsection{Signe d'une fonction affine}
+   \vspace*{0.5cm}
+   
+    Soit $f(x)=mx+p$ une fonction affine, avec $m \neq 0$.\\
+    
+    On cherche ici pour quelle valeur de $x$, la fonction $f$ s'annule.\\
+    
+    On résout $f(x)=0$ $\Leftrightarrow$ $mx+p=0$ $\Leftrightarrow$ $x=-\dfrac{p}{m}$.\\
+    
+  \textbf{ La fonction affine $f(x)=mx+p$ s'annule pour $x=-\dfrac{p}{m}$.\\}
+   
+   On en déduit les tableaux de signes possibles de $f$, selon le signe de $m$.
+
+\bi \item \textcolor{blue}{Pour $m>0$ :}\\
+
+\begin{variations}
+x&\mI & & &-\dfrac{p}{m} & & & \pI\\
+\hline
+f(x)=mx+p & &\ga- &\z &\dr+ &\\
+\hline
+\end{variations}
+
+\vspace*{0.5cm}
+
+\item  \textcolor{blue}{Pour $m<0$ } :\\
+
+\begin{variations}
+x&\mI & & &-\dfrac{p}{m} & & & \pI\\
+\hline
+f(x)=mx+p & &\ga+ &\z &\dr- &\\
+\hline
+\end{variations}
+
+\ei
+
+\vspace*{0.5cm}
+
+\underline{\textbf{Exemples :}} Dresser le tableau de signes des fonctions affines définies par $f(x)=2x+5$ et $g(x)=-3x+6$.\\
+
+\color{blue}
+
+\initq \q On cherche le réel $x$ qui a pour image 0 par $f$. \\
+Pour cela on résout  l’équation $2x+5=0$  $\Leftrightarrow$  $x=-\dfrac{5}{2}$\\
+
+On sait que $m=2 >0$, donc la fonction $f$ est croissante. \\
+On en déduit le tableau de signes de $f$ :\\
+
+\begin{variations}
+x&\mI & & &-\dfrac{5}{2} & & & \pI\\
+\hline
+\text{Signe de } 2x+5 & &\ga- &\z &\dr+ &\\
+\hline
+\end{variations}
+
+
+ \newpage
+   
+   \q On cherche le réel $x$ qui a pour image 0 par $g$. \\
+Pour cela on résout  l’équation $-3x+6=0$  $\Leftrightarrow$  $x=2$\\
+
+On sait que $m=-3 <0$, donc la fonction $g$ est décroissante. \\
+On en déduit le tableau de signes de $g$ :\\
+
+\begin{variations}
+x&\mI & & &2 & & & \pI\\
+\hline
+\text{Signe de } -3x+6 & &\ga+ &\z &\dr- &\\
+\hline
+\end{variations}
+
+    
+    
+ 
+
+\end{document}

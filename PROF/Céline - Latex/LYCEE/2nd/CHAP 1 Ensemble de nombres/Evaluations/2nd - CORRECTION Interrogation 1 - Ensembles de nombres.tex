@@ -1,0 +1,121 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi)}  }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Correction Interrogation 1 : Ensembles de nombres }{Nom :}{Prénom :}{\textbf{2nd 8}}{Date:}
+
+
+\exo{4} QUESTIONS DE COURS\\ 
+
+\initq \q Donner la définition de l'ensemble des nombres rationnels.\\
+\color{purple}
+Voir dans votre leçon !\\
+\color{black}
+
+\q Compléter les phrases suivantes :\\
+
+\initqa \qa $\N$ est \textcolor{purple}{l'ensemble des entiers naturels}\\
+
+\qa  \textcolor{purple}{$\mathbb{Q}^*$} est l'ensemble des nombres rationnels non nuls\\
+
+\qa $\mathbb{D}^+$ est \textcolor{purple}{l'ensemble des décimaux positifs}\\
+
+\qa  \textcolor{purple}{$\mathbb{Z}^-$} est l'ensemble des nombres entiers relatifs négatifs\\
+
+\q Représenter le diagramme de Venn avec tous les ensembles de nombres vus en classe.\\
+\color{purple}
+Voir dans votre leçon !\\
+\color{black}
+
+\exo{2} Citer : \\
+\initqa \qa un nombre appartenant à $\mathbb{R}$ mais pas à $\mathbb{Q}$ \hspace*{0.5cm} 	\qa un nombre appartenant à $\mathbb{Q}$ mais pas à $\mathbb{D}$.\\
+
+\color{purple}
+\initqa \qa $\sqrt{5} \in \mathbb{R} $ et $\sqrt{5} \notin \mathbb{Q}$ \hspace*{0.5cm}
+\qa $\dfrac{2}{18} \in \mathbb{Q} $ et $\dfrac{2}{18} \notin \mathbb{D}$\\
+
+
+\color{black}
+\vspace*{0.25cm}
+
+\exo{4}
+Compléter en utilisant le symbole qui convient parmi $\in$, $\notin$, $\subset$ ou $\not\subset$ les phrases suivantes :\\
+
+\hspace*{0.5cm}$\sqrt{64}$ \textcolor{purple}{$\in$} $\Z$ \hspace*{0.35cm}; \hspace*{0.35cm}  $\{-1;1\}$ \textcolor{purple}{$\not\subset$} $\N$ \hspace*{0.35cm}; \hspace*{0.35cm} $\{2 ; \dfrac{10}{2}\}$ \textcolor{purple}{$\subset$} $\N$ \hspace*{0.35cm}; \hspace*{0.35cm} $\mathbb{Q}$ \textcolor{purple}{$\not\subset$} $\mathbb{D}$ \\
+
+\hspace*{0.5cm}$\mathbb{N}$ \textcolor{purple}{$\subset$} $\Z$\hspace*{0.35cm}; \hspace*{0.35cm}  $-2,6767\underline{67}$ \textcolor{purple}{$\in$} $\mathbb{Q}$ \hspace*{0.35cm}; \hspace*{0.35cm} $\dfrac{3}{4}$ \textcolor{purple}{$\in$} $\mathbb{D	}$ \hspace*{0.35cm}; \hspace*{0.35cm} $\dfrac{7}{9}$ \textcolor{purple}{$\notin$} $\mathbb{D	}$ 
+\end{document}

@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%
-% Paramétrages du document %
+% Paramï¿½trages du document %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper,10pt,twoside,french]{article}
@@ -8,7 +8,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% déclaration des packages
+% dï¿½claration des packages
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -17,21 +17,21 @@
 
 	\usepackage{fullpage}
 	\usepackage[french]{babel}
-	\usepackage[latin1]{inputenc}
+	%\usepackage[latin1]{inputenc}
 	%\usepackage[latin9]{inputenc}
-	\usepackage{amsmath,amssymb} % Les bibliothèques LaTeX de l'American Mathematical Society sont pleines de macros intéressantes (voire indispensables).
+	\usepackage{amsmath,amssymb} % Les bibliothï¿½ques LaTeX de l'American Mathematical Society sont pleines de macros intï¿½ressantes (voire indispensables).
 
-	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractères accentués norme iso-8859, cela risque de ne pas marcher avec des fichiers créés sous windows
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caractï¿½res accentuï¿½s norme iso-8859, cela risque de ne pas marcher avec des fichiers crï¿½ï¿½s sous windows
 	
 	\usepackage{frcursive}
 	\usepackage{cmbright}
-% Packages de polices de caractères
+% Packages de polices de caractï¿½res
 	%\usepackage{txfonts} % Times
 	%\usepackage{pxfonts} % Palatino
 	%\usepackage{fourier} % Utopia
 
-% Packages pour la géométrie
-	\usepackage[x11names,table]{xcolor} % Gère les couleurs - Liste des couleurs dans le document xcolor.pdf
+% Packages pour la gï¿½omï¿½trie
+	\usepackage[x11names,table]{xcolor} % Gï¿½re les couleurs - Liste des couleurs dans le document xcolor.pdf
 	\usepackage{pst-eucl} % Document Euclide.pdf
 	\usepackage{pst-all}
 	\usepackage{pstricks}
@@ -48,8 +48,8 @@
 	
 % Package de maths
 	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
-	\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
-	\usepackage{tikz,tkz-tab}
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
 % Packages de mise en page
 	\usepackage{vmargin}
 	\usepackage{fancybox}
@@ -84,7 +84,7 @@
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Parametrage des marges et séparations
+% Parametrage des marges et sï¿½parations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -94,14 +94,14 @@
 	%	2 est la marge en haut
 	%	3 est la marge droite
 	%	4 est la marge en bas
-	%	5 fixe la hauteur de l'entête
-	%	6 fixe la distance entre l'entête et le texte
+	%	5 fixe la hauteur de l'entï¿½te
+	%	6 fixe la distance entre l'entï¿½te et le texte
 	%	7 fixe la hauteur du pied de page
 	%	8 fixe la distance entre le texte et le pied de page
 	
-	\setlength{\columnseprule}{0pt} % largeur du filet de séparation des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnseprule}{0pt} % largeur du filet de sï¿½paration des colonnes : mettre en commentaire pour supprimer ce filet.
 	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
-	\setlength{\shadowsize}{2pt} % taille de l'ombre portée par shadowbox
+	\setlength{\shadowsize}{2pt} % taille de l'ombre portï¿½e par shadowbox
 	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
 
 
@@ -111,12 +111,12 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Théorème} :}}
-	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Définition} :}}
-	\newtheorem{propriete}{\underline{Propriété :}}
-	\newtheorem{propcar}{\underline{Propriétés caractéristiques :}}
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Thï¿½orï¿½me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily Dï¿½finition} :}}
+	\newtheorem{propriete}{\underline{Propriï¿½tï¿½ :}}
+	\newtheorem{propcar}{\underline{Propriï¿½tï¿½s caractï¿½ristiques :}}
 	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
-	\newtheorem{methode}{\underline{Méthodologie :}}
+	\newtheorem{methode}{\underline{Mï¿½thodologie :}}
 	%\newtheorem{exo}{\underline{Exercice }}
 
 	% Ensembles de nombres
@@ -131,11 +131,11 @@
 	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
 	\newcommand{\e}{\ensuremath{\mathrm{e}}}
 	
-	% Nom spéciaux
+	% Nom spï¿½ciaux
 	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
 	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
 
-	% Repérage et coordonnees
+	% Repï¿½rage et coordonnees
 	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
 	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
 	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
@@ -146,12 +146,12 @@
 		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
 	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
 	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
-		% Opérateurs
+		% Opï¿½rateurs
 	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
 	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
 	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
 	
-	%  Redifinition d'une boite ombrée
+	%  Redifinition d'une boite ombrï¿½e
 	\makeatletter 
 	\let\shadowboxori\shadowbox 
 	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
@@ -162,7 +162,7 @@
 	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
 	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
 
-	% Mise en page des thèorème et autres définitions ...
+	% Mise en page des thï¿½orï¿½me et autres dï¿½finitions ...
 	
 			% Couleurs perso
 			\newrgbcolor{RougePale}{1 0.95 0.96}
@@ -182,7 +182,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -200,7 +200,7 @@
 \arrayrulecolor{DarkOliveGreen3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Dï¿½finition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -218,7 +218,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -234,7 +234,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.4cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Thï¿½orï¿½me}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -253,7 +253,7 @@
 \arrayrulecolor{Red3}
 \begin{tabularx}{18.9cm}{p{0.8cm}XX}
 %\cline{1-2}
-	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[2cm]{\rule[-4pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriï¿½tï¿½}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
 	%\cline{1-2}
 	 & \multicolumn{2}{|l}{\begin{minipage}{16.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
 	%\setlength{\arrayrulewidth}{0.25pt}
@@ -325,9 +325,9 @@
 		% Danger dans box
 		\newsavebox{\infobox}
  
-% On règle les marges définitivement ici
+% On rï¿½gle les marges dï¿½finitivement ici
 \newlength{\marge}\setlength{\marge}{5mm}
-% Contrôle fin pour le panneau
+% Contrï¿½le fin pour le panneau
 \newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{information}{%
@@ -351,7 +351,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Huge\Info}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
   \vspace*{\marge}
@@ -362,9 +362,9 @@
 		% Danger dans box
 		\newsavebox{\dangerbox}
  
-%% On règle les marges définitivement ici
+%% On rï¿½gle les marges dï¿½finitivement ici
 %\newlength{\marge}\setlength{\marge}{5mm}
-%% Contrôle fin pour le panneau
+%% Contrï¿½le fin pour le panneau
 %\newlength{\margehaut}\setlength{\margehaut}{2mm}
  
 \newenvironment{Danger}{%
@@ -388,7 +388,7 @@
   }
   % Affiche le panneau
   \rput(2\marge,0){\Large\textdbend}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
   \vspace*{\marge}
@@ -418,14 +418,14 @@
   %}
   % Affiche le panneau
   \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
-  % Réserve la place verticale pour la suite
+  % Rï¿½serve la place verticale pour la suite
   \par
   \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
   \vspace*{\marge}
 \bigskip}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des fonctions mathématiques
+% Dï¿½finition des fonctions mathï¿½matiques
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -435,7 +435,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Définition des numérotations
+% Dï¿½finition des numï¿½rotations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -472,28 +472,28 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}
-   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \color{red} \thesection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \color{red} \thesection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily \color{red}}% apparence du titre
    
 \titleformat{\subsection}
-   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \color{blue} \thesubsection}% apparence du numéro
-   {1em}% espacement numéro/texte
+   {\normalfont\fontsize{12pt}{14pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \color{blue} \thesubsection}% apparence du numï¿½ro
+   {1em}% espacement numï¿½ro/texte
    {\sffamily \color{blue}}% apparence du titre
 
 \titleformat{\subsubsection}
-   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numéro
-   {\sffamily \thesubsubsection}% apparence du numéro
-   {0.5em}% espacement numéro/texte
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au numï¿½ro
+   {\sffamily \thesubsubsection}% apparence du numï¿½ro
+   {0.5em}% espacement numï¿½ro/texte
    {\sffamily }% apparence du titre
   
   
   \newtheorem{exot}{\sffamily Exercice-type }
 \newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
  
-\newcommand{\chapitre}{Équation produit}
+\newcommand{\chapitre}{ï¿½quation produit}
 
 \newcommand{\numchapitre}{}
 
@@ -533,14 +533,14 @@
 
 
 \df{
-Une équation produit-nul est une équation qui peut s'écrire sous la forme d'un produit égale à 0.
+Une ï¿½quation produit-nul est une ï¿½quation qui peut s'ï¿½crire sous la forme d'un produit ï¿½gale ï¿½ 0.
 }\\
 
 \textbf{Exemples :}\\
 
-$(5x + 3)( 3x - 2) = 0$ est une équation produit-nul.\\
+$(5x + 3)( 3x - 2) = 0$ est une ï¿½quation produit-nul.\\
 
-Mais $7(3x + 4) + ( 7x + 1) = 0$ n'est pas une équation produit-nul c'est une somme.\\
+Mais $7(3x + 4) + ( 7x + 1) = 0$ n'est pas une ï¿½quation produit-nul c'est une somme.\\
 
 \vspace*{0.7cm}
 
@@ -551,7 +551,7 @@ Dans un produit, si l'un des facteurs est nul, alors ce produit est nul.
 Autrement dit,  Si A = 0 ou B = 0 alors $A \times B = 0$\\
 
 \prop{
-Réciproquement, si un produit est nul, alors l'un au moins de ses facteurs est nul.
+Rï¿½ciproquement, si un produit est nul, alors l'un au moins de ses facteurs est nul.
 }\\
 
 Autrement dit, si $A \times B = 0$ alors A = 0 ou B = 0.\\
@@ -560,18 +560,18 @@ Autrement dit, si $A \times B = 0$ alors A = 0 ou B = 0.\\
 
 
 
-\section{Reconnaître une équation produit}
+\section{Reconnaï¿½tre une ï¿½quation produit}
 
 \df{
-a, b, c et d désignent des nombres.\\
-Une équation de la forme (ax + b)(cx + d) = 0 est une équation produit.
+a, b, c et d dï¿½signent des nombres.\\
+Une ï¿½quation de la forme (ax + b)(cx + d) = 0 est une ï¿½quation produit.
 }\\
 
 
 \underline{\textbf{Exemple :}}\\
 
 
-L'équation $ (3x-5)(9-x)=0$  s'appelle une équation produit nul car :\\
+L'ï¿½quation $ (3x-5)(9-x)=0$  s'appelle une ï¿½quation produit nul car :\\
 
  -	L'un des membres  est un produit de facteurs.\\
 
@@ -583,10 +583,10 @@ L'équation $ (3x-5)(9-x)=0$  s'appelle une équation produit nul car :\\
 \begin{information}
 
 \bi 
-\item Si l'on développe le premier membre de cette équation, on s'aperçoit que cette équation est du
-second degré.
+\item Si l'on dï¿½veloppe le premier membre de cette ï¿½quation, on s'aperï¿½oit que cette ï¿½quation est du
+second degrï¿½.
 
-\item Pour obtenir une équation produit, il est parfois nécessaire de factoriser l'équation donnée. On dispose pour cela des formules du chapitre factorisation et des identités remarquables.
+\item Pour obtenir une ï¿½quation produit, il est parfois nï¿½cessaire de factoriser l'ï¿½quation donnï¿½e. On dispose pour cela des formules du chapitre factorisation et des identitï¿½s remarquables.
 \ei
 \end{information}
 
@@ -598,8 +598,8 @@ second degré.
 
 \begin{Exoapp}
 
- Transformer les équations suivantes pour qu'elles deviennent des équations produits. \\
- \textit{Il faudra factoriser le membre de gauche après s'être assurer que le membre de droite soit égal à 0. }\\
+ Transformer les ï¿½quations suivantes pour qu'elles deviennent des ï¿½quations produits. \\
+ \textit{Il faudra factoriser le membre de gauche aprï¿½s s'ï¿½tre assurer que le membre de droite soit ï¿½gal ï¿½ 0. }\\
 
 
 \bmul{2}
@@ -679,13 +679,13 @@ $(4x-1)^{2}=0$\\
 
 
 
-\section{Résoudre une équation produit}
+\section{Rï¿½soudre une ï¿½quation produit}
 
-\underline{\textbf{Énoncé}} : Résoudre l'équation : (x + 2)(2x - 7) = 0.\\
+\underline{\textbf{ï¿½noncï¿½}} : Rï¿½soudre l'ï¿½quation : (x + 2)(2x - 7) = 0.\\
 
-\underline{\textbf{Résolution }} : \\
+\underline{\textbf{Rï¿½solution }} : \\
 
-(x + 2)(2x - 7) = 0 est une équation produit.\\
+(x + 2)(2x - 7) = 0 est une ï¿½quation produit.\\
 
 Or, si un produit de facteurs est nul, alors l'un au moins des facteurs est nul.\\
 
@@ -695,17 +695,17 @@ Ainsi, \hspace*{0.6cm} $x+2 = 0$ \hspace*{1cm} \textbf{ou} \hspace*{1cm}$2x-7 = 
 
 \hspace*{1.6cm} $x= -2$ \hspace*{1.5cm} \textbf{ou} \hspace*{1cm}$x =\dfrac{7}{2}$\\
 
-Les solutions de l'équation sont alors -2 et $\dfrac{7}{2}$.\\
+Les solutions de l'ï¿½quation sont alors -2 et $\dfrac{7}{2}$.\\
 
 \newpage
 
-\underline{\textbf{Exemples}} : Résoudre les équations suivantes : 
+\underline{\textbf{Exemples}} : Rï¿½soudre les ï¿½quations suivantes : 
 
 $$ (x-4)(x+3)=0$$
 
 \color{red}
 
-$ (x-4)(x+3)=0$ est une équation produit.\\
+$ (x-4)(x+3)=0$ est une ï¿½quation produit.\\
 
 Or, si un produit de facteurs est nul, alors l'un au moins des facteurs est nul.\\
 
@@ -715,7 +715,7 @@ Ainsi, \hspace*{0.6cm} $x-4 = 0$ \hspace*{1cm} \textbf{ou} \hspace*{1cm}$x+3 = 0
 
 
 
-Les solutions de l'équation sont alors 4 et -3.\\
+Les solutions de l'ï¿½quation sont alors 4 et -3.\\
 
 
 \color{black}
@@ -726,7 +726,7 @@ Les solutions de l'équation sont alors 4 et -3.\\
  \color{red}
  
  
- $ (-2x-1)(7-3x)=0$ est une équation produit.\\
+ $ (-2x-1)(7-3x)=0$ est une ï¿½quation produit.\\
 
 Or, si un produit de facteurs est nul, alors l'un au moins des facteurs est nul.\\
 
@@ -737,7 +737,7 @@ Ainsi, \hspace*{0.6cm} $-2x-1 = 0$ \hspace*{1cm} \textbf{ou} \hspace*{1cm}$7-3x 
 \hspace*{1.6cm} $x= -\dfrac{1}{2}$ \hspace*{1.5cm} \textbf{ou} \hspace*{1cm}$x = \dfrac{7}{3}$\\
 
 
-Les solutions de l'équation sont alors $-\dfrac{1}{2}$ et $ \dfrac{7}{3}$.\\
+Les solutions de l'ï¿½quation sont alors $-\dfrac{1}{2}$ et $ \dfrac{7}{3}$.\\
  
  
 \color{black}
@@ -747,7 +747,7 @@ $$9x^{2} = 36$$
 
  \color{red}
  
-Il faut commencer par transformer cette équation en équation produit.\\
+Il faut commencer par transformer cette ï¿½quation en ï¿½quation produit.\\
 
 $$9x^{2} = 36$$
 
@@ -756,7 +756,7 @@ $$9x^{2} - 36=0$$
 
 $$(3x)^{2} - 6^{2}=0$$
 
-$(3x - 6) (3x + 6)=0$ est une équation produit.\\
+$(3x - 6) (3x + 6)=0$ est une ï¿½quation produit.\\
 
 Or, si un produit de facteurs est nul, alors l'un au moins des facteurs est nul.\\
 
@@ -767,29 +767,29 @@ Ainsi, \hspace*{0.6cm} $3x-6 = 0$ \hspace*{1cm} \textbf{ou} \hspace*{1cm}$3x+6 =
 \hspace*{1.6cm} $x=\dfrac{6}{3}=2$ \hspace*{1.5cm} \textbf{ou} \hspace*{1cm}$x = -\dfrac{6}{3}=-2$\\
 
 
-Les solutions de l'équation sont alors 2 et -2.\\
+Les solutions de l'ï¿½quation sont alors 2 et -2.\\
 
 \color{black}
 \newpage
 
 \begin{Exoapp}
 
-\underline{ Énoncés type-brevet }\\
+\underline{ ï¿½noncï¿½s type-brevet }\\
 
 
 
 \exo  On donne $R = (7x-5)(8-x)-(8-x)(10+x)$.\\
 
-\q Développer et réduire R.\\
+\q Dï¿½velopper et rï¿½duire R.\\
 \q Factoriser R.\\
 \q Calculer R pour $x = -1$.\\
-\q Résoudre l'équation R = 0.\\
+\q Rï¿½soudre l'ï¿½quation R = 0.\\
 
  \color{red}
 
 \underline{SOLUTION :}\\
 
-\initq \q J'utilise la double distributivité pour développer.\\
+\initq \q J'utilise la double distributivitï¿½ pour dï¿½velopper.\\
 
 $R = 56x -7x^{2}-40+5x -(80+8x-10x-x^{2})$\\
 
@@ -810,7 +810,7 @@ $R =(8-x)(6x-15)$\\
 
 \q Pour calculer R pour $x = -1$, je choisis l'expression R que je veux.\\
 
-Je vais choisir l'expression factorisée :\\
+Je vais choisir l'expression factorisï¿½e :\\
 
 $R =(8-x)(6x-15)$\\
 
@@ -822,7 +822,7 @@ $R =9\times (-21)$\\
 
 $R =-189$\\
 
-\q $R =0$ c'est-à-dire $(8-x)(6x-15)=0$\\ est une équation produit.\\
+\q $R =0$ c'est-ï¿½-dire $(8-x)(6x-15)=0$\\ est une ï¿½quation produit.\\
 
 Or, si un produit de facteurs est nul, alors l'un au moins des facteurs est nul.\\
 
@@ -833,7 +833,7 @@ Ainsi, \hspace*{0.6cm} $8-x = 0$ \hspace*{1cm} \textbf{ou} \hspace*{1cm}$6x-15 =
 \hspace*{1.6cm} $x=8$ \hspace*{1.5cm} \textbf{ou} \hspace*{1cm}$x = \dfrac{15}{6}=\dfrac{5}{2}$\\
 
 
-Les solutions de l'équation sont alors 8 et $\dfrac{5}{2}$.
+Les solutions de l'ï¿½quation sont alors 8 et $\dfrac{5}{2}$.
 
 
 
@@ -849,16 +849,16 @@ Les solutions de l'équation sont alors 8 et $\dfrac{5}{2}$.
 
 \exo On donne $E = 9 - (2x - 1)^{2}$.\\
 \initq
-\q Développer et réduire E.\\
+\q Dï¿½velopper et rï¿½duire E.\\
 \q Factoriser E.\\
 \q Calculer E pour $x = \dfrac{1}{2}$.\\
-\q Résoudre l'équation E = 0.\\
+\q Rï¿½soudre l'ï¿½quation E = 0.\\
 
  \color{red}
 
 \underline{SOLUTION :}\\
 
-\initq \q J'utilise la deuxième identité remarquable pour développer.\\
+\initq \q J'utilise la deuxiï¿½me identitï¿½ remarquable pour dï¿½velopper.\\
 
 
 $E = 9 - (4x^{2}-4x+1)$ \\
@@ -867,7 +867,7 @@ $E = 9 - 4x^{2}+4x-1$ \\
 
 $E =  - 4x^{2}+4x+8$ \\
 
-\q Factoriser avec la troisième identité remarquable.\\
+\q Factoriser avec la troisiï¿½me identitï¿½ remarquable.\\
 
 $E = 3^{2} - (2x - 1)^{2}$\\
 
@@ -881,7 +881,7 @@ $E = (- 2x + 4)( 2x +2)$\\
 
 \q Pour calculer R pour $x = \dfrac{1}{2}$, je choisis l'expression R que je veux.\\
 
-Je vais choisir l'expression développée :\\
+Je vais choisir l'expression dï¿½veloppï¿½e :\\
 
 $E =  - 4 \times \left(\dfrac{1}{2}\right)^{2}+4\times \left(\dfrac{1}{2}\right)+8$ \\
 
@@ -893,7 +893,7 @@ $E =  9$ \\
 
 
 
-\q $E =0$ c'est-à-dire $(- 2x + 4)( 2x +2)=0$\\ est une équation produit.\\
+\q $E =0$ c'est-ï¿½-dire $(- 2x + 4)( 2x +2)=0$\\ est une ï¿½quation produit.\\
 
 Or, si un produit de facteurs est nul, alors l'un au moins des facteurs est nul.\\
 
@@ -904,7 +904,7 @@ Ainsi, \hspace*{0.6cm} $-2x+4= 0$ \hspace*{1cm} \textbf{ou} \hspace*{1cm}$2x+2 =
 \hspace*{1.6cm} $x=\dfrac{4}{2}=2$ \hspace*{1.5cm} \textbf{ou} \hspace*{1cm}$x = -\dfrac{2}{2}=-1$\\
 
 
-Les solutions de l'équation sont alors 2 et -1.
+Les solutions de l'ï¿½quation sont alors 2 et -1.
 \end{Exoapp}
 
 \end{document}

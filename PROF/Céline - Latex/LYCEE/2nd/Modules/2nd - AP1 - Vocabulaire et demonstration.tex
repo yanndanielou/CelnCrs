@@ -1,0 +1,273 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+\usepackage{mathrsfs}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\Large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\titre{Séance d'AP 1 : Outils pour la démonstration}{}{}{2nd}{}
+
+\vspace*{0.2cm}
+
+\section{Vocabulaire}
+
+
+
+\textbf{\textcolor{purple}{\underline{PROPRIETE}}}\\
+Une propriété mathématique est une affirmation qui est toujours vraie. Elle ne comporte aucune exception.\\
+
+\underline{Exemple :}\\
+\textit{L'énoncé : " Si M est un point de la médiatrice du segment [AB] alors M est équidistant de A et de B" est toujours vrai : c'est donc une propriété.}\\
+\vspace*{0.5cm}
+
+\textbf{\textcolor{violet}{\underline{HYPOTHESE - CONCLUSION}}}\\
+On note P la phrase : "M est un point de la médiatrice du segment [AB] "\\
+On note Q la phrase : " M est équidistant de A et B".\\
+On dit que P implique Q et on note alors $P \Rightarrow Q$.\\
+P est appelé l'hypothèse ; Q est appelé la conclusion.\\
+\vspace*{0.5cm}
+
+\textbf{\textcolor{purple}{\underline{RECIPROQUE}}}\\
+L'énoncé réciproque d'une propriété s'obtient en inversant conclusion et hypothèse. Si l'énoncé réciproque est vrai, il est appelé propriété réciproque.\\
+
+\underline{Exemples :}
+\bi
+\item \textit{L'énoncé réciproque de la propriété ci-dessus est : " Si M est équidistant de A et de B alors M appartient à la médiatrice du segment [AB] " . Cet énoncé est vrai, c’est donc une propriété réciproque .}
+\item \textit{L'énoncé " si un quadrilatère est un losange alors ses diagonales sont perpendiculaires " est un énoncé vrai : c’est donc une propriété. L'énoncé réciproque est faux.}\\
+\ei
+\vspace*{0.5cm}
+
+\textbf{\textcolor{violet}{\underline{EQUIVALENCE}}}\\
+Quand l'énoncé réciproque d'une propriété est vrai, on peut regrouper propriété et propriété réciproque en un seul énoncé utilisant l'expression si et seulement si.\\
+ On dit que l'on a une équivalence et on note : $P \Leftrightarrow Q$.\\
+ 
+ \underline{Exemple :}\\
+\textit{Un point appartient à la médiatrice d’un segment si et seulement si il est équidistant des deux extrémités de ce segment.}\\
+ 
+\section{Démontrer}
+
+\textbf{\textcolor{violet}{\underline{VERIFIER}}}\\
+Vérifier une affirmation sur quelques exemples n’est pas démontrer.\\
+
+\underline{Exemple :}\\
+\textit{Quelqu'un affirme : "Pour toutes les valeurs de $x$, le nombre $x^{2}-x + 41$ est un nombre premier".}\\
+\textit{On peut vérifier cette affirmation en remplaçant x par 0, 1, 2,.....}\\
+\textit{Le fait de trouver toujours un nombre premier n'est pas une démonstration.}\\
+\textit{D'ailleurs, l'affirmation est fausse ( pour $x = 41$; $41^{2}-41+41$ = 1681 = $41^{2}$).}\\
+\newpage
+
+\textbf{\textcolor{violet}{\underline{VOIR}}}\\
+Voir sur une figure n'est pas démontrer.\\
+
+\underline{Exemple :}\\
+\textit{Construire un triangle ABC isocèle en A, de base 8 cm et de hauteur AH mesurant 7 cm. \\
+On voit très bien que le triangle est équilatéral, mais cela ne le démontre pas. D'ailleurs, il ne l'est pas. ( Utiliser Pythagore
+pour montrer que $AB = \sqrt{65}\approx 8,06$ )}\\
+
+\vspace*{0.5cm}
+
+
+\textbf{\textcolor{violet}{\underline{CONJECTURER}}}\\
+Conjecturer c'est formuler (supposer, deviner, imaginer, émettre, . . . ) des hypothèses.\\
+
+\underline{Exemples :}
+\bi
+\item \textit{Voir sur une figure et vérifier sont des étapes permettant de conjecturer. Mais après la conjecture, il faut démontrer ce que l'on a supposé . Une conjecture peut être vraie ou fausse.}
+\item  \textit{Il y a des conjecture célèbres : Goldbach (1690-1764)" tout nombre pair supérieur à deux est somme de deux nombres premiers ". Cette conjecture n'est toujours pas prouvée mais il n'y a toujours pas
+de contre-exemple.}\\
+\ei
+
+\vspace*{0.5cm}
+
+
+\textbf{\textcolor{purple}{\underline{PROUVER - MONTRER - DEMONTRER}}}\\
+C'est réaliser un raisonnement qui est rédigé à partir des données du problème, grâce aux outils de la démonstration( définitions ou propriétés).\\
+En déduire que c'est utiliser impérativement le résultat de la question précédente dans un nouveau raisonnement.\\
+
+
+\section{Les différents raisonnements}
+
+\subsection{Prouver que quelque chose est vrai.}
+
+\textbf{\textcolor{purple}{\underline{DEDUCTION}}}\\
+Effectuer un raisonnement déductif, c'est à partir des données du problème, aboutir à la conclusion souhaitée en utilisant les outils du cours ( définitions, propriétés, formules. . . ).\\
+
+\underline{Exemple :} \textit{Voir l'exercice 3}
+
+
+
+
+\subsection{Prouver que quelque chose est faux.}
+
+\textbf{\textcolor{purple}{\underline{CONTRE-EXEMPLE}}}\\
+Raisonner par contre-exemple, c'est trouver un exemple qui met en échec la conclusion de la proposition tout en respectant les hypothèses de celle-ci.\\
+
+\underline{Exemple :}\\
+\textit{Quelqu'un affirme : " Si les diagonales d’un quadrilatère sont égales, alors c'est un rectangle."\\
+On peut dire que c'est faux, et pour le démontrer, il suffit de dessiner un quadrilatère dont les diagonales sont de même longueur, mais qui ne soit pas un rectangle.}\\
+
+
+\vspace*{0.5cm}
+
+\textbf{\textcolor{purple}{\underline{RAISONNEMENT PAR L'ABSURDE}}}\\
+Raisonner par l'absurde c'est prendre pour hypothèse la négation du résultat à démontrer, puis effectuer un raisonnement déductif qui amène à une contradiction avec une donnée du problème ou avec une propriété
+connue.\\
+
+\underline{Exemple :}\\
+\textit{Démontrer que le triangle dont les côtés ont pour longueur 5, 6 et 7 cm n’est pas un triangle rectangle.}\\
+
+\textit{On suppose que ce triangle est rectangle. D'après la propriété de Pythagore, on devrait avoir "$7^{2} = 6^{2} + 5^{2}$".\\
+Or $7^{2}=49$ et $6^{2} + 5^{2}= 36+ 25 = 61$. L'égalité est fausse, la supposition faite est donc fausse, d'où le triangle n'est pas rectangle.
+} \\
+
+
+\newpage
+
+
+\vspace*{0.5cm}
+
+\begin{large}
+\textbf{EXERCICE 1}\\
+\end{large}
+Pour chaque ligne du tableau, dire si la proposition P implique la proposition Q, si la proposition Q implique la proposition P ou s'il y a équivalence.\\
+
+\renewcommand{\arraystretch}{2}
+
+\begin{tabular}{|p{5cm}|p{5cm}|c|c|c|}
+\hline 
+\textbf{Proposition $P$} & \textbf{Proposition $Q$} & $\mathbf{P \Rightarrow Q}$ & $\mathbf{Q \Rightarrow P}$ & $\mathbf{P \Leftrightarrow Q}$ \\ 
+\hline 
+M est une point de la médiatrice
+de [AB] & M équidistant de A et de B & • & • & • \\ 
+\hline 
+Je réside en France & Je réside en Europe & • & • & • \\ 
+\hline 
+Je suis majeur(e) & J’ai 19 ans & • & • & • \\ 
+\hline 
+CDEF est un parallélogramme & CDEF est un carré & • & • & • \\ 
+\hline 
+$x = 3$ & $x^{2} = 9$ & • & • & • \\ 
+\hline 
+MNP est rectangle en M & $MP^{2} +MN^{2} = NP^{2}$ & • & • & • \\ 
+\hline 
+$x\ge -2$ & $x\ge -1$ & • & • & • \\ 
+\hline 
+$a+b=5$& a = 2 et b = 3 & • & • & • \\ 
+\hline 
+$4x-(x-5)=7$ & $x=\dfrac{2}{3}$ & • & • & • \\ 
+\hline 
+$(ax+b)(cx+d)=0$ &  $ax+b=0$ ou $cx+d=0$ & • & • &\\ 
+\hline 
+\end{tabular} 
+
+
+\vspace*{1cm}
+
+
+\begin{large}
+\textbf{EXERCICE 2}\\
+\end{large}
+Toutes les affirmations suivantes sont fausses. Pour chacune, donner un contre exemple.\\
+
+\noindent \q Si $x^{2}$ > 4, alors $x > 2$.\\
+\q Pour tout couple de réels $(x; y)$, on a $(x + y)^{3} = x^{3} + y^{3}$.\\
+\q Si $x^{2}$ = 9 alors $x = 3$.\\
+\q Pour tout couple de réels positifs $(a; b)$, on a $\sqrt{a} + \sqrt{b} = \sqrt{a+b}$.\\
+\q Pour tout réel $p$, le réel $−10p$ est négatif.\\
+\q Tous les réels ont un inverse.\\
+\q Tous les multiples de 5 sont des multiples de 10.\\
+\q Si $x(x − 3) = 0$, alors $x = 3$.\\
+\q Si $x < 1$, alors $x < 0$.\\
+\q Si $x < 2$, alors $x^{2} < 4$.\\
+\q Pour tout $x$, $−x$ est un nombre négatif.\\
+\q Pour tout entier n, si n est divisible par 3, il est divisible par 6.\\
+\q Si $1 \le x \le 3$ alors $x \in ]1;3[$.\\
+\q Si $x \in [1 ; 5[$, alors $1 \le x \le 5$.\\
+\q Si $x \in [0 ; 10]$, alors $x$ est un entier naturel.\\
+
+\vspace*{1cm}
+
+\begin{large}
+\textbf{EXERCICE 3}\\
+\end{large}
+Pour aller plus loin.\\
+ Ecrire la démonstration de la propriété suivante : "La somme de deux nombres impairs est un nombre pair."\\
+
+\end{document}

@@ -1,0 +1,1030 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Param�trages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt,twoside,french]{extarticle}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% d�claration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	%\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les biblioth�ques LaTeX de l'American Mathematical Society sont pleines de macros int�ressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caract�res accentu�s norme iso-8859, cela risque de ne pas marcher avec des fichiers cr��s sous windows
+	\usepackage{amssymb} 
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caract�res
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la g�om�trie
+	\usepackage[x11names,table]{xcolor} % G�re les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et s�parations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{2cm}{1cm}{2cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'ent�te
+	%	6 fixe la distance entre l'ent�te et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de s�paration des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre port�e par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Th�or�me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily D�finition} :}}
+	\newtheorem{propriete}{\underline{Propri�t� :}}
+	\newtheorem{propcar}{\underline{Propri�t�s caract�ristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{M�thodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom sp�ciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Rep�rage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Op�rateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombr�e
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des th�or�me et autres d�finitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{20.9cm}{p{0.5cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{purple}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{purple}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi) } }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba}) }}
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\textbf{\setcounter{enumtaba}{0}}}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On r�gle les marges d�finitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contr�le fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On r�gle les marges d�finitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contr�le fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des fonctions math�matiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des num�rotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\color{red}\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\color{red}}
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{14pt}{16pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsubsection}% apparence du num�ro
+   {0.5em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+   
+   \newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{\textbf{Chapitre 0 :} Quelques rappels . . . utiles}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+\newpage
+ \setcounter{page}{1}
+ 
+ \section{Evolutions}
+ 
+ Dans cette partie, on considère une grandeur passant d'une valeur de départ $v_{0}$ à une valeur d'arrivée $v_{1}$.\\
+ 
+ \dfTitre{Variation absolue}{
+ On appelle \grasDef{variation absolue} le nombre $v_1-v_0$.\\
+La variation absolue s'exprime dans l'unité de la grandeur étudiée. 
+ }\\
+ 
+ 
+ \dfTitre{Taux d'évolution}{
+ On appelle \grasDef{Taux d'évolution} ou encore \grasDef{variation relative} le rapport $\dfrac{v_1-v_0}{v_0}$ .\\
+Ce nombre peut s'exprimer sous la forme d'un pourcentage en le multipliant par 100.}\\
+
+
+
+\rems 
+\begin{itemize}
+\item[\textbullet] La variation relative s'exprime sans unités !
+\item[\textbullet] Le pourcentage d'évolution dépend des valeurs de départ et d'arrivée, et peut donc être positif ou négatif.\\
+\end{itemize}
+
+\prop{Soit $t$ le pourcentage d'évolution de $v_0$ à $v_1$.
+\begin{itemize}
+\item[\textbullet] Si $t$ est positif, alors la grandeur a augmenté de $v_0$ à $v_1$, et on dit que $v_0$ a subit une augmentation.
+\item[\textbullet] Si $t$ est négatif, alors la grandeur a diminué de $v_0$ à $v_1$, et on dit que $v_0$ a subit une diminution.
+\end{itemize}
+} \\
+
+\prop{$t=\dfrac{v_1-v_0}{v_0}\times 100$ équivaut à $v_1=v_0\times\left(1+\dfrac{t}{100}\right)$}\\
+
+
+\dfTitre{Coefficient multiplicateur}{Faire évoluer de $t\%$ une quantité, c'est multiplier cette quantité par $1+\dfrac{t}{100}$.\\
+On nomme le nombre $1+\dfrac{t}{100}$ \grasDef{coefficient multiplicateur} de l'évolution (que l'on notera généralement $CM$).}\\
+
+%\rem Le coefficient multiplicateur est toujours positif !\\
+
+%Dans la suite, on notera $CM$ le coefficient multiplicateur d'une �volution.\\
+
+\prop{\begin{itemize}
+\item[\textbullet] si $CM>1$, alors l'évolution est une augmentation.
+\item[\textbullet] si $CM<1$, alors l'évolution est une diminution.
+\end{itemize}}\\
+
+\prop{Soit $CM$ le coefficient multiplicateur d'une évolution de $t\%$. Alors on a :
+$$t=(CM-1)\times 100$$}
+
+\section{Les suites numériques}
+\subsection{Généralités}
+
+
+\noindent On appelle suite numérique réelle, une \textbf{\sffamily liste ordonnée} de nombres réels.\\
+Chaque élément de la suite est précisément repéré par sa position dans la liste, position pouvant être définie simplement par un entier naturel.\\
+On note $(u_n)$ la suite $u_0$, $u_1$, $u_2$, $\ldots$, $u_n$, $u_{n+1}$ ,  $\ldots$
+
+\begin{itemize}
+	\item[\textbullet] $n$ est l'indice.
+	\item[\textbullet] $u_n$ est le terme général de la suite $(u_n)$, le terme de rang $n$ ou le terme d'indice $n$.
+\end{itemize}
+
+\noindent Il existe principalement deux modes de génération d'une suite :
+\begin{itemize}
+	\item[\textbullet] Par la donnée de l'expression de $u_n$ en fonction de $n$ (comme pour une fonction).\\
+	On dit alors que l'on donne \grasDef{la forme explicite} de la suite\\
+	\emph{Dans ce cas, on sait calculer n'importe quel terme de la suite}.\\
+	
+	\underline{Exemple 1 : } La suite $(u_n)$  définie pour tout $n \in \mathbb{N} $ par $u_{n} = 3n -5$.\\
+	\vspace*{0.5cm}
+	
+	\item[\textbullet] Par la donnée d'un terme initial et d'une relation permettant de calculer chaque terme à partir du précédent.\\
+	La suite est alors dite \grasDef{définie par récurrence}, et la relation est appelée \grasDef{relation de récurrence}.\\
+	
+	\underline{Exemple 2 :}  La suite $(u_n)$ est définie par $u_{0} = – 4$ et pour tout $n \in \mathbb{N} $ par $u_{n+1} = 3u_{n} + 1$.\\
+	\vspace*{0.5cm}
+	
+	\end{itemize}
+
+	\vspace*{0.5cm}
+	
+	\dfTitre{Représentation graphique}{La représentation graphique d'une suite est appelée \grasDef{un nuage de points}.\\
+Ce nuage est formé des points de coordonnées $(n;u_n)$, pour $n\in \N$.}\\
+\textit{Soit $(v_{n})$ une suite telle que pour tout $n \in \mathbb{N} $, $v_{n} \ge u_{n}$. On a représenté graphiquement ci-contre la suite $(u_{n})$ en bleu et la suite $(v_{n})$ en rouge.}
+\begin{center}
+\includegraphics[scale=1.5]{representationgraphiquesuite.eps} 
+\end{center}
+
+
+	
+\subsection{Variations}
+
+\prop{
+\begin{itemize}
+	\item[\textbullet] Une suite $(u_n)$ est \textbf{croissante} (resp. strictement croissante) si et seulement si pour tout $n\in \N$, $u_{n+1}\geq u_n$ (resp. $u_{n+1}>u_n$).
+	\item[\textbullet] Une suite $(u_n)$ est \textbf{décroissante} (resp. strictement décroissante) si et seulement si pour tout $n\in \N$, $u_{n+1}\leq u_n$ (resp. $u_{n+1}<u_n$).
+	\item[\textbullet] Une suite $(u_n)$ est \textbf{constante} si et seulement si pour tout $n\in \N$, $u_{n+1}=u_n$.
+\end{itemize}
+}\\
+
+\underline{\textbf{\sffamily Méthodologie :}}  Soit $(u_n)$ une suite. Pour étudier son sens de variation, on peut, pour tout $n\in \N$  comparer le signe de la différence $u_{n+1}-u_n$ :
+\begin{itemize}
+	\item si $u_{n+1}-u_n \geq 0$ alors la suite est croissante.
+	\item si $u_{n+1}-u_n \leq 0$ alors la suite est décroissante.\\
+\end{itemize}
+
+\underline{Exemples :}\\
+
+1) $u_{n}=\dfrac{1}{n+1}$ pout tout $n\in \N$ :\\
+\reponse[5]\\
+2) Pour tout $n\in \N$ , on donne la suite $(v_n)$ définie par : $v_{n+1}=v_n+2$:\\
+\reponse[3]
+
+\section{Les suites arithmétiques}
+\subsection{Généralités}
+
+\df{Une suite $(u_n)$ est dite \grasDef{arithmétique} si et seulement si il existe un réel $r$ tel que, pour tout $n\in\N$, on a: $$u_{n+1}=u_n+r$$
+Le réel $r$ est appelé \grasDef{raison} de la suite $(u_n)_{n\in\N}$}\\
+
+\thm{
+Si $(u_n)_{n\in\N}$ est une suite arithmétique de raison $r$, alors on a :
+\begin{itemize}
+	\item[\textbullet] Pour tout $n\in\N$ et pour tout $p\in\N$ tel que $p\leq n$, on a $$u_n=u_p+(n-p)\times r$$
+	\item[\textbullet] En particulier, on a, pour tout $n\in\N$ : $$u_n=u_0+n\times r $$
+\end{itemize}
+}\\
+
+\prop{Une suite $(u_n)$ est arithmétique de raison $r$ si et seulement si la \textbf{\sffamily variation absolue} entre deux termes consécutifs est constante égale à $r$. Autrement dit
+$$(u_n) \text{ est arithmétique de raison } r \Leftrightarrow u_{n+1}-u_n=r$$}
+\newpage
+
+\vspace*{0.25cm}
+
+\subsection{Somme des termes consécutifs d'une suite arithmétique}
+
+\vspace*{0.25cm}
+
+Il s'agit de calculer de la somme des $n$ premiers entiers non nuls.\\
+
+\prop{
+$n$ est un entier naturel non nul, alors on a : $1 + 2 + 3 + ⋯ + 𝑛 =\dfrac{n(1+n)}{2}$
+
+}\\
+
+\vspace*{0.5cm}
+
+Il s'agit de calculer maintenant la somme de  termes consécutifs d'une suite arithmétique. \\
+
+\prop{
+Somme des termes consécutifs d’une suite arithmétique :\\
+$$S_n=(n+1) \times \dfrac{(u_0+u_n)}{2}$$
+
+Autrement dit,\hspace*{0.5cm} $\text{Nbre de terme} \times \dfrac{(\text{premier terme}+ \text{dernier terme})}{2}$
+}\\
+
+\underline{Exemples}:\\
+
+\initq \q Calculer la somme suivante : $S = 33 + 36 + 39 + \ldots + 267$\\
+\reponse[4]\\
+
+\q Soit  $(u_n)_{n \in \N}$ la suite arithmétique de premier terme 2
+et de raison 5. \\
+Déterminer la somme S définie par : $S = u_{11} \ldots + u_{25}$\\
+\reponse[7]
+
+
+\newpage
+
+\subsection{Variation d'une suite arithmétique}
+
+\vspace*{0.5cm}
+
+\prop{
+Soit $(u_n)$ une suite arithmétique de raison $r$. alors :
+\begin{itemize}
+	\item[\textbullet] $(u_n)$ est croissante si $r>0$.
+	\item[\textbullet] $(u_n)$ est décroissante si $r<0$.
+\end{itemize}
+}\\
+
+\textbf{Représentation graphique d'une suite arithmétique}\\
+
+\prop{
+Une suite arithmétique de raison $r$ est représentée dans le plan par des points alignés sur une droite de coefficient directeur $r$.
+}\\
+
+
+
+
+\section{Les suites géométriques}
+\subsection{Généralités}
+
+\df{Une suite $(u_n)$ est dite \grasDef{géométrique} si, et seulement si, il existe un réel $q$ non nul tel que, pour tout entier  $n$, on a: $$u_{n+1}=q \times u_n$$
+Le réel $q$ est appelé \grasDef{raison} de la suite $(u_n)$.
+}\\
+
+La définition précédente nous donne la forme de récurrence de la suite. Or il est souvent (très souvent) bien plus utile de connaître la forme explicite de la suite. Les deux théorèmes suivant nous la fournissent.\\
+
+\thm{Si $(u_n)$ est une suite géométrique de raison $q$, alors, pour tout $n\in \N$, $u_n=u_0 \times q^n$. 
+}\\
+\vspace*{0.25cm}
+
+\thm{Si $(u_n)$ est une suite géométrique de raison $q$, alors, pour tout $n\in \N$ et pour tout $p\in\N$ tel que $p\leq n$, on a\hspace*{0.25cm} $u_n=u_p \times q^{n-p}$.
+}
+\newpage
+
+\rem
+Pour démontrer qu'une suite est géométrique (en dehors des deux cas triviaux), il suffit de montrer que, pour tout n, le quotient $\dfrac{u_{n+1}}{u_n}$ est constant. Cette constante sera alors la raison de la suite.\\
+
+\subsection{Somme des termes consécutifs d'une suite géométrique}
+
+Il s'agit de calculer la somme des $n+1$ premiers termes d'une suite géométrique de raison $q$ et de premier terme 1.\\
+
+\prop{
+
+$n$ est un entier naturel non nul et $q$ un réel différent de 1 alors on a : \\
+$$1 + q + q^2 + \ldots + q^n = \dfrac{1-q^{n+1}}{1-q}$$
+
+}\\
+
+Il s'agit maintenant de calculer la somme des $n+1$ termes d'une suite géométrique $(u_n)$ de raison $q$ et de premier terme $u_0$.\\
+
+\prop{
+Soit $(u_n)$ une suite géométrique de raison $q$. \\
+Si $S_n = u_0 + u_1 + \ldots + u_n $ 
+est une somme de termes consécutifs de la suite $(u_n)$, alors :
+$$S_n=u_0 \times \dfrac{1-q^{n+1}}{1-q}$$\\
+
+Autrement dit, \hspace*{0.25cm} $S_n = \text{premier terme} \times \dfrac{1-q^{\text{nbre de terme}}}{1-q}$
+
+}\\
+
+\underline{Exemples}:\\
+
+\initq \q  Calculer la somme $S = 3 + 3^2 + 3^3 + \ldots + 3^{13}$\\
+\reponse[2]
+
+\q Un entrepreneur investit au départ 20 000 \euro. Puis, chaque mois, il investit un montant supplémentaire diminué de 30 \% par rapport au mois précédent.\\
+On note $u_n$ le montant investi au mois $n$. On considère alors que $u_0=\text{20 000}$.\\
+\textit{Calculer le montant total investi la première année (12 mois).}\\
+\reponse[8]
+
+
+\subsection{Variations}
+
+
+\prop{
+La suite de terme général $u_n=q^n$ est :
+\bi \item strictement croissante si q > 1
+\item strictement décroissante si 0 < q < 1
+\item ni croissante ni décroissante si q < 0
+\ei
+}\\
+
+
+
+\prop{
+Soit $(u_n)$ la suite géométrique de raison $q$ et de premier terme $u_0$. Alors $u_n=u_0 \times q^n$ :
+\bi \item si $u_0>0$ alors la suite $(u_n)$ varie dans le même sens que la suite $(q^n)$;
+\item si $u_0<0$ alors la suite $(u_n)$ varie dans le  sens contraire de la suite $(q^n)$;
+\ei
+}\\
+
+\underline{Exemple :} Étudier le sens de variation de la suite $(u_n)$ définie par $u_0=0,5$ et $u_{n+1}=2u_n$ et la représenter dans un repère
+(O; I; J).
+
+\bmul{2}
+
+\noindent \reponse[6]
+
+\columnbreak
+
+\includegraphics[scale=2.2]{variationgeometrique.eps} 
+
+\emul
+
+
+\newpage
+
+\begin{center}
+{\large \textbf{Quelques petits exercices pour reprendre la main}}
+\end{center}
+
+\vspace*{0.5cm}
+
+\begin{multicols}{2}
+\begin{exo}
+\end{exo}
+
+\noindent Le prix d'un objet augmente de 125  \euro{} à 150 \euro.\\
+\initq \q Déterminer la variation absolue du prix.\\
+\q Déterminer la variation relative de ce prix et en déduire le pourcentage d'évolution de cet objet.\\
+
+
+
+\begin{exo}
+\end{exo}
+
+\noindent Le prix du baril de pétrole coûte 105 dollars. Ce prix augmente de 5 \%.\\
+Déterminer le prix du baril après l'augmentation.\\
+
+\begin{exo}
+\end{exo}
+
+\noindent Dans une entreprise, le nombre d'employés passe de 400 à 350 en un an.\\
+Déterminer le pourcentage d'évolution du nombre d'employés sur l'année.\\
+
+\begin{exo}
+\end{exo}
+
+\noindent Si la population d'une ville augmente de 20 \%, alors cette population a été multipliée par $\ldots$ .\\
+
+\begin{exo}
+\end{exo}
+
+\noindent Si une population augmente de 20 \% puis de 15 \%, alors cette population augmente de $\ldots $ \%.\\
+
+
+
+\begin{exo}
+\end{exo}
+
+\noindent $(u_n)$ et $(v_n)$ sont les suites définies pour tout entier naturel $n$ par $u_n=3^n$ et $v_n=n^2+2n$.\\
+\initq \q Calculer $u_0$, $u_1$, $u_2$, $u_3$, $u_{10}$.\\
+\q Calculer $v_0$, $v_1$, $v_2$, $v_3$, $v_{10}$.\\
+\q Exprimer $v_{n+1}$ en fonction de $n$.\\
+
+
+\begin{exo}
+\end{exo}
+
+\noindent $(u_n)$ est la suite  définie par $u_0=2$ et pour tout entier naturel $n$, $u_{n+1}=3u_n+1$.\\
+Calculer $u_1$, $u_2$, $u_3$.\\
+
+\begin{exo}
+\end{exo}
+
+\noindent $(u_n)$ est la suite définie pour tout entier naturel $n$ par $u_n=\dfrac{6}{n+2}$.\\
+Placer dans un repère les cinq premiers points de la représentation graphique de la suite $(u_n)$.\\
+
+\begin{exo}
+\end{exo}
+
+\noindent $(u_n)$ est la suite définie pour tout entier naturel $n$ par $u_n=5n+1$.\\
+Montrer que la suite $(u_n)$ est  strictement croissante.\\
+
+\begin{exo}
+\end{exo}
+
+\noindent $(u_n)$ est la suite définie pour tout entier naturel $n$ par $u_n=-n^2+4$.\\
+Montrer que la suite est décroissante.\\
+
+\begin{exo}
+\end{exo}
+
+\noindent $(u_n)$ est une suite arithmétique de raison -3 et de premier terme $u_0=8$. \\
+Calculer $u_1$, $u_2$, $u_3$.\\
+
+\begin{exo}
+\end{exo}
+
+\noindent $(u_n)$ est la suite arithmétique de raison 3 et de premier terme $u_0=5$.\\
+\initq \q Exprimer $u_n$ en fonction de $n$.\\
+\q Calculer $u_{50}$.\\
+
+
+\begin{exo}
+\end{exo}
+
+\noindent $(u_n)$ est la suite arithmétique telle que $u_{15}=9$ et $r=\np{1,5}$.\\
+\initq \q Calculer $u_{32}$\\
+\q Calculer $u_0$.\\
+
+
+\end{multicols}
+\newpage
+\vspace*{0.5cm}
+
+\textbf{{\large Suite arithmétique ou suite géométrique ?}}\\
+
+Une personne loue une maison à partir du 1er janvier 2014. \\
+	Elle a le choix entre deux formules de contrat. \\
+	Dans les deux cas, le loyer annuel en 2014 est de 7200 euros 	et le 	locataire s'engage à occuper la maison pendant huit 	années 	complètes.\\
+
+
+\textbf{\underline{Contrat 1}}\\
+
+Le locataire accepte une augmentation annuelle de 5 \% du loyer de l'année précédente. \\
+On note $u_1=7200$.\\
+
+\noindent \initq \q Calculer le loyer $u_2$ payé lors de la 2ème année.\\
+\q  On note $u_n$ le loyer lors de la n-ième année. Quelle est la nature de la suite $(u_n)$ ? \\
+Exprimer $(u_n)$ en fonction de $n$.\\
+\q Calculer le loyer $u_8$ payé lors de la 8ème année.\\
+\q Calculer la somme totale payée à l'issue des huit années de contrat.\\
+
+
+
+\textbf{\underline{Contrat 2}}\\
+
+Le locataire accepte une augmentation annuelle de 400 euros du loyer de l'année précédente. \\
+On note $v_1$=7200.\\
+
+\noindent \initq \q Calculer le loyer $v_2$ payé lors de la 2ème année.\\
+\q On note $v_n$ le loyer lors de la n-ième année. Quelle est la nature de la suite $(v_n)$ ?\\
+ Exprimer $v_n$ en fonction de $n$.\\
+\q Calculer le loyer $v_8$ payé lors de la 8ème année.\\
+\q Calculer la somme totale payée à l'issue des huit années de contrat.\\
+
+\newpage
+
+
+\begin{center}
+{\large \textbf{Exercices - Suites arithmétiques et géométriques}}
+\end{center}
+
+
+\begin{multicols}{2}
+\begin{exo}
+\end{exo}
+Pour prendre le train, Sofia achète un abonnement mensuel qui coûte 400 \euro.
+Avec cet abonnement, chaque billet de train qu'elle achète est au prix de 2 \euro.\\
+\noindent \initq \q Combien Sofia paiera-t-elle au total si elle achète 10 billets
+de train ?\\
+\q On note $u_n$ le prix que paye Sofia par mois pour l'abonnement
+et $n$ billets de train.\\
+\hspace*{0.2cm}\initqa \qa Exprimer $u_n$ en fonction de $n$.\\
+\hspace*{0.2cm} \qa Sofia a payé 434 \euro. Combien de billets de train a-t-elle achetés ?\\
+
+
+\begin{exo}
+\end{exo}
+Un téléphone est en vente à 400 € en 2019. Chaque année, son prix baisse de 10 \% par rapport à l'année précédente.\\
+On note $u_n$ le prix du téléphone en $2019 + n$.\\
+\noindent\initq \q Donner la valeur de $u_0$ et $u_1$.\\
+\q Exprimer $u_{n+1}$ en fonction de $(u_n)$. En déduire la nature de la suite $(u_n)$.\\
+\q En déduire l'expression de $u_n$ en fonction de $n$.\\
+
+
+\begin{exo}
+\end{exo}
+Soit $(u_n)$ une suite arithmétique de raison $r$ telle que $u_4 = 3$
+et $u_7 = 18$. \\
+Déterminer la valeur de $r$.\\
+
+
+\begin{exo}
+\end{exo}
+Soit $(u_n)$ une suite géométrique de raison $q > 0$, telle que
+$u_4 = 3$ et $u_6 = 48$. \\
+Déterminer la valeur de $q$.\\
+
+
+\begin{exo}
+\end{exo}
+Dans chacun des cas, étudier le sens de variation de la suite définie par :\\
+\initqa \qa $u_n=n^2$\\
+\qa $u_n=1+\dfrac{1}{n}$\\
+\qa $u_n=2n^2-1$\\
+\qa $u_n=\dfrac{5^n}{n}$\\
+
+
+\begin{exo}
+\end{exo}
+\initq \q Soit $(u_n)$ une suite géométrique de terme initial $u_0=18$ et de raison $q=2,2$. Etudier le sens de variation de $(u_n)$\\
+\q Soit $(v_n)$ une suite géométrique définie par $v_0=-5 500$ et $v_{n+1}=0,9v_n$. Etudier le sens de variation de $(v_n)$\\
+\q Soit $(w_n)$ une suite géométrique définie par $w_0=400$ et $w_{n+1}=1,5w_n-0,6w_n$.Etudier le sens de variation de $(w_n)$\\
+
+\begin{exo}
+\end{exo}
+Soit $(v_n)$ la suite définie pour tout $n$ entier naturel par : 
+$v_n=4 \times 2^n$\\
+\initqa \qa Montrer que la suite $(v_n)$ est une suite géométrique. En déduire l'expression de $v_n$ en fonction de $n$.\\
+\qa Quelles sont les variations de la suite $(v_n)$.\\
+
+
+\begin{exo}
+\end{exo}
+Calculer la somme des 20 premiers termes de la suite géométrique de premier terme 3 et de raison 1,05.\\
+
+
+
+\end{multicols}
+
+\vspace*{0.25cm}
+
+\begin{exo}
+\end{exo}
+Un étudiant loue un chambre pour 3 ans. On lui propose deux types de bail :\\
+\hspace*{0.25cm}\textit{Premier contrat} : un loyer de 200 \euro pour le premier mois, puis une augmentation de 5 \euro par mois jusqu'à la fin du bail ;\\
+\hspace*{0.25cm}\textit{Second contrat} : un loyer de 200 \euro pour le premier mois, puis une augmentation de 2 \% par mois jusqu'à la fin du bail.\\
+
+\textbf{Question : Quel est le contrat globalement le plus avantageux pour un bail de 3 ans ?}\\
+
+
+
+\newpage
+
+\end{document}

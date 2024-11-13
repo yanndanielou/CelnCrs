@@ -1,0 +1,153 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+\setmarginsrb{2cm}{1cm}{2cm}{1cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\titre{Contrôle - Arithmétique}{Nom :}{Prénom :}{Classe}{Date}
+
+\vspace*{0.25cm}
+
+\exo{2} L'ensemble des écrits de Victor Hugo a été republié après sa mort en 1 572 volumes. La bibliothécaire classe ces volumes à raison de 9 volumes par étagères.\\
+
+ Combien d'étagères faut-il pour exposer toute l'\oe{uvre} de Victor Hugo?\\ Combien de volumes l'étagère incomplète contiendra-t-elle? \textit{Justifier votre réponse.}\\
+
+\vspace*{0.25cm}
+
+\exo{4}
+
+\q Lequel de ces nombres n'est pas premier ? Justifier votre réponse.\\
+\hspace*{2.5cm}17 \hspace*{0.25cm};\hspace*{0.25cm} 23 \hspace*{0.25cm};\hspace*{0.25cm} 39 \hspace*{0.25cm};\hspace*{0.25cm} 43 \hspace*{0.25cm};\hspace*{0.25cm} 61 \hspace*{0.25cm};\hspace*{0.25cm} 79 \hspace*{0.25cm} et \hspace*{0.25cm} 101.\\
+
+\q On donne les nombres suivants :\hfill 36 \hfill ; \hfill 58 180 \hfill; \hfill 27 900 \hfill; \hfill 63 604 \hfill; \hfill 42 324 \hfill; \hfill 34 410.\\
+\qa Citer les nombres qui sont divisibles par 5. \textit{(Aucune justification n'est attendue.)}\\
+\qa Citer ceux qui sont à la fois divisible par 3 et par 4. \textit{(Aucune justification n'est attendue.)}\\
+
+
+\q Trouver un nombre à quatre chiffres à la fois divisible par 2;  divisible par 3; divisible par 5 et non divisible par 9. \textit{(Aucune justification n'est attendue.)}\\
+
+
+
+\vspace*{0.25cm}
+
+
+\exo{5} "Les nombres amicaux"\\
+\initq \q Citer tous les diviseurs de 220 et 284.\\
+\q Deux nombres sont amicaux si  les sommes de leurs diviseurs sont égales. Montrer que 220 et 284 sont amicaux.?\\
+
+
+\vspace*{0.25cm}
+
+\exo{3}Un carreleur doit poser le carrelage dans une pièce rectangulaire mesurant 6, 48 m de large sur 13, 50 m de long.
+Il souhaite poser des carreaux de carrelage carré et ne faire aucune découpe.\\
+\initq \q Peut-il poser des carreaux de 27 cm de côté ? \textit{Justifier votre réponse.}\\
+\q Peut-il poser des carreaux de 50 cm de côté ? \textit{Justifier votre réponse.}\\
+
+
+
+
+\vspace*{0.25cm}
+
+\exo{6} Un restaurant vend des barquettes composées de nems et de samossas.\\ Le cuisinier a préparé 2 106 nems et 1 188 samossas.\\
+Dans chaque barquette, le nombre de nems doit être le même et le nombre de samossas doit être le même.\\
+Tous les nems et tous les samossas doivent être utilisés.\\
+
+\noindent \initq \q Le cuisinier peut-il faire 45 barquettes en utilisant tous les samosas et tous les nems ?\\
+ \q \initqa \qa Avec ces conditions, quel nombre de barquettes \textbf{au maximum} pourra-t-il réaliser?\\
+\qa Dans ce cas, combien y aura-t-il de nems et de samossas dans chaque barquette ?\\
+
+
+\vspace*{0.25cm}
+
+
+
+
+
+\exo{} BONUS\\
+Le nombre de marches d'un escalier est compris entre 40 et 80.\\
+- Si on compte ces marches deux par deux, il en reste une.\\
+- Si on compte ces marches trois par trois, il en reste deux.\\
+- Si on compte ces marches cinq par cinq, il en reste quatre.\\
+
+Quel est le nombre de marches de cet escalier ?\\
+
+
+
+
+
+
+
+\end{document}
