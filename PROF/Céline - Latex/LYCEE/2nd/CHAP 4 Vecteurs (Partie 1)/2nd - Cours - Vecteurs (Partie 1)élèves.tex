@@ -1,0 +1,787 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Param�trages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt,twoside,french]{article}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% d�claration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	%\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les biblioth�ques LaTeX de l'American Mathematical Society sont pleines de macros int�ressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caract�res accentu�s norme iso-8859, cela risque de ne pas marcher avec des fichiers cr��s sous windows
+	\usepackage{amssymb} 
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caract�res
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la g�om�trie
+	\usepackage[x11names,table]{xcolor} % G�re les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et s�parations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{1cm}{1cm}{1cm}{0.75cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'ent�te
+	%	6 fixe la distance entre l'ent�te et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de s�paration des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre port�e par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Th�or�me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily D�finition} :}}
+	\newtheorem{propriete}{\underline{Propri�t� :}}
+	\newtheorem{propcar}{\underline{Propri�t�s caract�ristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{M�thodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom sp�ciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Rep�rage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Op�rateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombr�e
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des th�or�me et autres d�finitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{20.9cm}{p{0.5cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{purple}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{purple}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi) } }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On r�gle les marges d�finitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contr�le fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On r�gle les marges d�finitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contr�le fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des fonctions math�matiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des num�rotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\color{red}\Roman{section}.}
+	\renewcommand{\thesubsection}{\color{blue}\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{17pt}{19pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\color{red}}
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+    {\color{blue}}
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{15pt}{16pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsubsection}% apparence du num�ro
+   {0.5em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+   
+   \newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{Chapitre 4 : Vecteurs (Partie 1)}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+\setcounter{page}{0}
+
+\begin{minipage}{.9\textwidth}
+
+\renewcommand{\contentsname}{\sffamily Plan du cours}
+
+\large
+
+\tableofcontents
+
+\end{minipage}
+\newpage
+ \setcounter{page}{1}
+ 
+ 
+\section{Notion de vecteurs}
+\subsection{Translations et vecteurs}
+
+\df{
+On dit que D est l'image de C par \textbf{la translation qui transforme A en B} lorsque le quadrilatère ABDC est un parallélogramme (éventuellement aplati).\\
+A cette translation on associe le vecteur  $\overrightarrow{AB}$ et on dit que cette translation est \textbf{une translation de vecteur $\overrightarrow{AB}$ .}
+}\\
+
+\textbf{\underline{Exercice :}} Tracer l'image du triangle ABC par la transaltion de vecteur  $\overrightarrow{MN}$. \\
+\hspace*{3.5cm} \includegraphics[scale=1.5]{exo1cours.eps} 
+
+
+\df{
+Un vecteur $\overrightarrow{AB}$ est caractérisé par :\\
+- sa direction : celle de la droite (AB)\\
+- son sens : celui de A vers B\\
+- sa longueur que l'on appelle sa norme : la longueur AB du segment [AB] soit sa norme ||$\overrightarrow{AB}$||.
+}\\
+
+\rem\\
+ A est \textbf{l'origine} du vecteur $\overrightarrow{AB}$ et  B est \textbf{l'extrémité} du vecteur $\overrightarrow{AB}$\\
+
+
+
+\textbf{\underline{Exercice :}}
+\bmul{2}
+ \includegraphics[scale=1.4]{exo2cours.eps} 
+ 
+ \columnbreak
+ 
+\noindent\hspace*{0.5cm}\initq \q Tracer le vecteur $\overrightarrow{EO}$.\\
+\hspace*{0.5cm}\q Tracer le vecteur $-\overrightarrow{OF}$.\\
+\hspace*{0.5cm}\q Construire M l'image du point C par le  vecteur $\overrightarrow{EO}$.\\
+\hspace*{0.5cm}\q Construire N l'image du point D par le  vecteur $-\overrightarrow{OF}$.\\
+
+
+\emul
+
+
+
+\subsection{Egalité de deux vecteurs}
+\df{
+Deux vecteurs $\overrightarrow{AB}$ et $\overrightarrow{CD}$ non nuls \textbf{sont égaux} lorsqu'ils ont:\\
+- \textbf{la même direction }\textit{(les droites (AB) et (CD) sont parallèles )}\\
+- \textbf{le même sens }\textit{(on va de A vers B comme on va de C vers D.)}\\
+- \textbf{la même norme} \textit{(les longueurs AB et CD sont égales)}.\\
+
+On note alors $\overrightarrow{AB}=\overrightarrow{CD}$.
+}\\
+
+
+\textbf{\underline{Exercice :}}ABEF, BCDE et ABDE sont des parallélogrammes.\\
+\bmul{2} 
+
+ \includegraphics[scale=1.55]{exo3cours.eps} 
+ 
+ \columnbreak
+
+\noindent\initq \q Citer les vecteurs égaux aux vecteurs $\overrightarrow{AB}$ et $\overrightarrow{FA}$.\\
+\q Nommer le représentant du vecteur $\overrightarrow{AB}$ d'origine B.\\
+\q Nommer le représentant du vecteur $\overrightarrow{FE}$ d'origine G.\\
+
+\emul
+\vspace*{0.5cm}
+
+
+\prop{
+\bi
+\item Deux vecteurs $\overrightarrow{AB}$ et $\overrightarrow{CD}$ \textbf{sont égaux} si et seulement si \textbf{ABDC} est un parallélogramme (éventuellement aplati).\\
+\hspace*{3.5cm}\includegraphics[scale=1.3]{exemplecours.eps} 
+
+\item	$\overrightarrow{AB}=\overrightarrow{AC}$ si et seulement si B = C.\\
+\hspace*{3.5cm}\includegraphics[scale=1.5]{exemple2cours.eps} 
+
+
+\item K est le milieu du segment [AB] si et seulement si $\overrightarrow{AK}=\overrightarrow{KB}$\\
+\hspace*{3.5cm}\includegraphics[scale=1.5]{exemple3cours.eps} 
+
+\ei
+}\\
+
+\subsection{Vecteurs particuliers}
+
+\textbf{Le vecteur nul}\\
+Un vecteur nul est un vecteur dont l'origine et l'extrémité sont confondues.\\
+$\overrightarrow{0}=\overrightarrow{AA}=\overrightarrow{BB}=\overrightarrow{EE}$\\
+
+\newpage
+\textbf{Opposé d'un vecteur}\\
+L'opposé d'un vecteur non nul $\overrightarrow{v}$ , qu'on note $-\overrightarrow{v}$ , est le vecteur qui a la même direction et la
+même norme que v, mais qui est de sens contraire à $\overrightarrow{v}$.\\
+
+\rem 
+\bi 
+\item L'opposé du vecteur $\overrightarrow{AB}$ est le vecteur $\overrightarrow{BA}$.
+\item L'opposé du vecteur nul $\overrightarrow{0}$.\\
+
+\ei
+
+\bmul{2}
+
+
+\textbf{\underline{Exercice :}}
+Sur la figure ci-contre, placer les points :\\
+- L tel que $\overrightarrow{AL}=-\overrightarrow{u}$ \\
+- M tel que $\overrightarrow{BM}=-\overrightarrow{v}$\\
+- K tel que  $\overrightarrow{BK}=\overrightarrow{KA}$
+\columnbreak
+
+\includegraphics[scale=1.55]{exo4cours.eps} 
+
+ \emul
+
+\section{Opérations sur les vecteurs}
+\subsection{Somme de deux vecteurs}
+
+\textbf{\underline{Exercice :}}Dans chacun des cas de la figure suivante, construire en rouge le vecteur $\overrightarrow{w}$ d'origne A tel que\\
+ $\overrightarrow{w}=\overrightarrow{u}+\overrightarrow{v}$ \\
+\hspace*{1.5cm}\includegraphics[scale=1.65]{exo5cours.eps} 
+
+
+\bi
+
+\item \textbf{Avec la relation de Chasles}
+
+\df{
+La somme de deux vecteurs $\textcolor{red}{\overrightarrow{u}}$ et $\textcolor{green}{\overrightarrow{v}}$ est le vecteur associé à la translation résultant de l’enchaînement des
+translations de vecteur $\overrightarrow{u}$ et de vecteur $\overrightarrow{v}$ .\\
+ On note ce vecteur $\textcolor{blue}{\overrightarrow{u}+\overrightarrow{v}}$.
+}
+\newpage
+
+\hspace*{2cm}\includegraphics[scale=1.8]{exemple4cours.eps} \\
+
+\prop{
+Pour tous points A, B et C du plan, on a : $\overrightarrow{A\textcolor{red}{B}}+\overrightarrow{\textcolor{red}{B}C}=\overrightarrow{AC}$.\\
+Cette égalité s'appelle \textbf{la relation de Chasles}.
+
+}\\
+
+\underline{\textbf{Cas particulier :}} Pour tous points A et B :  $\overrightarrow{AB}+\overrightarrow{BA}=\overrightarrow{AA}=\overrightarrow{0}$ \\
+On admet alors que la somme de deux vecteurs opposés est égale au vecteur nul.\\
+
+ \item \textbf{Par la construction d'un parallèlogramme (ou par la règle du parallélogramme}\\
+ 
+ \includegraphics[scale=1.8]{exemple5cours.eps} \\
+ 
+ On définit les points A, B et C tels que : $\overrightarrow{AB}=\overrightarrow{u}$ et  $\overrightarrow{AC}=\overrightarrow{v}$.\\
+Soit D le point tel que ABDC soit un parallélogramme, alors :  $\overrightarrow{AD}=\overrightarrow{w}$.\\
+
+$\overrightarrow{u}+\overrightarrow{v}=$\\
+\vspace*{2cm}
+
+
+\prop{
+Soit ABDC un parallélogramme. On a $\overrightarrow{AB}+\overrightarrow{AC}= \overrightarrow{AD}$
+}\\
+
+ \ei
+ 
+ \newpage
+ 
+\textbf{\underline{Exercice :}} ABCD est un rectangle de centre O. \\
+Les points I, J et K sont les milieux respectifs des segments [AB], [AD] et [BC].
+\bmul{2}
+\includegraphics[scale=1.4]{exo6cours.eps} 
+
+\columnbreak
+Compléter les égalités suivantes : \\
+\initq \q En utilisant la relation de Chasles :\\
+\begin{large}
+\initqa \qa $\overrightarrow{JI}=\overrightarrow{J.}+ \overrightarrow{O.}$\\
+ \qa $\overrightarrow{AC}=\overrightarrow{.I}+ \overrightarrow{I.}$\\
+ \qa $\overrightarrow{D.}=\overrightarrow{.K}+ \overrightarrow{.C}$\\
+ \qa $\overrightarrow{AJ}+\overrightarrow{KC}=\overrightarrow{AJ}+ ...=...$
+\end{large}
+\emul
+\q  En utilisant la règle du parallélogramme :\\
+{\large \initqa \qa $\overrightarrow{AB}+\overrightarrow{A .}= \overrightarrow{AC}$ \hspace*{0.5cm} \qa $\overrightarrow{AJ}+\overrightarrow{AI}= ...$ \hspace*{0.5cm}  \qa $\overrightarrow{BK}+...= \overrightarrow{BO}$\\}
+ 
+ 
+ 
+ 
+ 
+ 
+\subsection{Produit d'un vecteur par un réel}
+
+\textbf{\underline{Exercice :}} Construire les vecteurs demandés à partir du vecteur $\overrightarrow{u}$.\\
+\hspace*{3.5cm}\includegraphics[scale=1.6]{exo7cours.eps} 
+
+\df{
+$\overrightarrow{u}$ désigne un vecteur  non nul et $k$ un réel non nul.\\
+Le produit du vecteur $\overrightarrow{u}$ par le réel $k$ est le vecteur noté $k\overrightarrow{u}$ tel que :\\
+- $\overrightarrow{u}$  et $k\overrightarrow{u}$ ont \textbf{la même direction}\\
+- $k\overrightarrow{u}$ a \textbf{le même sens} que $k\overrightarrow{u}$ si $k>0$, autrement si $k<0$, $k\overrightarrow{u}$ a \textbf{le sens contraire} de $\overrightarrow{u}$\\
+- $k\overrightarrow{u}$ a pour norme $|k|\times ||\overrightarrow{u}||$
+}
+
+
+\textbf{\underline{Exercice :}} Soient A et B deux points distincts. Tracer les points N et Q tels que $\overrightarrow{MN}=\dfrac{3}{4}\overrightarrow{AB}$ et  $\overrightarrow{PQ}=-\dfrac{1}{2}\overrightarrow{AB}$
+\hspace*{3.5cm}\includegraphics[scale=1.4]{exo8cours.eps}
+
+
+
+
+
+\newpage
+
+\subsection{Colinéarité de deux vecteurs}
+
+\df{
+On dit que deux vecteurs non nuls $\overrightarrow{u}$ et $\overrightarrow{v}$ \textbf{sont colinéaires} lorsqu'il existe un réel $k$ tel que $\overrightarrow{v}=k\overrightarrow{u}$.\\
+Autrement dit, deux vecteurs non nuls sont colinéaires lorsqu'ils ont la même direction.
+}\\
+
+\underline{\textbf{Exemple :}} Dans l'exercice précédent, on avait que  $\overrightarrow{MN}=\dfrac{3}{4}\overrightarrow{AB}$ et  $\overrightarrow{PQ}=-\dfrac{1}{2}\overrightarrow{AB}$.\\
+\reponse[2]\\
+
+ \rem \\
+ Par convention, on dit que \textbf{le vecteur nul est colinéaire à tout vecteur}.\\
+ 
+
+\vspace*{0.5cm}
+
+ \prop{
+ \bi
+\item Deux \textbf{droites (AB) et (CD) sont parallèles} si et seulement si \textbf{les vecteurs $\overrightarrow{AB}$ et $\overrightarrow{CD}$ sont colinéaires}.
+\item \textbf{Trois points A, B et C sont alignés} si et seulement si \textbf{les vecteurs $\overrightarrow{AB}$ et $\overrightarrow{AC}$ sont colinéaires}.
+\ei 
+ }\\
+ 
+ 
+
+\textbf{\underline{Exercice :}} 
+ ABC est un triangle. D et E sont deux points définis par \\
+ 
+ $\overrightarrow{AD}=-\dfrac{1}{4}\overrightarrow{AB}$ \hspace*{0.5cm} et  \hspace*{0.5cm}$\overrightarrow{CE}=\dfrac{5}{4}\overrightarrow{CA}$.
+ \bmul{2}
+\includegraphics[scale=1.5]{exo9cours.eps}
+
+\columnbreak
+\noindent  \initq \q Placer les points D et E sur la figure ci-dessous.\\
+ \q Exprimer le vecteurs $\overrightarrow{BC}$ en fonction des vecteurs $\overrightarrow{AB}$ et $\overrightarrow{AC}$.\\
+ \reponse[3]\\
+ \q Exprimer le vecteur $\overrightarrow{DE}$ en fonction des vecteurs $\overrightarrow{AB}$ et $\overrightarrow{AC}$.\\
+  \reponse[2]
+
+\emul
+\q En déduire que les droites (DE) et (BC) sont parallèles.\\
+ \reponse[1]
+ 
+\end{document}

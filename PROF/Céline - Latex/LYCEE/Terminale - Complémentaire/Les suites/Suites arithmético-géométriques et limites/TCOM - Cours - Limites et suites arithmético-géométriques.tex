@@ -793,6 +793,87 @@ Donc $\limite{n}{+\infty}S_n=\dfrac{10}{2-\sqrt{2}}$\\
  \color{black}  
   
 \newpage
+
+\section{Suites arithmético-géométriques}
+
+\df{On appelle suite arithmético-géométrique une suite définie par son premier terme et pour tout entier naturel $n$, par une relation de la forme :
+$$u_{n+1}=au_n+b $$ où a et b  sont deux réels donnés}
+
+\rem : si $a=1$ alors la suite est arithmétique ; si $b=0$ alors la suite est géométrique. \\
+
+L'étude d'une suite arithmético-géométrique se ramène à l'étude d'une suite auxiliaire géométrique. Cette suite est \og toujours \fg donnée par l'énoncé.\\
+
+
+
+\noindent \textbf{Exercice-type 1}
+
+Soit la suite u définie par $u_0 = 1$ et $u_{n+1} =\dfrac{1}{2}u_n +2$.\\
+On définit pour tout $n$, une suite auxiliaire $v$ par : $v_n = u_n -4$.\\
+\initqa \qa Montrer que $v$ est géométrique. On en précisera la raison.\\
+\qa Exprimer le terme $v_n$ en fonction de $n$.\\
+\qa En déduire alors l'expression de $u_n$ en fonction de $n$.\\
+\qa Déterminer la limite de la suite $u$.\\
+ 
+ \color{blue}
+ \noindent \textbf{Résolution :}
+ 
+\initqa \qa Pour tout $n$, $v_{n+1}=u_{n+1}-4=\left(   \dfrac{1}{2} u_n +2\right)-4=\dfrac{1}{2} u_n -2= \dfrac{1}{2} (u_n-4)= \dfrac{1}{2} v_n$\\
+Donc pour tout $n$, $v_{n+1}= \dfrac{1}{2} v_n$. La suite $v$ est donc une suite géométrique de raison $\dfrac{1}{2}$.\\
+
+\qa On en déduit que $v_n=v_0 \times q^n$. On a  $v_0=u_0-4=1-4=-3$.\\
+Ainsi, $v_n=-3 \times \left(\dfrac{1}{2} \right) ^n$.\\
+
+\qa Comme $v_n=u_n-4$ alors $u_n=v_n+4 = -3 \times \left(\dfrac{1}{2} \right) ^n +4$\\
+
+\qa Puisque $0<\dfrac{1}{2}< 1$,  $\limite{n}{+\infty}v_n=0$ et $\limite{n}{+\infty}u_n=4$\\
+
+
+ \color{black}
+\noindent \textbf{Exercice-type 2} 
+
+Une entreprise du secteur du BTP doit réduire la quantité de déchets qu'elle rejette .\\
+Elle s'engage, à terme, à rejeter moins de \np{30000} tonnes de déchets par an.\\
+En 2007, l'entreprise rejetait \np{40000} tonnes de déchets.\\
+Depuis cette date, l'entreprise réduit chaque année la quantité de déchets qu'elle rejette de 5 \%  par rapport à la quantité rejetée l'année précédente, mais elle produit par ailleurs 200 tonnes de nouveaux déchets par an en raison du développement de nouvelles activités.\\
+On note $r_n$ la quantité, en tonnes, des déchets rejetés pour l'année (2007+$n$).
+\begin{enumerate}
+\item Justifier que, pour tout entier naturel $n$, on  a $r_{n+1}=0,95r_n+200$.
+\item Soit $(s_n)$ la suite définie pour tout entier naturel $n$ par $s_n=r_n-\np{4000}$.
+\begin{enumerate}
+\item Démontrer que la suite $(s_n)$ est une suite géomérique de raison 0,95. Donner son premier terme.\\
+En déduire l'expression de $s_n$ en fonction de $n$.
+\item Prouver que, pour tout entier naturel $n$, on a $r_n=\np{36000} \times 0,95^n+\np{4000}$.
+\item Déterminer les limites des suites $(s_n)$ et $(r_n)$. Interpréter la limite de la suite $(r_n)$.\\
+\end{enumerate}
+\end{enumerate}
+
+
+ \color{blue}
+ \noindent \textbf{Résolution :}
+ 
+\initq \q $r_0= \np{40000}$. Et chaque année la quantité de déchets est réduite de 5 \% mais l'entreprise produit 200 tonnes de nouveaux déchets également.\\
+ Donc pour tout $n$,  $r_{n+1}=r_n \times \left( 1-\dfrac{5}{100} \right) +200=0,95r_n+200$\\
+ 
+\q \initqa \qa Pour tout entier naturel $n$, $s_n=r_n-\np{4000}$.
+Donc $$s_{n+1}=r_{n+1}-\np{4000}$$
+ $$s_{n+1}=0,95r_n+200-\np{4000}$$
+  $$s_{n+1}=0,95r_n-\np{3800}$$
+  $$s_{n+1}=0,95(r_n-\np{4000})$$
+  $$s_{n+1}=0,95s_{n}$$
+On en déduit que la suite $(s_n)$ est une suite géométrique de raison 0,95 et de premier terme $s_0=r_0-\np{4000}=\np{40000}-\np{4000}=\np{36000}$.\\
+Ainsi, pour tout entier naturel $n$ , $s_n= \np{36000} \times 0,95^n$\\
+
+\qa Comme $s_n=r_n- \np{4000}$ alors $r_n=s_n+ \np{4000} = \np{36000} \times 0,95^n + \np{4000} $\\
+
+
+\qa Puisque $0<0,95< 1$,  $\limite{n}{+\infty}s_n=0$ et $\limite{n}{+\infty}r_n= \np{4000}$\\
+La quantitté de déchets au fil des années tend vers 4 000 tonnes.\\
+
+
+
+ \color{black}
+
+\newpage
 \section{Recherche d'un seuil}
 
 \noindent La recherche d'un seuil consiste � d�terminer l'entier $n_0$ � partir duquel la suite est plus petite qu'une valeur donn�e (cas des suites convergentes) ou plus grand qu'une valeur donn�e (cas des suite ayant pour limite $+\infty$).\\
@@ -833,50 +914,6 @@ La boucle s'arr�te lorsque $u_K<10^{-40}$
 \noindent \textbf{Correction} :\\
 
 
-\section{Suites arithmético-géométriques}
-
-\df{On appelle suite arithm�tico-g�om�trique une suite d�finie par son premier terme et pour tout entier naturel $n$, par une relation de la forme :
-$$u_{n+1}=au_n+b \text{ o� } a \text{ et } b \text{ sont deux r�els donn�s}$$}
-
-\rem : si $a=1$ alors la suite est arithm�tique ; si $b=0$ alors la suite est g�om�trique. Vous comprendrez donc le nom donn� � ces suites !\\
-
-L'�tude d'une suite arithm�tico-g�om�trique se ram�ne � l'�tude d'une suite auxiliaire g�om�trique. Cette suite est \og toujours \fg donn�e par l'�nonc�.\\
-
-
-\noindent \textbf{Petite activit� pr�paratoire} : un couple d�pose au premier janvier 2011 une somme de 10 000 euros sur un compte r�mun�r� au taux annuel de 4 \%. Par la suite, ce couple poss�de une capacit� annuelle de 3 000 euros, �pargne vers�e tous les premiers  janvier sur le compte pr�c�dent.\\
-Les int�r�ts sont capitalis�s au 31 d�cembre de chaque ann�e. Pour tout entier naturel $n$, on note $S_n$ la somme dont le couple dispose au 1\ier janvier de l'ann�e (2011+n$n$).
-\begin{enumerate}
-\item \begin{enumerate}
-\item Calculer les valeur $S_0$, $S_1$, $S_2$ et $S_3$.
-\item La suite $(S_n)$ est-elle arithm�tique ? g�om�trique ?
-\end{enumerate}9
-\item \begin{enumerate}
-\item Montrer que l'expression de $S_{n+1}$ en fonction de $S_n$ est donn�e par la relation :
-$$S_{n+1}=(1,04)S_n+3000$$
-\item � l'aide de la calculatrice, obtenir le tableau de valeurs de $S_n$ pour $n$ variant de 0 � 20.
-\item Au 1\ier janvier de quelle ann�e le couple poss�dera-t-il une �pargne sup�rieure � 50 000 euros ?
-\end{enumerate}
-\end{enumerate}
-
-
-
-
-
-Une entreprise du secteur du BTP doit r�duire la quantit� de d�chets qu'elle rejette .\\
-Elle s'engage, � terme, � rejeter moins de \np{30000} tonnes de d�chets par na.\\
-En 2007, l'entreprise rejetait \np{40000} tonnes de d�chets.\\
-Depuis cette date, l'entreprise r�duit chaque ann�e la quantit� de d�chets qu'elle rejette de 5 \%  par rapport � la quantit� rejet�e l'ann�e pr�c�dente, mais elle produit par ailleurs 200 tonnes de nouveaux d�chets par an en raison du d�veloppement de nouvelles activit�s.\\
-On note $r_n$ la quantit�, en tonnes, des d�chets rejet�s pour l'ann�e (2007+$n$).
-\begin{enumerate}
-\item Justifier que, pour tout entier naturel $n$, on  a $r_{n+1}=0,95n+200$.
-\item Soit $(s_n)$ la suite d�finie pour tout entier naturel $n$ par $s_n=r_n-\np{4000}$.
-\begin{enumerate}
-\item D�montrer que la suite $(s_n)$ est une suite g�om�trique de raison 0,95. Donner son premier terme.\\
-En d�duire l'expression de $s_n$ en fonction de $n$.
-\item Prouver que, pour tout entier naturel $n$, on a $r_n=\np{36000} \times 0,95^n+\np{4000}$.
-\item Le contexte restant le m�me, � partir de quelle ann�e l'entreprise r�ussira-t-elle � respecter son engagement ?
-\end{enumerate}
-\end{enumerate}
 
 
 

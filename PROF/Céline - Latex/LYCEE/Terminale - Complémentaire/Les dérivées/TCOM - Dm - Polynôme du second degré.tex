@@ -1,0 +1,107 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+
+
+\setmarginsrb{2.5cm}{0.5cm}{2.5cm}{2cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : \marginpar{\hfill /#1}}
+\reversemarginpar
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi)}  }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba})} }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+\begin{document}
+\pagestyle{empty}
+\titre{Devoir maison : Polynôme du second degré}{Nom :}{Prénom :}{\textbf{TCOM}}{Date:}
+
+\vspace*{1cm}
+\exo\\
+Sur le graphique ci-dessous, on donne 5 paraboles.\\
+Attribuer à chacune  de ces courbes  la fonction qui lui est associée. Une justification est attendue.\\
+
+\includegraphics[scale=2]{parabole.eps} \\
+
+
+\vspace*{0.5cm}
+\exo \\
+Résoudre dans $\R$, les équations suivantes :\\
+\initq \q $2x^2-9x-5=0$ \hspace*{1.5cm}   \q $1-x^2-x=0$\\
+\q $2x-x^2-1=0$ \hspace*{1.5cm}   \q $-x^2+2x-3=0$\\
+
+
+\vspace*{0.5cm}
+\exo \\
+Etudier le signe des fonctions suivantes :\\
+\initq \q $f(x)=x^2-1$ \hspace*{1.5cm}   \q $g(x)=3x^2+x+6$ \hspace*{1.5cm}  \q $h(x)=-4x^2+8x+3$ \\
+
+
+\vspace*{0.5cm}
+\exo\\ 
+Déterminer le tableau de variation des fonctions suivantes :\\
+\initq \q $f(x)=x^3-2x^2+11x$ \hspace*{1.5cm}   \q $g(x)=-3(x+1)^2+8$
+
+\end{document}

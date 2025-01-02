@@ -1,0 +1,1263 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Param�trages du document %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt,twoside,french]{extarticle}
+\usepackage{etex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% d�claration des packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Packages pour l'encodage du texte 
+
+	\usepackage{fullpage}
+	\usepackage[french]{babel}
+	%\usepackage[latin1]{inputenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{amsmath,amssymb} % Les biblioth�ques LaTeX de l'American Mathematical Society sont pleines de macros int�ressantes (voire indispensables).
+
+	\usepackage[T1]{fontenc} % Pour que LaTeX comprenne les caract�res accentu�s norme iso-8859, cela risque de ne pas marcher avec des fichiers cr��s sous windows
+	\usepackage{amssymb} 
+	\usepackage{frcursive}
+	\usepackage{cmbright}
+% Packages de polices de caract�res
+	%\usepackage{txfonts} % Times
+	%\usepackage{pxfonts} % Palatino
+	%\usepackage{fourier} % Utopia
+
+% Packages pour la g�om�trie
+	\usepackage[x11names,table]{xcolor} % G�re les couleurs - Liste des couleurs dans le document xcolor.pdf
+	\usepackage{pst-eucl} % Document Euclide.pdf
+	\usepackage{pst-all}
+	\usepackage{pstricks}
+	\usepackage{pstricks-add} % Document pstricks-add-doc.pdf
+	\usepackage{pst-grad}
+		\usepackage{calc}
+		 \SpecialCoor 
+	 
+	 \usepackage{pifont}
+	 \usepackage{marvosym}
+	 \usepackage{manfnt}
+	 \usepackage{stmaryrd}
+		\usepackage{eurosym}
+	
+% Package de maths
+	\usepackage{variations} % Package permettant de tracer des tableau de variations - docvariationss.pdf
+	%\usepackage[FlechesMP]{tabvar} % docs : tabvar.pdf et demo.pdf
+	%\usepackage{tikz,tkz-tab}
+% Packages de mise en page
+	\usepackage{vmargin}
+	\usepackage{fancybox}
+	\usepackage{fancyhdr}
+	\usepackage{lastpage}
+	\usepackage{xspace} % Permet la gestion automatique des espaces.
+	\usepackage{multicol}
+	\usepackage{lscape}	
+	%\usepackage{enumerate}
+	\usepackage{enumitem}
+	 \frenchbsetup{StandardLists=true}
+	 \usepackage{mdwlist}
+
+% Packages pour le style
+	\usepackage{titlesec}
+	%\usepackage[Glenn]{fncychap}
+	\usepackage[french]{minitoc}
+	\usepackage{array}
+\usepackage{multirow}
+\usepackage[tight]{shorttoc}
+ 
+	\usepackage{array}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+\usepackage[np]{numprint}
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{1em}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsubsubsecnumwidth}{1em}
+ \usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Parametrage des marges et s�parations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\setmarginsrb{2cm}{1cm}{2cm}{1cm}{18pt}{0.5cm}{1cm}{1cm}
+	%\setmarginsrb{1}{2}{3}{4}{5}{6}{7}{8}
+	%	1 est la marge gauche
+	%	2 est la marge en haut
+	%	3 est la marge droite
+	%	4 est la marge en bas
+	%	5 fixe la hauteur de l'ent�te
+	%	6 fixe la distance entre l'ent�te et le texte
+	%	7 fixe la hauteur du pied de page
+	%	8 fixe la distance entre le texte et le pied de page
+	
+	\setlength{\columnseprule}{0pt} % largeur du filet de s�paration des colonnes : mettre en commentaire pour supprimer ce filet.
+	\setlength{\columnsep}{30pt} % Espace entre deux colonnes
+	\setlength{\shadowsize}{2pt} % taille de l'ombre port�e par shadowbox
+	\cornersize*{10pt} % taille de l'arrondi dans ovalbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Definitions des balises personnelles
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newtheorem{theo}{\textcolor{Red1}{\underline{\sffamily Th�or�me} :}}
+	\newtheorem{defi}{\textcolor{DarkSeaGreen4}{\underline{\sffamily D�finition} :}}
+	\newtheorem{propriete}{\underline{Propri�t� :}}
+	\newtheorem{propcar}{\underline{Propri�t�s caract�ristiques :}}
+	\newtheorem{pre}{\textcolor{darkgray}{\underline{Preuve :}}}
+	\newtheorem{methode}{\underline{M�thodologie :}}
+	%\newtheorem{exo}{\underline{Exercice }}
+
+	% Ensembles de nombres
+	\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+	\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+	\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+	\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+	\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+	\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+	\newcommand{\Rplus}{\ensuremath{\mathbb{R}^+}\xspace}
+	\newcommand{\Rmoins}{\ensuremath{\mathbb{R}^-}\xspace}
+	\newcommand{\Retoile}{\ensuremath{\mathbb{R}^*}\xspace}
+	\newcommand{\e}{\ensuremath{\mathrm{e}}}
+	
+	% Nom sp�ciaux
+	\newcommand{\Dm}{\ensuremath{\mathcal{D}}\xspace}
+	\newcommand{\Cm}{\ensuremath{\mathcal{C}}\xspace}
+
+	% Rep�rage et coordonnees
+	\newcommand{\repOij}{\ensuremath{\left(O;\vec{i},\vec{j}\: \right)}\xspace}
+	\newcommand{\repOuv}{\ensuremath{\left(O;\vec{u},\vec{v}\: \right)}\xspace}
+	\newcommand{\repOijk}{\ensuremath{\left(O;\vec{i},\vec{j},\vec{k}\: \right)}\xspace}
+	\newcommand{\rep}[3]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3}\: \right)}\xspace}
+	\newcommand{\repThreeD}[4]{\ensuremath{\left(#1;\overrightarrow{#2},\overrightarrow{#3},\overrightarrow{#4}\: \right)}\xspace}
+	\newcommand{\vect}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+	\newcommand{\vct}[1]{\ensuremath{\overrightarrow{#1}}\xspace} % balise pour vecteur 
+		\newcommand{\vecCoord}[4]{\ensuremath{\vec{#1}\begin {pmatrix}#2\cr #3\cr #4\end{pmatrix}}\xspace}
+	%\newcommand{\Coord}[3]{$\begin {pmatrix}#1\cr #2\end{pmatrix}$\xspace}
+	\newcommand{\angOr}[2]{\ensuremath{\left(\vct{#1};\vct{#2}\right)}}
+		% Op�rateurs
+	\newcommand{\limite}[2]{\ensuremath{\displaystyle \lim\limits_{\substack{#1 \to #2}}}\xspace}
+	\newcommand{\combi}[2]{\ensuremath{\begin{pmatrix}#1\cr #2\end{pmatrix}\xspace}}
+	\newcommand{\integrale}[4]{\ensuremath{\displaystyle \int\limits_{#1}^{#2} #3 \; \mathrm{d}#4}\xspace}
+	
+	%  Redifinition d'une boite ombr�e
+	\makeatletter 
+	\let\shadowboxori\shadowbox 
+	\renewcommand*\shadowbox[1][black]{\def\new@shadowcolor{#1}\new@shadowbox} 
+	\newcommand*\new@shadowbox[2][black]{{\color{\new@shadowcolor} \shadowboxori{\textcolor{#1}{#2}}}}
+	% % % % % % % % % % % % % % % % % %
+	
+	\newcommand{\important}[1]{\shadowbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\importantOval}[1]{\ovalbox{\begin{minipage}{18cm}#1\end{minipage}}}
+	\newcommand{\commentaire}[1]{\textcolor{LightCyan4}{#1}}
+
+	% Mise en page des th�or�me et autres d�finitions ...
+	
+			% Couleurs perso
+			\newrgbcolor{RougePale}{1 0.95 0.96}
+			\newrgbcolor{VertPale}{0.92 0.95 0.87}
+			\newrgbcolor{GrisPale}{0.96 0.96 0.96}
+
+
+\newcommand{\obox}[1]{\ovalbox{\begin{minipage}{17cm}#1\end{minipage}}}
+\newcommand{\oboxp}[1]{\ovalbox{\begin{minipage}{10cm}#1\end{minipage}}}
+\newcommand{\oboxP}[1]{\ovalbox{\begin{minipage}{8cm}#1\end{minipage}}}
+
+
+
+
+\newcommand{\df}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{20.9cm}{p{0.5cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\dfTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{DarkOliveGreen3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray, linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=DarkOliveGreen1,gradend=DarkOliveGreen4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Définition}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{DarkOliveGreen3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+\newcommand{\thm}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+\newcommand{\thmTitre}[2]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{Red3}
+\noindent \begin{tabularx}{18.4cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Théorème}}}}} & {\sffamily \textbf{#1}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #2 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{Red3}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\prop}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{purple}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=Red1,gradend=Red4, gradmidpoint=1,framearc=0.3, framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{white}{\sffamily \textbf{Propriété}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{purple}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+
+
+\newcommand{\preuve}[1]{
+\setlength{\arrayrulewidth}{0.5pt}
+\arrayrulecolor{black}
+\noindent \begin{tabularx}{18.9cm}{p{0.8cm}XX}
+%\cline{1-2}
+	\multicolumn{2}{c}{\rule[-6.5pt]{0cm}{20pt}\psframebox[shadow=true, shadowsize=1.5pt,shadowcolor=gray,linewidth=0.25pt, linecolor=darkgray, fillstyle=gradient,gradangle=0, gradbegin=GrisPale,gradend=lightgray, gradmidpoint=1,framearc=0.3,  framesep=1pt]{\makebox[3cm]{\rule[-2pt]{0cm}{15pt} \textcolor{black}{\sffamily \textbf{Preuve}}}}} \tabularnewline %\begin{minipage}{2.2cm}\centering \begin{defi}\end{defi}\end{minipage}} \tabularnewline
+	%\cline{1-2}
+	 & \multicolumn{2}{|l}{\begin{minipage}{14.7cm}\setlength{\arrayrulewidth}{0.75pt}\arrayrulecolor{black}\bigskip \normalfont #1 \medskip \end{minipage}} \tabularnewline
+	%\setlength{\arrayrulewidth}{0.25pt}
+	\arrayrulecolor{black}
+	\cline{2-3} 
+\end{tabularx}
+\arrayrulecolor{black}
+\setlength{\arrayrulewidth}{0.75pt}
+\medskip}
+
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\textbf{\stepcounter{enumtabi} \theenumtabi) } }
+\newcommand{\qa}{\textbf{\stepcounter{enumtaba} (\alph{enumtaba}) }}
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\textbf{\setcounter{enumtaba}{0}}}
+
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%	\newcommand{\ex}{{\sffamily\textbf{\textit{Exemple : }}}}
+	\newcommand{\exs}{{\sffamily\textbf{\textit{Exemples : }}}}
+	\newcommand{\rem }{ {\sffamily \textbf{Remarque : }}}
+	\newcommand{\rems }{ {\sffamily \textbf{Remarques : }}}
+	\newcommand{\grasDef}[1]{{\color{DarkOliveGreen4}{\sffamily \textbf{#1}}}}
+	\newcommand{\grasTheo}[1]{{\color{Red4}{\sffamily \textbf{#1}}}}
+	% Fleche pour les tableaux de variation
+	\unitlength=1cm
+	\newcommand{\fC}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,-0.1){\vector(2,1){#1}}\end{picture}\end{minipage}}
+	\newcommand{\fD}[1]{\begin{minipage}{#1cm}\begin{picture}(#1,0.75)\put(0,0.9){\vector(2,-1){#1}}\end{picture}\end{minipage}}
+
+
+	% Symbole divers
+	\def\danger{\begingroup
+		\psset{unit=1ex}
+		\begin{pspicture}(0,0)(3,3)
+		\pspolygon[linearc=0.2,linewidth=0.12,linecolor=red](0,0)(1.5,2.6)(3,0)
+		\psellipse*(1.5,1.33)(0.14,0.75)
+		\pscircle*(1.5,0.3){0.15}
+		\end{pspicture}
+		\endgroup}
+		
+		% Danger dans box
+		\newsavebox{\infobox}
+ 
+% On r�gle les marges d�finitivement ici
+\newlength{\marge}\setlength{\marge}{5mm}
+% Contr�le fin pour le panneau
+\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{information}{%
+  \par
+  \begin{lrbox}{\infobox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\infobox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.55em,0)(2.3em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Huge\Info}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\infobox+\dp\infobox+2\marge}
+  \vspace*{\marge}
+  \bigskip
+}		
+		
+		
+		% Danger dans box
+		\newsavebox{\dangerbox}
+ 
+%% On r�gle les marges d�finitivement ici
+%\newlength{\marge}\setlength{\marge}{5mm}
+%% Contr�le fin pour le panneau
+%\newlength{\margehaut}\setlength{\margehaut}{2mm}
+ 
+\newenvironment{Danger}{%
+  \par
+  \begin{lrbox}{\dangerbox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=gradient, gradbegin=white,gradend=AntiqueWhite2,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\dangerbox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+  \rput(\marge,0){%
+    \psline[linewidth=2\pslinewidth,linecolor=white](0.65em,0)(2.15em,0)
+  }
+  % Affiche le panneau
+  \rput(2\marge,0){\Large\textdbend}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+
+\newcounter{Exoapp}
+\newsavebox{\exotypebox}
+\newenvironment{Exoapp}{%
+\sffamily
+  \refstepcounter{Exoapp}\par
+  \begin{lrbox}{\exotypebox}
+    \begin{minipage}{\linewidth-3\marge-2\pslinewidth}
+      \par\vspace*{\margehaut}
+}
+{%
+    \end{minipage}%
+  \end{lrbox}
+  % Affiche le texte dans un cadre en couleur.
+  \rput[tl](0,0){%
+    \psframebox[fillstyle=none, gradbegin=white,gradend=Burlywood1,gradmidpoint=1,gradangle=90, framesep=\marge]{%
+      \usebox{\exotypebox}%
+    }%
+  }%
+  % Efface le trait juste ce qu'il faut
+%  \rput(\marge,0){%
+%    \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2em,0)
+  %}
+  % Affiche le panneau
+  \rput*(3\marge,-0.1){\sffamily \textbf{Exercice d'application \theExoapp}}
+  % R�serve la place verticale pour la suite
+  \par
+  \setlength{\marge}{\ht\exotypebox+\dp\exotypebox+2\marge}
+  \vspace*{\marge}
+\bigskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des fonctions math�matiques
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Fcarre{x  dup mul}
+\def\Finverse{1 x div}
+\def\FracineCarre{x sqrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% D�finition des num�rotations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\renewcommand{\thetheo}{\empty}
+	\renewcommand{\thedefi}{\empty}
+	\renewcommand{\thepropcar}{\empty}
+	\renewcommand{\thepropriete}{\empty}
+	\renewcommand{\thepre}{\empty}
+	\renewcommand{\themethode}{\empty}
+	\renewcommand{\thesection}{\color{red}\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+	\renewcommand{\theenumi}{\textbf{(\arabic{enumi})}}
+
+
+\newcounter{exo}
+\newenvironment{exo}{\refstepcounter{exo}{\noindent \underline{\textsf{\bfseries Exercice \theexo}}} \sffamily }{\par\vspace{0.3cm}}
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}\\[\parskip]
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Style de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\pagestyle{fancy}
+	%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% En-tete et pied de page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+   {\normalfont\fontsize{15pt}{17pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\color{red}}
+   {\sffamily }% apparence du titre
+   
+\titleformat{\subsection}
+   {\normalfont\fontsize{14pt}{16pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsection}% apparence du num�ro
+   {1em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+
+\titleformat{\subsubsection}
+   {\normalfont\fontsize{11pt}{12pt}\selectfont\bfseries}% apparence commune au titre et au num�ro
+   {\sffamily \thesubsubsection}% apparence du num�ro
+   {0.5em}% espacement num�ro/texte
+   {\sffamily }% apparence du titre
+   
+   \newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+  
+  
+  \newtheorem{exot}{\sffamily Exercice-type }
+\newcommand{\exotype}[1]{\begin{exot}\emph{\sffamily \textbf{: #1}} \end{exot}}
+ 
+\newcommand{\chapitre}{\textbf{Chapitre 3 :} Compléments sur la dérivation}
+
+\newcommand{\numchapitre}{}
+
+\newcommand{\ex}[1]{\textbf{Exemple :} \begin{minipage}{18cm} #1 \end{minipage}}
+
+\newcommand{\sommaire}{\shorttoc{\sffamily Plan du cours}{4}}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\sffamily \Large \chapitre}
+\fancyfoot[LO,RE]{}%\thepage}
+\fancyfoot[C]{\hrulefill ~ {\sffamily \thepage} ~ \hrulefill}
+% Parametre :
+% L,C,R : left, center, right
+% E,O : paire, impaire
+
+%%%%%%%%%%%
+	
+	\begin{document}
+
+
+
+\color{purple}
+\vspace*{0.5cm}
+
+\textbf{RAPPEL : } $f$ est une fonction définie sur un intervalle $I$, $a$ et $a+h$ appartiennent à I($h \neq 0$).\\
+
+$f$ est dite \textbf{dérivable en $a$} lorsque $\lim\limits_{h \rightarrow 0} \dfrac{f(a+h)-f(a)}{h}$ tend vers un réel $\ell$.\\
+
+On note alors $\ell=f'(a)$. f'(a) s'appelle \textbf{nombre dérivé de $f$ en $a$}.\\
+\color{black}
+
+
+\vspace*{0.5cm}
+
+\begin{center}
+{\large \textbf{Introduction}}
+\end{center}
+
+\initq \q Considérons la fonction $f$ définie sur $\R$ par $f(x)=x^2-5$.\\
+Etudier la dérivabilité de la fonction $f$ en $a=3$.\\
+
+ \q Considérons la fonction $g$ définie sur $[0;+\infty[$ par $f(x)=\sqrt{x}$.\\ 
+ Etudier la dérivabilité de la fonction $g$ en $a=0$.\\
+  En déduire l'ensemble de dérivabilité de la fonction $g$.\\
+
+ 
+\vspace*{1cm}
+
+\textbf{{\large Exercices d'entraînement}}\\
+
+\exo
+Soit la fonction $f$ définie sur $\R$ par $f(x)=(4-x)^2$.\\
+Calculer le nombre dérivé de $f$ en $a=1$.\\
+En déduire la dérivabilité de $f$ en 1.\\
+
+\exo
+Soit la fonction $t$ définie sur $\R$ par $t(x)=3x^2-5x+1$.\\
+Calculer le nombre dérivé de $t$ en $a=-2$.\\
+En déduire la dérivabilité de $f$ en -2.\\
+
+\exo
+Soit la fonction $g$ définie sur $\R^*$ par $g(x)=\dfrac{3}{x}$.\\
+Montrer que la fonction $g$ est dérivable en 1 et déterminer $g'(1)$.\\
+
+
+\exo
+Soit la fonction $k$ définie sur $\R \backslash \left\lbrace 3 \right\rbrace$ par $k(x)=\dfrac{-7}{3-x}$.\\
+Montrer que la fonction $k$ est dérivable en 2 et déterminer $g'(2)$.\\
+
+\newpage
+
+\begin{center}
+{\Large \textbf{Fonctions dérivées et tangentes}}
+\end{center}
+
+
+\begin{exo}
+\end{exo}
+\bmul{2}
+\includegraphics[scale=1.75]{exotangente.eps} 
+\columnbreak
+
+Sur le graphique ci-contre, on a tracé les courbes représentatives des fonctions $f$ et $g$ définies sur $\R$ par : $f(x)=e^{x-1}+2x$ \hspace*{0.25cm} ;  \hspace*{0.25cm} $g(x)=-x^2+5x-1$, ainsi que leurs tangentes respectives T et T' au point d'abscisse 1.\\
+Que peut-on conjecturer ? Démontrer cette conjecture.\\
+\emul
+
+\color{purple}
+On conjecteure que la tangente au point d'abscisse 1 de la fonction $f$ est confondue avec celle de $g$.\\
+
+Pour confirmer cette conjecture, nous allons déterminer les tangentes au point d'abscisse 1 des fonctions $f$ et $g$.\\
+
+\textbf{Equation réduite de la tangente à la courbe $C_f$ au point d'abscisse 1 :}\\
+Pour cela nous devons déterminer l'expression de la dérivée de la fonction $f$.\\
+
+$f$ est la somme de $u(x)=e^{x-1} $ dérivable là où la fonction $x \rightarrow x-1$ est dérivable, c'est-à-dire sur $\R$. Et $v(x)=2x$ est une fonction linéaire dérivable sur $\R$.\\
+
+Donc la fonction $f$ est dérivable sur $\R$ et $f'(x)=1e^{x-1}+2=e^{x-1}+2$\\
+
+L'équation réduite T est donc $y=f'(1)(x-1)+f(1)$\\
+
+Or, $f'(1)=e^0+2=3$ et $f(1)=e^0+2=3$\\
+
+Donc, T : $y=3(x-1)+3$ c'est-à-dire \fbox{T : $y=3x-3+3=3x$}\\
+
+
+
+
+\textbf{Equation réduite de la tangente à la courbe $C_g$ au point d'abscisse 1 :}\\
+Pour cela nous devons déterminer l'expression de la dérivée de la fonction $g$.\\
+
+$g$ est une fonction polynôme, donc dérivable sur $\R$, donc $g'(x)=-2x+5$\\
+
+Or, $g'(1)=-2\times1+5=3$ et $g(1)=-1+5-1=3$\\
+
+L'équation réduite T' est donc $y=g'(1)(x-1)+g(1)$\\
+Donc, T' : $y=3(x-1)+3$ c'est-à-dire \fbox{T' : $y=3x-3+3=3x$}\\
+
+
+\textbf{Conclusion : } On a bien $T=T'$, donc $C_f$ et$C_g$ ont des tangentes confondues au point (1;3).\\
+
+\color{black}
+\newpage
+\begin{exo}
+\end{exo}
+On considère la fonction $f$ définie sur $\R$ par $f(x)=2x^2-3x+1$.\\
+On note $C_f$ la courbe représentative de la fonction $f$ dans le repère (O ; I ; J).\\
+\initq \q Etablir que f'(1)=1.\\
+\q Déterminer l'équation réduite de la tangente (T) à la courbe $C_f$ au point d'abscisse 1.\\
+
+
+\color{purple}
+\initq \q $f$ est une fonction polynôme,dérivable sur $\R$, donc $f'(x)=4x-3$\\
+$f'(1)=4\times1-3=4-3=1$.\\
+
+\q L'équation réduite T au point d'abscisse 1 est  $y=f'(1)(x-1)+f(1)$\\
+Or, $f(1)=2-3+1=0$\\
+Donc, T' : $y=1(x-1)+0$ autrement dit \fbox{T : $y=x-1$}\\
+
+
+\color{black}
+
+
+\begin{exo}
+\end{exo}
+On considère la fonction $f$ définie et dérivable sur $\R$ par $f(x)=x^3-5x^2+7x-2$.\\
+On note $C_f$ la courbe représentative de la fonction $f$ dans le plan muni d'un repère orthonormé.\\
+\initq \q Déterminer l'expression de la fonction $f'$ dérivée de la fonction $f$.\\
+\q Déterminer l'équation réduite de la tangente (T) à la courbe $C_f$ au point d'abscisse 2.\\
+
+\color{purple}
+\initq \q $f$ est une fonction polynôme, dérivable sur $\R$, donc $f'(x)=3x^2-10x+7$\\
+\q L'équation réduite T au point d'abscisse 2 est  $y=f'(2)(x-2)+f(2)$\\
+Or, $f'(2)=3\times2^2-10\times2+7$.\\
+$f'(2)=3\times2^2-10\times2+7$.\\
+$f'(2)=-1$.\\
+
+Et $f(2)=2^3-5\times2^2+7\times2-2$\\
+$f(2)=8-20+14-2=0$\\
+Donc, T : $y=-1(x-1)+0$ autrement dit \fbox{T : $y=-x+1$}\\
+
+
+\color{black}
+
+
+
+
+
+\begin{exo}
+\end{exo}
+On considère la fonction $f$ définie et dérivable sur $\R$ par $f(x)=-x^3-3x^2-2x+4$.\\
+On note $C_f$ la courbe représentative de la fonction $f$ dans le plan muni d'un repère orthonormé.\\
+\initq \q Déterminer l'expression de la fonction $f'$ dérivée de la fonction $f$.\\
+\q Déterminer l'équation réduite de la tangente (T) à la courbe $C_f$ au point d'abscisse -1.\\
+
+\color{purple}
+\initq \q $f$ est une fonction polynôme, dérivable sur $\R$, donc $f'(x)=-3x^2-6x-2$\\
+\q L'équation réduite T au point d'abscisse -1 est  $y=f'(-1)(x+1)+f(-1)$\\
+Or, $f'(-1)=-3\times(-1)^2-6\times(-1)-2$.\\
+$f'(-1)=-3+6-2$.\\
+$f'(-1)=1$.\\
+
+Et $f(-1)=1-3+2+4$\\
+$f(-1)=4$\\
+
+Donc, T : $y=1(x-1)+4$ autrement dit \fbox{T : $y=x+3$}\\
+
+
+\color{black}
+\newpage
+
+\begin{exo}
+\end{exo}
+Déterminer l'expression des dérivées suivantes:
+\bmul{2}
+\noindent\initqa \qa $f(x)=-3x^2$\\
+\noindent \qa $h(x)=4\sqrt{x}$\\
+\noindent\qa $k(x)=x-\dfrac{1}{x}$
+
+\columnbreak
+\noindent \qa $g(x)=\dfrac{1}{12}x^6$\\
+\noindent \qa $j(x)=\dfrac{1}{2x}$\\
+\noindent \qa $m(x)=2x^3+\dfrac{2}{x}$
+\emul
+
+
+\color{purple}
+\textbf{CORRECTION }
+\bmul{2}
+\noindent\initqa \qa $f'(x)=-6x$\\
+\noindent \qa $h'(x)=\dfrac{2}{\sqrt{x}}$\\
+\noindent\qa $k'(x)=1+\dfrac{1}{x^2}=\dfrac{x^2+1}{x^2}$
+
+\columnbreak
+\noindent \qa $g(x)=\dfrac{6}{12}x^5=\dfrac{1}{2}x^5$\\
+\noindent \qa $j(x)=\dfrac{-1}{2x^2}$\\
+\noindent \qa $m(x)=6x^2-\dfrac{2}{x^2}=\dfrac{6x^4-2}{x^2}$
+\emul
+
+
+
+\color{black}
+\begin{exo}
+\end{exo}
+Déterminer l'expression des dérivées suivantes:\\
+\noindent \initqa \qa $f(x)=x^3(2x-5)$\\
+\noindent \qa $h(x)=(3-x)\dfrac{1}{x}$\\
+\noindent \qa $g(x)=(2x^2-5x+1)(1-x^2)$\\
+\noindent \qa $j(x)=(x^2-3)\sqrt{x}$\\
+\noindent \qa $k(x)=(4-3x)e^{2x-1}$\\
+
+
+\color{purple}
+\textbf{FORMULE UTILISEE : (uv)'=u'v+v'u}\\
+
+\noindent \initqa \qa $f(x)=x^3(2x-5)$\\
+On pose $u(x)=x^3$ \hspace*{0.75cm} $v(x)=2x-5$\\
+\hspace*{1.5cm}$u'(x)=3x^2$ \hspace*{0.75cm} $v'(x)=2$\\
+
+Ainsi, $f'(x)=3x^2(2x-5)+2x^3=6x^3-15x^2+2x^3=8x^3-15x^2$\\
+
+
+\color{black}
+\noindent \qa $h(x)=(3-x)\dfrac{1}{x}$\\
+\color{purple}
+
+ $h'(x)=-\dfrac{1}{x}-\dfrac{1}{x^2}(3-x)$\\
+$h'(x)=-\dfrac{1}{x}-\dfrac{3}{x^2}+\dfrac{x}{x^2}$\\
+$h'(x)=\dfrac{-3}{x^2}$\\
+
+\color{black}
+\noindent \qa $g(x)=(2x^2-5x+1)(1-x^2)$\\
+
+\color{purple}
+
+ $g'(x)=(4x-5)(1-x^2)-2x(2x^2-5x+1)$\\
+ $g'(x)=-8x^3+15x^2+2x-5$\\
+\color{black}
+
+\newpage
+
+\noindent \qa $j(x)=(x^2-3)\sqrt{x}$\\
+
+
+
+\color{purple}
+
+$j'(x)=2x\sqrt{x}+\dfrac{1}{2\sqrt{x}}(x^2-3)$\\
+$j'(x)=2x\sqrt{x}+\dfrac{x^2-3}{2\sqrt{x}}$\\
+$j'(x)=\dfrac{4x^2+x^2-3}{2\sqrt{x}}$\\
+$j'(x)=\dfrac{5x^2-3}{2\sqrt{x}}$\\
+\color{black}
+
+\noindent \qa $k(x)=(4-3x)e^{2x-1}$\\
+\color{purple}
+
+$k'(x)=-3e^{2x-1}+2e^{2x-1}(4-3x)$\\
+$k'(x)=-3e^{2x-1}+8e^{2x-1}-6xe^{2x-1}$\\
+$k'(x)=(5-6x)e^{2x-1}$\\
+
+\color{black}
+
+
+\begin{exo}
+\end{exo}
+On considère la fonction $f$ définie sur $\R^+$ par $f(x)=(2x+2)\sqrt{x}$.\\
+\initq \q Etablir que $f'(4)=\dfrac{13}{2}$\\
+
+\color{purple}
+Déterminons la fonction dérivée $f'$:\\
+$f'(x)=2\sqrt{x}+\dfrac{1}{2\sqrt{x}}(2x+2)$\\
+$f'(x)=\dfrac{2\sqrt{x}\times2\sqrt{x}+2x+2}{2\sqrt{x}}$\\
+$f'(x)=\dfrac{4x+2x+2}{2\sqrt{x}}$\\
+$f'(x)=\dfrac{6x+2}{2\sqrt{x}}$\\
+$f'(x)=\dfrac{3x+1}{\sqrt{x}}$\\
+
+Ainsi, $f'(4)=\dfrac{3 \times 4+1}{\sqrt{4}}=\dfrac{13}{2}$\\
+\color{black}
+
+\q On note $C_f$ la courbe représentative de la fonction $f$ dans un repère.\\
+En déduire l'équation réduite de la tangente à la courbe $C_f$ au point d'abscisse 4.\\
+\color{purple}
+L'équation réduite T au point d'abscisse 4 est  $y=f'(4)(x-4)+f(4)$\\
+Or, $f'(4)=\dfrac{13}{2}$.\\
+
+Et $f(4)=10\sqrt{4}=20$\\
+
+Donc, T : $y=\dfrac{13}{2}(x-4)+20$ autrement dit \fbox{T : $y=\dfrac{13}{2}x-6$}\\
+\color{black}
+
+\newpage
+
+\begin{center}
+{\Large \textbf{Fonctions dérivées et variation de fonctions}}
+\end{center}
+
+
+\begin{exo}
+\end{exo}
+Déterminer l'expression des dérivées suivantes:\\
+\noindent \initqa \qa $f(x)=\dfrac{3}{2-x}$\\
+
+\color{purple}
+$f'(x)=\dfrac{0(2-x)+3}{(2-x)^2}$\\
+$f'(x)=\dfrac{3}{(2-x)^2}$\\
+
+
+\color{black}
+
+\noindent \qa $h(x)=\dfrac{x+1}{2x-5}$\\
+
+\color{purple}
+$h'(x)=\dfrac{1(2x-5)-2(x+1)}{(2x-5)^2}$\\
+$h'(x)=\dfrac{-7}{(2x-5)^2}$\\
+
+
+\color{black}
+
+\noindent \qa $g(x)=\dfrac{x+1}{\sqrt{x}}$\\
+
+
+\color{purple}
+$g'(x)=\dfrac{1\sqrt{x}-\dfrac{1}{2\sqrt{x}}(x+1)}{(\sqrt{x})^2}$\\
+
+$g'(x)=\dfrac{\sqrt{x}-\dfrac{x+1}{2\sqrt{x}}}{(\sqrt{x})^2}$\\
+
+$g'(x)=\dfrac{\dfrac{2x-x-1}{2\sqrt{x}}}{(\sqrt{x})^2}$\\
+
+$g'(x)=\dfrac{\dfrac{x-1}{2\sqrt{x}}}{x}$\\
+
+$g'(x)=\dfrac{x-1}{2x\sqrt{x}}$\\
+
+\color{black}
+
+\noindent \qa $j(x)=\dfrac{2x^4-5x^3}{x^2+1}$\\
+
+
+\color{purple}
+
+$j'(x)=\dfrac{(8x^3-15x^2)(x^2+1)-2x(2x^4-5x^3)}{(x^2+1)^2}$\\
+
+$j'(x)=\dfrac{4x^5-5x^4+8x^3-15x^2}{(x^2+1)^2}$\\
+
+\color{black}
+
+\begin{exo}
+\end{exo}
+Déterminer l'expression des dérivées suivantes:\\
+\noindent \initqa \qa $f(x)=\sqrt{x^2+x}$\\
+
+
+\color{purple}
+
+$f'(x)=\dfrac{2x+1}{2\sqrt{x^2+x}}$\\
+
+\color{black}
+
+\newpage
+\noindent \qa $h(x)=(2x^2-x+1)^6$\\
+
+\color{purple}
+
+$h'(x)=6(4x-1)(2x^2-x+1)=(24x-6)(2x^2-x+1)$\\
+
+\color{black}
+\noindent \qa $g(x)=e^{2x^2+1}$\\
+
+\color{purple}
+
+$g'(x)=4xe^{2x^2+1}$\\
+
+\color{black}
+
+\noindent \qa $j(x)=2x+1-e^{4x^2-1}$\\
+
+\color{purple}
+
+$j'(x)=2-8xe^{4x^2-1}$\\
+
+\color{black}
+
+\begin{exo}
+\end{exo}
+Vrai ou Faux.\\
+Le tableau de variation d'une fonction $f$ est donné ci-dessous.\\
+
+\begin{variations}
+x          & -5  &       &  2   &    & 5 \\
+\filet
+$\m{f}$    &  1  &    \c   &   \h3 &  \d &-1 \\
+\end{variations}
+
+
+\initq \q $f'(x) \ge 0$ pour tout $x$ de [-5 ; 2].\\
+
+\q $f'(2)=3$\\
+
+\q On donne $f'(5)=2$. \\
+La tangente à la courbe de $f$ en 5 a pour équation $y=2x-11$.\\
+
+\q On donne $f(3)=4$ et $f'(3)=5$. \\
+Le coefficient directeur de la tangente à la courbe de $f$ en 3 est égal à 5.\\
+
+
+\color{purple}
+\textbf{CORRECTION}\\
+\initq \q Vrai \q Faux \q Vrai \q Vrai \\
+
+\color{black}
+
+\begin{exo}
+\end{exo}
+Dresser le tableau de variation des fonctions suivantes sur [-20 ; 20].\\
+
+\initqa \qa $f(x)=-2x^2+3x-11$ \\
+
+\color{purple}
+Déterminons la fonction dérivée de f : \hspace*{1cm}$f'(x)=-4x+3$\\
+
+$f'(x)>0$ $\Leftrightarrow$ $-4x+3>0$ $\Leftrightarrow$ $x<\dfrac{3}{4}$\\
+Donc $f'(x)>0$ pour tout $x \in \left[-20 ; \dfrac{3}{4} \right]$\\
+On en déduit donc que la fonction $f$ est strictement croissante sur $\left[-20 ; \dfrac{3}{4} \right]$ et  $f$ est strictement décroissante sur $\left[\dfrac{3}{4} ;20 \right]$.\\
+
+
+\begin{variations}
+x          & -20 &       &  \dfrac{3}{4}   &    & 20 \\
+\filet
+f'(x) &    &   +   &   \z & - &\\
+\filet
+$\m{f}$    &    &    \c   &    &  \d &\\
+\end{variations}
+
+
+\color{black}
+
+\qa $g(x)=(3-4x)e^{-0,5x}$\\
+
+\color{purple}
+Déterminons la fonction dérivée de g : \hspace*{1cm}$g'(x)=-4e^{-0,5x}-0,5e^{-0,5x}(3-4x)$\\
+\hspace*{1cm}$g'(x)=-4e^{-0,5x}-1,5e^{-0,5x}+2xe^{-0,5x}$\\
+\hspace*{1cm}$g'(x)=(-5,5+2x)e^{-0,5x}$\\
+
+On en déduit le tableau de signe de g' et de variation de g ci-dessous :\\
+
+\begin{variations}
+x          & -20 &       &  \dfrac{11}{4}   &    & 20 \\
+\filet
+-5,5+2x &    &   -  &   \z & + &\\
+\filet
+e^{-0,5x} &    &   +  &   & + &\\
+\filet
+g'(x) &    &   -  &   \z & + &\\
+\filet
+$\m{g}$    &    &    \d  &   g(\dfrac{11}{4}) &  \c &\\
+\end{variations}
+
+\color{black}
+
+\qa $h(x)=\dfrac{2x-1}{x+4}$\\
+
+\color{purple}
+Pour tout $x$ de $[-20 ; -4[ ]-4 ; 20]$, \hspace*{0.5cm}$f'(x)=\dfrac{2(x+4)-(2x-1)}{(x+4)^2}$\\
+\hspace*{0.5cm}$f'(x)=\dfrac{9}{(x+4)^2}$\\
+
+Etude du signe de f'(x)  :\\
+Pour tout $x$ de $ [-20 ; -4[ ]-4 ; 20]$, 9>0 et $(x+4)^2>0$ \\
+Donc $f'(x)$ > 0.
+On en déduit que la fonction $f$ est strictement croissante sur  $[-20 ; -4[ ]-4 ; 20]$.\\
+
+\begin{variations}
+x          & -20 &       &  -4   &    & 20 \\
+\filet
+f'(x) &    &   +   &   \bb & + &\\
+\filet
+$\m{f}$    &    &    \c   &   \bb &  \c &\\
+\end{variations}
+
+
+\color{black}
+
+
+
+
+
+
+\begin{exo}
+\end{exo}
+On considère la fonction $f$ définie et dérivable sur $\R$ par $f(x)=x^3-5x^2+7x-2$.\\
+On note $C_f$ la courbe représentative de la fonction $f$ dans le plan muni d'un repère orthonormé.\\
+\textbf{Déterminer les variations de la fonction $f$ sur $\R$.}\\
+
+
+\color{purple}
+Déterminons la fonction dérivée de f sur $\R$ :\\
+$f'(x)=3x^2-10x+7$\\
+Etude du signe du polynôme $3x^2-10x+7$ :\\
+$\Delta=100-84=16$, le discriminant étant positif, ce polynôme admet 2 racines distinctes :\\
+\bmul{2}
+$x_1=\dfrac{-b-\sqrt{\Delta}}{2a}$
+
+$x_1=\dfrac{10-4}{6}=1$
+
+\columnbreak
+
+$x_2=\dfrac{-b+\sqrt{\Delta}}{2a}$
+
+$x_2=\dfrac{10+4}{6}=\dfrac{7}{3}$
+
+\emul
+
+Le coefficient du terme du second degré étant strictement positif, on en déduit le tableau de variation suivant :\\
+
+\begin{variations}
+x          & -\infty &       & 1 &   & \dfrac{7}{3} &  & +\infty \\
+\filet
+f'(x)      &         &   +  &  \z  & - &     \z         & +  &      \\
+\filet
+$\m{f}$    &        &   \c   &   & \d &              & \c  &      \\
+\end{variations}
+
+\color{black}
+
+\begin{exo}
+\end{exo}
+On considère la fonction $f$ définie et dérivable sur $\R$ par $f(x)=-x^3-3x^2-2x+4$.\\
+On note $C_f$ la courbe représentative de la fonction $f$ dans le plan muni d'un repère orthonormé.\\
+\textbf{Déterminer les variations de la fonction $f$ sur $\R$.}\\
+
+
+\color{purple}
+Déterminons la fonction dérivée de f sur $\R$ :\\
+$f'(x)=-3x^2-6x-2$\\
+Etude du signe du polynôme $-3x^2-6x-2$ :\\
+$\Delta=36-24=12$, le discriminant étant positif, ce polynôme admet 2 racines distinctes :\\
+\bmul{2}
+$x_1=\dfrac{-b-\sqrt{\Delta}}{2a}$
+
+$x_1=\dfrac{6-\sqrt{12}}{-6}$
+
+$x_1=\dfrac{6-2\sqrt{3}}{-6}$
+
+$x_1=\dfrac{-3+\sqrt{3}}{3}$
+
+\columnbreak
+
+$x_2=\dfrac{-b+\sqrt{\Delta}}{2a}$
+
+$x_2=\dfrac{6+\sqrt{12}}{-6}$
+
+$x_2=\dfrac{6+2\sqrt{3}}{-6}$
+
+$x_2=\dfrac{-3-\sqrt{3}}{3}$
+
+\emul
+
+Le coefficient du terme du second degré étant strictement négatif, on en déduit le tableau de variation suivant :\\
+
+\begin{variations}
+x          & -\infty &       & \dfrac{-3-\sqrt{3}}{3} &   & \dfrac{-3+\sqrt{3}}{3} &  & +\infty \\
+\filet
+f'(x)      &         &   -  &  \z  & + &     \z         & -  &      \\
+\filet
+$\m{f}$    &        &   \d   &   & \c &              & \d  &      \\
+\end{variations}
+
+\color{black}
+
+
+
+
+\newpage
+\vspace*{0.5cm}
+\begin{exo}
+\end{exo}
+\includegraphics[scale=1.5]{exobilan1.eps} \\
+
+
+Dans le repère orthogonal donné ci-dessus, $C_f$ est la représentation graphique d'une fonction $f$ définie et dérivable sur [0 ; 30].\\
+On donne A(0 ; -11), B(5 ; 0), C(11 ; $y_c$).\\
+La tangente à la courbe $C_f$ au point d'abscisse A passe par le point B.\\
+La tangente à la courbe $C_f$ au point d'abscisse C est parallèle à l'axe de abscisses.\\
+
+\textbf{PARTIE A}\\
+\initq \q Lire graphiquement les valeurs de $f(0)$, $f'(0)$ et $f'(11)$.\\
+\color{purple}
+Le point A a pour coordonnée A(0 ; -11) donc f(0)=-11.\\
+
+En utilisant les coordonnées des points A et B, on calcule le coefficient directeur de la droite (AB) tangente à $C_f$ : \\
+$f'(0)=\dfrac{0-(-11)}{5-0}=\dfrac{11}{5}$\\
+
+La tangente à $C_f$ au point est horizontale donc $f'(11)=0$.\\
+
+\color{black}
+
+\q L'affirmation "La fonction $f'$ est positive sur [3 ; 30]" est-elle vraie?\\
+\color{purple}
+$f$ est croissante sur [3 ; 11] et décroissante sur [11 ; 30], donc f'(x)>0 sur [3 ; 11] et f'(x)<0 sur [11 ; 30].\\
+L'affirmation est donc fausse.\\
+
+
+\color{black}
+
+\textbf{PARTIE B}\\
+La fonction $f$ est définie sur [0 ; 30] par $f(x)=(x^2-11)e^{-0,2x}$.\\
+\initq \q  Déterminer $f'(x)$.\\
+\color{purple}
+En utilisant la formule permettant de dériver un produit de fonctions, et en posant $u(x)=x^2-11$ et $v(x)=e^{-0,2x}$, on a :\\
+$f'(x)=2xe^{-0,2x}-0,2e^{-0,2x}(x^2-11)$\\
+$f'(x)=(2x-0,2x^2+2,2)e^{-0,2x}$\\
+\color{black}
+
+\q Etudier le signe de $f'$ sur [0 ; 30] puis dresser le tableau de variations de $f$ sur [0 ; 30].\\
+\color{purple}
+Pour tout $x \in [0 ; 30]$, $e^{-0,2x}>0$ donc f'(x) a le même signe que le trinôme du second degré $2x-0,2x^2+2,2$.\\
+$\Delta=5,76$, le discriminant étant positif, ce polynôme admet 2 racines distinctes :\\
+\bmul{2}
+$x_1=\dfrac{-b-\sqrt{\Delta}}{2a}$
+
+$x_1=\dfrac{-2-2,4}{-0,4}$
+
+
+
+$x_1=11$
+
+\columnbreak
+
+$x_2=\dfrac{-b+\sqrt{\Delta}}{2a}$
+
+$x_2=\dfrac{-2+2,4}{-0,4}$
+
+
+
+$x_2=-1$
+
+\emul
+$x_2$ ne fait pas partie de l'intervalle d'étude.\\
+
+Le coefficient du terme du second degré étant strictement négatif, on en déduit le tableau de variation suivant :\\
+
+$f(0)=-11 <0$\\
+
+$f(11)=110e^{-2,2}>0$\\
+
+
+$f(30)=889e^{-6}>0$\\
+
+\begin{variations}
+x          & 0 &       &  11  &    & 30 \\
+\filet
+f'(x)      &    &   +   &   \z & - &\\
+\filet
+$\m{f}$    & -11   &    \c   & 110e^{-2,2}   &  \d & 889e^{-6}\\
+\end{variations}
+
+\color{black}
+
+
+
+\textbf{PARTIE C}\\
+\textit{Dans cette partie les résultats seront arrondis à $10^{-2}$ si nécessaire.}\\
+La fonction de demande d'un produit est modélisée sur l'intervalle [5 ; 30]  par la fonction $f$ étudiée dans la \textbf{partie B}.\\
+Le nombre $f(x)$ représente la quantité demandée, exprimée en centaine de milliers d'objets, lorsque le prix unitaire est égal à $x$ euros.\\
+\initq \q Calculer le nombre d'objets demandés, au millier près, lorsque le prix unitaire est fixé à 15 euros.\\
+\color{purple}
+$f(15)=(15^2-11)e^{-0,2\times15} \approx 10,65$.\\
+Soit 10,65 centaines de milliers, où 1 065 000.  1 065 000 objets seront demandés si le prix unitaire esr fixé à 15 euro.\\
+
+\color{black}
+
+\q L'élasticité $E(x)$ de la demande par rapport au prix est le pourcentage de variation de la demande pour une augmentation de 1 \% du prix.\\
+On admet qu'une bonne approximation de $E(x)$ est donnée par :\\
+\hspace*{1cm} $E(x)=\dfrac{f'(x)}{f(x)}\times x$ lorsque $x \in [5 ; 30]$\\
+
+Calculer $E(15)$ et interpréter le résultat.\\
+\color{purple}
+Pour un prix de 15 euros (soit $x=15$),\\
+$E(15)=\dfrac{f'(15)}{f(15)}\times15=-\dfrac{192}{214}\approx-0,90$.\\
+Cela signifie que si le prix de 15 euros augmente de 1 \%, la demande diminuera alors d'environ 0,9 \%.\\
+\color{black}
+
+
+\newpage
+
+
+\begin{exo}
+\end{exo}
+
+Un supermarché souhaite acheter des fruits à un fournisseur.\\
+Ce fournisseur propose des prix au kilogramme, dégressifs en fonction du poids de fruits commandé.\\
+Pour une commande de $x$ kilogrammes de fruit, le prix $P(x)$ en euros du kilogramme de fruits est donné par la formule : \hspace*{1.5cm}
+$P(x)=\dfrac{x+300}{x+100}$ pour $x \in [100 ; +\infty[$.\\
+\textit{Par exemple, si le supermarché achète 300 kg de fruits, il devra payé $300 \times P(300)=450$ euros au fournisseur pour cette commande.}\\
+
+\textbf{PARTIE A :} \textbf{Etude du prix P proposé par le fournisseur.}\\
+\initq \q Montrer que $P'(x)=\dfrac{-200}{(x+100)^2}$ sur $[100 ; +\infty[$.\\
+\q Donner le sens de variation de la fonction P sur $[100 ; +\infty[$.\\
+
+\textbf{PARTIE B :} \textbf{Etude de la somme S à dépenser par le supermarché.}\\
+On appelle $S(x)$ la somme en euros à dépenser par le supermarché pour une commande de $x$ kilogrammes de fruits (\textit{Ces fruits vendus par le fournisseur au prix de $P(x)$ euros par kilogramme}).\\
+Cette somme est égale à : $S(x)=xP(x)$ pour $x \in [100 ; +\infty[$.\\
+\initq \q Montrer que pour tout $x$ appartenant à $[100 ; +\infty[$ : $S'(x)=\dfrac{x^2+200x+30000}{(x+100)^2}$\\
+\q Montrer que pour tout $x$ appartenant à $[100 ; +\infty[$ :$S(x)=x+200-20000\times\dfrac{1}{x+100}$\\
+
+
+
+
+\begin{exo}
+\end{exo}
+L'entreprise CoTon produit du tissu en coton. Celui-ci est fabriqué en 1 mètre de large et pour une longueur $x$ exprimée en kilomètre, $x$ étant compris entre 0 et 10.\\
+Le coût total de production en euros de l'entreprise CoTon est donné en fonction de la longueur $x$ par la formule : $C(x)=15x^3-120x^2+500x+750$.\\
+
+Le graphique ci-contre donne la représentation graphique de la fonction $C$.\\
+\includegraphics[scale=1.8]{exo20derivee.eps} 
+
+\textbf{Les deux parties A et B de cet exercice sont indépendantes.}
+\newpage
+\vspace*{0.5cm}
+\textbf{PARTIE A : Etude du bénéfice}\\
+Si le marché offre un prix $p$ en euros pour un kilomètre de ce tissu, alors la recette de l'entreprise CoTon pour la vente d'une quantité $x$ est égal à $R(x)=px$.\\
+
+\initq \q Tracer sur le graphique la droite $D_1$ d'équation : $y=400x$.\\
+Expliquer pourquoi, au vu de ce tracé, l'entreprise CoTon ne peut pas réaliser un bénéfice si le prix $p$ du marché est égal à 400 euros.\\
+
+\q Dans cette question, on suppose que le prix du marché est égal à 680 euros.\\
+\initqa \qa Tracer sur le graphique la droite $D_2$ d'équation : $y=680x$.\\
+
+\qa Déterminer graphiquement, avec la précision permise par le graphique pour quelles quantités produites et vendues, l'entreprise CoTon réalise un bénéfice si le prix du marché $p$ est de 680 euros.\\
+
+\qa On considère la fonction B définie sur l'intervalle $[0;10]$ par : $B(x)=680x-C(x)$.\\
+Démontrer que pour tout $x$ appartenant à l'intervalle $[0;10]$, on a : $B'(x)=-45x^2+240x+180$\\
+
+\qa Etudier les variations de la fonction B sur  $[0;10]$.\\
+En déduire pour quelle quantité produite et vendue le bénéfice réalisé par l'entreprise CoTon est maximum. Donner la valeur de ce bénéfice.\\
+
+\textbf{PARTIE B : Etude du coût moyen}\\
+On rapelle que le coût moyen de production $C_M$ mesure le coût  par unité produite. On considère la fonction $C_M$ définie sur l'intervalle $]0;10]$ par : $C_M=\dfrac{C(x)}{x}$.\\
+
+\initq \q Démontrer que pour tout $x$ appartenant à l'intervalle $]0;10]$, $C'_M=\dfrac{30(x-5)(x^2+x+5)}{x^2}$.\\
+
+\q \initqa \qa Démontrer que pour tout $x$ appartenant à l'intervalle $]0;10]$, $C'_M$ est du signe de $(x-5)$.
+En déduire les variations de la fonction $C_M$ sur l'intervalle $[0;10]$.\\
+
+\qa Pour quelle quantité de tissu produite le coût moyen de production est-il minimum ? \\
+Que valent dans ce cas le coût moyen de production et le coût total ?\\
+\end{document}

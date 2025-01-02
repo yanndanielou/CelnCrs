@@ -1,0 +1,167 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amstext,vmargin,graphics,graphicx,tabularx,multicol} 
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+\usepackage{pstricks-add,tikz,tkz-tab,variations}
+\usepackage[autolanguage,np]{numprint} 
+\usepackage{calc}
+\usepackage{mathrsfs}
+
+\setmarginsrb{1.5cm}{0.5cm}{1cm}{0.5cm}{0cm}{0cm}{0cm}{0cm} %Gauche, haut, droite, haut
+\newcounter{numexo}
+\newcommand{\exo}[1]{\stepcounter{numexo}\noindent{\bf Exercice~\thenumexo} : }
+\reversemarginpar
+
+\newcommand{\bmul}[1]{\begin{multicols}{#1}}
+\newcommand{\emul}{\end{multicols}}
+
+\renewcommand{\thesection}{\Roman{section}.}
+	\renewcommand{\thesubsection}{\hspace{.5cm}\arabic{subsection}.}
+	\renewcommand{\thesubsubsection}{\hspace{1cm}\alph{subsubsection})}
+
+\newcounter{enumtabi}
+\newcounter{enumtaba}
+\newcommand{\q}{\stepcounter{enumtabi} \theenumtabi)  }
+\newcommand{\qa}{\stepcounter{enumtaba} (\alph{enumtaba}) }
+\newcommand{\initq}{\setcounter{enumtabi}{0}}
+\newcommand{\initqa}{\setcounter{enumtaba}{0}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bp}{\begin{pspicture*}}
+\newcommand{\ep}{\end{pspicture*}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\renewcommand{\tabularxcolumn}[1]{>{\centering}m{#1}} %(colonne m{} centrée, au lieu de p par défault) 
+\newcommand{\tnl}{\tabularnewline}
+
+\newcommand{\trait}{\noindent \rule{\linewidth}{0.2mm}}
+\newcommand{\hs}[1]{\hspace{#1}}
+\newcommand{\vs}[1]{\vspace{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\mc}{\mathcal}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\eq}{\quad \Leftrightarrow \quad}
+\newcommand{\vecti}{\vec{\imath}}
+\newcommand{\vectj}{\vec{\jmath}}
+\newcommand{\Oij}{(O;\vec{\imath}, \vec{\jmath})}
+\newcommand{\OIJ}{(O;I,J)}
+
+
+\newcommand{\reponse}[1][1]{%
+\multido{}{#1}{\makebox[\linewidth]{\rule[0pt]{0pt}{20pt}\dotfill}
+}}
+
+\newcommand{\titre}[5] 
+% #1: titre #2: haut gauche #3: bas gauche #4: haut droite #5: bas droite
+{
+\noindent #2 \hfill #4 \\
+#3 \hfill #5
+
+\vspace{-1.6cm}
+
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+\vspace{0.2cm}
+\begin{center}{\Large{\textbf{#1}}}\end{center}
+\begin{center}\rule{6cm}{0.5mm}\end{center}
+}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\titre{Séance d'AP 6 : Factorisations}{}{}{2nd}{}
+\vspace*{0.75cm}
+
+\textbf{RAPPELS}\\
+
+\textbf{\textcolor{green}{\underline{Factorisation :}}} Soient $a$, $b$ et $k$ trois réels, $ka+kb=k(a+b)$ et $ka-kb=k(a-b)$   \\
+
+\underline{Exemples :}\\
+\hspace*{2cm}  $A=5x^2+x$  \hfill    $B=16x^x-24$ \hfill  $C=12x^2+3x$ \hfill $S=(x-1)(7-6x)-(x+2)(x-1)$ \hspace*{5cm}\\
+
+
+
+
+\textbf{\textcolor{green}{\underline{Identités remarquables :}}}
+Soient $a$ et $b$ deux réels, $a^2+2ab+b^2=(a+b)^2$   \\
+\hspace*{10.2cm} $a^2-2ab+b^2=(a-b)^2$ \\
+\hspace*{10.2cm}  $a^2-b^2=(a+b)(a-b)$ \\
+
+\underline{Exemples :}\\
+\hspace*{1cm} $D=100x^2-40x +4$  \hfill   $G=81+108x+36x^2$  \hfill  $M=64x^2-25$ \hfill  $V=64x^2-(x-2)^2$ \hspace*{1cm}\\
+
+\vspace*{1.5cm}
+\exo\\ Factoriser les expressions littérales suivantes.
+\bmul{2}
+\initqa \qa  $(2x-1)(x-5)+(3x+7)(x-5)$\\
+
+\qa $(-3x+4)(3x-8)-(3x+4)(7x+2)$\\
+
+\columnbreak
+
+\qa  $(2x+3)^2+(x-2)(2x+3)$\\
+
+\qa $(2x-7)-(5x-1)(2x-7)$\\
+
+
+
+
+
+\emul
+
+\vspace*{1cm}
+\exo\\ Factoriser les expressions littérales suivantes.
+\bmul{4}
+\initqa \qa  $x^2-49$\\
+
+\qa $81-4x^2$
+
+
+\columnbreak
+
+\qa  $9x^2- 12x+4$\\
+
+\qa $1+20x+100x^2$
+
+\columnbreak
+
+\qa    $16x^2-36$\\ 
+
+\qa $(x+1)^2-25$
+
+\columnbreak
+
+\qa  $81-(2x+1)^2$\\
+
+\qa $(x-1)^2-(5x-6)^2$
+
+
+
+\emul
+
+
+
+\vspace*{1cm}
+\exo\\ 
+
+\initq \q Démontrer que, pour tout réel $x$ : \\
+$(2 x - 3)(x +5)=2x^2+ 7 x -15 $\\
+
+\q Soit la fonction $f$ définie sur $\R$ par : $f (x )=x (10 - x)$.\\
+Montrer que : $f ( x )=25 -( x - 5)^2$
+
+   
+\end{document}
